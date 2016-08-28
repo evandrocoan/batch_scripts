@@ -1,5 +1,6 @@
 ' 
 ' Only supports the Military Hourly format 24 hours for now. It speaks the time when called.
+' It also, turn the NumLock key on, when it is off.
 '
 ' This program is free software; you can redistribute it and/or modify it
 ' under the terms of the GNU General Public License as published by the
@@ -48,4 +49,22 @@ Else
 End If
 
 speech.Speak speaks
+
+
+' Turn the NumLock on when it is off.
+' See: https://blogs.technet.microsoft.com/heyscriptingguy/2006/08/10/how-can-tell-whether-the-numlock-key-is-on-or-off/
+
+Set objWord = CreateObject("Word.Application")
+'Wscript.Echo "NumLock key is on: " & objWord.NumLock
+
+If NOT objWord.NumLock Then
+    Set objShell = CreateObject("WScript.Shell")
+    objShell.SendKeys "{NUMLOCK}"
+End If
+
+objWord.Quit
+
+
+
+
 
