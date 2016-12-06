@@ -13,14 +13,33 @@
 ; and it launches a new Notepad window (or activates an existing one).  To
 ; try out these hotkeys, run AutoHotkey again, which will load this file.
 
-NumpadDot::.
+
+; See:
+; http://stackoverflow.com/questions/40981048/how-to-start-an-infinity-loop-on-autohotkey-when-reloading-the-script
+#persistent
+
+SetTitleMatchMode 1
+Loop
+{
+    WinMaximize Figure 1
+    Sleep 1000
+}
+
 Return
+
+
+
+NumpadDot::.
 
 F1::F2
-Return
 
 RCtrl::RAlt
-Return
+
+
+;MsgBox, 4, Calculator, Do you want to open Calculator?
+;Return
+
+
 
 ;
 ^+8::
@@ -35,8 +54,6 @@ Loop
    if !ErrorLevel or (prev = ErrorLevel)
    break
 }
-
-;MsgBox, 4, Calculator, Do you want to open Calculator?
 Return
 
 
@@ -69,6 +86,7 @@ Return
     Send {Enter}
 return
 
+
 ; Lock workstation shortcut to kick teamviewer asses
 ^#l::
 	Run "D:\User\Documents\Desktop\LockWorkStation.lnk"
@@ -78,6 +96,7 @@ return
 ; Abre o terminal principal
 ^!t:: Run "C:\ProgramData\Microsoft\Windows\Start Menu\Terminal.lnk"
 Return
+
 ;^!t:: Run "D:\User\Documents\ConEmuPack.140923\ConEmu.exe"
 ;WinActivate ahk_class VirtualConsoleClass
 ;Return
@@ -90,10 +109,12 @@ Return
 ;--------------------------------------  ------------------------------------
 ;^!j:: Run "C:\Program Files (x86)\Notepad++\notepad++.exe"
 ;Return
+
 ^+j:: Run "C:\Program Files (x86)\Notepad++\notepad++.exe" -multiInst
 ;^!j:: Run "C:\Notepad++Portable\App\Notepad++\notepad++.exe" -multiInst
 ^!j:: Run "F:\Notepad++Portable\App\Notepad++\notepad++.exe" -multiInst
 Return
+
 ;--------------------------------------  ------------------------------------
 
 ;-------------------------------------- Rodar Process Hacker ------------------------------------
@@ -152,6 +173,7 @@ Return
 
 ^!Numpad3::Run "C:\Program Files (x86)\Last.fm\Last.fm Scrobbler.exe" 
 Return
+
 ^!NumpadPgDn::Run "C:\Program Files (x86)\Last.fm\Last.fm Scrobbler.exe" 
 Return
 
@@ -161,6 +183,7 @@ Return
 
 ^!f:: Run "C:\Windows\system32\mmc.exe" "C:\Windows\system32\wf.msc"
 Return
+
 ;--------------------------------------  ------------------------------------
 
 
