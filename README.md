@@ -1,7 +1,23 @@
-# SpeakTimeVBScript
+# Scripts
+
+Contains some useful script utilities I use somewhere.
+
+
+
+## SpeakTimeVBScript
 
 It speaks the time when this script is called. It also, turn the NumLock key on, when it is off.
 It is an windows only application, Tested under Windows 10, but should work since Windows XP SP3 version.
+
+
+
+## Silent Run
+
+Run a Batch file passed as its first command line argument silently, i.e., without any windows.
+Call example:
+```batch
+wscript .\silent_run.vbs ".\code.bat" "arg 1" arg2 %*
+```
 
 
 
