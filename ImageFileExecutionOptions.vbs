@@ -18,9 +18,6 @@
 ' You should have received a copy of the GNU General Public License
 ' along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '
-'
-'
-'
 ' DISCLAIMER
 ' THIS COMES WITH NO WARRANTY, IMPLIED OR OTHERWISE. USE AT YOUR OWN RISK
 ' IF YOU ARE NOT COMFORTABLE EDITING THE REGISTRY THEN DO NOT USE THIS SCRIPT
@@ -46,20 +43,28 @@
 ' Modify value and enter wscript.exe "path to npp.vbs" e.g. wscript.exe "C:\Program Files\Notepad++\npp.vbs"
 '
 
-
 Option Explicit
-Dim sCmd, x
+
+Dim sCmd
+Dim index
+Dim oShell
 
 sCmd = """" & LeftB(WScript.ScriptFullName, LenB(WScript.ScriptFullName) - LenB(WScript.ScriptName)) & "sublime_text.exe" & """ -n """
-For x = 1 To WScript.Arguments.Count - 1
-   sCmd = sCmd & WScript.Arguments(x) & " "
+For index = 1 To WScript.Arguments.Count - 1
+   sCmd = sCmd & WScript.Arguments(index) & " "
 Next
 
 sCmd = Trim(sCmd) & """"
-
 ' Wscript.Echo "sCmd: " & sCmd
-CreateObject("WScript.Shell").Run sCmd, 1, True
 
+' Is there a way to start a program minimized with VBScript using WScript.Shell?
+' https://stackoverflow.com/questions/13792429/is-there-a-way-to-start-a-program-minimized-with-vbscript-using-wscript-shell
+Set oShell = CreateObject("WScript.Shell")
+oShell.Run sCmd, 3, True
+
+' How can I maximize, restore, or minimize a window with a vb script?
+' https://stackoverflow.com/questions/3824284/how-can-i-maximize-restore-or-minimize-a-window-with-a-vb-script
+oShell.SendKeys "% x"
 WScript.Quit
 
 
