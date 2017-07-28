@@ -5,6 +5,9 @@
 '  Replacing Notepad with Notepad++ using Image File Execution Options
 '  https://www.cult-of-tech.net/2011/10/replacing-notepad-with-notepad-using-image-file-execution-options/
 '
+'  A simple launcher app to allow Sublime Text to replace Notepad on Windows.
+'  https://github.com/grumpydev/Sublime-Notepad-Replacement
+'
 ' This program is free software; you can redistribute it and/or modify it
 ' under the terms of the GNU General Public License as published by the
 ' Free Software Foundation; either version 3 of the License, or ( at
@@ -40,7 +43,7 @@
 ' Create new Sting Value called Debugger
 '
 ' 4)
-' Modify value and enter wscript.exe "path to npp.vbs" e.g. wscript.exe "C:\Program Files\Notepad++\npp.vbs"
+' Modify value and enter wscript.exe "path to npp.vbs" e.g. wscript.exe "C:\Program Files\Notepad++\npp.vbs" "notepad++.exe"
 '
 
 Option Explicit
@@ -49,17 +52,27 @@ Dim sCmd
 Dim index
 Dim oShell
 
-sCmd = """" & LeftB(WScript.ScriptFullName, LenB(WScript.ScriptFullName) - LenB(WScript.ScriptName)) & "sublime_text.exe" & """ -n """
-For index = 1 To WScript.Arguments.Count - 1
+' The first command line will the the program name to run
+sCmd = """" & LeftB(WScript.ScriptFullName, LenB(WScript.ScriptFullName) - LenB(WScript.ScriptName)) & WScript.Arguments(0) & """ -n """
+
+' The `Image File Execution Options`, sends each command line's path as a separate command line
+' argument to the VBScript. Hence here we gather them all together as one again.
+'
+' The command line argument `index 1` is the original program's path, which we do not need here,
+' therefore we start taking the arguments we need which start at the `index 2`.
+'
+For index = 2 To WScript.Arguments.Count - 1
    sCmd = sCmd & WScript.Arguments(index) & " "
 Next
 
+' Wscript.Echo "WScript.Arguments(0): " & WScript.Arguments(0)
 sCmd = Trim(sCmd) & """"
+
 ' Wscript.Echo "sCmd: " & sCmd
+Set oShell = CreateObject("WScript.Shell")
 
 ' Is there a way to start a program minimized with VBScript using WScript.Shell?
 ' https://stackoverflow.com/questions/13792429/is-there-a-way-to-start-a-program-minimized-with-vbscript-using-wscript-shell
-Set oShell = CreateObject("WScript.Shell")
 oShell.Run sCmd, 3, True
 
 ' How can I maximize, restore, or minimize a window with a vb script?
