@@ -15,29 +15,79 @@
 
 
 ; See:
-; http://stackoverflow.com/questions/40981048/how-to-start-an-infinity-loop-on-autohotkey-when-reloading-the-script
+; How to start an infinity loop on AutoHotKey when reloading the script?
+; http://stackoverflow.com/questions/40981048/
 #persistent
 
-SetTitleMatchMode 1
-Loop
-{
-    WinMaximize Figure 1
-    Sleep 1000
-}
+SetTimer, check_for_sublime_settings_window, 500
+;SetTimer, check_for_octave_graphics_window, 1000
 
 Return
 
 
+check_for_sublime_settings_window:
+{
+    SetTitleMatchMode RegEx
+    
+    ;WinWait, Preferences.sublime-settings
+    WinMaximize, .*(?:(sublime\-settings)|(sublime\-keymap)).*Sublime Text
+    
+    SetTimer, check_for_sublime_settings_window, 500
+}
+Return
+
+check_for_octave_graphics_window:
+{
+    SetTitleMatchMode 1
+    
+    ;WinWait, Figure 1
+    WinMaximize, Figure 1
+    
+    SetTimer, check_for_octave_graphics_window, 1000
+}
+Return
+
 
 NumpadDot::.
 
+; My keybord key F2 is not working
+^F1::Send {F2}
 F1::F2
-
 RCtrl::RAlt
+
+
+; Copy Paste in Bash on Ubuntu on Windows
+; https://stackoverflow.com/questions/38832230/copy-paste-in-bash-on-ubuntu-on-windows
+; #IfWinActive ahk_exe cmd.exe
+    ; ^+v::SendRaw %clipboard%
+; #IfWinActive
+
+
+; Disable Alt key tapping open menu in Windows
+; https://forum.sublimetext.com/t/disable-alt-key-tapping-open-menu-in-windows/27777
+#IfWinActive ahk_exe explorer.exe
+    ;~LAlt Up:: Return
+    F1::F2
+#IfWinActive
 
 
 ;MsgBox, 4, Calculator, Do you want to open Calculator?
 ;Return
+
+
+; https://superuser.com/questions/278951/my-keyboard-has-no-media-keys-can-i-control-media-without-them
+; ^!Left::Send   {Media_Prev}
+; ^!Right::Send  {Media_Next}
+; +^!Left::Send  {Volume_Down}
+; +^!Right::Send {Volume_Up}
+; ^!Down::Send   {Media_Play_Pause}
+; +^!Down::Send  {Volume_Mute}
+
+; ^!Left::Send  {Media_Prev}
+; ^!Right::Send {Media_Next}
+Pause::Send   {Media_Play_Pause}
+
+return
 
 
 
@@ -67,24 +117,35 @@ Return
 ;Return
 
 
+; Windows 10 build > 10240 (newers)
 ^!n::
     Sleep, 600
     Send {AppsKey}
     Sleep, 800
     Send w
-    Sleep, 300
-    Send w
-    Sleep, 300
-    Send {Enter}
-    Sleep, 400
-    Send {Up}
-    Sleep, 100
-    Send {Up}
-    Sleep, 100
-    Send {Up}
-    Sleep, 100
-    Send {Enter}
+    Sleep, 800
+    Send t
 return
+
+; Windows 10 build <= 10240 (olders)
+; ^!n::
+    ; Sleep, 600
+    ; Send {AppsKey}
+    ; Sleep, 800
+    ; Send w
+    ; Sleep, 300
+    ; Send w
+    ; Sleep, 300
+    ; Send {Enter}
+    ; Sleep, 400
+    ; Send {Up}
+    ; Sleep, 100
+    ; Send {Up}
+    ; Sleep, 100
+    ; Send {Up}
+    ; Sleep, 100
+    ; Send {Enter}
+; return
 
 
 ; Lock workstation shortcut to kick teamviewer asses
@@ -110,9 +171,12 @@ Return
 ;^!j:: Run "C:\Program Files (x86)\Notepad++\notepad++.exe"
 ;Return
 
-^+j:: Run "C:\Program Files (x86)\Notepad++\notepad++.exe" -multiInst
+^+j:: Run "F:\Notepad++\notepad++.exe" -multiInst
 ;^!j:: Run "C:\Notepad++Portable\App\Notepad++\notepad++.exe" -multiInst
-^!j:: Run "F:\Notepad++Portable\App\Notepad++\notepad++.exe" -multiInst
+
+;^!j:: Run "F:\Notepad++Portable\App\Notepad++\notepad++.exe" -multiInst
+; Update 2017, notepad2-mod agora pode chamar diretamente o do windows.
+^!j:: Run "notepad.exe" -multiInst
 Return
 
 ;--------------------------------------  ------------------------------------
@@ -146,9 +210,9 @@ Return
 ;#IfWinNotActive ahk_class MiniLyrics
 ;{
 
-^!Numpad1::Run "C:\Program Files (x86)\MiniLyrics\MiniLyrics.exe"
+^!Numpad1::Run "D:\User\Documents\MiniLyrics\MiniLyrics.exe"
 Return
-^!NumpadEnd::Run "C:\Program Files (x86)\MiniLyrics\MiniLyrics.exe"
+^!NumpadEnd::Run "D:\User\Documents\MiniLyrics\MiniLyrics.exe"
 Return
 
 ;}
