@@ -20,7 +20,7 @@
 #persistent
 
 SetTimer, check_for_sublime_settings_window, 500
-;SetTimer, check_for_octave_graphics_window, 1000
+; SetTimer, check_for_octave_graphics_window, 1000
 
 Return
 
@@ -171,7 +171,7 @@ Return
 ;^!j:: Run "C:\Program Files (x86)\Notepad++\notepad++.exe"
 ;Return
 
-^+j:: Run "F:\Notepad++\notepad++.exe" -multiInst
+; ^+j:: Run "F:\Notepad++\notepad++.exe" -multiInst
 ;^!j:: Run "C:\Notepad++Portable\App\Notepad++\notepad++.exe" -multiInst
 
 ;^!j:: Run "F:\Notepad++Portable\App\Notepad++\notepad++.exe" -multiInst
