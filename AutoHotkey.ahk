@@ -92,7 +92,7 @@ return
 
 
 ;
-^+8::
+^!8::
 Run "D:\User\Documents\AutoHotKey\MyBatches\kill_macro_player.vbs"
 
 process = MacroPlayer.exe
