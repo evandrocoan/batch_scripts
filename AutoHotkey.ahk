@@ -20,7 +20,7 @@
 #persistent
 
 SetTimer, check_for_sublime_settings_window, 500
-; SetTimer, check_for_octave_graphics_window, 1000
+; SetTimer, check_for_octave_graphics_window, 500
 
 Return
 
@@ -30,7 +30,7 @@ check_for_sublime_settings_window:
     SetTitleMatchMode RegEx
     
     ;WinWait, Preferences.sublime-settings
-    WinMaximize, .*(?:(sublime\-settings)|(sublime\-keymap)).*Sublime Text
+    WinMaximize, .*(?:(sublime\-settings)|(sublime\-keymap))[^\(]+\w+[^\)]+.*Sublime Text
     
     SetTimer, check_for_sublime_settings_window, 500
 }
@@ -218,10 +218,10 @@ Return
 ;}
 ;Return
 
-^!Numpad0::Run "D:\User\Dropbox\Applications\AIMP3-1350\AIMP3.exe" 
+^!Numpad0::Run "D:\User\Dropbox\Backups\AIMP\AIMP.exe" 
 Return
 
-^!NumpadIns::Run "D:\User\Dropbox\Applications\AIMP3-1350\AIMP3.exe" 
+^!NumpadIns::Run "D:\User\Dropbox\Backups\AIMP\AIMP.exe" 
 Return
 
 
