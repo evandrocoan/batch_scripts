@@ -28,10 +28,10 @@ Return
 check_for_sublime_settings_window:
 {
     SetTitleMatchMode RegEx
-    
+
     ;WinWait, Preferences.sublime-settings
     WinMaximize, .*(?:(sublime\-settings)|(sublime\-keymap))[^\(]+\w+[^\)]+.*Sublime Text
-    
+
     SetTimer, check_for_sublime_settings_window, 500
 }
 Return
@@ -39,10 +39,10 @@ Return
 check_for_octave_graphics_window:
 {
     SetTitleMatchMode 1
-    
+
     ;WinWait, Figure 1
     WinMaximize, Figure 1
-    
+
     SetTimer, check_for_octave_graphics_window, 1000
 }
 Return
@@ -206,22 +206,40 @@ Return
 ;#IfWinActive ahk_class MiniLyrics
 ;{
 ;^!Numpad1::Send !{F4}
-;} 
+;}
 ;#IfWinNotActive ahk_class MiniLyrics
 ;{
 
-^!Numpad1::Run "D:\User\Documents\MiniLyrics\MiniLyrics.exe"
-Return
-^!NumpadEnd::Run "D:\User\Documents\MiniLyrics\MiniLyrics.exe"
+; ^!Numpad1::Run "D:\User\Documents\MiniLyrics\MiniLyrics.exe"
+; Return
+; ^!NumpadEnd::Run "D:\User\Documents\MiniLyrics\MiniLyrics.exe"
+; Return
+
+^!Numpad1::
+^!NumpadEnd::
+if WinExist("ahk_exe D:\User\Documents\MiniLyrics\MiniLyrics.exe")
+    WinActivate, ahk_exe D:\User\Documents\MiniLyrics\MiniLyrics.exe
+else
+    Run, D:\User\Documents\MiniLyrics\MiniLyrics.exe
 Return
 
 ;}
 ;Return
 
-^!Numpad0::Run "D:\User\Dropbox\Backups\AIMP\AIMP.exe" 
-Return
 
-^!NumpadIns::Run "D:\User\Dropbox\Backups\AIMP\AIMP.exe" 
+; ^!NumpadIns::Run "D:\User\Dropbox\Backups\AIMP\AIMP.exe"
+; Return
+
+^!Numpad0::
+^!NumpadIns::
+if WinExist("ahk_exe D:\User\Dropbox\Backups\AIMP\AIMP.exe")
+    ; https://autohotkey.com/docs/misc/WinTitle.htm
+    ; https://autohotkey.com/docs/commands/WinActivate.htm
+    WinActivate, ahk_exe D:\User\Dropbox\Backups\AIMP\AIMP.exe
+else
+    ; Recently, makes Windows 10 to turn screen off  for some seconds, therefore only open it manually
+    ; Run, D:\User\Dropbox\Backups\AIMP\AIMP.exe
+    Return
 Return
 
 
@@ -230,15 +248,15 @@ Return
 ;#IfWinActive ahk_class QWidget
 ;{
 ;^!Numpad3::Send !{F4}
-;} 
+;}
 ;Return
 ;#IfWinNotActive ahk_class QWidget
 ;{
 
-^!Numpad3::Run "C:\Program Files (x86)\Last.fm\Last.fm Scrobbler.exe" 
+^!Numpad3::Run "C:\Program Files (x86)\Last.fm\Last.fm Scrobbler.exe"
 Return
 
-^!NumpadPgDn::Run "C:\Program Files (x86)\Last.fm\Last.fm Scrobbler.exe" 
+^!NumpadPgDn::Run "C:\Program Files (x86)\Last.fm\Last.fm Scrobbler.exe"
 Return
 
 ;}
