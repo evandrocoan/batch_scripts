@@ -20,10 +20,9 @@
 #persistent
 
 SetTimer, check_for_sublime_settings_window, 500
+SetTimer, check_for_media_player_classic_window, 500
 ; SetTimer, check_for_octave_graphics_window, 500
-
 Return
-
 
 check_for_sublime_settings_window:
 {
@@ -33,6 +32,15 @@ check_for_sublime_settings_window:
     WinMaximize, .*(?:(sublime\-settings)|(sublime\-keymap))[^\(]+\w+[^\)]+.*Sublime Text
 
     SetTimer, check_for_sublime_settings_window, 500
+}
+Return
+
+check_for_media_player_classic_window:
+{
+    ;WinWait, Preferences.sublime-settings
+    WinMaximize, ahk_class MediaPlayerClassicW
+
+    SetTimer, check_for_media_player_classic_window, 500
 }
 Return
 
@@ -51,9 +59,23 @@ Return
 NumpadDot::.
 
 ; My keybord key F2 is not working
-^F1::Send {F2}
-F1::F2
+; ^F1::Send {F2}
+; F1::F2
 RCtrl::RAlt
+
+
+; https://autohotkey.com/docs/commands/SoundSet.htm
+; Increase master volume by 10%
+; Insert::
+^!Up::
+SoundSet +10
+Return
+
+; Decrease master volume by 10%
+; ^Insert::
+^!Down::
+SoundSet -10
+Return
 
 
 ; Copy Paste in Bash on Ubuntu on Windows
@@ -220,7 +242,7 @@ Return
 if WinExist("ahk_exe D:\User\Documents\MiniLyrics\MiniLyrics.exe")
     WinActivate, ahk_exe D:\User\Documents\MiniLyrics\MiniLyrics.exe
 else
-    Run, D:\User\Documents\MiniLyrics\MiniLyrics.exe
+    Run, "D:\User\Documents\MiniLyrics\MiniLyrics.exe"
 Return
 
 ;}
@@ -233,9 +255,15 @@ Return
 ^!Numpad0::
 ^!NumpadIns::
 if WinExist("ahk_exe D:\User\Dropbox\Backups\AIMP\AIMP.exe")
+    ; Most times this does not work
     ; https://autohotkey.com/docs/misc/WinTitle.htm
     ; https://autohotkey.com/docs/commands/WinActivate.htm
-    WinActivate, ahk_exe D:\User\Dropbox\Backups\AIMP\AIMP.exe
+    ; WinActivate, ahk_exe AIMP.exe
+    ; WinActivate, ahk_class TAIMPMainForm
+
+    ; This is why I use this
+    ; https://stackoverflow.com/questions/557166/bring-to-front-for-windows-xp-command-shell
+    Run, "D:\User\Documents\NirSoft\nircmd-x64\nircmd.exe" win activate class "TAIMPMainForm"
 else
     ; Recently, makes Windows 10 to turn screen off  for some seconds, therefore only open it manually
     ; Run, D:\User\Dropbox\Backups\AIMP\AIMP.exe
