@@ -1,4 +1,4 @@
-' 
+'
 ' Only supports the Military Hourly format 24 hours for now. It speaks the time when called.
 ' It also, turn the NumLock key on, when it is off.
 '
@@ -14,10 +14,10 @@
 '
 ' You should have received a copy of the GNU General Public License
 ' along with this program.  If not, see <http://www.gnu.org/licenses/>.
-' 
-' 
-' 
-' 
+'
+'
+'
+'
 
 Dim speaks
 Dim speech
@@ -26,7 +26,13 @@ Dim currentTime
 Dim currentHour
 Dim currentMinute
 
-Set speech    = CreateObject("sapi.spvoice")
+Set speech = CreateObject("sapi.spvoice")
+Set speech.Voice = speech.GetVoices.Item(0)
+
+' Speech speed from -10 to 10
+speech.Rate = -2
+speech.Volume = 50
+
 currentTime   = Now()
 currentHour   = hour( currentTime )
 currentMinute = Minute( currentTime )
