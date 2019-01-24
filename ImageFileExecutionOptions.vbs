@@ -53,7 +53,10 @@ Dim index
 Dim oShell
 
 ' The first command line will the the program name to run
-sCmd = """" & LeftB(WScript.ScriptFullName, LenB(WScript.ScriptFullName) - LenB(WScript.ScriptName)) & WScript.Arguments(0) & """ -n """
+sCmd = """" & WScript.Arguments(0) & """ -n """
+
+' Use this for relative paths names to the current script location
+' sCmd = """" & LeftB(WScript.ScriptFullName, LenB(WScript.ScriptFullName) - LenB(WScript.ScriptName)) & WScript.Arguments(0) & """ -n """
 
 ' The `Image File Execution Options`, sends each command line's path as a separate command line
 ' argument to the VBScript. Hence here we gather them all together as one again.
