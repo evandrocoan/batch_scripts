@@ -43,7 +43,11 @@
 ' Create new Sting Value called Debugger
 '
 ' 4)
-' Modify value and enter wscript.exe "path to npp.vbs" e.g. wscript.exe "C:\Program Files\Notepad++\npp.vbs" "notepad++.exe"
+' Modify value and enter wscript.exe "path to npp.vbs" e.g.
+'   wscript.exe "D:\User\Dropbox\SoftwareVersioning\SpeakTimeVBScript\ImageFileExecutionOptions.vbs" "F:\SublimeText\sublime_text.exe"
+'
+'   (old)
+'   wscript.exe "C:\Program Files\Notepad++\npp.vbs" "notepad++.exe"
 '
 
 Option Explicit
