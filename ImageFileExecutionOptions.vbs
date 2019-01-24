@@ -78,6 +78,8 @@ Set oShell = CreateObject("WScript.Shell")
 ' https://stackoverflow.com/questions/13792429/is-there-a-way-to-start-a-program-minimized-with-vbscript-using-wscript-shell
 oShell.Run sCmd, 3, True
 
+WScript.Sleep 500
+
 ' How can I maximize, restore, or minimize a window with a vb script?
 ' https://stackoverflow.com/questions/3824284/how-can-i-maximize-restore-or-minimize-a-window-with-a-vb-script
 oShell.SendKeys "% x"
