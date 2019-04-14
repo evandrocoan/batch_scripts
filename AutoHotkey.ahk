@@ -62,23 +62,6 @@ NumpadDot::.
 ; My keybord key F2 is not working
 ; ^F1::Send {F2}
 ; F1::F2
-RCtrl::RAlt
-
-
-; https://autohotkey.com/docs/commands/SoundSet.htm
-; Increase master volume by 10%
-; Insert::
-^!Up::
->!Up::
-SoundSet +10
-Return
-
-; Decrease master volume by 10%
-; ^Insert::
-^!Down::
->!Down::
-SoundSet -10
-Return
 
 
 ; Copy Paste in Bash on Ubuntu on Windows
@@ -139,8 +122,26 @@ Return
 ; ^!Right::Send {Media_Next}
 
 Pause::CheckForPlayerWindow("ahk_class MediaPlayerClassicW", "{Media_Play_Pause}", "{Space}")
->!Left::CheckForPlayerWindow("ahk_class MediaPlayerClassicW", "{Media_Prev}", "^p")
->!Right::CheckForPlayerWindow("ahk_class MediaPlayerClassicW", "{Media_Next}", "^n")
+^!Left::CheckForPlayerWindow("ahk_class MediaPlayerClassicW", "{Media_Prev}", "^p")
+^!Right::CheckForPlayerWindow("ahk_class MediaPlayerClassicW", "{Media_Next}", "^n")
+
+
+; Remaps Ctrl to Ctrl + Alt
+RCtrl::RAlt
+
+; https://autohotkey.com/docs/commands/SoundSet.htm
+; Increase master volume by 10%
+; Insert::
+^!Up::
+SoundSet +10
+Return
+
+; Decrease master volume by 10%
+; ^Insert::
+^!Down::
+SoundSet -10
+Return
+
 
 ; https://stackoverflow.com/questions/55670223/how-to-determine-whether-a-window-is-visible-on-the-screen-with-ahk
 CheckForPlayerWindow(window_identifier, media_key, player_key) {
