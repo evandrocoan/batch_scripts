@@ -20,7 +20,7 @@
 #persistent
 
 SetTimer, check_for_sublime_settings_window, 500
-SetTimer, check_for_media_player_classic_window, 500
+; SetTimer, check_for_media_player_classic_window, 500
 ; SetTimer, check_for_octave_graphics_window, 500
 Return
 
@@ -29,7 +29,8 @@ check_for_sublime_settings_window:
     SetTitleMatchMode RegEx
 
     ;WinWait, Preferences.sublime-settings
-    WinMaximize, .*(?:(sublime\-settings)|(sublime\-keymap))[^\(]+\w+[^\)]+.*Sublime Text
+    ; WinMaximize, .*(?:(sublime\-settings)|(sublime\-keymap))[^\(]+\w+[^\)]+.*Sublime Text
+    WinMaximize, .*(?:(sublime\-settings)|(sublime\-keymap)|(sublime\-mousemap)).+Sublime Text
 
     SetTimer, check_for_sublime_settings_window, 500
 }
@@ -68,12 +69,14 @@ RCtrl::RAlt
 ; Increase master volume by 10%
 ; Insert::
 ^!Up::
+>!Up::
 SoundSet +10
 Return
 
 ; Decrease master volume by 10%
 ; ^Insert::
 ^!Down::
+>!Down::
 SoundSet -10
 Return
 
@@ -93,13 +96,40 @@ Return
 #IfWinActive
 
 
+; #IfWinActive ahk_exe Greenshot.exe
+;     enter::
+;     SendInput ^+c
+;     WinClose
+;     Return
+; #IfWinActive
+
+; Fixes Alt+F4 exiting the application instead of closing the foreground window
+; https://feedback.discordapp.com/forums/326712-discord-dream-land/suggestions/31661170-alt-f4-minimizes-to-tray-instead-of-closing-discor
+#IfWinActive ahk_exe Discord.exe
+    !F4::
+    WinClose ; use the window found above
+    Return
+#IfWinActive
+
+
+; ; Switching back to last *used* tab on Chrome
+; ; https://superuser.com/questions/402095/switching-back-to-last-used-tab-on-chrome
+; #IfWinActive ahk_exe chrome.exe
+;     ; https://autohotkey.com/docs/KeyList.htm
+;     ^Tab::Send !{s}
+;     Return
+; #IfWinActive
+
+
 ;MsgBox, 4, Calculator, Do you want to open Calculator?
 ;Return
 
 
+; https://autohotkey.com/docs/KeyList.htm
 ; https://superuser.com/questions/278951/my-keyboard-has-no-media-keys-can-i-control-media-without-them
-; ^!Left::Send   {Media_Prev}
-; ^!Right::Send  {Media_Next}
+;
+; >^Left::Send   {Media_Prev}
+; >^Right::Send  {Media_Next}
 ; +^!Left::Send  {Volume_Down}
 ; +^!Right::Send {Volume_Up}
 ; ^!Down::Send   {Media_Play_Pause}
@@ -107,10 +137,70 @@ Return
 
 ; ^!Left::Send  {Media_Prev}
 ; ^!Right::Send {Media_Next}
-Pause::Send   {Media_Play_Pause}
 
+Pause::CheckForPlayerWindow("ahk_class MediaPlayerClassicW", "{Media_Play_Pause}", "{Space}")
+>!Left::CheckForPlayerWindow("ahk_class MediaPlayerClassicW", "{Media_Prev}", "^p")
+>!Right::CheckForPlayerWindow("ahk_class MediaPlayerClassicW", "{Media_Next}", "^n")
+
+; https://stackoverflow.com/questions/55670223/how-to-determine-whether-a-window-is-visible-on-the-screen-with-ahk
+CheckForPlayerWindow(window_identifier, media_key, player_key) {
+    WinGetTitle, window_title, %window_identifier%
+
+    if( !window_title ) {
+        Send % media_key
+    }
+    else {
+        WinWaitActive, %window_title%, , 0.1
+        is_window_focused := true
+
+        if( ErrorLevel ) {
+            ; MsgBox, WinWait timed out.
+            is_window_focused := false
+        }
+        else {
+            PlayPauseVideo(player_key)
+            return
+        }
+
+        counter := 4
+        first_result := GetRunningWindowText(window_title)
+
+        while( counter > 0) {
+            sleep, 200
+            counter := counter - 1
+            second_result := GetRunningWindowText(window_title)
+
+            if( first_result != second_result ) {
+                PlayPauseVideo(player_key)
+                return
+            }
+        }
+
+        if( is_window_focused ) {
+            PlayPauseVideo(player_key)
+        }
+        else {
+            Send % media_key
+        }
+    }
+}
+
+GetRunningWindowText(window_title) {
+    WinGetText, window_text, %window_title%
+
+    ; FoundPos := RegExMatch(window_text, "O)(?:\d\d:)+(?<frames>\d\d)", first_result)
+    FoundPos := RegExMatch(window_text, "O)drawn: (?<frames>\d+)", first_result)
+
+    ; Msgbox % first_result.Count() ": " first_result.Name(1) "=" first_result["frames"]
+    return first_result["frames"]
+}
+
+PlayPauseVideo(player_key) {
+    ; Msgbox, It is running video...
+    WinActivate, ahk_class MediaPlayerClassicW
+    SendInput % player_key
+}
 return
-
 
 
 ;
