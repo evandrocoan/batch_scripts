@@ -162,7 +162,7 @@ CheckForPlayerWindow(window_identifier, media_key, player_key) {
             return
         }
 
-        counter := 4
+        counter := 5
         first_result := GetRunningWindowText(window_title)
 
         while( counter > 0) {
