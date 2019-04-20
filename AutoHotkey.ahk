@@ -13,6 +13,12 @@
 ; and it launches a new Notepad window (or activates an existing one).  To
 ; try out these hotkeys, run AutoHotkey again, which will load this file.
 
+; Note: From now on whenever you run AutoHotkey directly, this script
+; will be loaded.  So feel free to customize it to suit your needs.
+
+; Please read the QUICK-START TUTORIAL near the top of the help file.
+; It explains how to perform common automation tasks such as sending
+; keystrokes and mouse clicks.  It also explains more about hotkeys.
 
 ; See:
 ; How to start an infinity loop on AutoHotKey when reloading the script?
@@ -108,24 +114,6 @@ NumpadDot::.
 ;Return
 
 
-; https://autohotkey.com/docs/KeyList.htm
-; https://superuser.com/questions/278951/my-keyboard-has-no-media-keys-can-i-control-media-without-them
-;
-; >^Left::Send   {Media_Prev}
-; >^Right::Send  {Media_Next}
-; +^!Left::Send  {Volume_Down}
-; +^!Right::Send {Volume_Up}
-; ^!Down::Send   {Media_Play_Pause}
-; +^!Down::Send  {Volume_Mute}
-
-; ^!Left::Send  {Media_Prev}
-; ^!Right::Send {Media_Next}
-
-Pause::CheckForPlayerWindow("ahk_class MediaPlayerClassicW", "{Media_Play_Pause}", "{Space}")
-^!Left::CheckForPlayerWindow("ahk_class MediaPlayerClassicW", "{Media_Prev}", "^p")
-^!Right::CheckForPlayerWindow("ahk_class MediaPlayerClassicW", "{Media_Next}", "^n")
-
-
 ; Remaps Ctrl to Ctrl + Alt
 RCtrl::RAlt
 
@@ -142,9 +130,28 @@ Return
 SoundSet -10
 Return
 
+; https://autohotkey.com/docs/KeyList.htm
+; https://superuser.com/questions/278951/my-keyboard-has-no-media-keys-can-i-control-media-without-them
+;
+; >^Left::Send   {Media_Prev}
+; >^Right::Send  {Media_Next}
+; +^!Left::Send  {Volume_Down}
+; +^!Right::Send {Volume_Up}
+; ^!Down::Send   {Media_Play_Pause}
+; +^!Down::Send  {Volume_Mute}
+
+; ^!Left::Send  {Media_Prev}
+; ^!Right::Send {Media_Next}
+
+Pause::CheckForPlayerWindow("ahk_class MediaPlayerClassicW",
+        "{Media_Play_Pause}", "{Space}", "false")
+
+^!Left::CheckForPlayerWindow("ahk_class MediaPlayerClassicW", "{Media_Prev}", "^p")
+^!Right::CheckForPlayerWindow("ahk_class MediaPlayerClassicW", "{Media_Next}", "^n")
+
 
 ; https://stackoverflow.com/questions/55670223/how-to-determine-whether-a-window-is-visible-on-the-screen-with-ahk
-CheckForPlayerWindow(window_identifier, media_key, player_key) {
+CheckForPlayerWindow(window_identifier, media_key, player_key, reactive=true) {
     WinGetTitle, window_title, %window_identifier%
 
     if( !window_title ) {
@@ -159,7 +166,7 @@ CheckForPlayerWindow(window_identifier, media_key, player_key) {
             is_window_focused := false
         }
         else {
-            PlayPauseVideo(player_key)
+            PlayPauseVideo(window_identifier, player_key, reactive)
             return
         }
 
@@ -172,13 +179,13 @@ CheckForPlayerWindow(window_identifier, media_key, player_key) {
             second_result := GetRunningWindowText(window_title)
 
             if( first_result != second_result ) {
-                PlayPauseVideo(player_key)
+                PlayPauseVideo(window_identifier, player_key, reactive)
                 return
             }
         }
 
         if( is_window_focused ) {
-            PlayPauseVideo(player_key)
+            PlayPauseVideo(window_identifier, player_key, reactive)
         }
         else {
             Send % media_key
@@ -196,10 +203,19 @@ GetRunningWindowText(window_title) {
     return first_result["frames"]
 }
 
-PlayPauseVideo(player_key) {
+PlayPauseVideo(window_identifier, player_key, reactive=true) {
     ; Msgbox, It is running video...
-    WinActivate, ahk_class MediaPlayerClassicW
+
+    if( reactive == true ) {
+        WinGetActiveTitle, active_window_title
+    }
+
+    WinActivate, %window_identifier%
     SendInput % player_key
+
+    if( reactive == true ) {
+        WinActivate, %active_window_title%
+    }
 }
 return
 
@@ -427,13 +443,3 @@ Return
 ;--------------------------------------  ------------------------------------
 
 ;--------------------------------------  ------------------------------------
-
-
-
-
-; Note: From now on whenever you run AutoHotkey directly, this script
-; will be loaded.  So feel free to customize it to suit your needs.
-
-; Please read the QUICK-START TUTORIAL near the top of the help file.
-; It explains how to perform common automation tasks such as sending
-; keystrokes and mouse clicks.  It also explains more about hotkeys.
