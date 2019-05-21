@@ -327,7 +327,7 @@ Return
 
 ;-------------------------------------- Rodar Calculadora ------------------------------------
 
-^!o:: Run "%windir%\system32\calc.exe"
+^!o:: Run "D:\User\Documents\speedcrunch-0.12-win32\speedcrunch.exe"
 Return
 
 ;Abre e fecha a janela do MiniLyrics
