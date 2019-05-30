@@ -114,6 +114,35 @@ NumpadDot::.
 ;Return
 
 
+; https://autohotkey.com/board/topic/108437-hold-shift-with-w-key/
+; https://gist.github.com/cheeaun/160999
+; https://autohotkey.com/board/topic/24023-press-key-when-scroll-wheel-shift-are-used/
+; https://community.coreldraw.com/talk/coreldraw_graphics_suite_x4/f/coreldraw-x4/13357/zoom-settings
+; https://community.coreldraw.com/talk/coreldraw_graphics_suite_x6/f/coreldraw-x6/35290/shift-zoom-not-working-in-x6
+; https://community.coreldraw.com/talk/coreldraw_graphics_suite_x7/f/coreldraw-graphics-suite-x7/51248/zoom-increments
+; https://community.coreldraw.com/talk/coreldraw_graphics_suite_x5/f/coreldraw-graphics-suite-x5/37920/is-there-a-way-to-set-zoom-tool-to-smaller-increments/179493
+#IfWinActive ahk_exe CorelDRW.exe
+    WheelUp::
+        Send, {Shift down}
+        Send, {WheelUp}
+        Send, {Shift up}
+        Return
+
+    WheelDown::
+        Send, {Shift down}
+        Send, {WheelDown}
+        Send, {Shift up}
+        Return
+
+    +WheelUp::
+        Send, {WheelUp}
+        Return
+
+    +WheelDown::
+        Send, {WheelDown}
+        Return
+#IfWinActive
+
 ; Remaps Ctrl to Ctrl + Alt
 RCtrl::RAlt
 
