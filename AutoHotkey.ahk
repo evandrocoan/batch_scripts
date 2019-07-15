@@ -172,10 +172,13 @@ Return
 ; ^!Left::Send  {Media_Prev}
 ; ^!Right::Send {Media_Next}
 
-Pause::CheckForPlayerWindow("ahk_class MediaPlayerClassicW", "{Media_Play_Pause}", "{Space}", "false")
+; Pause::CheckForPlayerWindow("ahk_class MediaPlayerClassicW", "{Media_Play_Pause}", "{Space}", "false")
+; ^!Left::CheckForPlayerWindow("ahk_class MediaPlayerClassicW", "{Media_Prev}", "^p")
+; ^!Right::CheckForPlayerWindow("ahk_class MediaPlayerClassicW", "{Media_Next}", "^n")
 
-^!Left::CheckForPlayerWindow("ahk_class MediaPlayerClassicW", "{Media_Prev}", "^p")
-^!Right::CheckForPlayerWindow("ahk_class MediaPlayerClassicW", "{Media_Next}", "^n")
+Pause::Send {Media_Play_Pause}
+; ^!Left::Send {Media_Prev}
+; ^!Right::Send {Media_Next}
 
 
 ; https://stackoverflow.com/questions/55670223/how-to-determine-whether-a-window-is-visible-on-the-screen-with-ahk
