@@ -65,6 +65,19 @@ Return
 
 NumpadDot::.
 
+
+; https://superuser.com/questions/309005/disable-the-activation-of-the-menu-bar-when-alt-is-pressed-in-windows-7
+#IfWinActive ahk_exe sublime_text.exe
+    Alt::
+    KeyWait, Alt
+    return
+
+    LAlt Up::
+    if (A_PriorKey = "Alt")
+        return
+    return
+#IfWinActive
+
 ; My keybord key F2 is not working
 ; ^F1::Send {F2}
 ; F1::F2
