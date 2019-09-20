@@ -267,6 +267,11 @@ Loop
 Return
 
 
+; https://www.groovypost.com/howto/howto/windows-programs-always-on-top/
+^!i::Winset, Alwaysontop, , A
+Return
+
+
 ;^!n:: Run "\\192.168.25.215\lg-d685\external_SD\fastnotse\Transferencia.txt"
 ;Return
 
