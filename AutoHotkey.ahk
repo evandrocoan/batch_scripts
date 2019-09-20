@@ -25,7 +25,7 @@
 ; http://stackoverflow.com/questions/40981048/
 #persistent
 
-SetTimer, check_for_sublime_settings_window, 500
+; SetTimer, check_for_sublime_settings_window, 500
 ; SetTimer, check_for_media_player_classic_window, 500
 ; SetTimer, check_for_octave_graphics_window, 500
 Return
