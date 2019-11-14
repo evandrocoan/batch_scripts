@@ -1,0 +1,85 @@
+
+// Pointing folder to different disk
+// https://superuser.com/questions/386018/pointing-folder-to-different-disk
+
+// Within different drives
+mklink /D destino origem
+mklink /D D:\Evandro D:\User
+
+// Within the same drive
+mklink /J destino origem
+mklink /J "D:\User\Dropbox\UFSC\TCC" "D:\User\GoogleDrive\TCC"
+
+
+
+http://www.maximumpc.com/how-to-use-symbolic-links-to-master-vistas-file-system/
+How-To: Use Symbolic Links to Master Vista's File System
+Alex Castle May 12, 2009
+With Windows Vista, Microsoft introduced a new capability into its operating system: the ability to create symbolic links. Accessible only from the command line, symbolic links aren’t something the average user would need to be familiar with to use Windows, but they are a powerful way to manipulate the file system. In this article, we’ll provide a little background info about symbolic links and hard links, and show you how to use the mklink command to create them. We’ll also show you a couple of examples, including how to use mklink to manage your Steam games and music files. so read on, and find out how you could be taking full advantage of symbolic links!
+What is a symbolic link?
+A symbolic link is very much like what you would normally call a “shortcut.” it creates a pointer to a different part of the file system, redirecting your computer to that location when accessed. What makes a symbolic link different from a shortcut is that it is handled at the operating system level, rather than at the application level. This means that whereas only a few programs (such as explorer.exe) know how to handle a shortcut file, a symbolic link can be used with almost any program that deals with the file system.
+With a symbolic link, if the target directory or file is deleted, the link becomes non-functioning, as it points to a file that no longer exists. In a way, this gives symbolic links extra flexibility, as you can create a symbolic link to a file or folder that doesn’t actually exist, but will later. Symbolic links take up no space, and if you delete a symbolic link, nothing happens to the original data.
+
+It's actually considerably more complicated than what's shown in the above graph, but this gives you an idea of the structure a symbolic link creates.
+What is a hard link?
+A hard link is functionally very similar to a symbolic link, but is fundamentally different. Rather than pointing to a part of the file system, a hardlink points to data in memory. In other words, when you create a hard link, you’re not merely creating a link or a shortcut to another file—you’re creating a new file which points to already extant data.
+
+This is best illustrated by mentioning that if you delete the original file, any hard links to that file will still work normally, as the data they pointed to is still there.  The data will remain until every hard link pointing to it is deleted.
+
+
+How to use the mklink command
+To create a symbolic link with mklink, use the following syntax:
+mklink <link> <target>
+The parameter <link> is the name you want to give to the newly created link. The <target> parameter is where you specify the location that you want to link to. The location can be an absolute path (such as “C:\Documents and Settings\acastle\My Documents\Articles”), a relative path (such as “Articles\October 08”), or the address of a network share (such as 192.168.1.3). The target can be a single file or an entire folder, depending on which command line options are specified. These options are as follows:
+Default
+If you use mklink without any command line flags, it will default to creating a file symbolic link. Thus, the specified target must be a single file. For example, to link a game save file to a mounted network drive, you could enter
+
+mklink D:\Games \civilization iv\game1.sav M:\Games\civilization iv\game1.sav
+/D
+With the /D flag, mklink creates a directory symbolic link. This is just a symbolic link that points to a whole directory rather than a file. You would generally use such a link the same way you would use a shortcut to a directory. As an example, it could look like this:
+
+mklink D:\Photos \\192.168.1.4\photos
+/H
+With the /H flag, mklink creates a hard link, rather than a soft link, as described at the beginning of this article. It must point to a file, not a directory. It would look like this:
+
+mklink /H C:\app\config.ini E:\apps\exampleapp\config.ini
+/J
+The /J flag is the hard link equivalent of the /D flag. It creates a hard link to a directory, rather than a single file. For example, if you wanted to create a hard link to a folder, you could use this command:
+mklink /J D:\Articles C:\Users\username\Documents\Articles
+
+If at any time you simply enter " mklink " into the command prompt, you'll be shown a brief reminder of what the command line options are.
+
+
+Sample Uses
+Alright, so that was a whole lot of theory about symbolic links, but what are they actually good for? As a basic tool for manipulating the file system, they’ve got potentially endless uses, but most of the ways we’ve used the in the past involve using hard links to provide extra flexibility for applications that don’t normally allow you to change where certain data is stored. For example:
+Storing Steam Games Outside the Steam Folder
+Steam is an excellent example of a application which is not entirely flexible in the way it uses the file system. When you first install Steam, you can choose where you want games saved, but after that point, every new game you download is installed to the same place. With hard links, we can fix that.
+
+Why would we want to have Steam games installed in different places? Let’s look at the following example. Say we have a computer with two hard drives: a 300GB WD Velociraptor and a 1.5TB Seagate Barracuda. We use the faster-accessing Velociraptor for gaming, so we install Steam on one of its partitions. Eventually, the Velociraptor begins to fill up, so we have to start evaluating how we’re using the space. For a game like Crysis, which will be accessing tons of data off the disk—fast—we definitely want to use the faster hard drive. However, for a game like Civilization 4, which is older and loads quickly pretty much no matter what, we could afford to move the game’s data over to the slower drive, clearing up a couple of gigabytes on the Velociraptor.
+
+
+
+
+So how would we go about doing it? All we need to do is find the files we want to move. In our example, they’re located in D:\Games\Steam\steamapps\common\sid meier's civilization iv. We’ll move that folder somewhere on the 2TB drive, for instance to E:\Games\sid meier's civilization iv. Now, before starting up Steam again, we need to create a hard link to fill in the hole we left when we moved the folder. The command we’ll use to do that is:
+
+mklink /J D:\Games\Steam\steamapps\common\sid meier's civilization iv E:\Games\sid meier's civilization iv
+
+Now, when Steam looks for the Civilization 4 files, it will find them right where it’s expecting. However, the hard link is pointing it to data that’s actually on the 2TB drive. Using this technique, we can store our games wherever we like.
+Managing Media Files Stored on a Network
+One useful feature of symbolic links, as they are implemented in Windows Vista and later, is that they can point to other locations on a local network, as long as the other computer is also running a post-XP Windows operating system. This opens up a whole new set of uses for symbolic links.
+For example, say you’ve got a home server set up to store all your media files, and you want to use iTunes to access your music from any other computer on your local network. iTunes allows you to choose where music is stored, allowing you to select your media server, but that’s not everything you need. You see, iTunes stores all the data it uses to make its big track index run smoothly in an XML file called a “library.” This library file is created automatically by iTunes; you cannot normally choose to access a library on a network drive. However, with mklink, this is easy.
+
+Say you’ve mapped your media server’s music folder to drive letter M. All you would have to do to make your music library much more flexible is follow these steps:
+
+1.    Locate the folder containing the XML library files. By default, it’s usually found in username\music\iTunes.
+
+2.    Now, much like we did with the Steam game, we’re going to swap this file out with a mklink folder. So, first copy the contents of this folder to a folder on the network drive. You can name it whatever, we chose M:\shared music libraries.
+
+3.    Next, delete the folder from your local machine.
+
+4.    Finally, create the symbolic link. For iTunes, we don’t need a hardlink, so we’ll use the following command:
+
+Mklink /D C:\Users\Username\Music\iTunes M:\shared music libraries
+
+
+And that’s it. Now your music index files are saved on the server alongside the music files themselves. This allows you to get instant access to all these files from any computer on the network, by simply running the above mklink command on those computers.

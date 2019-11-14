@@ -1,0 +1,7 @@
+Para isso, ative the Filter Keys, em acessibilidade no painel de controle. 
+
+Depois use o programa FilterKeysSetter.exe para aumentar a taxa de repetição. 
+
+Diminua a taxa de repetição das  filter keys para menos que o mínimo de 0.3 que é permitido. 
+
+Utilize 20 ms.
