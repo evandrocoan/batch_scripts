@@ -1,0 +1,39 @@
+
+I know you are asking the question, why the f#ck would you want to move from #Github 
+to #Bitbucket, however some clients just dont want to pay $7 a month for a private repo...
+
+Moving right alone now...
+
+Make sure you have a cloned version of the repo somewhere nice and local on your system...
+
+$ git clone git@github.com:[user or org name]/[repo name].git #Remove the []
+This will by default clone all the remote branches which can be found by:
+
+$ git branch -r
+Then you need to add local tracking branches for all your remote branches:
+
+$git branch --track development origin/development #Repeat until all remote branches have local branches
+Now go and create your new repo at Bitbucket. (You should be able to work this bit out... Im hoping)
+
+Then add this as a remote in your local git repo, like so:
+
+$ git remote add bitbucket git@bitbucket.org:[user or org name]/[repo name].git #Again remove the []
+Now lets push all the branches to bitbucket:
+
+$ git push --all bitbucket
+Then all the tags:
+
+$ git push --tags bitbucket
+And finally rename the remotes, I alway like to just keep the point to github around like so:
+
+$ git remote rename origin github
+And the change Btibucket to origin:
+
+$ git remote rename bitbucket origin
+You should now have moved over your repo to bitbucket. :)
+
+Let me know if I missed anything. Thanks!
+
+Para finalizar:
+git push origin --force --all
+git push origin --force --tags

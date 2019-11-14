@@ -1,0 +1,54 @@
+http://stackoverflow.com/a/1186549/4934640
+http://stackoverflow.com/questions/1186535/how-to-modify-a-specified-commit-in-git
+
+
+You can use git rebase, for example, if you want to modify back to commit bbc643cd, run
+
+$ git rebase --interactive 'bbc643cd^'
+In the default editor, modify pick to edit in the line whose commit you want to modify. Make your
+changes and then commit them with the same message you had before:
+
+$ git commit --all --amend --no-edit
+to modify the commit, and after that
+
+$ git rebase --continue
+to return back to the previous head commit.
+
+WARNING: Note that this will change the SHA-1 of that commit as well as all children -- in other
+words, this rewrites the history from that point forward. You can break repos doing this if you
+push using the command git push --force
+
+
+Use the awesome interactive rebase:
+
+git rebase -i @~9   # Show the last 9 commits in a text editor
+Find the commit you want, change pick to e (edit), and save and close the file. Git will rewind to that commit, allowing you to either:
+
+use git commit --amend to make changes, or
+use git reset @~ to discard the last commit, but not the changes to the files (i.e. take you to the point you were at when you'd edited the files, but hadn't committed yet).
+The latter is useful for doing more complex stuff like splitting into multiple commits.
+
+Then, run git rebase --continue, and Git will replay the subsequent changes on top of your modified commit. You may be asked to fix some merge conflicts.
+
+Note: @ is shorthand for HEAD, and ~ is the commit before the specified commit.
+
+Read more about rewriting history in the Git docs.
+
+
+
+Don't be afraid to rebase
+
+ProTip™:   Don't be afraid to experiment with "dangerous" commands that rewrite history* — Git doesn't delete your commits for 90 days by default; you can find them in the reflog:
+
+$ git reset @~3   # go back 3 commits
+$ git reflog
+c4f708b HEAD@{0}: reset: moving to @~3
+2c52489 HEAD@{1}: commit: more changes
+4a5246d HEAD@{2}: commit: make important changes
+e8571e4 HEAD@{3}: commit: make some changes
+... earlier commits ...
+$ git reset 2c52489
+... and you're back where you started
+* Watch out for options like --hard and --force though — they can discard data.
+* Also, don't rewrite history on any branches you're collaborating on.
+

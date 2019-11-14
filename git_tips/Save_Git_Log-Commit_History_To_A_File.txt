@@ -1,0 +1,14 @@
+
+
+
+
+
+
+// Just run:
+git log --stat > file.txt
+
+
+
+// --stat
+https://git-scm.com/book/ch2-3.html
+

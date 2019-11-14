@@ -1,0 +1,14 @@
+Hotfix:
+    Se alguém reportar um bug você salva o que esta fazendo em uma nova 
+    branch e então você inicia uma nova Hotfix, e corrige ela e finaliza ela.
+
+Feature:
+    Quando você passa a trabalhar em um novo recurso para o seu programa 
+    você cria uma nova Feature e faz as commits necessárias para terminar a 
+    criação do seu novo recurso.
+
+Release:
+    Quando você terminou de mesclar features o suficiente, então você cria uma 
+    nova Release e começa e testar todo o seu software e corrige os erros e 
+    imperfeições encontras criando commits para eles.
+

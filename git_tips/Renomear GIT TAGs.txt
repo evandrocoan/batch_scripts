@@ -1,0 +1,89 @@
+http://stackoverflow.com/questions/21738647/change-date-of-git-tag-or-github-release-based-on-it
+
+Summary
+For each tag that needs to be changed:
+
+Go back in time to the commit representing the tag
+Delete the tag (locally and remotely)
+This will turn your "Release" on GitHub into a Draft that you can later delete.
+Re-add the same-named tag using a magic invocation that sets its date to the date of the commit.
+Push the new tags with fixed dates back up to GitHub.
+Go to GitHub, delete any now-draft releases, and re-create new releases from the new tags
+In code:
+
+# Fixing tag named '1.0.1'
+git checkout 1.0.1               # Go to the associated commit
+git tag -d 1.0.1                 # Locally delete the tag
+git push origin :refs/tags/1.0.1 # Push this deletion up to GitHub
+
+# Create the tag, with a date derived from the current head
+GIT_COMMITTER_DATE="$(git show --format=%aD | head -1)" git tag -a 1.0.1 -m"v1.0.1"
+
+git push --tags                  # Send the fixed tags to GitHub
+
+
+
+
+
+
+# This moves you to the point in history where the commit exists
+git checkout SHA1_OF_PAST_COMMIT
+
+# This command gives you the datetime of the commit you're standing on
+git show --format=%aD  | head -1
+
+# And this temporarily sets git tag's clock back to the date you copy/pasted in from above
+GIT_COMMITTER_DATE="Thu, 26 Feb 2009 12:00:32 -0200" git tag -a v1.1.290 -m "2009-02-26 | v1.1.290
+
+ * Added a check for valid map when populating the various map listings from map list files.
+ * Fixed error whem empty server map file doesn't exist.
+ * Fixed issue whereas Galileo would set the time limit to 0 in the course of it's regular
+   activities but then sometimes not reset it to the original time limit afterwards.
+ * No longer tries to print menus in color if the game mod doesn't support colored menus.
+ * Fixed possible RTV exploit by introducing a delay before a single player can RTV after a
+    map change. It's the lesser of either 2 minutes or the value of gal_rtv_wait.
+ * Added additional information to comments for gal_nom_mapfile, gal_vote_mapfile, and
+    gal_emptyserver_mapfile in galileo.cfg.
+ * Changed default for gal_nom_prefixes from 1 to 0. In other words, the prefix functionality
+    will be turned off by default.
+ * Will no longer overwrite an existing menu. This means if a player has another menu open when
+   the map vote starts, they won't see the map vote until the other menu is closed. It also means
+   that, after a player voted and if the server is showing the vote progress, if another menu
+   overwrites Galileo's, the progress won't be shown again until the other menu has been closed.
+   This only affects people that show the in-progress vote status.
+ * Now obeys a setting of '0' for gal_endofmapvote. Would previously erroneously present a vote
+   regardless of the setting.
+ * New CVAR, gal_sounds_mute, to indicate if any of the sentences spoken during various events are
+   muted. See galileo.cfg for more information.
+ * Added code to handle automated version info from SVN. This is of no consequence to anyone but
+   me really, but I wanted to include it in the change log since it actually involves a change
+   to the code.
+ * Removed benign code that was prepped for feature utilizing standard maps of each mod. There
+   is no longer any plans to add any information regarding standard maps as I see no use for it.
+ * Removed the following language keys:
+   GAL_STANDARD_NOTFOUND
+   GAL_STANDARD_TOOMANY
+   GAL_STANDARD_UNKNOWNMOD
+ * Fixed the 'vote filler groups' feature that was previously working incorrectly.
+"
+
+# Combining the two...
+GIT_COMMITTER_DATE="$(git show --format=%aD  | head -1)" git tag -a 0.9.33 -m "Retroactively tagging version 0.9.33
+"
+
+However, if you have already added the tag, you cannot use the above with git tag -f existingtag or else git will complain when you try to merge
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

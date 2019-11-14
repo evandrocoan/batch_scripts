@@ -1,0 +1,10 @@
+How to remove all files which are missing from working directory 
+git ls-files -z --deleted  git update-index -z --remove --stdin
+
+To both remove files that are missing, and add all files that are new, one can use the (much easier) command 
+git add -A
+
+
+How to un add in git?
+git reset core/doNotAdd.php
+git reset core/noWayYouWantToAdd.php

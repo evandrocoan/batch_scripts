@@ -1,0 +1,48 @@
+https://www.git-tower.com/learn/git/faq/change-author-name-email
+
+
+git rebase -i HEAD~5
+
+git commit --amend --author="username <username@hotmail.com>" --no-edit
+
+
+git rebase -i e161da72f687452cca79a12e7e2698e6a2db0a1f^
+
+git commit --amend --no-edit --author="username <username@hotmail.com>" && git rebase --continue
+
+
+Using Interactive Rebase
+
+Interactive Rebase is the Swiss Army Knife of tools in Git: it allows you to do and change almost anything. However, being as powerful as it is, this also means you can very easily shoot yourself in the foot. Use it with care (and possibly read up on it)!
+
+The first step is to identify the last "good" commit and provide its hash to the rebase command:
+
+$ git rebase -i -p 0ad14fa5
+02-interactive-rebase
+Your editor will open, requesting you to mark all the commits you want to change with the "edit" keyword.
+
+Git will now walk you through each commit, giving you the chance to mold it as you desire:
+
+Stopped at 5772b4bf2... Add images to about page
+You can amend the commit now, with
+
+    git commit --amend
+
+Once you are satisfied with your changes, run
+
+    git rebase --continue
+Your job, now, is to correct the author information and then continue to the next concerned commit object until you've edited all the commits you just marked:
+
+$ git commit --amend --author="John Doe <john@doe.org>" --no-edit
+$ git rebase --continue
+
+
+
+
+
+
+
+
+
+
+
