@@ -1,12 +1,14 @@
 Windows Registry Editor Version 5.00
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\shell\openbashhere]
+@="Open Bash Here"
 "Icon"="D:\\Programas\\ubuntu.ico\\ubuntu.ico"
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\shell\openbashhere\command]
 @="cmd.exe /c cd /d \"%V\" && bash.exe"
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\Drive\shell\openbashhere]
+@="Open Bash Here"
 "Icon"="D:\\Programas\\ubuntu.ico\\ubuntu.ico"
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\Drive\shell\openbashhere\command]
@@ -15,12 +17,14 @@ Windows Registry Editor Version 5.00
 
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\Background\shell\openbashhere]
+@="Open Bash Here"
 "Icon"="D:\\Programas\\ubuntu.ico\\ubuntu.ico"
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\Background\shell\openbashhere\command]
 @="cmd.exe /c cd /d \"%V\" && bash.exe"
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\DesktopBackground\shell\openbashhere]
+@="Open Bash Here"
 "Icon"="D:\\Programas\\ubuntu.ico\\ubuntu.ico"
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\DesktopBackground\shell\openbashhere\command]
