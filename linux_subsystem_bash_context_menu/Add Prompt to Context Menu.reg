@@ -1,12 +1,14 @@
 Windows Registry Editor Version 5.00
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\shell\opencmdprompthere]
+@="Command Prompt"
 "Icon"="C:\\Windows\\System32\\cmd.exe,0"
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\shell\opencmdprompthere\command]
 @="cmd.exe /c cd /d \"%V\" && cmd.exe"
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\Drive\shell\opencmdprompthere]
+@="Command Prompt"
 "Icon"="C:\\Windows\\System32\\cmd.exe,0"
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\Drive\shell\opencmdprompthere\command]
@@ -15,12 +17,14 @@ Windows Registry Editor Version 5.00
 
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\Background\shell\opencmdprompthere]
+@="Command Prompt"
 "Icon"="C:\\Windows\\System32\\cmd.exe,0"
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\Background\shell\opencmdprompthere\command]
 @="cmd.exe /c cd /d \"%V\" && cmd.exe"
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\DesktopBackground\shell\opencmdprompthere]
+@="Command Prompt"
 "Icon"="C:\\Windows\\System32\\cmd.exe,0"
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\DesktopBackground\shell\opencmdprompthere\command]
