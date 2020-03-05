@@ -90,7 +90,15 @@ End With
 ' How to run Batch script received as argument on VBscript?
 ' https://stackoverflow.com/questions/45239157/how-to-run-batch-script-received-as-argument-on-vbscript
 '
-CreateObject("Wscript.Shell").Run Trim( arglist ), 0, False
+Set myshell = CreateObject("Wscript.Shell")
+returncode = myshell.Run( Trim( arglist ), 0, True )
 
+If returncode <> 0 Then
+    Set WshShellExec = myshell.Exec( Trim( arglist ) )
 
+    MsgBox "Error '" & returncode & "' running the script:" _
+        & vbCrLf & "'" & Trim( arglist ) & "'" & vbCrLf _
+        & WshShellExec.StdOut.ReadAll & WshShellExec.StdErr.ReadAll
+End If
 
+WScript.Quit( returncode )
