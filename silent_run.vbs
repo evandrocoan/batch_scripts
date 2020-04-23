@@ -97,8 +97,9 @@ If returncode <> 0 Then
     Set WshShellExec = myshell.Exec( Trim( arglist ) )
 
     MsgBox "Error '" & returncode & "' running the script:" _
-        & vbCrLf & "'" & Trim( arglist ) & "'" & vbCrLf _
-        & WshShellExec.StdOut.ReadAll & WshShellExec.StdErr.ReadAll
+        & vbCrLf & "'" & Trim( arglist ) & "'" _
+        & vbCrLf & WshShellExec.StdOut.ReadAll _
+        & vbCrLf & WshShellExec.StdErr.ReadAll
 End If
 
 WScript.Quit( returncode )
