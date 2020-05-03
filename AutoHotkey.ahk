@@ -264,6 +264,19 @@ PlayPauseVideo(window_identifier, player_key, reactive=true) {
 return
 
 
+; https://superuser.com/questions/38687/windows-program-to-remove-titlebar-frame-etc-from-a-window
+;-Caption
+LWIN & LButton::
+WinSet, Style, -0xC00000, A
+return
+;
+
+;+Caption
+LWIN & RButton::
+WinSet, Style, +0xC00000, A
+return
+
+
 ;
 ^!8::
 Run "D:\User\Documents\AutoHotKey\MyBatches\kill_macro_player.vbs"
