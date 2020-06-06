@@ -163,13 +163,13 @@ RCtrl::RAlt
 ; Increase master volume by 10%
 ; Insert::
 ^!Up::
-SoundSet +10
+SoundSet +5
 Return
 
 ; Decrease master volume by 10%
 ; ^Insert::
 ^!Down::
-SoundSet -10
+SoundSet -5
 Return
 
 ; https://autohotkey.com/docs/KeyList.htm
