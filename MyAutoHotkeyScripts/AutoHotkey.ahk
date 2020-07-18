@@ -380,6 +380,12 @@ Return
 ^!l:: Run "C:\Program Files\Microsoft Office\Office15\WINWORD.EXE"
 Return
 
+;-------------------------------------- Rodar Chrome ------------------------------------
+; https://www.autohotkey.com/docs/KeyList.htm#SpecialKeys
+; Ctrl + Alt + ç
+^!SC027:: Run "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --new-window
+Return
+
 ;-------------------------------------- Rodar Tradutor ------------------------------------
 ^!k:: Run "C:\Program Files (x86)\MicroPower Software\Delta Translator 3.0\DTransl.exe"
 Return
