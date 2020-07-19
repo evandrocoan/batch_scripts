@@ -1,12 +1,19 @@
 
-cd /d F:\anki
-
-set "ANKI_BASE=D:\\User\\Documents\\Anki2"
-set "ANKI_EXTRA_PIP=python -m pip install git+https://github.com/evandroforks/pyaudio"
-
-sh run
+sh run_anki.sh || goto :fail
 
 :: Exit the batch file, without closing the cmd.exe, if called from another script
 if not "%1"=="" exit 0
 
 pause
+exit 0
+
+:fail
+echo.
+echo # Running Anki FAILED!
+
+:typeitrightupdatefailed
+:: timeout /T 60
+set /p "UserInputPath=Type 'out' to quit... "
+if not "%UserInputPath%" == "out" goto typeitrightupdatefailed
+exit /1
+
