@@ -5,6 +5,9 @@ set -eo pipefail
 # You can find a Windows 10 Task Scheduler task you can import: https://github.com/evandrocoan/batch_scripts/blob/master/WindowsTaksTcheduler/AnkiBackupDailyTask.xml
 SOURCE="${BASH_SOURCE[0]}"
 
+# Attempt to disable colored output (for better console logging)
+export CI=true
+
 # https://stackoverflow.com/questions/59895/how-to-get-the-source-directory-of-a-bash-script-from-within-the-script-itself
 while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
   SCRIPT_FOLDER_PATH="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
