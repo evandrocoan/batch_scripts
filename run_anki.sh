@@ -16,7 +16,7 @@ while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symli
 done
 SCRIPT_FOLDER_PATH="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
 
-cd /cygdrive/f/anki
+cd /f/anki
 BACKUP_FILE_NAME="${SCRIPT_FOLDER_PATH}/run_anki.log"
 
 export ANKI_BASE="D:/User/Documents/Anki2"
