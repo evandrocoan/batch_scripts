@@ -1,5 +1,5 @@
 
-sh run_anki.sh || goto :fail
+sh run_anki.sh %* || goto :fail
 
 :: Exit the batch file, without closing the cmd.exe, if called from another script
 if not "%1"=="" exit 0
