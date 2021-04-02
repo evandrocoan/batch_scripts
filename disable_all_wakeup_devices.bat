@@ -34,5 +34,9 @@ ENDLOCAL
 :end
 echo After, powercfg devicequery wake_armed
 powercfg devicequery wake_armed
+
+:: Exit the batch file, without closing the cmd.exe, if called from another script
+if not "%1"=="" exit 0
+
 pause
 
