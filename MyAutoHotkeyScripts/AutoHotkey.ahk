@@ -160,16 +160,21 @@ NumpadDot::.
 RCtrl::RAlt
 
 ; https://autohotkey.com/docs/commands/SoundSet.htm
+; https://www.autohotkey.com/boards/viewtopic.php?t=68279 - SoundSet vs Volume_Down/Up (OSD and precision)
 ; Increase master volume by 10%
 ; Insert::
 ^!Up::
-SoundSet +5
+SoundGet v
+Send {Volume_Up}
+SoundSet v+5
 Return
 
 ; Decrease master volume by 10%
 ; ^Insert::
 ^!Down::
-SoundSet -5
+SoundGet v
+Send {Volume_Down}
+SoundSet v-5
 Return
 
 ; https://autohotkey.com/docs/KeyList.htm
