@@ -389,7 +389,7 @@ Return
 ; https://www.autohotkey.com/docs/KeyList.htm#SpecialKeys
 ; Ctrl + Alt + ç
 ^!SC027::
-Run "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --start-maximized --new-window
+Run "C:\Program Files\Google\Chrome\Application\chrome.exe" --user-data-dir="F:\GoogleChromeProfiles\MainProfile" --start-maximized --new-window
 WinWaitActive, ahk_class Chrome_WidgetWin_1
 WinMaximize, ahk_class Chrome_WidgetWin_1
 ; Msgbox, It is running video...
