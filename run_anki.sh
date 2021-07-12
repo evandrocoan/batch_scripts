@@ -21,6 +21,7 @@ SCRIPT_FOLDER_PATH="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
 cd /f/anki
 BACKUP_FILE_NAME="${SCRIPT_FOLDER_PATH}/run_anki.log"
 
+export QTWEBENGINE_REMOTE_DEBUGGING=8087
 export ANKI_BASE="D:/User/Documents/Anki2"
 export ANKI_EXTRA_PIP="python -m pip install git+https://github.com/evandroforks/pyaudio"
 
