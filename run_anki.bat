@@ -8,7 +8,15 @@ set _tail=%2%_tail%
 echo tail arguments: %_tail%
 
 :run_anki_now
-sh run_anki.sh %_tail% || goto :fail
+set "PATH=f:\bazel\;%PATH%"
+cd /d F:/anki2
+
+set "QTWEBENGINE_REMOTE_DEBUGGING=8087"
+set "ANKI_BASE=D:/User/Documents/Anki2"
+set "ANKI_EXTRA_PIP=python -m pip install git+https://github.com/evandroforks/pyaudio"
+
+:: sh run_anki.sh %_tail% || goto :fail
+run.bat %_tail% || goto :fail
 
 :: Exit the batch file, without closing the cmd.exe, if called from another script
 if not "%1"=="" exit 0

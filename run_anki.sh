@@ -21,10 +21,6 @@ SCRIPT_FOLDER_PATH="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
 cd /f/anki
 BACKUP_FILE_NAME="${SCRIPT_FOLDER_PATH}/run_anki.log"
 
-export QTWEBENGINE_REMOTE_DEBUGGING=8087
-export ANKI_BASE="D:/User/Documents/Anki2"
-export ANKI_EXTRA_PIP="python -m pip install git+https://github.com/evandroforks/pyaudio"
-
 # requires sudo apt-get install moreutils expect
 # https://stackoverflow.com/questions/11337041/force-line-buffering-of-stdout-when-piping-to-tee
 if unbuffer -p /bin/bash run "$@" 2>&1 | tee /dev/tty | ts '[%Y-%m-%d %H:%M:%S]' >> "${BACKUP_FILE_NAME}";
