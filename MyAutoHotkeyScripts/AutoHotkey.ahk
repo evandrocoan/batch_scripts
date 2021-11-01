@@ -392,6 +392,9 @@ Return
 ^!SC027::
 Run "C:\Program Files\Google\Chrome\Application\chrome.exe" --user-data-dir="F:\GoogleChromeProfiles\MainProfile" --start-maximized --new-window
 WinWaitActive, ahk_class Chrome_WidgetWin_1
+; https://www.autohotkey.com/board/topic/59109-winwait-window-with-no-title/
+SetTitleMatchMode RegEx
+ifwinactive ^$
 WinMaximize, ahk_class Chrome_WidgetWin_1
 ; Msgbox, It is running video...
 Return
