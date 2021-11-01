@@ -20,6 +20,60 @@
 ; It explains how to perform common automation tasks such as sending
 ; keystrokes and mouse clicks.  It also explains more about hotkeys.
 
+; This should be replaced by whatever your native language is. See
+; http://msdn.microsoft.com/en-us/library/dd318693%28v=vs.85%29.aspx
+; for the language identifiers list.
+; ru := DllCall("LoadKeyboardLayout", "Str", "00000419", "Int", 1)
+; en := DllCall("LoadKeyboardLayout", "Str", "00000409", "Int", 1)
+
+; !Shift::
+; PostMessage 0x0281, 0, 0x80000000,, A
+; w := DllCall("GetForegroundWindow")
+; pid := DllCall("GetWindowThreadProcessId", "UInt", w, "Ptr", 0)
+; l := DllCall("GetKeyboardLayout", "UInt", pid)
+; if (l = en)
+; {乃
+;     PostMessage 0x50, 0, %ru%,, A
+; }
+; else
+; {
+;     PostMessage 0x50, 0, %en%,, A
+; }
+
+; !Shift::
+; Send, {LAlt down}{Shift}{LAlt up}
+; if !LangID := GetKeyboardLanguage(WinActive("A"))
+; {
+;     MsgBox, % "GetKeyboardLayout function failed " ErrorLevel
+;     return
+; }
+
+; if (LangID = 0x0409)
+;     MsgBox, Language is EN
+; else if (LangID = 0x080C)
+;     MsgBox, Language is FR
+; else if (LangID = 0x0813)
+;     MsgBox, Language is NL
+; else if (LangID = 0x0411)
+;     MsgBox, Language is JP
+; return
+
+; ; https://autohotkey.com/board/topic/116538-detect-which-language-is-currently-on/
+; GetKeyboardLanguage(_hWnd=0)
+; {
+;     if !_hWnd
+;         ThreadId=0
+;     else
+;         if !ThreadId := DllCall("user32.dll\GetWindowThreadProcessId", "Ptr", _hWnd, "UInt", 0, "UInt")
+;             return false
+
+;     if !KBLayout := DllCall("user32.dll\GetKeyboardLayout", "UInt", ThreadId, "UInt")
+;         return false
+
+;     return KBLayout & 0xFFFF
+; }
+; Return
+
 ; See:
 ; How to start an infinity loop on AutoHotKey when reloading the script?
 ; http://stackoverflow.com/questions/40981048/
