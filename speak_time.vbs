@@ -40,7 +40,7 @@ currentMinute = Minute( currentTime )
 If currentHour < 12 Then
     dayPeriod = "AM"
 Else
-    dayPeriod   = "PM"
+    dayPeriod = "PM"
 End If
 
 If currentHour > 12 Then
