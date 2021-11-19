@@ -406,7 +406,8 @@ return
 
 
 ; Abre o terminal principal
-^!t:: Run "C:\ProgramData\Microsoft\Windows\Start Menu\Terminal.lnk"
+; ^!t:: Run "C:\ProgramData\Microsoft\Windows\Start Menu\Terminal.lnk"
+^!t:: Run "C:\Windows\System32\wscript.exe" "D:\User\Dropbox\SoftwareVersioning\SpeakTimeVBScript\silent_run.vbs" "F:\msys64\msys2_shell.cmd" -here -mingw64 -no-start -mintty -use-full-path"
 Return
 
 ;^!t:: Run "D:\User\Documents\ConEmuPack.140923\ConEmu.exe"
