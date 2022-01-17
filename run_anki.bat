@@ -16,6 +16,8 @@ echo tail arguments: %_tail%
 set "PATH=f:\bazel\;%PATH%"
 cd /d F:/anki2
 
+:: https://stackoverflow.com/questions/39551549/q-how-do-you-display-chinese-characters-in-command-prompt/52355476
+chcp 936
 
 set "ANKI_PROFILE_CODE=1"
 set "QTWEBENGINE_REMOTE_DEBUGGING=8087"
