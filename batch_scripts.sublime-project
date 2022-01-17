@@ -2,7 +2,10 @@
 	"folders":
 	[
 		{
-			"path": "."
-		}
-	]
+			"path": ".",
+		},
+		{
+			"path": "F:\\msys64\\home\\Professional"
+		},
+	],
 }
