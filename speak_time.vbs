@@ -31,7 +31,7 @@ Set speech.Voice = speech.GetVoices.Item(0)
 
 ' Speech speed from -10 to 10
 speech.Rate = -2
-speech.Volume = 50
+speech.Volume = 80
 
 currentTime   = Now()
 currentHour   = hour( currentTime )
@@ -73,6 +73,7 @@ End Function
 ' https://www.top-password.com/blog/mute-or-turn-off-microphone-in-windows-10/
 RunCommand( """D:\User\Documents\NirSoft\SoundVolumeView.exe"" /Mute {0.0.1.00000000}.{e5b46464-3e8d-45de-99ab-54ad06ee6ddd}" )
 
+' Wscript.Echo "speaks: " & speaks
 speech.Speak speaks
 
 RunCommand( """D:\User\Documents\NirSoft\SoundVolumeView.exe"" /Unmute {0.0.1.00000000}.{e5b46464-3e8d-45de-99ab-54ad06ee6ddd}" )
