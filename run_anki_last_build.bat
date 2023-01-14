@@ -32,7 +32,7 @@ set "QTWEBENGINE_REMOTE_DEBUGGING=8087"
 set "RUNFILES_DIR=F:\bazel\anki\rybdqld5\execroot\ankidesktop\bazel-out\x64_windows-fastbuild\bin\qt\runanki.exe.runfiles"
 set "BAZELISK_SKIP_WRAPPER=true"
 
-F:\bazel\anki\rybdqld5\execroot\ankidesktop\bazel-out\x64_windows-fastbuild\bin\qt\runanki.exe || goto :fail
+"F:\bazel\anki\rybdqld5\execroot\ankidesktop\bazel-out\x64_windows-fastbuild\bin\qt\runanki.exe" %_tail% || goto :fail
 :: bazel shutdown
 
 :: Exit the batch file, without closing the cmd.exe, if called from another script
