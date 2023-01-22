@@ -357,6 +357,11 @@ Return
 ^!i::Winset, Alwaysontop, , A
 Return
 
+; Assign a hotkey to maximize the active window.
+; https://www.autohotkey.com/boards/viewtopic.php
+; https://www.autohotkey.com/docs/v1/Hotkeys.htm
+#Up::WinMaximize, A
+return
 
 ;^!n:: Run "\\192.168.25.215\lg-d685\external_SD\fastnotse\Transferencia.txt"
 ;Return
