@@ -231,6 +231,14 @@ Send {Volume_Down}
 SoundSet v-5
 Return
 
+^!Right::
+Send {Media_Next}
+Return
+
+^!Left::
+Send {Media_Prev}
+Return
+
 ; https://autohotkey.com/docs/KeyList.htm
 ; https://superuser.com/questions/278951/my-keyboard-has-no-media-keys-can-i-control-media-without-them
 ;
