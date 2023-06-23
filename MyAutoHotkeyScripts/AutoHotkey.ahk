@@ -527,6 +527,18 @@ else
 Return
 
 
+^!Numpad2::
+if WinExist("ahk_exe Spotify.exe")
+    ; Most times this does not work
+    ; https://autohotkey.com/docs/misc/WinTitle.htm
+    ; https://autohotkey.com/docs/commands/WinActivate.htm
+    WinActivate, ahk_exe Spotify.exe
+else
+    ; Recently, makes Windows 10 to turn screen off  for some seconds, therefore only open it manually
+    Run, "C:\Users\Professional\AppData\Roaming\Spotify\Spotify.exe"
+    Return
+Return
+
 
 ;;Abre e fecha a janela do Last.fm Scrobbler
 ;#IfWinActive ahk_class QWidget
