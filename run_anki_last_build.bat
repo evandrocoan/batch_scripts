@@ -23,16 +23,13 @@ set "ANKI_BASE=D:/User/Documents/Anki2"
 set "ANKI_EXTRA_PIP=python -m pip install git+https://github.com/evandroforks/pyaudio"
 set "ANKI_PROFILE_CODE=1"
 
-set "BAZEL_SH=C:\msys64\usr\bin\bash.exe"
 set "BUILD_WORKING_DIRECTORY=F:/anki2"
 set "BUILD_WORKSPACE_DIRECTORY=F:/anki2"
 set "PATH=C:\Users\Professional\AppData\Local\bazelisk\downloads\bazelbuild\bazel-4.0.0-windows-x86_64\bin;c:\msys64\usr\bin;c:\python;%PATH%"
 set "PYTHONWARNINGS=default"
 set "QTWEBENGINE_REMOTE_DEBUGGING=8087"
-set "RUNFILES_DIR=F:\bazel\anki\rybdqld5\execroot\ankidesktop\bazel-out\x64_windows-fastbuild\bin\qt\runanki.exe.runfiles"
-set "BAZELISK_SKIP_WRAPPER=true"
 
-"F:\bazel\anki\rybdqld5\execroot\ankidesktop\bazel-out\x64_windows-fastbuild\bin\qt\runanki.exe" %_tail% || goto :fail
+".\out\pyenv\scripts\python" tools\run.py %_tail% || goto :fail
 :: bazel shutdown
 
 :: Exit the batch file, without closing the cmd.exe, if called from another script
