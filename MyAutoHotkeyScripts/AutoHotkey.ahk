@@ -522,7 +522,7 @@ if WinExist("ahk_exe D:\User\Dropbox\Backups\AIMP\AIMP.exe")
     Run, "D:\User\Documents\NirSoft\nircmd-x64\nircmd.exe" win activate class "TAIMPMainForm"
 else
     ; Recently, makes Windows 10 to turn screen off  for some seconds, therefore only open it manually
-    ; Run, D:\User\Dropbox\Backups\AIMP\AIMP.exe
+    Run, D:\User\Dropbox\Backups\AIMP\AIMP.exe
     Return
 Return
 
