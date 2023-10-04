@@ -35,8 +35,11 @@ set "QTWEBENGINE_REMOTE_DEBUGGING=8087"
 :: Exit the batch file, without closing the cmd.exe, if called from another script
 if not "%EXITONEND%"=="" exit 0
 
-cmd
-pause
+:: cmd
+:: pause
+set "TIMEOUT=15"
+echo This batch file will exit in %TIMEOUT% seconds.
+C:\Windows\System32\timeout.exe /t %TIMEOUT% /nobreak
 exit 0
 
 :fail
