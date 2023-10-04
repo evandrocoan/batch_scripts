@@ -488,29 +488,29 @@ Return
 ;#IfWinNotActive ahk_class MiniLyrics
 ;{
 
-; ^!Numpad1::Run "D:\User\Documents\MiniLyrics\MiniLyrics.exe"
+; ^!Numpad1::Run "F:\MiniLyrics\MiniLyrics.exe"
 ; Return
-; ^!NumpadEnd::Run "D:\User\Documents\MiniLyrics\MiniLyrics.exe"
+; ^!NumpadEnd::Run "F:\MiniLyrics\MiniLyrics.exe"
 ; Return
 
 ^!Numpad1::
 ^!NumpadEnd::
-if WinExist("ahk_exe D:\User\Documents\MiniLyrics\MiniLyrics.exe")
-    WinActivate, ahk_exe D:\User\Documents\MiniLyrics\MiniLyrics.exe
+if WinExist("ahk_exe F:\MiniLyrics\MiniLyrics.exe")
+    WinActivate, ahk_exe F:\MiniLyrics\MiniLyrics.exe
 else
-    Run, "D:\User\Documents\MiniLyrics\MiniLyrics.exe"
+    Run, "F:\MiniLyrics\MiniLyrics.exe"
 Return
 
 ;}
 ;Return
 
 
-; ^!NumpadIns::Run "D:\User\Dropbox\Backups\AIMP\AIMP.exe"
+; ^!NumpadIns::Run "F:\AIMP\AIMP.exe"
 ; Return
 
 ^!Numpad0::
 ^!NumpadIns::
-if WinExist("ahk_exe D:\User\Dropbox\Backups\AIMP\AIMP.exe")
+if WinExist("ahk_exe F:\AIMP\AIMP.exe")
     ; Most times this does not work
     ; https://autohotkey.com/docs/misc/WinTitle.htm
     ; https://autohotkey.com/docs/commands/WinActivate.htm
@@ -522,7 +522,7 @@ if WinExist("ahk_exe D:\User\Dropbox\Backups\AIMP\AIMP.exe")
     Run, "D:\User\Documents\NirSoft\nircmd-x64\nircmd.exe" win activate class "TAIMPMainForm"
 else
     ; Recently, makes Windows 10 to turn screen off  for some seconds, therefore only open it manually
-    Run, D:\User\Dropbox\Backups\AIMP\AIMP.exe
+    Run, F:\AIMP\AIMP.exe
     Return
 Return
 
