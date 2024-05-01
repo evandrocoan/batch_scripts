@@ -71,12 +71,12 @@ Function RunCommand(command)
 End Function
 
 ' https://www.top-password.com/blog/mute-or-turn-off-microphone-in-windows-10/
-RunCommand( """D:\User\Documents\NirSoft\SoundVolumeView.exe"" /Mute {0.0.1.00000000}.{e5b46464-3e8d-45de-99ab-54ad06ee6ddd}" )
+RunCommand( """D:\User\Documents\NirSoft\SoundVolumeView.exe"" /Mute {0.0.1.00000000}.{6880abb7-ba7a-4588-9ccd-83da34ade8e5}" )
 
 ' Wscript.Echo "speaks: " & speaks
 speech.Speak speaks
 
-RunCommand( """D:\User\Documents\NirSoft\SoundVolumeView.exe"" /Unmute {0.0.1.00000000}.{e5b46464-3e8d-45de-99ab-54ad06ee6ddd}" )
+RunCommand( """D:\User\Documents\NirSoft\SoundVolumeView.exe"" /Unmute {0.0.1.00000000}.{6880abb7-ba7a-4588-9ccd-83da34ade8e5}" )
 
 ' Turn the NumLock on when it is off.
 ' See: https://blogs.technet.microsoft.com/heyscriptingguy/2006/08/10/how-can-tell-whether-the-numlock-key-is-on-or-off/
