@@ -49,27 +49,42 @@
 ; }
 
 ; if (LangID = 0x0409)
+; {
 ;     MsgBox, Language is EN
+; }
 ; else if (LangID = 0x080C)
+; {
 ;     MsgBox, Language is FR
+; }
 ; else if (LangID = 0x0813)
+; {
 ;     MsgBox, Language is NL
+; }
 ; else if (LangID = 0x0411)
+; {
 ;     MsgBox, Language is JP
+; }
 ; return
 
 ; ; https://autohotkey.com/board/topic/116538-detect-which-language-is-currently-on/
 ; GetKeyboardLanguage(_hWnd=0)
 ; {
 ;     if !_hWnd
+;     {
 ;         ThreadId=0
+;     }
 ;     else
+;     {
 ;         if !ThreadId := DllCall("user32.dll\GetWindowThreadProcessId", "Ptr", _hWnd, "UInt", 0, "UInt")
+;         {
 ;             return false
-
+;         }
+;     }
+;
 ;     if !KBLayout := DllCall("user32.dll\GetKeyboardLayout", "UInt", ThreadId, "UInt")
+;     {
 ;         return false
-
+;     }
 ;     return KBLayout & 0xFFFF
 ; }
 ; Return
@@ -128,7 +143,9 @@ NumpadDot::.
 
     LAlt Up::
     if (A_PriorKey = "Alt")
+    {
         return
+    }
     return
 #IfWinActive
 
@@ -140,7 +157,7 @@ NumpadDot::.
 ; Copy Paste in Bash on Ubuntu on Windows
 ; https://stackoverflow.com/questions/38832230/copy-paste-in-bash-on-ubuntu-on-windows
 ; #IfWinActive ahk_exe cmd.exe
-    ; ^+v::SendRaw %clipboard%
+;     ^+v::SendRaw %clipboard%
 ; #IfWinActive
 
 
@@ -458,13 +475,36 @@ Return
 ; https://www.autohotkey.com/docs/KeyList.htm#SpecialKeys
 ; Ctrl + Alt + ç
 ^!SC027::
-Run "C:\Program Files\Google\Chrome\Application\chrome.exe" --user-data-dir="F:\GoogleChromeProfiles\MainProfile" --start-maximized --new-window
+ProcessName := "chrome.exe" ; Replace with your process name
+ArgumentToFind := "F:\GoogleChromeProfiles\MainProfile" ; Replace with the argument you want to search for
+Found := false
+
+; Query WMI for processes
+for objProcess in ComObjGet("winmgmts:").ExecQuery("Select * from Win32_Process where Name='" . ProcessName . "'") {
+    CommandLine := objProcess.CommandLine
+    if CommandLine and InStr(CommandLine, ArgumentToFind) {
+        Found := true
+        break
+    }
+}
+
+; Output result
+if (Found)
+{
+    ; MsgBox, Process with argument "%ArgumentToFind%" is running.
+    Run "C:\Program Files\Google\Chrome\Application\chrome.exe" --user-data-dir="%ArgumentToFind%" --start-maximized --new-window
+}
+else
+{
+    ; MsgBox, Process with argument "%ArgumentToFind%" is not running.
+    Run "C:\Program Files\Google\Chrome\Application\chrome.exe" --start-maximized --new-window
+}
+
 WinWaitActive, ahk_class Chrome_WidgetWin_1
 ; https://www.autohotkey.com/board/topic/59109-winwait-window-with-no-title/
 SetTitleMatchMode RegEx
 ifwinactive ^$
 WinMaximize, ahk_class Chrome_WidgetWin_1
-; Msgbox, It is running video...
 Return
 
 ;-------------------------------------- Rodar Tradutor ------------------------------------
@@ -477,7 +517,7 @@ Return
 
 ;-------------------------------------- Rodar Calculadora ------------------------------------
 
-^!o:: Run "D:\User\Documents\speedcrunch-0.12-win32\speedcrunch.exe"
+^!o:: Run "F:\speedcrunch\current\speedcrunch.exe"
 Return
 
 ;Abre e fecha a janela do MiniLyrics
@@ -496,9 +536,13 @@ Return
 ^!Numpad1::
 ^!NumpadEnd::
 if WinExist("ahk_exe F:\MiniLyrics\MiniLyrics.exe")
+{
     WinActivate, ahk_exe F:\MiniLyrics\MiniLyrics.exe
+}
 else
+{
     Run, "F:\MiniLyrics\MiniLyrics.exe"
+}
 Return
 
 ;}
@@ -511,6 +555,7 @@ Return
 ^!Numpad0::
 ^!NumpadIns::
 if WinExist("ahk_exe F:\AIMP\AIMP.exe")
+{
     ; Most times this does not work
     ; https://autohotkey.com/docs/misc/WinTitle.htm
     ; https://autohotkey.com/docs/commands/WinActivate.htm
@@ -520,23 +565,28 @@ if WinExist("ahk_exe F:\AIMP\AIMP.exe")
     ; This is why I use this
     ; https://stackoverflow.com/questions/557166/bring-to-front-for-windows-xp-command-shell
     Run, "D:\User\Documents\NirSoft\nircmd-x64\nircmd.exe" win activate class "TAIMPMainForm"
+}
 else
+{
     ; Recently, makes Windows 10 to turn screen off  for some seconds, therefore only open it manually
     Run, F:\AIMP\AIMP.exe
-    Return
+}
 Return
 
 
 ^!Numpad2::
 if WinExist("ahk_exe Spotify.exe")
+{
     ; Most times this does not work
     ; https://autohotkey.com/docs/misc/WinTitle.htm
     ; https://autohotkey.com/docs/commands/WinActivate.htm
     WinActivate, ahk_exe Spotify.exe
+}
 else
+{
     ; Recently, makes Windows 10 to turn screen off  for some seconds, therefore only open it manually
     Run, "C:\Users\Professional\AppData\Roaming\Spotify\Spotify.exe"
-    Return
+}
 Return
 
 
@@ -555,7 +605,7 @@ Return
 ^!NumpadPgDn::Run "C:\Program Files (x86)\Last.fm\Last.fm Scrobbler.exe"
 Return
 
-;}
+;
 ;Return
 
 
