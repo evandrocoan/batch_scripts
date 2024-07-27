@@ -14,7 +14,9 @@ echo tail arguments: %_tail%
 
 :run_anki_now
 set "PATH=f:\bazel\;%PATH%"
-cd /d F:/anki2
+
+set "BUILD_WORKING_DIRECTORY=F:/anki2"
+cd /d "%BUILD_WORKING_DIRECTORY%"
 
 :: https://stackoverflow.com/questions/39551549/q-how-do-you-display-chinese-characters-in-command-prompt/52355476
 chcp 936
@@ -22,9 +24,9 @@ chcp 936
 set "ANKI_BASE=D:/User/Documents/Anki2"
 set "ANKI_EXTRA_PIP=python -m pip install git+https://github.com/evandroforks/pyaudio"
 set "ANKI_PROFILE_CODE=1"
+set "ENABLE_QT5_COMPAT=1"
 
-set "BUILD_WORKING_DIRECTORY=F:/anki2"
-set "BUILD_WORKSPACE_DIRECTORY=F:/anki2"
+set "BUILD_WORKSPACE_DIRECTORY=%BUILD_WORKING_DIRECTORY%"
 set "PATH=C:\Users\Professional\AppData\Local\bazelisk\downloads\bazelbuild\bazel-4.0.0-windows-x86_64\bin;c:\msys64\usr\bin;c:\python;%PATH%"
 set "PYTHONWARNINGS=default"
 set "QTWEBENGINE_REMOTE_DEBUGGING=8087"

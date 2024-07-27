@@ -21,8 +21,10 @@ chcp 936
 
 set "OUTPUT_SUCCESS=1"
 set "ANKI_PROFILE_CODE=1"
+set "ENABLE_QT5_COMPAT=1"
 set "QTWEBENGINE_REMOTE_DEBUGGING=8087"
-set "ANKI_BASE=D:/User/Documents/Anki2"
+
+:: set "ANKI_BASE=D:/User/Documents/Anki2"
 set "ANKI_EXTRA_PIP=python -m pip install git+https://github.com/evandroforks/pyaudio"
 
 :: sh run_anki.sh %_tail% || goto :fail
