@@ -234,6 +234,7 @@ RCtrl::RAlt
 ; https://www.autohotkey.com/boards/viewtopic.php?t=68279 - SoundSet vs Volume_Down/Up (OSD and precision)
 ; Increase master volume by 10%
 ; Insert::
+>^Up::
 ^!Up::
 SoundGet v
 Send {Volume_Up}
@@ -242,16 +243,19 @@ Return
 
 ; Decrease master volume by 10%
 ; ^Insert::
+>^Down::
 ^!Down::
 SoundGet v
 Send {Volume_Down}
 SoundSet v-5
 Return
 
+>^Right::
 ^!Right::
 Send {Media_Next}
 Return
 
+>^Left::
 ^!Left::
 Send {Media_Prev}
 Return
@@ -552,6 +556,8 @@ Return
 ; ^!NumpadIns::Run "F:\AIMP\AIMP.exe"
 ; Return
 
+>^Numpad0::
+>^NumpadIns::
 ^!Numpad0::
 ^!NumpadIns::
 if WinExist("ahk_exe F:\AIMP\AIMP.exe")
@@ -574,6 +580,7 @@ else
 Return
 
 
+>^Numpad2::
 ^!Numpad2::
 if WinExist("ahk_exe Spotify.exe")
 {
