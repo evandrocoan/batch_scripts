@@ -4,12 +4,12 @@ ping google.com -n 1 -w 1000
 if not errorlevel 1 goto hasinternet
 
 :: https://stackoverflow.com/questions/1672338/how-to-sleep-for-five-seconds-in-a-batch-file-cmd
-netsh interface set interface "Ethernet 3" disable
+netsh interface set interface "Ethernet" disable
 
 :: https://stackoverflow.com/questions/1672338/how-to-sleep-for-five-seconds-in-a-batch-file-cmd
 timeout 4
 
-netsh interface set interface "Ethernet 3" enable
+netsh interface set interface "Ethernet" enable
 
 :hasinternet
 timeout 5
