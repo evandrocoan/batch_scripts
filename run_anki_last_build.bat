@@ -21,7 +21,7 @@ cd /d "%BUILD_WORKING_DIRECTORY%"
 :: https://stackoverflow.com/questions/39551549/q-how-do-you-display-chinese-characters-in-command-prompt/52355476
 chcp 936
 
-set "ANKI_BASE=D:/User/Documents/Anki2"
+set "ANKI_BASE=F:\AnkiCollection"
 set "ANKI_EXTRA_PIP=python -m pip install git+https://github.com/evandroforks/pyaudio"
 set "ANKI_PROFILE_CODE=1"
 set "ENABLE_QT5_COMPAT=1"
