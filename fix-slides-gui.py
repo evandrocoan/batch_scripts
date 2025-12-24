@@ -2,12 +2,11 @@ import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 from pathlib import Path
 from pptx import Presentation
-from pptx.oxml import parse_xml
-from pptx.dml.color import RGBColor
+from slide_processor import process_presentation
 
 # Default configuration
-DEFAULT_GLOW_COLOR = "#FFFFF0"
-DEFAULT_GLOW_SIZE = 18
+DEFAULT_GLOW_COLOR = "#ffffe0"
+DEFAULT_GLOW_SIZE = 20
 DEFAULT_TEXT_COLOR = "#010101"
 
 class SlideFixerGUI:
@@ -120,46 +119,6 @@ class SlideFixerGUI:
             self.file_entry.config(state="readonly")
             self.process_btn.config(state="normal")
     
-    def apply_solid_glow_to_run(self, run, color_hex, size_pt):
-        """Applies a SOLID glow effect to create a highlighter background effect."""
-        # Strip '#' from color if present
-        color_hex = color_hex.lstrip('#')
-        
-        # Get the Run Properties (rPr) element or create it
-        rPr = run._r.get_or_add_rPr()
-        
-        # Calculate radius in EMUs (1 point = 12700 EMUs)
-        radius_emu = int(size_pt * 12700)
-        
-        # Create the XML for the effect list with glow
-        effectlst_xml = f'''<a:effectLst xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
-            <a:glow rad="{radius_emu}">
-                <a:srgbClr val="{color_hex}">
-                    <a:alpha val="100000"/>
-                </a:srgbClr>
-            </a:glow>
-        </a:effectLst>'''
-        
-        # Remove any existing effectLst or standalone glow
-        existing_effectlst = rPr.find("{http://schemas.openxmlformats.org/drawingml/2006/main}effectLst")
-        if existing_effectlst is not None:
-            rPr.remove(existing_effectlst)
-        
-        existing_glow = rPr.find("{http://schemas.openxmlformats.org/drawingml/2006/main}glow")
-        if existing_glow is not None:
-            rPr.remove(existing_glow)
-        
-        # Parse the new XML and inject it into the run properties
-        effectlst_element = parse_xml(effectlst_xml)
-        
-        # Insert after solidFill if it exists, otherwise at the beginning
-        solid_fill = rPr.find("{http://schemas.openxmlformats.org/drawingml/2006/main}solidFill")
-        if solid_fill is not None:
-            insert_index = list(rPr).index(solid_fill) + 1
-            rPr.insert(insert_index, effectlst_element)
-        else:
-            rPr.insert(0, effectlst_element)
-    
     def process_file(self):
         if not self.selected_file:
             messagebox.showerror("Error", "Please select a file first!")
@@ -193,48 +152,9 @@ class SlideFixerGUI:
             
             # Open presentation
             prs = Presentation(self.selected_file)
-            count = 0
             
-            # Process each slide
-            for slide in prs.slides:
-                # Check if slide has any text
-                has_text = False
-                for shape in slide.shapes:
-                    if shape.has_text_frame and shape.text_frame.text.strip():
-                        has_text = True
-                        break
-                
-                # Set slide background: white if has text, black if no text
-                background = slide.background
-                fill = background.fill
-                fill.solid()
-                if has_text:
-                    fill.fore_color.rgb = RGBColor(255, 255, 255)
-                else:
-                    fill.fore_color.rgb = RGBColor(0, 0, 0)
-                
-                # Process all text shapes
-                for shape in slide.shapes:
-                    if not shape.has_text_frame:
-                        continue
-                    
-                    text_processed = False
-                    for paragraph in shape.text_frame.paragraphs:
-                        for run in paragraph.runs:
-                            if run.text.strip():
-                                # Apply the SOLID glow
-                                self.apply_solid_glow_to_run(run, glow_color, glow_size)
-                                
-                                # Set text color
-                                run.font.color.rgb = RGBColor(
-                                    int(text_color[0:2], 16),
-                                    int(text_color[2:4], 16),
-                                    int(text_color[4:6], 16)
-                                )
-                                text_processed = True
-                    
-                    if text_processed:
-                        count += 1
+            # Process using shared function
+            count = process_presentation(prs, glow_color, glow_size, text_color)
             
             # Save the presentation
             prs.save(str(output_path))
