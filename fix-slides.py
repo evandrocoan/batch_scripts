@@ -7,7 +7,7 @@ from pptx.enum.shapes import MSO_SHAPE_TYPE
 INPUT_FILE = "Apresentação1.pptx"  # Put your file name here
 OUTPUT_FILE = "Apresentação1_fixed.pptx"
 GLOW_COLOR = "#FFFFF0"  # Lighter, more discrete yellow
-GLOW_SIZE_PT = 15      # Size of the glow in points (reduce to avoid overlap between letters)
+GLOW_SIZE_PT = 18      # Size of the glow in points (reduce to avoid overlap between letters)
 TEXT_COLOR = "#010101"  # Hex code for near-black text (R=1, G=1, B=1)
 BACKGROUND_COLOR = "#000000"  # Hex code for black background (R=0, G=0, B=0)
 # =================================================
