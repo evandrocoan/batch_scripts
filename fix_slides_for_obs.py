@@ -1,6 +1,21 @@
 import argparse
-from pptx import Presentation
-from fix_slides_for_obs_processor import process_presentation
+import sys
+
+try:
+    from pptx import Presentation
+except ImportError as e:
+    print("Error: The 'python-pptx' package maty be not installed.")
+    print("Please install it by running: pip install python-pptx")
+    print(f"Error details: {e}")
+    sys.exit(1)
+
+try:
+    from fix_slides_for_obs_processor import process_presentation
+except ImportError as e:
+    print("Error: Could not import 'fix_slides_for_obs_processor'.")
+    print("Make sure the file 'fix_slides_for_obs_processor.py' exists in the same directory.")
+    print(f"Error details: {e}")
+    sys.exit(1)
 
 # ================= DEFAULT CONFIGURATION =================
 DEFAULT_GLOW_COLOR = "#FFFFF0"  # Lighter, more discrete yellow

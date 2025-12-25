@@ -1,8 +1,34 @@
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 from pathlib import Path
-from pptx import Presentation
-from fix_slides_for_obs_processor import process_presentation
+import sys
+
+try:
+    from pptx import Presentation
+except ImportError as e:
+    root = tk.Tk()
+    root.withdraw()
+    messagebox.showerror(
+        "Missing Package",
+        f"The 'python-pptx' package may be not not installed.\n\n"
+        f"Please install it by running:\n"
+        f"pip install python-pptx\n\n"
+        f"Error details: {e}"
+    )
+    sys.exit(1)
+
+try:
+    from fix_slides_for_obs_processor import process_presentation
+except ImportError as e:
+    root = tk.Tk()
+    root.withdraw()
+    messagebox.showerror(
+        "Missing File",
+        f"Could not import 'fix_slides_for_obs_processor'.\n\n"
+        f"Make sure the file 'fix_slides_for_obs_processor.py' exists in the same directory.\n\n"
+        f"Error details: {e}"
+    )
+    sys.exit(1)
 
 # Default configuration
 DEFAULT_GLOW_COLOR = "#FFFFF0"
