@@ -1,5 +1,5 @@
 from pptx import Presentation
-from slide_processor import process_presentation
+from fix_slides_for_obs_processor import process_presentation
 
 # ================= CONFIGURATION =================
 INPUT_FILE = "Apresentação1.pptx"  # Put your file name here

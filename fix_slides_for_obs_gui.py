@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 from pathlib import Path
 from pptx import Presentation
-from slide_processor import process_presentation
+from fix_slides_for_obs_processor import process_presentation
 
 # Default configuration
 DEFAULT_GLOW_COLOR = "#ffffe0"
