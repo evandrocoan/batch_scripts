@@ -5,7 +5,7 @@ from pptx import Presentation
 from fix_slides_for_obs_processor import process_presentation
 
 # Default configuration
-DEFAULT_GLOW_COLOR = "#ffffe0"
+DEFAULT_GLOW_COLOR = "#FFFFF0"
 DEFAULT_GLOW_SIZE = 20
 DEFAULT_TEXT_COLOR = "#010101"
 
