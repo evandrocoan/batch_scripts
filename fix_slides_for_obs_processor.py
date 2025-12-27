@@ -92,6 +92,7 @@ def process_presentation(prs, glow_color, glow_size, text_color):
             fill.fore_color.rgb = RGBColor(255, 255, 255)  # White background
         else:
             fill.fore_color.rgb = RGBColor(0, 0, 0)  # Black background
+            continue  # Skip processing shapes on empty slides
         
         # Iterate through every shape on the slide
         for shape in slide.shapes:
