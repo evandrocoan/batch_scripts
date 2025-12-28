@@ -34,14 +34,19 @@ def apply_solid_glow_to_run(run, color_hex, size_pt):
         </a:glow>
     </a:effectLst>'''
     
-    # Remove any existing effectLst or standalone glow
-    existing_effectlst = rPr.find("{http://schemas.openxmlformats.org/drawingml/2006/main}effectLst")
-    if existing_effectlst is not None:
-        rPr.remove(existing_effectlst)
+    # Remove any existing effects more robustly
+    # Check for all possible effect-related elements regardless of namespace
+    # This handles different DrawingML versions and effect types
+    elements_to_remove = []
+    for child in rPr:
+        tag = child.tag
+        # Check if tag contains effect-related element names (namespace-agnostic)
+        if any(effect_name in tag for effect_name in ['effectLst', 'glow', 'outerShdw', 'innerShdw', 'reflection', 'softEdge', 'effectDag']):
+            elements_to_remove.append(child)
     
-    existing_glow = rPr.find("{http://schemas.openxmlformats.org/drawingml/2006/main}glow")
-    if existing_glow is not None:
-        rPr.remove(existing_glow)
+    # Remove all found effect elements
+    for element in elements_to_remove:
+        rPr.remove(element)
     
     # Parse the new XML and inject it into the run properties
     # effectLst should come after solidFill but before font typefaces
