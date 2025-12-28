@@ -10,7 +10,11 @@ except ImportError as e:
     sys.exit(1)
 
 try:
-    from fix_slides_for_obs_processor import process_presentation, reset_master_slides
+    from fix_slides_for_obs_processor import (
+        process_presentation, reset_master_slides,
+        check_and_report_overflow, auto_fit_all_text, PILLOW_AVAILABLE,
+        reposition_and_resize_text_boxes, reposition_and_maximize_font
+    )
 except ImportError as e:
     print("Error: Could not import 'fix_slides_for_obs_processor'.")
     print("Make sure the file 'fix_slides_for_obs_processor.py' exists in the same directory.")
@@ -61,6 +65,45 @@ def main():
         action="store_true",
         help="Reset master slides to default (removes effects and backgrounds)"
     )
+    parser.add_argument(
+        "--check-overflow",
+        dest="check_overflow",
+        action="store_true",
+        help="Check for text that overflows slide boundaries (report only)"
+    )
+    parser.add_argument(
+        "--auto-fit",
+        dest="auto_fit",
+        action="store_true",
+        help="Automatically maximize font size to fit text within shapes (requires Pillow)"
+    )
+    parser.add_argument(
+        "--margin",
+        dest="margin",
+        type=int,
+        default=10,
+        help="Margin in points for auto-fit (default: 10)"
+    )
+    parser.add_argument(
+        "--reposition",
+        dest="reposition",
+        action="store_true",
+        help="Reposition text boxes to fill the slide and maximize font size (requires Pillow)"
+    )
+    parser.add_argument(
+        "--spacing",
+        dest="spacing",
+        type=int,
+        default=10,
+        help="Spacing between text boxes in points when repositioning (default: 10)"
+    )
+    parser.add_argument(
+        "--margin-percent",
+        dest="margin_percent",
+        type=float,
+        default=0.05,
+        help="Margin as percentage of slide size for repositioning (default: 0.05 = 5%%)"
+    )
     
     args = parser.parse_args()
     
@@ -76,6 +119,55 @@ def main():
     if args.reset_masters:
         print("Resetting master slides...")
         reset_master_slides(prs)
+    
+    # Check for overflow if requested
+    if args.check_overflow:
+        print("Checking for text overflow...")
+        overflow_report = check_and_report_overflow(prs)
+        if overflow_report:
+            print(f"\nFound {len(overflow_report)} shape(s) with overflow:")
+            for item in overflow_report:
+                print(f"  Slide {item['slide_num']}: {item['shape_name']}")
+                info = item['overflow_info']
+                if info['overflow_right'] > 0:
+                    print(f"    - Overflows right by {info['overflow_right'] / 12700:.1f} pt")
+                if info['overflow_bottom'] > 0:
+                    print(f"    - Overflows bottom by {info['overflow_bottom'] / 12700:.1f} pt")
+                if info['overflow_left'] > 0:
+                    print(f"    - Overflows left by {info['overflow_left'] / 12700:.1f} pt")
+                if info['overflow_top'] > 0:
+                    print(f"    - Overflows top by {info['overflow_top'] / 12700:.1f} pt")
+        else:
+            print("No overflow detected.")
+    
+    # Reposition and maximize font if requested
+    if args.reposition:
+        if not PILLOW_AVAILABLE:
+            print("Error: Pillow is required for repositioning with font maximization. Install with: pip install Pillow")
+            sys.exit(1)
+        print("Repositioning text boxes and maximizing font size...")
+        result = reposition_and_maximize_font(prs, args.margin_percent, args.spacing)
+        print(f"Repositioned text boxes on {result['slides_processed']} slide(s).")
+        if result['font_changes']:
+            print(f"Adjusted font size for {len(result['font_changes'])} shape(s):")
+            for change in result['font_changes']:
+                old = f"{change['old_size']:.1f}pt" if change['old_size'] else "unknown"
+                print(f"  Slide {change['slide_num']}: {change['shape_name']} - {old} -> {change['new_size']}pt")
+    
+    # Auto-fit text if requested
+    if args.auto_fit:
+        if not PILLOW_AVAILABLE:
+            print("Error: Pillow is required for auto-fit. Install with: pip install Pillow")
+            sys.exit(1)
+        print("Auto-fitting text to maximum size...")
+        changes = auto_fit_all_text(prs, args.margin)
+        if changes:
+            print(f"Adjusted font size for {len(changes)} shape(s):")
+            for change in changes:
+                old = f"{change['old_size']:.1f}pt" if change['old_size'] else "unknown"
+                print(f"  Slide {change['slide_num']}: {change['shape_name']} - {old} -> {change['new_size']}pt")
+        else:
+            print("No font size changes made.")
     
     count = process_presentation(prs, args.glow_color, args.glow_size, args.text_color)
     

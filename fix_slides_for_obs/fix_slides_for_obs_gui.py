@@ -18,7 +18,11 @@ except ImportError as e:
     sys.exit(1)
 
 try:
-    from fix_slides_for_obs_processor import process_presentation
+    from fix_slides_for_obs_processor import (
+        process_presentation, reset_master_slides,
+        check_and_report_overflow, PILLOW_AVAILABLE,
+        reposition_and_maximize_font
+    )
 except ImportError as e:
     root = tk.Tk()
     root.withdraw()
@@ -39,7 +43,7 @@ class SlideFixerGUI:
     def __init__(self, root):
         self.root = root
         self.root.title("PowerPoint Slide Fixer - OBS Chroma Key")
-        self.root.geometry("600x500")
+        self.root.geometry("600x580")
         self.root.resizable(False, False)
         
         self.selected_file = None
@@ -99,7 +103,7 @@ class SlideFixerGUI:
         
         # Reset master slides checkbox
         reset_frame = tk.Frame(config_frame)
-        reset_frame.pack(fill="x", pady=10)
+        reset_frame.pack(fill="x", pady=5)
         self.reset_masters_var = tk.BooleanVar(value=False)
         reset_checkbox = tk.Checkbutton(
             reset_frame,
@@ -107,6 +111,31 @@ class SlideFixerGUI:
             variable=self.reset_masters_var
         )
         reset_checkbox.pack(side="left")
+        
+        # Check overflow checkbox
+        overflow_frame = tk.Frame(config_frame)
+        overflow_frame.pack(fill="x", pady=5)
+        self.check_overflow_var = tk.BooleanVar(value=False)
+        overflow_checkbox = tk.Checkbutton(
+            overflow_frame,
+            text="Check for text overflow (report only)",
+            variable=self.check_overflow_var
+        )
+        overflow_checkbox.pack(side="left")
+        
+        # Reposition and auto-fit checkbox
+        reposition_frame = tk.Frame(config_frame)
+        reposition_frame.pack(fill="x", pady=5)
+        self.reposition_var = tk.BooleanVar(value=False)
+        reposition_checkbox = tk.Checkbutton(
+            reposition_frame,
+            text="Reposition & auto-fit text (fill slide)",
+            variable=self.reposition_var,
+            state="normal" if PILLOW_AVAILABLE else "disabled"
+        )
+        reposition_checkbox.pack(side="left")
+        if not PILLOW_AVAILABLE:
+            tk.Label(reposition_frame, text="(requires Pillow)", fg="gray").pack(side="left", padx=5)
         
         # Progress bar
         self.progress_frame = tk.Frame(self.root)
@@ -192,8 +221,28 @@ class SlideFixerGUI:
             
             # Reset master slides if requested
             if self.reset_masters_var.get():
-                from fix_slides_for_obs_processor import reset_master_slides
                 reset_master_slides(prs)
+            
+            # Check for overflow if requested
+            overflow_msg = ""
+            if self.check_overflow_var.get():
+                overflow_report = check_and_report_overflow(prs)
+                if overflow_report:
+                    overflow_msg = f"\n\nOverflow detected in {len(overflow_report)} shape(s):"
+                    for item in overflow_report[:5]:  # Show first 5
+                        overflow_msg += f"\n  - Slide {item['slide_num']}: {item['shape_name']}"
+                    if len(overflow_report) > 5:
+                        overflow_msg += f"\n  ... and {len(overflow_report) - 5} more"
+                else:
+                    overflow_msg = "\n\nNo text overflow detected."
+            
+            # Reposition and auto-fit text if requested
+            reposition_msg = ""
+            if self.reposition_var.get() and PILLOW_AVAILABLE:
+                result = reposition_and_maximize_font(prs, margin_percent=0.05, spacing_pt=10)
+                reposition_msg = f"\n\nRepositioned & auto-fit {result['slides_processed']} slide(s)."
+                if result['font_changes']:
+                    reposition_msg += f" Adjusted {len(result['font_changes'])} font size(s)."
             
             # Process using shared function
             count = process_presentation(prs, glow_color, glow_size, text_color)
@@ -210,7 +259,7 @@ class SlideFixerGUI:
             # Show success message
             messagebox.showinfo(
                 "Success",
-                f"Processed {count} text shapes!\n\nSaved to:\n{output_path.name}"
+                f"Processed {count} text shapes!\n\nSaved to:\n{output_path.name}{overflow_msg}{reposition_msg}"
             )
             
         except Exception as e:
