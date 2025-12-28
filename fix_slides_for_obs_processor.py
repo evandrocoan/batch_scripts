@@ -62,6 +62,86 @@ def apply_solid_glow_to_run(run, color_hex, size_pt):
         rPr.insert(0, effectlst_element)
 
 
+def reset_master_slides(prs):
+    """
+    Reset all master slides and layouts to default formatting by removing effects and backgrounds.
+    This removes glow effects, shadows, and other visual effects from master slide text.
+    
+    Args:
+        prs: PowerPoint Presentation object
+    
+    Returns:
+        tuple: (number of master slides processed, number of layouts processed)
+    """
+    masters_count = 0
+    layouts_count = 0
+    
+    # Process each slide master
+    for slide_master in prs.slide_masters:
+        masters_count += 1
+        
+        # Reset master slide background to default (white)
+        try:
+            background = slide_master.background
+            fill = background.fill
+            fill.solid()
+            fill.fore_color.rgb = RGBColor(255, 255, 255)
+        except:
+            pass  # Some masters may not allow background modification
+        
+        # Remove effects from all text in master slide
+        for shape in slide_master.shapes:
+            if shape.has_text_frame:
+                for paragraph in shape.text_frame.paragraphs:
+                    for run in paragraph.runs:
+                        if run.text.strip():
+                            # Remove all effects from run
+                            try:
+                                rPr = run._r.get_or_add_rPr()
+                                elements_to_remove = []
+                                for child in rPr:
+                                    tag = child.tag
+                                    if any(effect_name in tag for effect_name in ['effectLst', 'glow', 'outerShdw', 'innerShdw', 'reflection', 'softEdge', 'effectDag']):
+                                        elements_to_remove.append(child)
+                                for element in elements_to_remove:
+                                    rPr.remove(element)
+                            except:
+                                pass
+        
+        # Process each layout in the master
+        for layout in slide_master.slide_layouts:
+            layouts_count += 1
+            
+            # Reset layout background
+            try:
+                background = layout.background
+                fill = background.fill
+                fill.solid()
+                fill.fore_color.rgb = RGBColor(255, 255, 255)
+            except:
+                pass
+            
+            # Remove effects from all text in layout
+            for shape in layout.shapes:
+                if shape.has_text_frame:
+                    for paragraph in shape.text_frame.paragraphs:
+                        for run in paragraph.runs:
+                            if run.text.strip():
+                                try:
+                                    rPr = run._r.get_or_add_rPr()
+                                    elements_to_remove = []
+                                    for child in rPr:
+                                        tag = child.tag
+                                        if any(effect_name in tag for effect_name in ['effectLst', 'glow', 'outerShdw', 'innerShdw', 'reflection', 'softEdge', 'effectDag']):
+                                            elements_to_remove.append(child)
+                                    for element in elements_to_remove:
+                                        rPr.remove(element)
+                                except:
+                                    pass
+    
+    return masters_count, layouts_count
+
+
 def process_presentation(prs, glow_color, glow_size, text_color):
     """
     Process a PowerPoint presentation to add glow effects and set backgrounds.

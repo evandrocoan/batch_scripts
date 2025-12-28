@@ -97,6 +97,17 @@ class SlideFixerGUI:
         self.text_color_entry.insert(0, DEFAULT_TEXT_COLOR)
         self.text_color_entry.pack(side="left", padx=5)
         
+        # Reset master slides checkbox
+        reset_frame = tk.Frame(config_frame)
+        reset_frame.pack(fill="x", pady=10)
+        self.reset_masters_var = tk.BooleanVar(value=False)
+        reset_checkbox = tk.Checkbutton(
+            reset_frame,
+            text="Reset master slides to default",
+            variable=self.reset_masters_var
+        )
+        reset_checkbox.pack(side="left")
+        
         # Progress bar
         self.progress_frame = tk.Frame(self.root)
         self.progress_frame.pack(pady=10, padx=20, fill="x")
@@ -178,6 +189,11 @@ class SlideFixerGUI:
             
             # Open presentation
             prs = Presentation(self.selected_file)
+            
+            # Reset master slides if requested
+            if self.reset_masters_var.get():
+                from fix_slides_for_obs_processor import reset_master_slides
+                reset_master_slides(prs)
             
             # Process using shared function
             count = process_presentation(prs, glow_color, glow_size, text_color)

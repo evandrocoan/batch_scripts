@@ -10,7 +10,7 @@ except ImportError as e:
     sys.exit(1)
 
 try:
-    from fix_slides_for_obs_processor import process_presentation
+    from fix_slides_for_obs_processor import process_presentation, reset_master_slides
 except ImportError as e:
     print("Error: Could not import 'fix_slides_for_obs_processor'.")
     print("Make sure the file 'fix_slides_for_obs_processor.py' exists in the same directory.")
@@ -55,6 +55,12 @@ def main():
         default=DEFAULT_TEXT_COLOR,
         help=f"Text color in hex format (default: {DEFAULT_TEXT_COLOR})"
     )
+    parser.add_argument(
+        "-r", "--reset-masters",
+        dest="reset_masters",
+        action="store_true",
+        help="Reset master slides to default (removes effects and backgrounds)"
+    )
     
     args = parser.parse_args()
     
@@ -65,6 +71,11 @@ def main():
     
     print(f"Opening {args.input_file}...")
     prs = Presentation(args.input_file)
+    
+    # Reset master slides if requested
+    if args.reset_masters:
+        print("Resetting master slides...")
+        reset_master_slides(prs)
     
     count = process_presentation(prs, args.glow_color, args.glow_size, args.text_color)
     
