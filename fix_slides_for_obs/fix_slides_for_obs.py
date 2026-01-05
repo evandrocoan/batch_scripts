@@ -18,9 +18,9 @@ except ImportError as e:
     sys.exit(1)
 
 # ================= DEFAULT CONFIGURATION =================
-DEFAULT_GLOW_COLOR = "#FFFFF0"  # Lighter, more discrete yellow
+DEFAULT_GLOW_COLOR = "#FFFFE0"  # Lighter, more discrete yellow
 DEFAULT_GLOW_SIZE_PT = 20       # Size of the glow in points (reduce to avoid overlap between letters)
-DEFAULT_TEXT_COLOR = "#010101"  # Hex code for near-black text (R=1, G=1, B=1)
+DEFAULT_TEXT_COLOR = "#050505"  # Hex code for near-black text
 # =========================================================
 
 def main():
