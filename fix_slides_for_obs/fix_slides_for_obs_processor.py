@@ -5,6 +5,7 @@ from pptx.oxml import parse_xml
 from pptx.dml.color import RGBColor
 from pptx.util import Pt, Emu
 from pptx.enum.shapes import MSO_SHAPE_TYPE
+from pptx.enum.text import MSO_AUTO_SIZE
 
 try:
     from PIL import ImageFont, ImageDraw, Image
@@ -614,6 +615,9 @@ def reposition_and_resize_text_boxes(prs, margin_percent=0.05, spacing_pt=10):
                 shape.width = available_width
                 shape.height = height_per_box
                 
+                # Enable "Shrink text on overflow" to prevent text from going outside the box
+                shape.text_frame.auto_size = MSO_AUTO_SIZE.TEXT_TO_FIT_SHAPE
+                
                 # Center align text in the shape
                 for paragraph in shape.text_frame.paragraphs:
                     paragraph.alignment = PP_ALIGN.CENTER
@@ -847,6 +851,9 @@ def reposition_and_maximize_font(prs, margin_percent=0.05, spacing_pt=10):
                 shape.top = layout['y']
                 shape.width = available_width
                 shape.height = layout['height']
+                
+                # Enable "Shrink text on overflow" to prevent text from going outside the box
+                shape.text_frame.auto_size = MSO_AUTO_SIZE.TEXT_TO_FIT_SHAPE
                 
                 # Apply scaled font sizes (same scale for all, preserving ratios)
                 for para_idx, paragraph in enumerate(shape.text_frame.paragraphs):

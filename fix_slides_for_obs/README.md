@@ -46,6 +46,40 @@ python fix_slides_for_obs.py presentation.pptx -r
 | `-c, --text-color` | Text color (hex) | `#010101` |
 | `-r, --reset-masters` | Reset master slides | `False` |
 
+## Running Tests
+
+```bash
+# Run all tests
+python -m pytest tests/ -v
+
+# Run only unit tests
+python -m pytest tests/test_slides_processor.py -v
+
+# Run individual slide tests
+python -m pytest tests/test_individual_slides.py -v
+
+# Run a specific test
+python -m pytest tests/test_individual_slides.py::test_slide_aleluia -v
+```
+
+## Debugging
+
+Use `debug_slide.py` for slide inspection and debugging:
+
+```bash
+# Basic slide info
+python debug_slide.py 17
+
+# Compare original vs processed
+python debug_slide.py 17 --compare
+
+# Show all debug info
+python debug_slide.py 17 --all
+
+# Process presentation and save output
+python debug_slide.py --generate-output
+```
+
 ## How It Works
 
 1. **Background Setup**: Sets white background for slides with text, black for empty slides
