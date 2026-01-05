@@ -15,13 +15,21 @@ Additional verifications:
 - Vertical ordering (shapes must maintain relative vertical order)
 - Position at margins (transformed shapes must be at margin positions)
 
-Run with: python -m pytest test_individual_slides.py -v
+Run with: python -m pytest tests/test_individual_slides.py -v
+Or from tests/: python -m pytest test_individual_slides.py -v
 """
 import pytest
 import os
+import sys
 from pptx import Presentation
 from pptx.util import Emu
+
+# Add parent directory to path for imports
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import fix_slides_for_obs_processor as processor
+
+# Get the directory containing this test file
+TEST_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 # =============================================================================
@@ -105,7 +113,7 @@ def get_shapes_info(slide):
 
 def process_and_save_slide(slide_name, tmp_path):
     """Process a slide, save it, and return path to saved file and original shapes info."""
-    input_file = f'test_slides/{slide_name}.pptx'
+    input_file = os.path.join(TEST_DIR, 'test_slides', f'{slide_name}.pptx')
     
     if not os.path.exists(input_file):
         pytest.skip(f"File {input_file} not found")

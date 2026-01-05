@@ -11,6 +11,14 @@ fix_slides_for_obs/
 ├── fix_slides_for_obs.py          # CLI interface
 ├── fix_slides_for_obs_gui.py      # GUI interface (Tkinter)
 ├── fix_slides_for_obs_processor.py # Shared processing logic
+├── debug_slide.py                 # Unified debugging/utility script
+├── Apresentação1Original.pptx     # Original presentation for testing
+├── README.md                      # Project documentation
+├── tests/                         # Test directory
+│   ├── test_slides_processor.py   # Unit tests
+│   ├── test_individual_slides.py  # Individual slide tests
+│   ├── test_expected_data.json    # Expected test data
+│   └── test_slides/               # Individual slide files for testing
 └── .github/
     └── copilot-instructions.md    # This file
 ```
@@ -99,6 +107,37 @@ This handles different DrawingML versions and prevents effect stacking.
 - `argparse`: CLI (standard library)
 - `Pillow` (optional): Text measurement for auto-fit feature
 
+## Debugging Tools
+
+Use `debug_slide.py` for all slide debugging and utility operations:
+
+```bash
+# Basic slide inspection
+python debug_slide.py 17                    # Basic info for slide 17
+python debug_slide.py 17 --compare          # Compare original vs processed
+python debug_slide.py 17 --fonts            # Show font details
+python debug_slide.py 17 --layout           # Show layout calculation
+python debug_slide.py 17 --measurement      # Show text measurement
+python debug_slide.py 17 --shapes           # Show all shapes (including non-text)
+python debug_slide.py 17 --binary-search    # Show binary search scaling process
+python debug_slide.py 17 --lines            # Show line-by-line text analysis
+python debug_slide.py 17 --scale-tests      # Show scale factor tests
+python debug_slide.py 17 --all              # Show all debug info
+
+# Batch operations
+python debug_slide.py --all-slides          # Show fonts for all slides
+python debug_slide.py 17 --process          # Process single slide and show results
+
+# Utility operations
+python debug_slide.py --generate-output     # Process full presentation, save to test_output.pptx
+python debug_slide.py --split-slides        # Split presentation into individual slide files
+
+# Custom files
+python debug_slide.py 17 --original my_presentation.pptx --processed my_output.pptx
+```
+
+**Important**: Do NOT create individual debug scripts like `check_slide17.py` or `debug_slide55.py`. All debugging functionality is consolidated in `debug_slide.py`.
+
 ## Testing Recommendations
 
 1. Test with presentations containing:
@@ -116,3 +155,18 @@ This handles different DrawingML versions and prevents effect stacking.
 3. Check output opens correctly in PowerPoint and LibreOffice Impress
 
 4. Test auto-fit with various text lengths and shape sizes
+
+## Running Tests
+
+```bash
+# Run all tests from project root
+python -m pytest tests/test_slides_processor.py -v
+python -m pytest tests/test_individual_slides.py -v
+
+# Run specific test
+python -m pytest tests/test_individual_slides.py::test_slide_17 -v
+
+# Run from tests directory
+cd tests
+python -m pytest test_slides_processor.py -v
+```

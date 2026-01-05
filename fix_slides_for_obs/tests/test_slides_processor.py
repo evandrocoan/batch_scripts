@@ -6,15 +6,23 @@ Tests verify that each slide is either:
 2. Skipped (if it contains visual elements like images/charts)
 3. Unchanged (if no text shapes to process)
 
-Run with: python -m pytest test_slides_processor.py -v
-Or: python test_slides_processor.py
+Run with: python -m pytest tests/test_slides_processor.py -v
+Or from tests/: python -m pytest test_slides_processor.py -v
 """
 import unittest
 import os
+import sys
 import json
 from pptx import Presentation
 from pptx.enum.shapes import MSO_SHAPE_TYPE
+
+# Add parent directory to path for imports
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import fix_slides_for_obs_processor as processor
+
+# Get the directory containing this test file
+TEST_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.dirname(TEST_DIR)
 
 
 class TestSlidesProcessor(unittest.TestCase):
@@ -23,13 +31,13 @@ class TestSlidesProcessor(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         """Load presentations once for all tests."""
-        cls.prs_orig = Presentation('Apresentação1Original.pptx')
-        cls.prs_proc = Presentation('test_output.pptx')
+        cls.prs_orig = Presentation(os.path.join(PROJECT_DIR, 'Apresentação1Original.pptx'))
+        cls.prs_proc = Presentation(os.path.join(TEST_DIR, 'test_output.pptx'))
         cls.slides_orig = list(cls.prs_orig.slides)
         cls.slides_proc = list(cls.prs_proc.slides)
         
         # Load expected data
-        with open('test_expected_data.json', 'r', encoding='utf-8') as f:
+        with open(os.path.join(TEST_DIR, 'test_expected_data.json'), 'r', encoding='utf-8') as f:
             cls.expected_data = json.load(f)
         
         # Slide dimensions
