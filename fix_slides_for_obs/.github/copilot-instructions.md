@@ -12,12 +12,10 @@ fix_slides_for_obs/
 ├── fix_slides_for_obs_gui.py      # GUI interface (Tkinter)
 ├── fix_slides_for_obs_processor.py # Shared processing logic
 ├── debug_slide.py                 # Unified debugging/utility script
-├── Apresentação1Original.pptx     # Original presentation for testing
 ├── README.md                      # Project documentation
 ├── tests/                         # Test directory
-│   ├── test_slides_processor.py   # Unit tests
-│   ├── test_individual_slides.py  # Individual slide tests
-│   ├── test_expected_data.json    # Expected test data
+│   ├── test_slides_processor.py   # Unit tests (no external files needed)
+│   ├── test_individual_slides.py  # Individual slide tests (uses test_slides/)
 │   └── test_slides/               # Individual slide files for testing
 └── .github/
     └── copilot-instructions.md    # This file
