@@ -39,7 +39,7 @@ except ImportError as e:
 # Default configuration
 DEFAULT_GLOW_COLOR = "#FFFFF0"
 DEFAULT_GLOW_SIZE = 20
-DEFAULT_TEXT_COLOR = "#010101"
+DEFAULT_TEXT_COLOR = "#030303"
 DEFAULT_INVERT_COLORS = False
 
 # Configuration file path (platform-appropriate location)
