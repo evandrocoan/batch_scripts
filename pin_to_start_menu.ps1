@@ -26,13 +26,26 @@ if (-not (Test-Path $ShortcutPath)) {
 
 $ShortcutPath = Resolve-Path $ShortcutPath
 
+# Check if the file is a .lnk file
+if (-not $ShortcutPath.EndsWith('.lnk')) {
+    Write-Host "Error: Input file must be a shortcut (.lnk file): $ShortcutPath" -ForegroundColor Red
+    exit 1
+}
+
+# Check if destination already exists
+$StartMenuPath = "$env:AppData\Microsoft\Windows\Start Menu\Programs"
+$TargetPath = Join-Path $StartMenuPath (Split-Path $ShortcutPath -Leaf)
+
+if (Test-Path $TargetPath) {
+    Write-Host "Error: Destination already exists: $TargetPath" -ForegroundColor Red
+    Write-Host "Please remove the existing file first or use a different name." -ForegroundColor Yellow
+    exit 1
+}
+
 Write-Host "Attempting to pin: $ShortcutPath" -ForegroundColor Cyan
 
 try {
     # Copy to Start Menu Programs folder - this is the most reliable method
-    $StartMenuPath = "$env:AppData\Microsoft\Windows\Start Menu\Programs"
-    $TargetPath = Join-Path $StartMenuPath (Split-Path $ShortcutPath -Leaf)
-    
     Copy-Item -Path $ShortcutPath -Destination $TargetPath -Force
     Write-Host "Successfully copied to: $TargetPath" -ForegroundColor Green
     Write-Host "`nNow:" -ForegroundColor Yellow
