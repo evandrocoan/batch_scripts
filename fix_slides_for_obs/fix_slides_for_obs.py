@@ -104,6 +104,12 @@ def main():
         default=0.05,
         help="Margin as percentage of slide size for repositioning (default: 0.05 = 5%%)"
     )
+    parser.add_argument(
+        "-i", "--invert-colors",
+        dest="invert_colors",
+        action="store_true",
+        help="Invert colors (black background with white text instead of white background with black text)"
+    )
     
     args = parser.parse_args()
     
@@ -169,8 +175,8 @@ def main():
         else:
             print("No font size changes made.")
     
-    count = process_presentation(prs, args.glow_color, args.glow_size, args.text_color)
-    
+    count = process_presentation(prs, args.glow_color, args.glow_size, args.text_color, args.invert_colors)
+
     print(f"Processed {count} text shapes.")
     print(f"Saving to {args.output_file}...")
     prs.save(args.output_file)

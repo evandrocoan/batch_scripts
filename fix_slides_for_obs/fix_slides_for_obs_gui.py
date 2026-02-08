@@ -2,6 +2,8 @@ import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 from pathlib import Path
 import sys
+import json
+import os
 
 try:
     from pptx import Presentation
@@ -38,6 +40,29 @@ except ImportError as e:
 DEFAULT_GLOW_COLOR = "#FFFFF0"
 DEFAULT_GLOW_SIZE = 20
 DEFAULT_TEXT_COLOR = "#010101"
+DEFAULT_INVERT_COLORS = False
+
+# Configuration file path (platform-appropriate location)
+def get_config_path():
+    """Get platform-appropriate config file path."""
+    if sys.platform == 'win32':
+        # Windows: Use APPDATA
+        config_dir = os.environ.get('APPDATA', os.path.expanduser('~'))
+        config_path = os.path.join(config_dir, 'fix_slides_for_obs', 'config.json')
+    elif sys.platform == 'darwin':
+        # macOS: Use ~/Library/Application Support
+        config_dir = os.path.expanduser('~/Library/Application Support/fix_slides_for_obs')
+        config_path = os.path.join(config_dir, 'config.json')
+    else:
+        # Linux/Unix: Use XDG_CONFIG_HOME or ~/.config
+        config_dir = os.environ.get('XDG_CONFIG_HOME', os.path.expanduser('~/.config'))
+        config_path = os.path.join(config_dir, 'fix_slides_for_obs', 'config.json')
+    
+    # Ensure directory exists
+    os.makedirs(os.path.dirname(config_path), exist_ok=True)
+    return config_path
+
+CONFIG_FILE = get_config_path()
 
 class SlideFixerGUI:
     def __init__(self, root):
@@ -50,6 +75,12 @@ class SlideFixerGUI:
         
         # Create UI
         self.create_widgets()
+        
+        # Load saved configuration
+        self.load_config()
+        
+        # Save configuration on close
+        self.root.protocol("WM_DELETE_WINDOW", self.on_closing)
     
     def create_widgets(self):
         # Title
@@ -137,6 +168,17 @@ class SlideFixerGUI:
         if not PILLOW_AVAILABLE:
             tk.Label(reposition_frame, text="(requires Pillow)", fg="gray").pack(side="left", padx=5)
         
+        # Invert colors (dark mode) checkbox
+        invert_frame = tk.Frame(config_frame)
+        invert_frame.pack(fill="x", pady=5)
+        self.invert_colors_var = tk.BooleanVar(value=DEFAULT_INVERT_COLORS)
+        invert_checkbox = tk.Checkbutton(
+            invert_frame,
+            text="Invert colors (black background, white text)",
+            variable=self.invert_colors_var
+        )
+        invert_checkbox.pack(side="left")
+        
         # Progress bar
         self.progress_frame = tk.Frame(self.root)
         self.progress_frame.pack(pady=10, padx=20, fill="x")
@@ -167,6 +209,68 @@ class SlideFixerGUI:
             cursor="hand2"
         )
         self.process_btn.pack()
+    
+    def load_config(self):
+        """Load saved configuration from JSON file."""
+        try:
+            if os.path.exists(CONFIG_FILE):
+                with open(CONFIG_FILE, 'r') as f:
+                    config = json.load(f)
+                
+                # Restore glow color
+                if 'glow_color' in config:
+                    self.color_entry.delete(0, tk.END)
+                    self.color_entry.insert(0, config['glow_color'])
+                
+                # Restore glow size
+                if 'glow_size' in config:
+                    self.size_spinbox.delete(0, tk.END)
+                    self.size_spinbox.insert(0, config['glow_size'])
+                
+                # Restore text color
+                if 'text_color' in config:
+                    self.text_color_entry.delete(0, tk.END)
+                    self.text_color_entry.insert(0, config['text_color'])
+                
+                # Restore checkboxes
+                if 'reset_masters' in config:
+                    self.reset_masters_var.set(config['reset_masters'])
+                
+                if 'check_overflow' in config:
+                    self.check_overflow_var.set(config['check_overflow'])
+                
+                if 'reposition' in config:
+                    self.reposition_var.set(config['reposition'])
+                
+                if 'invert_colors' in config:
+                    self.invert_colors_var.set(config['invert_colors'])
+        except Exception as e:
+            # If loading fails, just use defaults (don't show error to user)
+            pass
+    
+    def save_config(self):
+        """Save current configuration to JSON file."""
+        try:
+            config = {
+                'glow_color': self.color_entry.get(),
+                'glow_size': self.size_spinbox.get(),
+                'text_color': self.text_color_entry.get(),
+                'reset_masters': self.reset_masters_var.get(),
+                'check_overflow': self.check_overflow_var.get(),
+                'reposition': self.reposition_var.get(),
+                'invert_colors': self.invert_colors_var.get()
+            }
+            
+            with open(CONFIG_FILE, 'w') as f:
+                json.dump(config, f, indent=2)
+        except Exception as e:
+            # Silently fail if saving doesn't work
+            pass
+    
+    def on_closing(self):
+        """Handle window close event."""
+        self.save_config()
+        self.root.destroy()
     
     def browse_file(self):
         filename = filedialog.askopenfilename(
@@ -245,10 +349,14 @@ class SlideFixerGUI:
                     reposition_msg += f" Adjusted {len(result['font_changes'])} font size(s)."
             
             # Process using shared function
-            count = process_presentation(prs, glow_color, glow_size, text_color)
+            invert_colors = self.invert_colors_var.get()
+            count = process_presentation(prs, glow_color, glow_size, text_color, invert_colors)
             
             # Save the presentation
             prs.save(str(output_path))
+            
+            # Save configuration for next time
+            self.save_config()
             
             # Stop progress bar
             self.progress_bar.stop()

@@ -217,5 +217,234 @@ class TestInsignificantPlaceholder(unittest.TestCase):
         self.assertFalse(processor.is_insignificant_placeholder(shape))
 
 
+class TestColorInversion(unittest.TestCase):
+    """Test color inversion logic used when invert_colors option is enabled."""
+    
+    def invert_color(self, color_hex):
+        """Helper to invert a hex color string (mimics processor logic)."""
+        color_hex = color_hex.lstrip('#')
+        r = int(color_hex[0:2], 16)
+        g = int(color_hex[2:4], 16)
+        b = int(color_hex[4:6], 16)
+        return f"{255-r:02X}{255-g:02X}{255-b:02X}"
+    
+    def test_invert_black_to_white(self):
+        """Inverting black (#000000) should give white (#FFFFFF)."""
+        result = self.invert_color("#000000")
+        self.assertEqual(result, "FFFFFF")
+    
+    def test_invert_white_to_black(self):
+        """Inverting white (#FFFFFF) should give black (#000000)."""
+        result = self.invert_color("#FFFFFF")
+        self.assertEqual(result, "000000")
+    
+    def test_invert_almost_black(self):
+        """Inverting almost black (#010101) should give almost white (#FEFEFE)."""
+        result = self.invert_color("#010101")
+        self.assertEqual(result, "FEFEFE")
+    
+    def test_invert_almost_white(self):
+        """Inverting almost white (#FEFEFE) should give almost black (#010101)."""
+        result = self.invert_color("#FEFEFE")
+        self.assertEqual(result, "010101")
+    
+    def test_invert_default_glow_color(self):
+        """Inverting default glow color (#FFFFF0) should give (#00000F)."""
+        result = self.invert_color("#FFFFF0")
+        self.assertEqual(result, "00000F")
+    
+    def test_invert_red(self):
+        """Inverting pure red (#FF0000) should give cyan (#00FFFF)."""
+        result = self.invert_color("#FF0000")
+        self.assertEqual(result, "00FFFF")
+    
+    def test_invert_green(self):
+        """Inverting pure green (#00FF00) should give magenta (#FF00FF)."""
+        result = self.invert_color("#00FF00")
+        self.assertEqual(result, "FF00FF")
+    
+    def test_invert_blue(self):
+        """Inverting pure blue (#0000FF) should give yellow (#FFFF00)."""
+        result = self.invert_color("#0000FF")
+        self.assertEqual(result, "FFFF00")
+    
+    def test_invert_gray(self):
+        """Inverting mid-gray (#808080) should give complementary gray (#7F7F7F)."""
+        result = self.invert_color("#808080")
+        self.assertEqual(result, "7F7F7F")
+    
+    def test_invert_without_hash(self):
+        """Inversion should work with or without # prefix."""
+        result = self.invert_color("FF0000")
+        self.assertEqual(result, "00FFFF")
+    
+    def test_invert_is_reversible(self):
+        """Inverting twice should return to original color."""
+        original = "A5B7C9"
+        inverted = self.invert_color(original)
+        double_inverted = self.invert_color(inverted)
+        self.assertEqual(double_inverted, original)
+
+
+class TestProcessPresentationInvertColors(unittest.TestCase):
+    """Test process_presentation with invert_colors option."""
+    
+    def setUp(self):
+        """Create a minimal test presentation."""
+        from pptx import Presentation
+        from pptx.util import Inches, Pt
+        
+        self.prs = Presentation()
+        # Set standard slide dimensions
+        self.prs.slide_width = Inches(10)
+        self.prs.slide_height = Inches(5.625)
+        
+        # Add a slide with text
+        blank_layout = self.prs.slide_layouts[6]  # Blank layout
+        self.slide = self.prs.slides.add_slide(blank_layout)
+        
+        # Add a text box
+        left = Inches(1)
+        top = Inches(1)
+        width = Inches(8)
+        height = Inches(2)
+        txBox = self.slide.shapes.add_textbox(left, top, width, height)
+        tf = txBox.text_frame
+        p = tf.paragraphs[0]
+        run = p.add_run()
+        run.text = "Test text"
+        run.font.size = Pt(24)
+    
+    def test_process_without_invert(self):
+        """Process presentation without invert_colors should use white background."""
+        from pptx.dml.color import RGBColor
+        
+        processor.process_presentation(
+            self.prs, 
+            glow_color="#FFFFF0", 
+            glow_size=20, 
+            text_color="010101",
+            invert_colors=False
+        )
+        
+        # Check background is white
+        fill = self.slide.background.fill
+        self.assertEqual(fill.fore_color.rgb, RGBColor(255, 255, 255))
+    
+    def test_process_with_invert(self):
+        """Process presentation with invert_colors should use black background."""
+        from pptx.dml.color import RGBColor
+        
+        processor.process_presentation(
+            self.prs, 
+            glow_color="#FFFFF0", 
+            glow_size=20, 
+            text_color="010101",
+            invert_colors=True
+        )
+        
+        # Check background is black
+        fill = self.slide.background.fill
+        self.assertEqual(fill.fore_color.rgb, RGBColor(0, 0, 0))
+    
+    def test_text_color_normal_mode(self):
+        """Text color should match input in normal mode."""
+        from pptx.dml.color import RGBColor
+        
+        processor.process_presentation(
+            self.prs, 
+            glow_color="#FFFFF0", 
+            glow_size=20, 
+            text_color="010101",
+            invert_colors=False
+        )
+        
+        # Find text and check color
+        for shape in self.slide.shapes:
+            if shape.has_text_frame:
+                for para in shape.text_frame.paragraphs:
+                    for run in para.runs:
+                        if run.text.strip():
+                            # Should be almost black (#010101)
+                            self.assertEqual(run.font.color.rgb, RGBColor(1, 1, 1))
+    
+    def test_text_color_inverted_mode(self):
+        """Text color should be inverted in inverted mode."""
+        from pptx.dml.color import RGBColor
+        
+        processor.process_presentation(
+            self.prs, 
+            glow_color="#FFFFF0", 
+            glow_size=20, 
+            text_color="010101",
+            invert_colors=True
+        )
+        
+        # Find text and check color
+        for shape in self.slide.shapes:
+            if shape.has_text_frame:
+                for para in shape.text_frame.paragraphs:
+                    for run in para.runs:
+                        if run.text.strip():
+                            # Should be almost white (#FEFEFE = 254, 254, 254)
+                            self.assertEqual(run.font.color.rgb, RGBColor(254, 254, 254))
+    
+    def test_empty_slide_background_normal(self):
+        """Empty slides should have black background in normal mode."""
+        from pptx.dml.color import RGBColor
+        
+        # Add an empty slide
+        blank_layout = self.prs.slide_layouts[6]
+        empty_slide = self.prs.slides.add_slide(blank_layout)
+        
+        processor.process_presentation(
+            self.prs, 
+            glow_color="#FFFFF0", 
+            glow_size=20, 
+            text_color="010101",
+            invert_colors=False
+        )
+        
+        # Empty slide should have black background
+        fill = empty_slide.background.fill
+        self.assertEqual(fill.fore_color.rgb, RGBColor(0, 0, 0))
+    
+    def test_empty_slide_background_inverted(self):
+        """Empty slides should have white background in inverted mode."""
+        from pptx.dml.color import RGBColor
+        
+        # Add an empty slide
+        blank_layout = self.prs.slide_layouts[6]
+        empty_slide = self.prs.slides.add_slide(blank_layout)
+        
+        processor.process_presentation(
+            self.prs, 
+            glow_color="#FFFFF0", 
+            glow_size=20, 
+            text_color="010101",
+            invert_colors=True
+        )
+        
+        # Empty slide should have white background in inverted mode
+        fill = empty_slide.background.fill
+        self.assertEqual(fill.fore_color.rgb, RGBColor(255, 255, 255))
+    
+    def test_default_invert_colors_is_false(self):
+        """Default value for invert_colors should be False."""
+        from pptx.dml.color import RGBColor
+        
+        # Call without invert_colors parameter
+        processor.process_presentation(
+            self.prs, 
+            glow_color="#FFFFF0", 
+            glow_size=20, 
+            text_color="010101"
+        )
+        
+        # Should behave as if invert_colors=False (white background)
+        fill = self.slide.background.fill
+        self.assertEqual(fill.fore_color.rgb, RGBColor(255, 255, 255))
+
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)

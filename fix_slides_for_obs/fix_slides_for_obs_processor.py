@@ -1141,7 +1141,7 @@ def reset_master_slides(prs):
     return masters_count, layouts_count
 
 
-def process_presentation(prs, glow_color, glow_size, text_color):
+def process_presentation(prs, glow_color, glow_size, text_color, invert_colors=False):
     """
     Process a PowerPoint presentation to add glow effects and set backgrounds.
     
@@ -1150,6 +1150,7 @@ def process_presentation(prs, glow_color, glow_size, text_color):
         glow_color: Hex color for glow (with or without #)
         glow_size: Glow size in points
         text_color: Hex color for text (with or without #)
+        invert_colors: If True, use black background with white text instead of white background with black text
     
     Returns:
         int: Number of text shapes processed
@@ -1171,14 +1172,22 @@ def process_presentation(prs, glow_color, glow_size, text_color):
                 has_text = True
                 break
         
-        # Set slide background: white if has text, black if no text
+        # Set slide background based on invert_colors setting
+        # Normal: white background for text slides, black for empty
+        # Inverted: black background for text slides, white for empty
         background = slide.background
         fill = background.fill
         fill.solid()
         if has_text:
-            fill.fore_color.rgb = RGBColor(255, 255, 255)  # White background
+            if invert_colors:
+                fill.fore_color.rgb = RGBColor(0, 0, 0)  # Black background (inverted)
+            else:
+                fill.fore_color.rgb = RGBColor(255, 255, 255)  # White background
         else:
-            fill.fore_color.rgb = RGBColor(0, 0, 0)  # Black background
+            if invert_colors:
+                fill.fore_color.rgb = RGBColor(255, 255, 255)  # White background (inverted)
+            else:
+                fill.fore_color.rgb = RGBColor(0, 0, 0)  # Black background
             continue  # Skip processing shapes on empty slides
         
         # Iterate through every shape on the slide
@@ -1192,15 +1201,31 @@ def process_presentation(prs, glow_color, glow_size, text_color):
             for paragraph in shape.text_frame.paragraphs:
                 for run in paragraph.runs:
                     if run.text.strip():  # Only process non-empty runs
-                        # Apply the SOLID glow (0% transparency) to create highlighter effect
-                        apply_solid_glow_to_run(run, glow_color, glow_size)
+                        # Invert glow color if needed
+                        glow_color_to_use = glow_color
+                        if invert_colors:
+                            # Strip '#' and invert the glow color
+                            glow_hex = glow_color.lstrip('#')
+                            r = int(glow_hex[0:2], 16)
+                            g = int(glow_hex[2:4], 16)
+                            b = int(glow_hex[4:6], 16)
+                            # Invert each component
+                            glow_color_to_use = f"{255-r:02X}{255-g:02X}{255-b:02X}"
                         
-                        # Set text color
-                        run.font.color.rgb = RGBColor(
-                            int(text_color[0:2], 16),
-                            int(text_color[2:4], 16),
-                            int(text_color[4:6], 16)
-                        )
+                        # Apply the SOLID glow (0% transparency) to create highlighter effect
+                        apply_solid_glow_to_run(run, glow_color_to_use, glow_size)
+                        
+                        # Set text color (invert if invert_colors is enabled)
+                        r = int(text_color[0:2], 16)
+                        g = int(text_color[2:4], 16)
+                        b = int(text_color[4:6], 16)
+                        
+                        if invert_colors:
+                            # Invert the color components (255 - value)
+                            run.font.color.rgb = RGBColor(255 - r, 255 - g, 255 - b)
+                        else:
+                            # Normal: use the configured text color
+                            run.font.color.rgb = RGBColor(r, g, b)
                         text_processed = True
             
             if text_processed:
