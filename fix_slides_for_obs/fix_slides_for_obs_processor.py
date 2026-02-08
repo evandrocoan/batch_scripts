@@ -4,7 +4,7 @@ Shared functions for PowerPoint slide processing with OBS chroma key support.
 from pptx.oxml import parse_xml
 from pptx.dml.color import RGBColor
 from pptx.util import Pt, Emu
-from pptx.enum.shapes import MSO_SHAPE_TYPE
+from pptx.enum.shapes import MSO_SHAPE_TYPE, PP_PLACEHOLDER
 from pptx.enum.text import MSO_AUTO_SIZE
 
 try:
@@ -19,6 +19,40 @@ WINDOWS_FONTS_DIR = os.path.join(os.environ.get('WINDIR', 'C:\\Windows'), 'Fonts
 
 # Default/fallback font
 DEFAULT_FONT = 'arial.ttf'
+
+
+# Placeholder types that should be ignored when checking for meaningful text content
+# These are typically auto-generated elements like page numbers, dates, and footers
+INSIGNIFICANT_PLACEHOLDER_TYPES = {
+    PP_PLACEHOLDER.SLIDE_NUMBER,
+    PP_PLACEHOLDER.FOOTER,
+    PP_PLACEHOLDER.DATE,
+    PP_PLACEHOLDER.HEADER,
+}
+
+
+def is_insignificant_placeholder(shape):
+    """
+    Check if a shape is an insignificant placeholder (page number, footer, date, header).
+    These should be ignored when determining if a slide has meaningful content.
+    
+    Args:
+        shape: A PowerPoint shape object
+    
+    Returns:
+        bool: True if the shape is an insignificant placeholder, False otherwise
+    """
+    if not shape.is_placeholder:
+        return False
+    
+    try:
+        placeholder_format = shape.placeholder_format
+        if placeholder_format and placeholder_format.type in INSIGNIFICANT_PLACEHOLDER_TYPES:
+            return True
+    except Exception:
+        pass
+    
+    return False
 
 
 def slide_has_visual_elements(slide):
@@ -1127,10 +1161,13 @@ def process_presentation(prs, glow_color, glow_size, text_color):
     
     # Iterate through every slide
     for slide in prs.slides:
-        # Check if slide has any text
+        # Check if slide has any meaningful text (ignore page numbers, footers, etc.)
         has_text = False
         for shape in slide.shapes:
             if shape.has_text_frame and shape.text_frame.text.strip():
+                # Skip insignificant placeholders like page numbers, footers, dates
+                if is_insignificant_placeholder(shape):
+                    continue
                 has_text = True
                 break
         

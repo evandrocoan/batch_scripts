@@ -137,5 +137,85 @@ class TestEMUConversions(unittest.TestCase):
         self.assertAlmostEqual(ratio, expected_ratio, places=2)
 
 
+class MockPlaceholderFormat:
+    """Mock placeholder format for testing."""
+    def __init__(self, placeholder_type):
+        self.type = placeholder_type
+
+
+class MockShape:
+    """Mock shape for testing is_insignificant_placeholder."""
+    def __init__(self, is_placeholder=False, placeholder_type=None):
+        self._is_placeholder = is_placeholder
+        self._placeholder_type = placeholder_type
+    
+    @property
+    def is_placeholder(self):
+        return self._is_placeholder
+    
+    @property
+    def placeholder_format(self):
+        if self._placeholder_type is not None:
+            return MockPlaceholderFormat(self._placeholder_type)
+        return None
+
+
+class TestInsignificantPlaceholder(unittest.TestCase):
+    """Test is_insignificant_placeholder function."""
+    
+    def test_non_placeholder_shape(self):
+        """Non-placeholder shapes should return False."""
+        shape = MockShape(is_placeholder=False)
+        self.assertFalse(processor.is_insignificant_placeholder(shape))
+    
+    def test_slide_number_placeholder(self):
+        """Slide number placeholders should be insignificant."""
+        from pptx.enum.shapes import PP_PLACEHOLDER
+        shape = MockShape(is_placeholder=True, placeholder_type=PP_PLACEHOLDER.SLIDE_NUMBER)
+        self.assertTrue(processor.is_insignificant_placeholder(shape))
+    
+    def test_footer_placeholder(self):
+        """Footer placeholders should be insignificant."""
+        from pptx.enum.shapes import PP_PLACEHOLDER
+        shape = MockShape(is_placeholder=True, placeholder_type=PP_PLACEHOLDER.FOOTER)
+        self.assertTrue(processor.is_insignificant_placeholder(shape))
+    
+    def test_date_placeholder(self):
+        """Date placeholders should be insignificant."""
+        from pptx.enum.shapes import PP_PLACEHOLDER
+        shape = MockShape(is_placeholder=True, placeholder_type=PP_PLACEHOLDER.DATE)
+        self.assertTrue(processor.is_insignificant_placeholder(shape))
+    
+    def test_header_placeholder(self):
+        """Header placeholders should be insignificant."""
+        from pptx.enum.shapes import PP_PLACEHOLDER
+        shape = MockShape(is_placeholder=True, placeholder_type=PP_PLACEHOLDER.HEADER)
+        self.assertTrue(processor.is_insignificant_placeholder(shape))
+    
+    def test_title_placeholder_is_significant(self):
+        """Title placeholders should be significant (return False)."""
+        from pptx.enum.shapes import PP_PLACEHOLDER
+        shape = MockShape(is_placeholder=True, placeholder_type=PP_PLACEHOLDER.TITLE)
+        self.assertFalse(processor.is_insignificant_placeholder(shape))
+    
+    def test_body_placeholder_is_significant(self):
+        """Body placeholders should be significant (return False)."""
+        from pptx.enum.shapes import PP_PLACEHOLDER
+        shape = MockShape(is_placeholder=True, placeholder_type=PP_PLACEHOLDER.BODY)
+        self.assertFalse(processor.is_insignificant_placeholder(shape))
+    
+    def test_subtitle_placeholder_is_significant(self):
+        """Subtitle placeholders should be significant (return False)."""
+        from pptx.enum.shapes import PP_PLACEHOLDER
+        shape = MockShape(is_placeholder=True, placeholder_type=PP_PLACEHOLDER.SUBTITLE)
+        self.assertFalse(processor.is_insignificant_placeholder(shape))
+    
+    def test_placeholder_without_format(self):
+        """Placeholder without format should return False (not crash)."""
+        shape = MockShape(is_placeholder=True, placeholder_type=None)
+        # Should return False, not raise an exception
+        self.assertFalse(processor.is_insignificant_placeholder(shape))
+
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)
