@@ -1,4 +1,4 @@
-# Guia Rápido Mesa de Som - Tutorial
+# Guia Mesa de Som
 
 ![mesa-som-visao-geral](mesa-som-visao-geral.png)
 
@@ -6,12 +6,12 @@
 
 - [1. Introdução](#1-introdução)
   - [Nosso objetivo](#nosso-objetivo)
-  - [A regra de ouro](#a-regra-de-ouro)
-  - [⚠ Antes de começar (checklist de segurança)](#-antes-de-começar-checklist-de-segurança)
+  - [Princípio orientador](#princípio-orientador)
+  - [Antes de começar (checklist de segurança)](#antes-de-começar-checklist-de-segurança)
 - [2. Operação básica de um canal](#2-operação-básica-de-um-canal)
   - [O caminho do som (visão geral)](#o-caminho-do-som-visão-geral)
   - [A. O som principal (as 4 grandes caixas dos cantos)](#a-o-som-principal-as-4-grandes-caixas-dos-cantos)
-  - [⚠ A regra dos 3 botões (onde o som morre)](#-a-regra-dos-3-botões-onde-o-som-morre)
+  - [A regra dos 3 botões (onde o som morre)](#a-regra-dos-3-botões-onde-o-som-morre)
     - [O que acontece se nenhum estiver apertado?](#o-que-acontece-se-nenhum-estiver-apertado)
     - [A solução padrão (o "ST")](#a-solução-padrão-o-st)
   - [O segredo do som limpo: ganho vs. volume](#o-segredo-do-som-limpo-ganho-vs-volume)
@@ -25,19 +25,19 @@
 - [4. Controlando os retornos (o que os músicos ouvem)](#4-controlando-os-retornos-o-que-os-músicos-ouvem)
   - [AUX 1 e 2 - retornos dos músicos](#aux-1-e-2---retornos-dos-músicos)
   - [A regra de ouro (botão PRE)](#a-regra-de-ouro-botão-pre)
-  - [⚠ O cenário do caos (o que acontece se o PRE estiver solto)](#-o-cenário-do-caos-o-que-acontece-se-o-pre-estiver-solto)
+  - [O cenário do caos (o que acontece se o PRE estiver solto)](#o-cenário-do-caos-o-que-acontece-se-o-pre-estiver-solto)
   - [AUX 3 e 4 - configurando como auxiliares POST](#aux-3-e-4---configurando-como-auxiliares-post)
 - [5. Entendendo as saídas: onde ligar a gravação?](#5-entendendo-as-saídas-onde-ligar-a-gravação)
-  - [🏆 A vencedora: ST SUB OUT (a profissional)](#-a-vencedora-st-sub-out-a-profissional)
-  - [⚠ As perigosas](#-as-perigosas)
+  - [A vencedora: ST SUB OUT (a profissional)](#a-vencedora-st-sub-out-a-profissional)
+  - [As perigosas](#as-perigosas)
     - [MONO OUT - o som fica "abafado"](#mono-out---o-som-fica-abafado)
     - [REC OUT (RCA) - sem controle de volume](#rec-out-rca---sem-controle-de-volume)
-  - [🎯 Veredito final](#-veredito-final)
+  - [Veredito final](#veredito-final)
 - [6. Como usar AFL e PFL (os botões de escuta solo)](#6-como-usar-afl-e-pfl-os-botões-de-escuta-solo)
   - [O que significam as siglas?](#o-que-significam-as-siglas)
   - [Como usar na prática](#como-usar-na-prática)
-  - [⚠ Quando usar (casos práticos)](#-quando-usar-casos-práticos)
-  - [⚠ Importante: não afeta o som da igreja](#-importante-não-afeta-o-som-da-igreja)
+  - [Quando usar (casos práticos)](#quando-usar-casos-práticos)
+  - [Importante: não afeta o som da igreja](#importante-não-afeta-o-som-da-igreja)
   - [AFL nos grupos (1-2, 3-4) e Master (ST/MONO)](#afl-nos-grupos-1-2-3-4-e-master-stmono)
     - [O que muda?](#o-que-muda)
     - [Exemplo prático: monitorar a bateria agrupada](#exemplo-prático-monitorar-a-bateria-agrupada)
@@ -49,13 +49,13 @@
   - [A regra de ouro: PFL manda em tudo](#a-regra-de-ouro-pfl-manda-em-tudo)
   - [Como usar para ajustar o GAIN (método profissional)](#como-usar-para-ajustar-o-gain-método-profissional)
 - [8. Conclusão](#8-conclusão)
-- [🆘 Anexo: Tabela de Salvação Rápida](#-anexo-tabela-de-salvação-rápida)
+- [Anexo: Tabela de Salvação Rápida](#anexo-tabela-de-salvação-rápida)
 
 ## 1. Introdução
 
-Seja bem-vindo ao nosso guia de operação de áudio. Este documento foi criado para ajudar músicos, cantores e voluntários a entenderem melhor como funciona o coração do nosso sistema de som a mesa Yamaha MG3214FX.
+Seja bem-vindo ao nosso guia de operação de áudio. Este documento foi criado para ajudar músicos, cantores e voluntários a entenderem melhor como funciona o coração do nosso sistema de som a mesa Yamaha MG32/14FX.
 
-À primeira vista, uma mesa de som com dezenas de botões pode parecer intimidante, como a cabine de um avião. Mas a verdade é que ela segue uma lógica simples e repetitiva. Uma vez que você entende como funciona um canal (uma tira vertical de botões), você automaticamente entende como funcionam todos os outros.
+À primeira vista, uma mesa de som com dezenas de botões pode parecer intimidante, como a cabine de um avião. Mas a verdade é que ela segue uma lógica repetitiva. Uma vez que você compreende bem como funciona um canal básico (uma tira vertical de botões), você terá domínio sobre a maioria das operações cotidianas, embora algumas funções avançadas ainda exijam estudo adicional.
 
 ### Nosso objetivo
 
@@ -65,24 +65,24 @@ O som na igreja não existe para ser apenas alto. Ele existe para servir. O obje
 - **A música envolva:** Que a assembleia consiga cantar junto, sem que o som machuque os ouvidos ou esteja embolado.
 - **O equipamento dure:** Que saibamos usar nossa ferramenta corretamente para evitar danos e microfonias.
 
-### A regra de ouro
+### Princípio orientador
 
-No áudio, menos é mais. Antes de aumentar o volume do seu instrumento, tente ouvir o todo. A mesa de som serve para misturar as vozes e instrumentos, criando uma harmonia única, e não uma competição de volumes.
+No áudio litúrgico, **equilíbrio é essencial**. Antes de aumentar o volume do seu instrumento, tente ouvir o conjunto. A mesa de som serve para misturar as vozes e instrumentos, criando uma harmonia única, e não uma competição de volumes.
 
 Vamos desmistificar esses botões e trabalhar juntos para que a nossa liturgia tenha a melhor qualidade possível!
 
-### ⚠ Antes de começar (Checklist de Segurança)
+### Antes de começar (checklist de segurança)
 
 Antes de operar qualquer controle da mesa, verifique estes itens:
 
 > **⚠ Ordem Sagrada de Ligar e Desligar:**
 >
 > 1. **PARA LIGAR:**
->    - Baixe os **Faders Mestres** (Fader Vermelho STEREO e Faders AUX 1, 2, 4) para o zero.
+>    - Baixe os **faders mestres** (fader vermelho STEREO e faders AUX 1, 2, 4) para o zero.
 >    - Ligue o botão Power da mesa.
->    - Só depois ligue os Amplificadores/Caixas.
->    - Agora sim, suba o Fader Vermelho (Master) até o 0.
->    - Suba também os Faders AUX 1, 2 e 4 conforme necessário.
+>    - Só depois ligue os amplificadores/caixas.
+>    - Agora sim, suba o fader vermelho (master) até o 0.
+>    - Suba também os faders AUX 1, 2 e 4 conforme necessário.
 > 2. **PARA DESLIGAR:** Faça o inverso! Desligue as caixas primeiro, depois a mesa.
 > **Por quê?** Essa ordem evita "estouros" (transientes) que podem queimar os alto-falantes das caixas.
 
@@ -103,6 +103,8 @@ Microfone → GAIN → EQ → Fader → [ST/Grupos] → Caixas Principais
                             ↓
                       AUX 1/2 (configurado PRE) → Retornos dos Músicos
                             ↓
+                      AUX 3 (configurado POST) → Transmissão/Gravação
+                            ↓
                       AUX 4 (configurado POST) → Caixas Laterais
 ```
 
@@ -111,6 +113,7 @@ Microfone → GAIN → EQ → Fader → [ST/Grupos] → Caixas Principais
 - **Fader:** Controla o volume final para as caixas principais
 - **ST/Grupos:** Encaminha o som para as saídas corretas
 - **AUX 1/2 (configurado PRE):** Envio independente para os retornos dos músicos
+- **AUX 3 (configurado POST):** Envio proporcional ao fader para transmissão/gravação
 - **AUX 4 (configurado POST):** Envio proporcional ao fader para caixas laterais
 
 ### A. O som principal (as 4 grandes caixas dos cantos)
@@ -123,7 +126,7 @@ Este é o controle mestre. Ele define o volume que sai nas 4 caixas grandes inst
 - **Para baixo:** Diminui o som geral.
 - **⚠ Atenção:** Mover este controle NÃO altera o retorno dos músicos (Aux 1 e 2), pois foram configurados como PRE-fader (independentes). O AUX 4 (caixas laterais) está configurado como POST-fader, então acompanha o movimento do fader!
 
-### ⚠ A regra dos 3 botões (onde o som morre)
+### A regra dos 3 botões (onde o som morre)
 
 ![Botao-ST-12-34](botao-st-12-34.png)
 
@@ -133,9 +136,9 @@ Ele entra pelo cabo do microfone, passa pelo ganho, pelo equalizador, pelo fader
 
 Ao lado de cada fader de volume (o botão deslizante), existem três botões quadrados pequenos: **1-2**, **3-4** e **ST**.
 
-Eles são **Botões de Destino (Roteamento)**. O som precisa saber para onde ir depois de sair do fader.
+Eles são **botões de destino (roteamento)**. O som precisa saber para onde ir depois de sair do fader.
 
-> 🛑 **Lembre-se:** Mesmo com o botão **ST** apertado, o som só sairá nas caixas se o **Fader Vermelho (STEREO OUT)** estiver levantado! Veja o checklist de segurança na Introdução.
+> 🛑 **Lembre-se:** Mesmo com o botão **ST** apertado, o som só sairá nas caixas se o **fader vermelho (STEREO OUT)** estiver levantado! Veja o [checklist de segurança](#antes-de-começar-checklist-de-segurança) na Introdução.
 
 #### O que acontece se nenhum estiver apertado?
 
@@ -143,9 +146,9 @@ Se você subir o volume do canal, ver a luzinha verde acender (sinal entrando), 
 
 - **O som:** Fica preso dentro do canal.
 - **O resultado:** **Silêncio total nas caixas principais.**
-- **A única exceção:** O som **AINDA SAI** nos Retornos de Palco (AUX 1 e AUX 2), pois eles são "Pré-Fader" e pegam o sinal antes desses botões.
+- **A principal exceção:** O som **AINDA SAI** nos retornos de palco (AUX 1 e AUX 2), pois eles estão configurados como "pré-fader" (pegam o sinal antes dos botões de roteamento).
   - *Isso confunde muito:* O músico ouve no retorno, mas o povo não ouve nada.
-  - ⚠ **Atenção:** O AUX 4 (Caixas Laterais) **NÃO** recebe som, pois está configurado em modo POST e depende do fader.
+  - ⚠ **Atenção:** O AUX 4 (caixas laterais) **NÃO** recebe som, pois está configurado em modo POST e depende do fader. Se você configurar AUX 3 ou 4 como PRE também (apertando o botão PRE inferior), eles também se tornam exceções.
 
 #### A solução padrão (o "ST")
 
@@ -154,7 +157,7 @@ Para que o som saia nas caixas principais da igreja, o botão **ST (Stereo)** de
 - **1-2 e 3-4:** Devem ficar **SOLTOS** (para cima), a menos que você saiba exatamente o que está fazendo (agrupando instrumentos).
 - **ST:** **APERTADO** (para baixo).
 
-> 💡 **Nota para Curiosos:** Os botões 1-2 e 3-4 servem para criar subgrupos (ex: controlar toda a bateria com um só fader). Como este é um guia básico, focaremos apenas no botão ST.
+> 💡 **Nota para curiosos:** Os botões 1-2 e 3-4 servem para criar subgrupos (ex: controlar toda a bateria com um só fader). **ATENÇÃO:** Se você apertar esses botões, o som NÃO sai direto nas caixas - você precisará apertar também o botão ST no fader do grupo correspondente.
 >
 > ⚠️ **IMPORTANTE - Usando grupos 1-2 ou 3-4:** Se você apertar o botão **1-2** ou **3-4** em um canal, esse canal vai para os **faders de grupo** (localizados à direita da mesa). **MAS ATENÇÃO:** para o som desse grupo sair nas caixas principais, você também precisa apertar o botão **ST** dos faders de grupo! Ou seja:
 >
@@ -172,7 +175,7 @@ Para que o som saia nas caixas principais da igreja, o botão **ST (Stereo)** de
 
 ![fader-vs-gain](fader-vs-gain.png)
 
-Muitos problemas de som (chiadeira ou distorção) acontecem porque confundimos esses dois controles. Para operar a mesa Yamaha MG3214FX, pense nela como um sistema de água:
+Muitos problemas de som (chiadeira ou distorção) acontecem porque confundimos esses dois controles. Para operar a mesa Yamaha MG32/14FX, pense nela como um sistema de água:
 
 - **GAIN** (Botão giratório *lá no topo do canal*): É a **PRESSÃO** da água que vem da rua (o microfone/instrumento).
 - **FADER** (Botão de deslizar *lá embaixo*): É a **TORNEIRA** que você abre para encher o copo (o volume que sai nas caixas).
@@ -184,13 +187,13 @@ Siga esta ordem sagrada antes de começar a tocar:
 1. **Zere tudo:** Deixe o fader branco (*o botão deslizante lá embaixo*) totalmente abaixado, na posição ∞ (infinito). Gire o botão GAIN (*lá no topo do canal*) todo para a esquerda.
 2. **🔴 Ligue o canal (ON):** Aperte o botão quadrado laranja **ON** (*logo acima do fader*). **Se ele não acender, não sai som!** Este é o "interruptor" do canal.
    - ⚠ **Erro comum:** O iniciante sobe o fader, vê o sinal verde piscando, mas esquece de apertar o botão ON. Resultado: silêncio!
-3. **Ative o filtro de limpeza (80 Hz):** Se for um microfone de voz, aperte o botão **80** com símbolo de filtro (*próximo ao botão GAIN, no topo*). Esse filtro remove o "ronco" grave de ar-condicionado e ruídos de manuseio.
+3. **Ative o filtro de limpeza (80 Hz):** Se for um microfone de voz (especialmente vozes médias e agudas), aperte o botão **80** com símbolo de filtro (*próximo ao botão GAIN, no topo*). Esse filtro remove o "ronco" grave de ar-condicionado e ruídos de manuseio. **Exceção:** Em vozes masculinas muito graves ou instrumentos graves, teste primeiro - o filtro pode remover harmônicos importantes.
 4. **Encaminhe para as caixas (ST):** Garanta que o botão **ST** (*o botão quadrado pequeno ao lado do fader*) esteja **APERTADO** (afundado).
-5. **Confira o Fader Master:** Verifique se o **Fader Vermelho (STEREO OUT)** está levantado (conforme visto no [Checklist de Segurança](#-antes-de-começar-checklist-de-segurança)).
-6. **Som real:** Peça para o músico cantar ou tocar no volume forte que ele vai usar durante a missa/louvor.
+5. **Confira o fader master:** Verifique se o **fader vermelho (STEREO OUT)** está levantado (conforme visto no [checklist de segurança](#antes-de-começar-checklist-de-segurança)).
+6. **Som real:** Peça para o músico cantar ou tocar no volume **mais intenso** que ele vai usar durante a missa/louvor (exemplo: um refrão animado, não apenas um murmúrio). Isso garante que o GAIN seja ajustado para os momentos de pico.
 7. **Ajuste a pressão (GAIN):** Enquanto ele toca, vá girando o GAIN devagar para a direita até a luzinha verde SIGNAL (*ao lado do fader*) piscar com força. **Evite que a luz vermelha (PEAK) acenda!**
-   > 💡 **Dica Pro:** Aperte o botão redondo **PFL** do canal e olhe para as luzes coloridas grandes (VUs) à direita da mesa. Gire o Ganho até que as luzes batam perto do **0**, sem deixar a luz vermelha (PEAK) acender no topo. Esse é o método mais preciso para regular o Ganho. Veja mais detalhes na [Seção 6 - PFL/AFL](#6-como-usar-afl-e-pfl-os-botões-de-escuta-solo).
-8. **Abra a torneira (FADER):** Agora sim, levante o fader branco devagar até a marca do **0** (a linha mais grossa na régua). Esse é o ponto onde a mesa trabalha melhor.
+   > 💡 **Dica pro:** Aperte o botão redondo **PFL** do canal e olhe para as luzes coloridas grandes (VUs) à direita da mesa. Gire o ganho até que as luzes batam perto do **0**, sem deixar a luz vermelha (PEAK) acender no topo. Esse é o método mais preciso para regular o ganho. Veja mais detalhes na [Seção 6 - PFL/AFL](#6-como-usar-afl-e-pfl-os-botões-de-escuta-solo).
+8. **Abra a torneira (FADER):** Agora sim, levante o fader branco devagar até a marca do **0** (a linha mais grossa na régua). Essa é a posição de referência (ganho unitário), que facilita ajustes posteriores durante a celebração - você terá margem tanto para aumentar quanto para diminuir o volume.
 
 ---
 
@@ -223,7 +226,7 @@ Agora que você domina o básico (GAIN, Fader, ON, ST e luzes), vamos conhecer o
 
 ![equalizers-knobs](equalizers-knobs.png)
 
-Os botões giratórios coloridos no meio do canal são o **Equalizador (EQ)**. Eles permitem ajustar o "timbre" do som - deixar a voz mais clara, tirar o "peso" do violão, etc.
+Os botões giratórios coloridos no meio do canal são o **equalizador (EQ)**. Eles permitem ajustar o "timbre" do som - deixar a voz mais clara, tirar o "peso" do violão, etc.
 
 - **HIGH (Agudos - botão verde claro no topo):** Gire para a direita para dar mais "brilho" e clareza. Gire para a esquerda para tirar chiados e assobios.
 - **MID (Médios - botões verdes do meio):** Controla a "presença" da voz. Se a voz está "nasal" ou "abafada", ajuste aqui.
@@ -245,7 +248,7 @@ Os botões giratórios coloridos no meio do canal são o **Equalizador (EQ)**. E
 
 Logo acima do fader, existe um botão giratório chamado **PAN**.
 
-- **Regra de Ouro:** Mantenha ele sempre apontando para o meio (topo / 12 horas).
+- **Regra de ouro:** Mantenha ele sempre apontando para o meio (topo / 12 horas).
 - **⚠ O perigo:** Se você girar este botão para um lado, **o som pode sumir para metade da igreja** (quem senta do lado oposto não ouvirá aquele instrumento/voz) ou a gravação da missa pode ficar com defeito (som só em um canal).
 - **Na dúvida:** Não mexa! Deixe sempre no centro.
 
@@ -267,15 +270,15 @@ Se você ligar um desses microfones e ele **não funcionar** (luz verde não ace
    - **Botão 1:** Canais 1 a 8
    - **Botão 2:** Canais 9 a 16
    - **Botão 3:** Canais 17 a 24
-2. **Aperte o botão do bloco correto:** Uma luz deve acender indicando que o Phantom Power está ativo para aqueles 8 canais.
-3. **Aguarde 10 segundos:** Microfones condensadores demoram um pouco para "acordar".
+2. **Aperte o botão do bloco correto:** Uma luz deve acender indicando que o phantom power está ativo para aqueles 8 canais.
+3. **Aguarde alguns segundos:** Microfones condensadores precisam de um breve momento para estabilizar após receber energia (tipicamente 5-15 segundos).
 
-⚠ **ATENÇÃO - O Phantom liga para 8 canais de uma vez:**
+⚠ **ATENÇÃO - O phantom liga para 8 canais de uma vez:**
 
 - Quando você apertar o botão +48V, estará ligando energia **para 8 canais simultaneamente**, não só para o canal do microfone.
 - **Antes de ligar:** Verifique se não há **cabos desbalanceados, adaptadores de celular ou teclados antigos** conectados nos outros canais do mesmo bloco.
 - **Por quê?** Equipamentos sensíveis ou cabos ruins podem pegar ruído ou até danificar quando recebem +48V.
-- O Phantom Power **NÃO danifica** microfones dinâmicos comuns (como SM58), mas evite ligar/desligar com volume alto para não dar estalos.
+- O phantom power **NÃO danifica** microfones dinâmicos balanceados comuns (como SM58 com cabo XLR). Entretanto, evite ligar/desligar com volume alto para não dar estalos. **Nunca ligue +48V se houver cabos desbalanceados, adaptadores de celular ou equipamentos com entrada não balanceada conectados nos canais do mesmo bloco.**
 
 ---
 
@@ -290,7 +293,7 @@ Em resumo:
 - **AUX 4 (azul):** Caixas de reforço nas laterais da igreja.
 - **AUX 5 e 6 (brancos):** Efeitos internos (Reverb/Eco) - **MANTENHA ZERADOS!**
 
-🛑 **IMPORTANTE - Os Botões Brancos (AUX 5/6 ou EFFECT):**
+🛑 **IMPORTANTE - Os botões brancos (AUX 5/6 ou EFFECT):**
 
 - Esses botões controlam os **efeitos internos** da mesa (eco, reverberação).
 - **Deixe-os sempre ZERADOS** (todos girados para a esquerda, na posição mínima).
@@ -312,13 +315,13 @@ Os **retornos** (também chamados de "monitores") são as caixas de som viradas 
   - **Onde sai:** Na caixa de som de chão, lado do altar.
   - **Use para:** Que os cantores e instrumentistas desse lado se ouçam.
   - **Botão azul AUX 1** (*acima do equalizador, no meio do canal*): gire para a direita para aumentar o volume desse instrumento/voz no retorno esquerdo.
-  - **⚠ Modo PRE (apertado):** O volume do retorno é independente do fader principal.
+  - **⚠ Configuração atual: Modo PRE (botão apertado):** Nesta configuração, o volume do retorno é independente do fader principal. **Importante:** Se o botão PRE for solto acidentalmente, o comportamento muda - o retorno passará a acompanhar o fader (modo POST).
 
 - **AUX 2 🥁 RETORNO LADO DIREITO (Bateria)**
   - **Público:** Músicos do lado direito (lado da mesa de som e bateria, se você estiver de frente para os músicos).
   - **Onde sai:** Na caixa de som próxima à bateria e mesa de som.
   - **Botão azul AUX 2** (*logo abaixo do AUX 1*): gire para a direita para aumentar o volume desse instrumento/voz no retorno direito.
-  - **⚠ Modo PRE (apertado):** O volume do retorno é independente do fader principal.
+  - **⚠ Configuração atual: Modo PRE (botão apertado):** Nesta configuração, o volume do retorno é independente do fader principal. **Importante:** Se o botão PRE for solto acidentalmente, o comportamento muda - o retorno passará a acompanhar o fader (modo POST).
 
 ### A regra de ouro (botão PRE)
 
@@ -331,7 +334,7 @@ O botãozinho quadrado escrito **PRE** (*localizado entre os botões AUX 2 e AUX
 - **PRE apertado (correto):** O volume do retorno é **independente**. Você pode abaixar o som da igreja sem afetar o que o músico ouve.
 - **PRE solto (perigoso):** O volume do retorno fica **amarrado** ao fader. Se você abaixar o som da igreja, o músico perde o retorno junto!
 
-### ⚠ O cenário do caos (o que acontece se o PRE estiver solto)
+### O cenário do caos (o que acontece se o PRE estiver solto)
 
 Para entender a importância desse botãozinho, imagine a seguinte cena durante a missa:
 
@@ -348,23 +351,25 @@ Para entender a importância desse botãozinho, imagine a seguinte cena durante 
 
 Diferente dos retornos (AUX 1 e 2), os Aux 3 e 4 devem ser **configurados em modo POST** (segundo botão PRE solto), ou seja, o volume deles **acompanha** o fader principal:
 
-🛑 **CONFIGURAÇÃO OBRIGATÓRIA - DEIXE O SEGUNDO BOTÃO PRE SOLTO:**
+🛑 **CONFIGURAÇÃO OBRIGATÓRIA - Entenda os dois botões PRE:**
 
-Existe um **segundo botão PRE** no canal (*localizado logo abaixo do primeiro botão PRE, entre AUX 4 e AUX 5/6*). Para que AUX 3 e 4 funcionem em modo POST (que é o que você quer):
+Cada canal possui **DOIS botões PRE** com funções diferentes:
 
-- **DEIXE ESSE SEGUNDO BOTÃO PRE SOLTO** (para cima, não apertado)
-- Se você apertar esse botão, AUX 3 e 4 viram PRE (igual aos retornos), e aí o volume NÃO acompanha mais o fader - **não faça isso!**
+- **Botão PRE superior** (entre AUX 2 e AUX 3): Controla se AUX 1 e AUX 2 são PRE ou POST. **Mantenha APERTADO** para retornos independentes.
+- **Botão PRE inferior** (entre AUX 4 e AUX 5/6): Controla se AUX 3 e AUX 4 são PRE ou POST. **Mantenha SOLTO** para que acompanhem o fader.
 
-**Resumo:** Primeiro botão PRE = APERTADO (para AUX 1 e 2). Segundo botão PRE = SOLTO (para AUX 3 e 4 ficarem POST).
+Se você apertar o botão PRE inferior acidentalmente, AUX 3 e 4 viram PRE (igual aos retornos), e aí o volume NÃO acompanha mais o fader - **evite isso!**
+
+**Resumo:** Botão PRE superior = APERTADO (AUX 1 e 2 independentes). Botão PRE inferior = SOLTO (AUX 3 e 4 acompanham o fader).
 
 - **AUX 3 📺 Transmissão/Envio Especial**
   - **Uso:** Saída auxiliar para enviar uma **mixagem diferente** (ex: mais voz do coral, menos instrumentos) para gravação ou transmissão. **Para a maioria dos casos, prefira usar ST SUB OUT** (veja [Seção 5](#5-entendendo-as-saídas-onde-ligar-a-gravação)).
   - **Botão azul AUX 3** (*abaixo do botão PRE*): gire para a direita para aumentar o volume desse canal na transmissão.
   - ⚠ **Modo POST (segundo botão PRE solto):** Como está configurado em modo POST, se você abaixar o fader, o som da transmissão também abaixa.
 
-- **AUX 4 🔉 CAIXAS DE REFORÇO (as 12 pequenas)**
+- **AUX 4 🔉 CAIXAS DE REFORÇO (zona intermediária)**
   - **Público:** Fiéis sentados nas laterais/corredor.
-  - **Onde sai:** Nas 6 caixas pequenas instaladas de cada lado, entre as caixas grandes da frente e de trás.
+  - **Onde sai:** Nas caixas pequenas instaladas nas laterais da nave (configuração da nossa igreja: 6 de cada lado, distribuídas entre as caixas principais da frente e de trás, cobrindo a zona intermediária onde o som das caixas principais pode ter menos alcance).
   - **Como usar:** Este volume serve para preencher o som no meio da igreja.
   - **Botão azul AUX 4** (*o último dos botões azuis*): gire para a direita para aumentar o volume desse canal nas caixas laterais.
   - ⚠ **Modo POST (segundo botão PRE solto):** Como está configurado em modo POST, quando você abaixa o fader de um canal, o som também reduz nas caixas laterais.
@@ -379,13 +384,13 @@ Existe um **segundo botão PRE** no canal (*localizado logo abaixo do primeiro b
 
 Nossa mesa de som possui várias saídas "mestras" diferentes, e isso pode confundir na hora de conectar um gravador ou fazer a transmissão da missa. A boa notícia é que **só uma delas é a correta para lives e gravações**.
 
-### 🏆 A vencedora: ST SUB OUT (a profissional)
+### A vencedora: ST SUB OUT (a profissional)
 
 - **O que é:** Uma cópia exata do som principal (Master L/R).
 - **O que ela captura:** Exatamente o mesmo som que está saindo nas caixas principais da igreja.
 - **O grande diferencial:** Possui um **botão de volume independente** (*botão giratório no painel frontal marcado "ST SUB OUT"*).
 
-> 💡 **Dica:** Pense na ST SUB OUT como o **"Volume de Gravação"**. O nome "SUB" pode confundir com "Subgrupo", mas aqui significa apenas uma saída secundária ("subsidiary") do Master Stereo.
+> 💡 **Dica:** Pense na ST SUB OUT como o **"Volume de Gravação"**. Tecnicamente, 'ST SUB' significa 'Stereo Submix' - uma cópia derivada do Master Stereo com controle de volume independente.
 
 **Por que usamos:**
 
@@ -402,7 +407,7 @@ Imagine que o som na igreja está perfeito, mas o responsável pela transmissão
 
 **Uso ideal:** Gravação de missas, transmissão ao vivo (YouTube/Facebook), envio de som para salas auxiliares.
 
-### ⚠ As perigosas
+### As perigosas
 
 Existem outras saídas na mesa que **NÃO devem ser usadas para gravação/transmissão**:
 
@@ -422,11 +427,11 @@ Ao lado do fader vermelho (Stereo), existe um fader preto chamado **MONO**. Esta
 
 - **O que é:** saída com conectores vermelho e branco (padrão de aparelhos domésticos).
 - **O problema fatal:** **não tem volume independente.** Se o sinal estiver "rachando" na gravação, você não pode ajustar apenas a gravação - teria que mexer no volume da igreja inteira.
-- **Limitação de cabo:** se o gravador ficar longe da mesa (mais de 3-5 metros), esse cabo pode pegar chiados e ruídos.
+- **Limitação de cabo:** por ser uma conexão desbalanceada, esse cabo é mais suscetível a chiados e ruídos de interferência, especialmente em cabos longos ou em ambientes com equipamentos elétricos próximos.
 
 **Uso:** apenas para gravadores portáteis que ficam **colados na mesa** (cabo curto).
 
-### 🎯 Veredito final
+### Veredito final
 
 Para gravar missas ou transmitir lives, **sempre use a ST SUB OUT**. Ela oferece:
 
@@ -462,7 +467,7 @@ AFL e PFL são ferramentas de diagnóstico profissional que permitem ao operador
 3. **Ouça no fone** enquanto o som normal continua saindo nas caixas da igreja.
 4. **Solte o botão** quando terminar a verificação.
 
-### ⚠ Quando usar (casos práticos)
+### Quando usar (casos práticos)
 
 **Use PFL quando:**
 
@@ -476,7 +481,7 @@ AFL e PFL são ferramentas de diagnóstico profissional que permitem ao operador
 - Precisar verificar o som final que está indo para as caixas
 - Estiver ajustando efeitos e quiser ouvir o resultado
 
-### ⚠ Importante: não afeta o som da igreja
+### Importante: não afeta o som da igreja
 
 Apertar esses botões **NÃO muda nada** no som que sai nas caixas. Eles servem apenas para você ouvir no fone de ouvido e fazer diagnósticos.
 
@@ -538,19 +543,19 @@ Essas luzes funcionam como um semáforo de trânsito:
 - 💚 **Verde (-20 até -1):** Zona segura. O som está passando, mas ainda está numa faixa limpa e saudável.
 - 🎯 **0 (Zero dB):** O alvo perfeito. É aqui que você quer que o som bata na maior parte do tempo. Significa que o sinal está forte o suficiente para não ter chiado, mas longe de distorcer. É o **"ponto doce"** da mesa.
 - 🟡 **Amarelo (+1 até +5):** Atenção! O som está ficando muito forte. Em momentos de empolgação (um grito, uma batida forte de bumbo), é normal a luz bater aqui rapidamente, mas **não deixe ficar aceso constantemente**.
-- 🔴 **Vermelho (PEAK):** PERIGO! O som distorceu (rachou). Se essa luz acender, **abaixe o GAIN imediatamente**, ou você pode queimar alto-falantes ou entregar um som horrível para a assembleia.
+- 🔴 **Vermelho (PEAK):** PERIGO! O som distorceu (rachou). Se essa luz acender, **abaixe o GAIN imediatamente** - o som está distorcendo e vai sair "rachado" nas caixas. Distorção prolongada pode danificar os alto-falantes.
 
 ### As 4 fileiras de luzes
 
 A mesa divide os medidores em dois pares:
 
-#### Par Esquerdo: STEREO L e R (fixos)
+#### Par esquerdo: STEREO L e R (fixos)
 
 - **O que mostram:** SEMPRE mostram o volume final que está saindo para as **caixas principais** da igreja.
-- **Controlado por:** Fader Vermelho (STEREO OUT).
-- **Comportamento:** Se o Fader Vermelho estiver baixo, essas luzes mal acendem. Se estiver no 0, elas devem bater entre -7 e 0 dB durante a missa.
+- **Controlado por:** Fader vermelho (STEREO OUT).
+- **Comportamento:** Se o fader vermelho estiver baixo, essas luzes mal acendem. Se estiver no 0, elas devem bater entre -7 e 0 dB durante a missa.
 
-#### Par Direito: PFL-AFL / GROUP (camaleão)
+#### Par direito: PFL-AFL / GROUP (camaleão)
 
 - **O que mostram:** Essas luzes **mudam de função** dependendo do que você aperta na mesa.
 - **É aqui que entra o botão GROUP.**
@@ -559,7 +564,7 @@ A mesa divide os medidores em dois pares:
 
 Logo abaixo das luzes, existe um botão quadrado escrito **GROUP**. Ele decide o que o par direito de luzes vai mostrar:
 
-- **Botão SOLTO (para cima):** As luzes mostram o nível de **PFL/AFL** (monitoramento). Se nenhum botão PFL ou AFL estiver apertado, elas ficam apagadas ou mostram nível baixo.
+- **Botão SOLTO (para cima):** As luzes mostram o nível de **PFL/AFL** quando algum botão PFL ou AFL estiver apertado. Se nenhum botão PFL/AFL estiver ativo, essas luzes ficam apagadas.
 - **Botão APERTADO (para baixo):** As luzes passam a mostrar o volume dos **Grupos 1-2** (fileira superior) e **Grupos 3-4** (fileira inferior).
 
 **Para que serve:** Se você agrupou a bateria nos Grupos 1-2, você aperta GROUP para ver visualmente se o volume da bateria está equilibrado, sem precisar ouvir no fone.
@@ -614,7 +619,7 @@ Lembre-se: o som litúrgico existe para servir a palavra e a música sagrada, n�
 
 ---
 
-## 🆘 Anexo: Tabela de Salvação Rápida
+## Anexo: Tabela de Salvação Rápida
 
 *Cole esta tabela na parede da cabine de som!*
 
@@ -623,7 +628,7 @@ Lembre-se: o som litúrgico existe para servir a palavra e a música sagrada, n�
 | **Silêncio Total** | Botão **ON** e **ST** | Aperte o botão **ON** e o botão **ST** do canal (ou se usar grupos, aperte **ST** também no fader do grupo). Suba o fader vermelho Master. |
 | **Som "Rachando"** | Luz Vermelha (**PEAK**) | O som está entrando muito forte. Abaixe o botão **GAIN** (lá em cima). |
 | **Microfonia (Apito)** | Retornos (**AUX 1/2**) | Abaixe um pouco o botão azul **AUX 1 ou 2** do microfone que está apitando. |
-| **Músico não se ouve** | Botão **PRE** | Verifique se o botão **PRE** está **APERTADO**. |
+| **Músico não se ouve** | Botões **AUX 1/2** e **PRE** | Verifique se o botão **PRE** está **APERTADO** e se o botão azul **AUX 1 ou 2** do canal está girado para a direita. |
 | **Live sem som** | Saída **ST SUB OUT** | Aumente o botão giratório de volume da saída **ST SUB OUT**. |
-| **Microfone condensador sem som** | **Phantom Power (+48V)** | Aperte o botão **+48V** do bloco correto (canais 1-8, 9-16 ou 17-24). Aguarde 10 segundos. |
+| **Microfone condensador sem som** | **Phantom Power (+48V)** | Aperte o botão **+48V** do bloco correto (canais 1-8, 9-16 ou 17-24). Aguarde alguns segundos. |
 | **Som com eco/caverna** | Botões **AUX 5/6 (EFFECT)** | Os botões brancos AUX 5/6 devem estar **ZERADOS** (girados para a esquerda). |
