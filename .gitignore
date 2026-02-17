@@ -1,6 +1,7 @@
 
 
 MyAutoHotkeyScripts/AutoHotkey.exe
+fix_slides_for_obs/samples
 
 *.sublime-workspace
 *.log
