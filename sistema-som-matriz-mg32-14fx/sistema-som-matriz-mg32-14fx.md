@@ -99,20 +99,40 @@ Para operar corretamente, divida a igreja em 3 zonas mentais Altar/Palco, Cantos
 Antes de mergulhar nos botões, entenda o caminho que o som percorre dentro da mesa:
 
 ```text
-Microfone → GAIN → EQ → Fader → [ST/Grupos] → Caixas Principais
-                            ↓
-                      AUX 1/2 (configurado PRE) → Retornos dos Músicos
-                            ↓
-                      AUX 3 (configurado POST) → Transmissão/Gravação
-                            ↓
-                      AUX 4 (configurado POST) → Caixas Laterais
+Microfone → GAIN → EQ →
+                       ↓
+  ← ← ← ← ← ← ← ← ← ← ← ↓
+ ↓     ← ← ← ← ← ← ← ← ← ↓
+ ↓    ↓
+ ↓    ↓ →  AUX 1 (configurado PRE)
+ ↓    ↓                 ↓
+ ↓    ↓         Retorno Lado Altar
+ ↓    ↓
+ ↓    ↓ →  AUX 2 (configurado PRE)
+ ↓                      ↓
+ ↓              Retorno Lado Bateria
+ ↓
+ ↓ → Fader Branco
+           ↓
+   ← ← ← ← ↓ → → ST e Grupos 1 à 4
+  ↓        ↓             ↓
+  ↓        ↓     4 Caixas Caixas Grandes (frente/fundo)
+  ↓        ↓
+  ↓     AUX 3 (configurado POST)
+  ↓                      ↓
+  ↓             Transmissão/Gravação
+  ↓
+  ↓ → → AUX 4 (configurado POST)
+                         ↓
+             12 Caixas Pequenas Laterais
 ```
 
 - **GAIN:** Ajusta a "pressão" do sinal que entra (volume de entrada)
 - **EQ:** Modifica o timbre (graves, médios, agudos)
-- **Fader:** Controla o volume final para as caixas principais
-- **ST/Grupos:** Encaminha o som para as saídas corretas
-- **AUX 1/2 (configurado PRE):** Envio independente para os retornos dos músicos
+- **Fader Branco:** Controla o volume final para as 4 caixas grandes principais e 12 caixas pequenas
+- **ST e Grupos 1 à 4:** Encaminha o som para as saídas corretas
+- **AUX 1 (configurado PRE):** Envio independente para os retornos dos músicos lado do altar
+- **AUX 2 (configurado PRE):** Envio independente para os retornos dos músicos lado da bateria
 - **AUX 3 (configurado POST):** Envio proporcional ao fader para transmissão/gravação
 - **AUX 4 (configurado POST):** Envio proporcional ao fader para caixas laterais
 
@@ -193,6 +213,7 @@ Siga esta ordem sagrada antes de começar a tocar:
 6. **Som real:** Peça para o músico cantar ou tocar no volume **mais intenso** que ele vai usar durante a missa/louvor (exemplo: um refrão animado, não apenas um murmúrio). Isso garante que o GAIN seja ajustado para os momentos de pico.
 7. **Ajuste a pressão (GAIN):** Enquanto ele toca, vá girando o GAIN devagar para a direita até a luzinha verde SIGNAL (*ao lado do fader*) piscar com força. **Evite que a luz vermelha (PEAK) acenda!**
    > 💡 **Dica pro:** Aperte o botão redondo **PFL** do canal e olhe para as luzes coloridas grandes (VUs) à direita da mesa. Gire o ganho até que as luzes batam perto do **0**, sem deixar a luz vermelha (PEAK) acender no topo. Esse é o método mais preciso para regular o ganho. Veja mais detalhes na [Seção 6 - PFL/AFL](#6-como-usar-afl-e-pfl-os-botões-de-escuta-solo).
+   > 💡 **Dica:** Se o seu instrumento precisar de muito ganho na mesa, verifique primeiro se o volume no próprio instrumento está no máximo. Se já estiver e ainda assim precisar de muito ganho, confirme com o fone de ouvido pelo botão **PFL** que o sinal ficou limpo (sem chiado).
 8. **Abra a torneira (FADER):** Agora sim, levante o fader branco devagar até a marca do **0** (a linha mais grossa na régua). Essa é a posição de referência (ganho unitário), que facilita ajustes posteriores durante a celebração - você terá margem tanto para aumentar quanto para diminuir o volume.
 
 ---
