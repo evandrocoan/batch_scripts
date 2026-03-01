@@ -790,6 +790,13 @@ Lembre-se: o som litúrgico existe para servir a palavra e a música sagrada, n�
 | **Live sem som** | Saída **ST SUB OUT** | Aumente o botão giratório de volume da saída **ST SUB OUT**. |
 | **Microfone condensador sem som** | **Phantom Power (+48V)** | Aperte o botão **+48V** do bloco correto (canais 1-8, 9-16 ou 17-24). Aguarde alguns segundos. |
 | **Som com eco/caverna** | Botões **AUX 5/6 (EFFECT)** | Os botões brancos AUX 5/6 devem estar **ZERADOS** (girados para a esquerda). |
+| **Som distorcendo mesmo com GAIN no mínimo** | Botão **PAD** | Aperte o botão **PAD** (no topo do canal, acima do GAIN). Ele aplica uma redução fixa de **26 dB**. Depois, reajuste o GAIN a partir do mínimo. |
+| **Retorno do músico muda ao mexer no fader da igreja** | Botão **PRE superior** | O botão **PRE** (entre AUX 2 e AUX 3) está **SOLTO**. Aperte-o para tornar os retornos AUX 1/2 independentes do fader. |
+| **Som só sai de um lado da igreja** | Botão **PAN** | O botão **PAN** do canal está girado para um lado. Gire-o de volta para o **centro** (posição 12 horas). |
+| **Microfone com ronco/ruído grave** | Botão **80 Hz** (HPF) | Aperte o botão **80** (filtro passa-alto, no topo do canal, próximo ao GAIN). Ele remove roncos de ar-condicionado e ruídos de manuseio. Exceção: vozes masculinas muito graves. |
+| **Som fraco mesmo com fader levantado** | Volume do **instrumento** e **GAIN** | Verifique se o volume no próprio instrumento está no máximo. Se já estiver, suba o **GAIN** com cuidado (sem acender o PEAK). Se ainda não resolver, verifique cabo e microfone. |
+| **Live distorcendo mas som da igreja está bom** | Botão **ST SUB OUT** | O sinal da gravação/transmissão está muito forte. Gire o botão **ST SUB OUT** (no painel frontal) para a **esquerda** até o som parar de distorcer. |
+| **Gravação com som só em um canal (mono)** | Botão **PAN** | O botão **PAN** de algum canal está girado para um lado. Gire-o de volta para o **centro** (posição 12 horas). |
 
 ---
 
