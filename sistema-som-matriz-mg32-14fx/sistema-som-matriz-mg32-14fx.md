@@ -18,6 +18,7 @@ Manual oficial do mesa: <https://usa.yamaha.com/files/download/other_assets/9/33
     - [A solução padrão (o "ST")](#a-solução-padrão-o-st)
   - [O segredo do som limpo: ganho vs. volume](#o-segredo-do-som-limpo-ganho-vs-volume)
   - [Como regular um canal do zero (passo a passo)](#como-regular-um-canal-do-zero-passo-a-passo)
+  - [O problema da dinâmica de voz (e por que o GAIN sozinho não resolve)](#o-problema-da-dinâmica-de-voz-e-por-que-o-gain-sozinho-não-resolve)
   - [Entendendo as luzes (o semáforo do som)](#entendendo-as-luzes-o-semáforo-do-som)
 - [3. Controles adicionais do canal](#3-controles-adicionais-do-canal)
   - [Equalização básica (EQ) - deixando o som claro](#equalização-básica-eq---deixando-o-som-claro)
@@ -218,6 +219,36 @@ Siga esta ordem sagrada antes de começar a tocar:
    > 💡 **Dica pro:** Aperte o botão redondo **PFL** do canal e olhe para as luzes coloridas grandes (VUs) à direita da mesa. Gire o ganho até que as luzes batam perto do **0**, sem deixar a luz vermelha (PEAK) acender no topo. Esse é o método mais preciso para regular o ganho. Veja mais detalhes na [Seção 6 - PFL/AFL](#6-como-usar-afl-e-pfl-os-botões-de-escuta-solo).
    > 💡 **Dica:** Se o seu instrumento precisar de muito ganho na mesa, verifique primeiro se o volume no próprio instrumento está no máximo. Se já estiver e ainda assim precisar de muito ganho, confirme com o fone de ouvido pelo botão **PFL** que o sinal ficou limpo (sem chiado).
 8. **Abra a torneira (FADER):** Agora sim, levante o fader branco devagar até a marca do **0** (a linha mais grossa na régua). Essa é a posição de referência (ganho unitário), que facilita ajustes posteriores durante a celebração - você terá margem tanto para aumentar quanto para diminuir o volume.
+
+---
+
+### O problema da dinâmica de voz (e por que o GAIN sozinho não resolve)
+
+O passo 6 acima diz para calibrar o GAIN com o volume **mais intenso** da pessoa. Mas na prática da nossa liturgia, o mesmo microfone é usado por pessoas muito diferentes: o padre que projeta bem a voz, o leitor que fala mais baixo, o comentarista que se aproxima demais do microfone.
+
+Isso cria um dilema:
+
+- Se você calibra o GAIN para a voz **mais fraca** → a luz SIGNAL acende para todos, mas quem fala mais alto **estoura o PEAK** e distorce.
+- Se você calibra o GAIN para a voz **mais forte** → ninguém distorce, mas quem fala mais baixo some nas caixas e a luz SIGNAL mal pisca.
+
+#### O que um compressor de áudio resolveria
+
+Um **compressor** é um equipamento que fica entre o microfone e a mesa e resolve exatamente esse problema: ele reduz automaticamente os picos de quem fala alto, sem deixar sumir a voz de quem fala baixo. É como ter um operador invisível ajustando o volume o tempo todo.
+
+O equipamento ideal para o nosso caso seria um compressor de rack como o **Behringer MDX4600**, que tem 4 canais independentes e limitador de picos. Com ele, o GAIN poderia ser calibrado para as vozes mais fracas sem risco de distorção.
+
+> ⚠ **Hoje não temos compressor.** Enquanto isso, a operação manual precisa compensar essa limitação (veja abaixo).
+
+#### Como compensar manualmente (sem compressor)
+
+Como não temos compressor, a regra prática é:
+
+1. **Calibre o GAIN sempre para a voz mais forte** que vai usar aquele microfone. O PEAK não pode estourar — distorção não tem conserto na hora.
+2. **Quando uma pessoa de voz mais fraca pegar o microfone**, suba o **fader** daquele canal para compensar.
+3. **Quando a pessoa de voz mais forte voltar**, abaixe o fader de volta para o 0.
+4. Se o microfone for **fixo de uma pessoa só** (exemplo: microfone do ambão usado apenas pelo leitor), aí sim você pode calibrar o GAIN para aquela voz específica sem se preocupar com outras.
+
+> 💡 **Dica:** Se perceber que a luz SIGNAL não acende para uma pessoa mesmo com o fader no 0, não suba o GAIN — suba o **fader**. O som ainda chega nas caixas mesmo que a SIGNAL não pisque, desde que o fader esteja levantado.
 
 ---
 
