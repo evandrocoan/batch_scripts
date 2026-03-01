@@ -145,9 +145,11 @@ Microfone → GAIN → EQ →
 
 ### A. O som principal (as 4 grandes caixas dos cantos)
 
-**Controle:** o fader branco (*o botão deslizante lá embaixo do canal*)
+**Controle por canal:** o fader branco (*o botão deslizante lá embaixo do canal*)
 
-Este é o controle mestre. Ele define o volume que sai nas 4 caixas grandes instaladas nos cantos da igreja (duas na frente, duas atrás).
+**Controle geral (master):** o fader vermelho (*STEREO OUT, localizado no canto direito da mesa*) — ele controla o volume final de **todas as 4 caixas grandes** ao mesmo tempo. Mesmo que todos os faders brancos estejam levantados, se o fader vermelho estiver abaixado, nenhum som sairá nas caixas grandes.
+
+O fader branco de cada canal define o volume individual que aquele instrumento/voz contribui para as 4 caixas grandes instaladas nos cantos da igreja (duas na frente, duas atrás).
 
 Cada tipo de caixa tem uma função diferente na cobertura sonora da nave:
 
@@ -239,10 +241,14 @@ Siga esta ordem sagrada antes de começar a tocar:
    > ⚠️ **Sinal muito forte (distorcendo mesmo com GAIN no mínimo):** Se mesmo com o GAIN girado todo para a esquerda (mínimo) o sinal já acende o PEAK, aperte o botão **PAD** (*localizado logo acima do botão GAIN, no topo do canal*). Ele aplica uma redução fixa de **26 dB** no sinal antes de chegar ao ganho, trazendo o nível de volta a uma faixa segura para trabalhar. Depois de apertar o PAD, suba o GAIN novamente a partir do mínimo para calibrar normalmente.
    >
    > 🔇 **Sinal fraco não tem solução fácil:** Se mesmo com o GAIN no máximo o sinal chega fraco, **não há milagre a ser feito** — nem por equipamentos de estúdio caros. Amplificar um sinal fraco aumenta junto o ruído de fundo, gerando chiado e microfonia. Isso vale para qualquer estágio da cadeia: o GAIN da mesa, os amplificadores das caixas, ou qualquer amplificador que venha antes ou depois da mesa. A solução correta é resolver o problema na origem — revisar o instrumento, o microfone, o cabo, ou o volume de saída do equipamento — para que o sinal chegue à mesa com força suficiente.
-8. **Confirme o ganho com o fone de ouvido (teste de chiado):** Com o instrumento/microfone em silêncio, pegue o fone de ouvido pendurado embaixo da mesa, conecte-o na entrada PHONES (painel frontal), aperte o botão **PFL** do canal e **aumente o volume dos fones de ouvido ao máximo**. Se em silêncio não houver nenhum chiado, o ganho está seguro e o canal pode ser trabalhado com qualidade. Se houver chiado, reduza o GAIN até ele desaparecer. **Depois, abaixe um pouco o volume dos fones** para não assustar quando você ou outra pessoa apertar o PFL de um canal com sinal alto.
+8. **Confirme o ganho com o fone de ouvido (teste de chiado):** Com o instrumento/microfone em silêncio, pegue o fone de ouvido pendurado embaixo da mesa, conecte-o na entrada PHONES (painel frontal), **aperte bem os fones na cabeça** para isolar o som ambiente, aperte o botão **PFL** do canal e **aumente o volume dos fones de ouvido ao máximo**. Se em silêncio não houver nenhum chiado, o ganho está seguro e o canal pode ser trabalhado com qualidade. Se houver chiado, reduza o GAIN até ele desaparecer. **Depois, abaixe um pouco o volume dos fones** para não assustar quando você ou outra pessoa apertar o PFL de um canal com sinal alto.
 9. **Verifique o botão PRE dos Aux 3 e 4:** Certifique-se de que o **botão PRE inferior** (entre AUX 4 e AUX 5/6) está **SOLTO** em todos os canais. Se estiver apertado, os Aux 3 e 4 ficam independentes do fader — e aí o volume das caixas dos corredores e da transmissão não vai acompanhar o fader branco. Veja detalhes na [seção AUX 3 e 4](#aux-3-e-4---configurando-como-auxiliares-post).
-10. **Abra a torneira (FADER):** Agora sim, aperte o botão **ON** do canal e levante o fader branco devagar até a marca do **0** (a linha mais grossa na régua). Essa é a posição de referência (ganho unitário), que facilita ajustes posteriores durante a celebração - você terá margem tanto para aumentar quanto para diminuir o volume.
+10. **Ligue o canal e ajuste os retornos (AUX 1 e 2):** Com o fader branco ainda na posição ∞ (totalmente abaixado), aperte o botão **ON** do canal. O som ainda não sairá nas caixas da igreja (pois o fader está zerado), mas já estará disponível nos retornos dos músicos (AUX 1 e 2), pois eles são PRE-fader. Agora, ajuste os botões azuis **AUX 1** e **AUX 2** para que o músico se ouça no retorno do palco. Peça feedback ao músico antes de prosseguir.
     - ⚠ **Erro comum:** O iniciante sobe o fader, vê o sinal verde piscando, mas esquece de apertar o botão ON. Resultado: silêncio!
+11. **Abra a torneira (FADER):** Com os retornos ajustados, levante o fader branco devagar até a marca do **0** (a linha mais grossa na régua). Essa é a posição de referência (ganho unitário), que facilita ajustes posteriores durante a celebração — você terá margem tanto para aumentar quanto para diminuir o volume. O AUX 4 (caixas laterais) começará a receber sinal junto com o fader, pois é POST-fader.
+12. **Verifique a cobertura (caminhando pela igreja):** Com todos os canais configurados e os músicos tocando, saia da mesa e caminhe até a caixa grande do fundo e até a porta da igreja. Verifique se o som está em bom volume em todo o percurso. Se necessário, volte à mesa e ajuste o fader branco do canal ou o fader vermelho (Master ST). Veja mais detalhes na [seção sobre cobertura sonora](#a-o-som-principal-as-4-grandes-caixas-dos-cantos).
+
+> 💡 **Resumo da sequência operacional:** A ordem correta para configurar um canal novo é: ① Calibrar o GAIN (passos 1–9) → ② Ligar o canal e ajustar os retornos AUX 1/2 para os músicos (passo 10) → ③ Subir o fader branco para o som da igreja e AUX 4 (passo 11) → ④ Caminhar pela igreja para verificar a cobertura (passo 12). Essa sequência garante que os músicos já estejam se ouvindo antes de o som chegar à assembleia.
 
 ---
 
@@ -442,7 +448,7 @@ Se você apertar o botão PRE inferior acidentalmente, AUX 3 e 4 viram PRE (igua
 **Resumo:** Botão PRE superior = APERTADO (AUX 1 e 2 independentes). Botão PRE inferior = SOLTO (AUX 3 e 4 acompanham o fader).
 
 - **AUX 3 📺 Transmissão/Envio Especial**
-  - **Uso:** Saída auxiliar para enviar uma **mixagem diferente** (ex: mais voz do coral, menos instrumentos) para gravação ou transmissão. **Para a maioria dos casos, prefira usar ST SUB OUT** (veja [Seção 5](#5-entendendo-as-saídas-onde-ligar-a-gravação)).
+  - **Uso:** Saída auxiliar para enviar uma **mixagem diferente** (ex: mais voz do coral, menos instrumentos) para gravação ou transmissão no YouTube. **Para a maioria dos casos, prefira usar ST SUB OUT** (veja [Seção 5](#5-entendendo-as-saídas-onde-ligar-a-gravação)).
   - **Botão azul AUX 3** (*abaixo do botão PRE*): gire para a direita para aumentar o volume desse canal na transmissão.
   - ⚠ **Modo POST (segundo botão PRE solto):** Como está configurado em modo POST, se você abaixar o fader, o som da transmissão também abaixa.
 
@@ -451,6 +457,7 @@ Se você apertar o botão PRE inferior acidentalmente, AUX 3 e 4 viram PRE (igua
   - **Onde sai:** Nas caixas pequenas instaladas nas laterais da nave (configuração da nossa igreja: 6 de cada lado, distribuídas entre as caixas principais da frente e de trás, cobrindo a zona intermediária onde o som das caixas principais pode ter menos alcance).
   - **Como usar:** Este volume serve para preencher o som no meio da igreja.
   - **Botão azul AUX 4** (*o último dos botões azuis*): gire para a direita para aumentar o volume desse canal nas caixas laterais.
+  - **Volume geral do AUX 4:** Além do botão azul em cada canal, existe um **controle master (geral) do AUX 4** — um botão giratório localizado no **canto superior direito da mesa, ao lado das luzes de sinal (V.U. Meters)**. Esse controle define o volume geral de todas as caixas pequenas laterais. Os controles master dos outros auxiliares (AUX 1, 2 e 3) também ficam nessa mesma região.
   - ⚠ **Modo POST (segundo botão PRE solto):** Como está configurado em modo POST, quando você abaixa o fader de um canal, o som também reduz nas caixas laterais.
 
 > ⚠️ **Operação avançada — contra-rotacionar fader e AUX 4:** Em determinadas situações você pode perceber (caminhando pela igreja) que o som está um pouco fraco perto da caixa grande do fundo, mas já está bom nos corredores. Nesse caso, é tentador subir o fader branco daquele canal — mas como o AUX 4 é POST-fader, o volume das caixas laterais vai subir junto. Se os corredores já estavam bons, isso vai desequilibrar o som.
@@ -605,6 +612,8 @@ O fone de ouvido conectado na mesa permite monitorar **4 pontos independentes da
 
 Enquanto os músicos tocam, use o fone com os botões PFL/AFL para escutar individualmente cada canal e detectar chiados, volume baixo ou instrumentos ausentes em alguma das saídas.
 
+> 🎧 **Prática recomendada durante a passagem de som:** Com os músicos tocando, coloque o fone de ouvido e vá apertando o botão **PFL** de cada canal, um por um. Ouça atentamente se há chiado, volume muito baixo ou algum problema no sinal. Depois, use os botões **AFL** dos masters (AUX 1, AUX 2, AUX 4 e ST) para verificar se em alguma das saídas está faltando algum microfone, cantor ou instrumento. Essa verificação canal por canal é essencial para garantir que tudo está chegando limpo e completo em todos os pontos da sonorização antes da celebração começar.
+
 ### Quando usar (casos práticos)
 
 **Use PFL quando:**
@@ -680,7 +689,7 @@ Cada fileira tem a mesma escala de medição, de baixo para cima:
 Essas luzes funcionam como um semáforo de trânsito:
 
 - 💚 **Verde (-20 até -1):** Zona segura. O som está passando, mas ainda está numa faixa limpa e saudável.
-- 🎯 **0 (Zero dB):** O alvo perfeito. É aqui que você quer que o som bata na maior parte do tempo. Significa que o sinal está forte o suficiente para não ter chiado, mas longe de distorcer. É o **"ponto doce"** da mesa.
+- 🎯 **0 (Zero dB):** O alvo perfeito. É aqui que você quer que o som bata na maior parte do tempo. Significa que o sinal está forte o suficiente para não ter chiado, mas longe de distorcer. É o **"ponto doce"** da mesa. Tecnicamente, operar no 0 dB representa **ganho unitário (1:1)**: o sinal que entra no canal é o mesmo que sai para as caixas, sem amplificação nem atenuação — ou seja, sem perda de qualidade introduzida pela mesa.
 - 🟡 **Amarelo (+1 até +5):** Atenção! O som está ficando muito forte. Em momentos de empolgação (um grito, uma batida forte de bumbo), é normal a luz bater aqui rapidamente, mas **não deixe ficar aceso constantemente**.
 - 🔴 **Vermelho (PEAK):** PERIGO! O som distorceu (rachou). Se essa luz acender, **abaixe o GAIN imediatamente** - o som está distorcendo e vai sair "rachado" nas caixas. Distorção prolongada pode danificar os alto-falantes.
 
