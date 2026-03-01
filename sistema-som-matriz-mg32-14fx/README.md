@@ -235,7 +235,7 @@ Siga esta ordem sagrada antes de começar a tocar:
 4. **Encaminhe para as caixas (ST):** Garanta que o botão **ST** (*o botão quadrado pequeno ao lado do fader*) esteja **APERTADO** (afundado).
 5. **Confira o fader master:** Verifique se o **fader vermelho (STEREO OUT)** está levantado (conforme visto no [checklist de segurança](#antes-de-começar-checklist-de-segurança)).
 6. **Som real:** Peça para o músico cantar ou tocar no volume **mais intenso** que ele vai usar durante a missa/louvor (exemplo: um refrão animado, não apenas um murmúrio). Isso garante que o GAIN seja ajustado para os momentos de pico.
-7. **Ajuste a pressão (GAIN):** Enquanto ele toca, vá girando o GAIN devagar para a direita até a luzinha verde SIGNAL (*ao lado do fader*) piscar — isso confirma que há sinal chegando naquele canal. **Evite que a luz vermelha (PEAK) acenda!** Com a SIGNAL acendendo, aperte o botão redondo **PFL** do canal e olhe para as luzes coloridas grandes (VUs) à direita da mesa. Gire o ganho até que as luzes batam perto do **0**, sem deixar a luz vermelha (PEAK) acender no topo. Esse é o método mais preciso para regular o ganho. Veja mais detalhes na [Seção 6 - PFL/AFL](#6-como-usar-afl-e-pfl-os-botões-de-escuta-solo).
+7. **Ajuste a pressão (GAIN):** Enquanto ele toca, vá girando o GAIN devagar para a direita até a luzinha verde SIGNAL (*ao lado do fader*) piscar — isso confirma que há sinal chegando naquele canal. **Evite que a luz vermelha (PEAK) acenda!** Com a SIGNAL acendendo, aperte o botão redondo **PFL** do canal e olhe para as luzes coloridas grandes (V.U. Meters) à direita da mesa. Gire o ganho até que as luzes batam perto do **0**, sem deixar a luz vermelha (PEAK) acender no topo. Esse é o método mais preciso para regular o ganho. Veja mais detalhes na [Seção 6 - PFL/AFL](#6-como-usar-afl-e-pfl-os-botões-de-escuta-solo).
    > 💡 **Dica:** Se o seu instrumento precisar de muito ganho na mesa, verifique primeiro se o volume no próprio instrumento está no máximo. Se já estiver e ainda assim precisar de muito ganho, confirme com o fone de ouvido pelo botão **PFL** que o sinal ficou limpo (sem chiado).
    >
    > ⚠️ **Sinal muito forte (distorcendo mesmo com GAIN no mínimo):** Se mesmo com o GAIN girado todo para a esquerda (mínimo) o sinal já acende o PEAK, aperte o botão **PAD** (*localizado logo acima do botão GAIN, no topo do canal*). Ele aplica uma redução fixa de **26 dB** no sinal antes de chegar ao ganho, trazendo o nível de volta a uma faixa segura para trabalhar. Depois de apertar o PAD, suba o GAIN novamente a partir do mínimo para calibrar normalmente.
@@ -300,9 +300,9 @@ Ao lado de cada fader (volume deslizante), existem duas luzes pequenas. Elas sã
 
  O que significa: PERIGO! O som está estourando!
  O que acontece: Se essa luz acender, o som vai sair rachado e distorcido nas caixas.
- Como resolver: Se a luz vermelha piscar (mesmo que seja só um pouco), abaixe imediatamente o botão GAIN lá no topo do canal até ela parar de acender. Não abaixe o **fader**, abaixe o **Gain**!
+ Como resolver: Se a luz vermelha piscar (mesmo que seja só um pouco), abaixe imediatamente o botão GAIN lá no topo do canal até ela parar de acender. Não abaixe o **fader**, abaixe o **GAIN**!
 
-**Regra de ouro:** Durante a celebração, use apenas os faders (deslizantes) para controlar o volume. Evite mexer no Gain depois que a passagem de som terminar.
+**Regra de ouro:** Durante a celebração, use apenas os faders (deslizantes) para controlar o volume. Evite mexer no GAIN depois que a passagem de som terminar.
 
 ---
 
@@ -624,7 +624,7 @@ Enquanto os músicos tocam, use o fone com os botões PFL/AFL para escutar indiv
 **Use PFL quando:**
 
 - Suspeitar que um microfone está com defeito ou desligado
-- Quiser ajustar o GAIN sem interferir no som da igreja (gire o Ganho até que as luzes batam perto do **0** - veja a [Seção 7](#7-entendendo-os-medidores-as-4-fileiras-de-luzes) para entender a escala completa dos medidores)
+- Quiser ajustar o GAIN sem interferir no som da igreja (gire o GAIN até que as luzes batam perto do **0** - veja a [Seção 7](#7-entendendo-os-medidores-as-4-fileiras-de-luzes) para entender a escala completa dos medidores)
 - Precisar verificar se há sinal chegando no canal, mesmo com o fader abaixado
 
 **Use AFL quando:**
@@ -844,7 +844,7 @@ Lembre-se: o som litúrgico existe para servir a palavra e a música sagrada, n�
 1. **Fader** — O botão deslizante (como um controle de volume em formato de régua) presente em cada canal e no master da mesa. Controla o volume de saída.
 1. **Faixa dinâmica** — A diferença entre o som mais fraco e o mais forte que um equipamento consegue reproduzir com qualidade. Operar perto do 0 dB (ganho unitário) garante o melhor aproveitamento dessa faixa — sinais muito baixos introduzem chiado (ruído de fundo) e sinais muito altos causam distorção.
 1. **Frequência** — A "velocidade" de vibração de uma onda sonora, medida em Hertz (Hz). Sons graves têm frequência baixa (ex: bumbo, 60 Hz), sons médios ficam na faixa intermediária (ex: voz humana, 300–3000 Hz) e sons agudos têm frequência alta (ex: pratos, 10.000 Hz). Os filtros HPF e LPF e o equalizador trabalham cortando ou reforçando faixas de frequência específicas.
-1. **Gain / Ganho** — Botão giratório no topo do canal que ajusta a intensidade do sinal que entra na mesa vindo do microfone ou instrumento. É o primeiro ponto de ajuste antes de qualquer outra coisa.
+1. **GAIN / Ganho** — Botão giratório no topo do canal que ajusta a intensidade do sinal que entra na mesa vindo do microfone ou instrumento. É o primeiro ponto de ajuste antes de qualquer outra coisa.
 1. **Ganho unitário** — Quando o sinal que entra no canal é o mesmo que sai, sem amplificação nem atenuação (proporção 1:1). Na mesa, isso corresponde à posição **0 dB** nos medidores e à marca **0** no fader. Operar nessa referência garante o melhor aproveitamento da faixa dinâmica do equipamento, com mínimo de ruído e sem risco de distorção.
 1. **HPF (High Pass Filter)** — "Filtro passa-alto." Remove as frequências graves abaixo de um ponto de corte (na nossa mesa, 80 Hz), deixando passar apenas os médios e agudos. É o botão **80** no topo do canal, próximo ao GAIN. Útil para eliminar roncos de ar-condicionado, ruídos de manuseio e "efeito de proximidade" em microfones de voz.
 1. **Harmônicos** — Frequências secundárias que acompanham a nota fundamental de um som e lhe dão "cor" e riqueza. São os harmônicos que fazem um violão soar diferente de uma flauta, mesmo tocando a mesma nota. O filtro HPF (80 Hz) pode remover harmônicos graves importantes em vozes masculinas muito graves ou instrumentos de registro baixo — por isso deve ser usado com cuidado nesses casos.
@@ -857,7 +857,7 @@ Lembre-se: o som litúrgico existe para servir a palavra e a música sagrada, n�
 1. **ON** — Botão presente em cada canal que liga ou desliga a passagem de sinal. Quando solto (não apertado), o canal fica mudo — nenhum som sai para as caixas, retornos ou qualquer saída. Deve ser apertado somente após o GAIN estar calibrado.
 1. **P10 (plug 1/4")** — Conector de áudio com formato cilíndrico de 6,35 mm de diâmetro. Existe em duas versões: **TS** (2 contatos — desbalanceado, usado em instrumentos como guitarra e teclado) e **TRS** (3 contatos — balanceado, usado em conexões profissionais e fones de ouvido). Visualmente se distinguem pelo número de anéis na ponta: um anel = TS, dois anéis = TRS.
 1. **PAN (Panorama)** — Botão giratório que controla o balanço estéreo — ou seja, se o som de um canal vai mais para a caixa da esquerda ou da direita. Deve ficar sempre no centro (posição 12 horas).
-1. **PAD** Passive Attenuation Device (Em português: Dispositivo de Atenuação Passiva) — Botão no topo de cada canal que aplica uma atenuação fixa de **26 dB** no sinal antes de chegar ao GAIN. Use quando o sinal do instrumento/microfone é tão forte que distorce mesmo com o GAIN no mínimo. Após apertar o PAD, reajuste o GAIN normalmente a partir do mínimo.
+1. **PAD (Passive Attenuation Device)** — Em português: Dispositivo de Atenuação Passiva. Botão no topo de cada canal que aplica uma atenuação fixa de **26 dB** no sinal antes de chegar ao GAIN. Use quando o sinal do instrumento/microfone é tão forte que distorce mesmo com o GAIN no mínimo. Após apertar o PAD, reajuste o GAIN normalmente a partir do mínimo.
 1. **Passagem de som** — Período antes da celebração em que os músicos tocam e cantam para que o operador de som ajuste os ganhos, volumes, equalização e retornos. É o momento correto para calibrar a mesa, testar microfones e garantir que tudo esteja funcionando antes de o público chegar.
 1. **PEAK** — Luz vermelha de alerta presente em cada canal e nos medidores gerais da mesa. Quando acende, indica que o sinal está forte demais e está distorcendo ("rachando"). A solução imediata é abaixar o GAIN do canal. Nunca deve ficar acesa durante a operação normal.
 1. **Phantom Power (+48V)** — Energia elétrica enviada pelo cabo XLR da mesa para alimentar microfones condensadores. Invisível e segura para microfones dinâmicos comuns, mas pode causar problemas em cabos desbalanceados ou equipamentos domésticos.
