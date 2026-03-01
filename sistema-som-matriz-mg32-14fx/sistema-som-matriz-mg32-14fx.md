@@ -2,6 +2,8 @@
 
 ![mesa-som-visao-geral](mesa-som-visao-geral.png)
 
+Manual oficial do mesa: <https://usa.yamaha.com/files/download/other_assets/9/333859/mg32_14fx_pt.pdf>
+
 ## Índice
 
 - [1. Introdução](#1-introdução)
@@ -395,7 +397,21 @@ Se você apertar o botão PRE inferior acidentalmente, AUX 3 e 4 viram PRE (igua
   - **Botão azul AUX 4** (*o último dos botões azuis*): gire para a direita para aumentar o volume desse canal nas caixas laterais.
   - ⚠ **Modo POST (segundo botão PRE solto):** Como está configurado em modo POST, quando você abaixa o fader de um canal, o som também reduz nas caixas laterais.
 
-> 📝 **Nota:** A configuração dos Auxiliares (qual vai para onde) depende de como os cabos estão ligados atrás da mesa.
+> 💡 **Por que POST e não PRE para o AUX 4?**
+>
+> O AUX 4 alimenta as 12 caixas pequenas laterais, que são um **reforço** do som principal para a nave. Faz sentido que elas acompanhem o fader branco, porque:
+>
+> - Se você **sobe** o fader de um canal → o som aumenta tanto nas 4 caixas grandes **quanto** nas caixas laterais. Consistente.
+> - Se você **abaixa** o fader → as laterais também abaixam. O som da nave fica equilibrado.
+>
+> Se o AUX 4 fosse PRE, as caixas laterais continuariam tocando mesmo depois de você silenciar um canal — o que causaria confusão (ex: você "tira" o violão do som da igreja, mas ele continua saindo pelas laterais).
+>
+> **A pessoa que está regulando o som só precisa mexer no fader branco**, e o AUX 4 se ajusta automaticamente junto — sem precisar sincronizar dois controles separados para manter o equilíbrio entre caixas grandes e laterais.
+>
+> | Saída | Modo correto | Motivo |
+> | --- | --- | --- |
+> | AUX 1 e 2 (retornos dos músicos) | **PRE** | Independente do fader — músico não perde o retorno se você abaixar o volume da igreja |
+> | AUX 4 (caixas laterais) | **POST** | Acompanha o fader — o som das laterais fica sempre proporcional ao som principal |
 
 ---
 
