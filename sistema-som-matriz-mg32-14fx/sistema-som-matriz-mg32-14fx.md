@@ -472,12 +472,13 @@ Ao lado do fader vermelho (Stereo), existe um fader preto chamado **MONO**. Esta
 
 Para gravar missas ou transmitir lives, **sempre use a ST SUB OUT**. Ela oferece:
 
-| Característica | ST SUB OUT | MONO OUT | REC OUT |
-| -------------- | :--------: | :------: | :-----: |
-| Volume independente | ✅ | ❌ | ❌ |
-| Sem filtro perigoso | ✅ | ❌ (LPF) | ✅ |
-| Cabo balanceado (sem chiado) | ✅ | ✅ | ❌ |
-| **Recomendado para Lives** | **✅ SIM** | ❌ NÃO | ❌ NÃO |
+| Característica | ST SUB OUT | AUX 3 OUT | MONO OUT | REC OUT |
+| -------------- | :--------: | :-------: | :------: | :-----: |
+| Volume independente | ✅ | ✅ (por canal) | ❌ | ❌ |
+| Sem filtro perigoso | ✅ | ✅ | ❌ (LPF) | ✅ |
+| Cabo balanceado (sem chiado) | ✅ | ✅ | ✅ | ❌ |
+| Mixagem personalizada por canal | ❌ | ✅ | ❌ | ❌ |
+| **Recomendado para Lives** | **✅ SIM** | ⚠️ AVANÇADO | ❌ NÃO | ❌ NÃO |
 
 ---
 
