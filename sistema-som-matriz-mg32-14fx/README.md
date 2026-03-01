@@ -226,7 +226,8 @@ Siga esta ordem sagrada antes de começar a tocar:
    > ⚠️ **Sinal muito forte (distorcendo mesmo com GAIN no mínimo):** Se mesmo com o GAIN girado todo para a esquerda (mínimo) o sinal já acende o PEAK, aperte o botão **PAD** (*localizado logo acima do botão GAIN, no topo do canal*). Ele aplica uma redução fixa de **26 dB** no sinal antes de chegar ao ganho, trazendo o nível de volta a uma faixa segura para trabalhar. Depois de apertar o PAD, suba o GAIN novamente a partir do mínimo para calibrar normalmente.
    >
    > 🔇 **Sinal fraco não tem solução fácil:** Se mesmo com o GAIN no máximo o sinal chega fraco, **não há milagre a ser feito** — nem por equipamentos de estúdio caros. Amplificar um sinal fraco aumenta junto o ruído de fundo, gerando chiado e microfonia. Isso vale para qualquer estágio da cadeia: o GAIN da mesa, os amplificadores das caixas, ou qualquer amplificador que venha antes ou depois da mesa. A solução correta é resolver o problema na origem — revisar o instrumento, o microfone, o cabo, ou o volume de saída do equipamento — para que o sinal chegue à mesa com força suficiente.
-8. **Abra a torneira (FADER):** Agora sim, levante o fader branco devagar até a marca do **0** (a linha mais grossa na régua). Essa é a posição de referência (ganho unitário), que facilita ajustes posteriores durante a celebração - você terá margem tanto para aumentar quanto para diminuir o volume.
+8. **Confirme o ganho com o fone de ouvido (teste de chiado):** Com o instrumento/microfone em silêncio, conecte o fone de ouvido na entrada PHONES, aperte o botão **PFL** do canal e **aumente o volume dos fones de ouvido ao máximo**. Se em silêncio não houver nenhum chiado, o ganho está seguro e o canal pode ser trabalhado com qualidade. Se houver chiado, reduza o GAIN até ele desaparecer. **Depois, abaixe um pouco o volume dos fones** para não assustar quando você ou outra pessoa apertar o PFL de um canal com sinal alto.
+9. **Abra a torneira (FADER):** Agora sim, levante o fader branco devagar até a marca do **0** (a linha mais grossa na régua). Essa é a posição de referência (ganho unitário), que facilita ajustes posteriores durante a celebração - você terá margem tanto para aumentar quanto para diminuir o volume.
 
 ---
 
@@ -570,6 +571,21 @@ AFL e PFL são ferramentas de diagnóstico profissional que permitem ao operador
 3. **Ouça no fone** enquanto o som normal continua saindo nas caixas da igreja.
 4. **Solte o botão** quando terminar a verificação.
 
+> 💡 **Dica de volume dos fones:** Mantenha o volume do fone de ouvido em um nível confortável durante a operação normal. Se você aumentou o volume dos fones para um teste de chiado (com o instrumento em silêncio), lembre-se de **abaixá-lo depois** para não se assustar quando apertar o PFL de um canal com sinal alto.
+
+### Os 4 destinos que você pode espiar pelo fone
+
+O fone de ouvido conectado na mesa permite monitorar **4 pontos independentes da sonorização** da igreja, sem afetar o som que o povo ouve:
+
+| Destino | Como escutar | O que você ouvirá |
+| --- | --- | --- |
+| **AUX 1** — retorno lado altar | Aperte o botão **AFL** ao lado do master do Aux 1 | O que os músicos do lado do altar estão ouvindo no monitor deles |
+| **AUX 2** — retorno lado bateria | Aperte o botão **AFL** ao lado do master do Aux 2 | O que o baterista e músicos desse lado estão ouvindo |
+| **AUX 4** — caixas dos corredores | Aperte o botão **AFL** ao lado do master do Aux 4 | O som que está saindo pelas caixas pequenas nas laterais da nave |
+| **ST** — as 4 caixas grandes | Aperte o botão **AFL** no fader vermelho (Master ST) | O som principal que está chegando à assembleia |
+
+Enquanto os músicos tocam, use o fone com os botões PFL/AFL para escutar individualmente cada canal e detectar chiados, volume baixo ou instrumentos ausentes em alguma das saídas.
+
 ### Quando usar (casos práticos)
 
 **Use PFL quando:**
@@ -583,6 +599,7 @@ AFL e PFL são ferramentas de diagnóstico profissional que permitem ao operador
 - Quiser conferir se o equalizador (EQ) está correto
 - Precisar verificar o som final que está indo para as caixas
 - Estiver ajustando efeitos e quiser ouvir o resultado
+- Quiser **regular o volume do fader branco** de um canal: aperte AFL, observe as luzes de medição e verifique se o sinal está batendo perto do **0 dB**. Assim como o PFL é usado para calibrar o GAIN (entrada), o AFL é usado para calibrar o fader (saída). Se o sinal estiver passando do 0 dB constantemente, o fader branco está levantado demais — abaixe-o um pouco.
 
 ### Importante: não afeta o som da igreja
 
