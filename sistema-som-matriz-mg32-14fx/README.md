@@ -149,6 +149,15 @@ Microfone → GAIN → EQ →
 
 Este é o controle mestre. Ele define o volume que sai nas 4 caixas grandes instaladas nos cantos da igreja (duas na frente, duas atrás).
 
+Cada tipo de caixa tem uma função diferente na cobertura sonora da nave:
+
+- **4 caixas grandes (cantos):** Servem para **empurrar o som para dentro da igreja** — elas têm potência e alcance para que o som chegue ao fundo da nave.
+- **12 caixas pequenas (laterais/corredores):** Servem para **preencher o som** nas áreas intermediárias onde o alcance das caixas grandes é menor, garantindo uniformidade ao longo dos corredores.
+
+> 💡 **Como verificar se a cobertura está boa:** Com os músicos tocando, saia da mesa e caminhe até a caixa grande do fundo e até a porta da igreja. O som deve estar em bom volume em todo o percurso. Perto da caixa grande do fundo ele será naturalmente um pouco mais alto — isso é normal e esperado. Se o som estiver equilibrado nesse trajeto, a mesa está bem configurada.
+>
+> ⚠️ **Cuidado com a caixa pequena bem acima da cabine de som:** Ela é enganadora como referência, pois você também está próximo dos retornos dos músicos logo à frente. Para ter uma noção real das caixas laterais, caminhe pelo menos **2 metros para dentro** depois daquela caixa pequena na esquina — a partir daí o som das laterais já dá uma noção mais fidedigna.
+
 - **Para cima:** Aumenta o peso do som para a assembleia.
 - **Para baixo:** Diminui o som geral.
 - **⚠ Atenção:** Mover este controle NÃO altera o retorno dos músicos (Aux 1 e 2), pois foram configurados como PRE-fader (independentes). O AUX 4 (caixas laterais) está configurado como POST-fader, então acompanha o movimento do fader!
@@ -438,6 +447,10 @@ Se você apertar o botão PRE inferior acidentalmente, AUX 3 e 4 viram PRE (igua
   - **Botão azul AUX 4** (*o último dos botões azuis*): gire para a direita para aumentar o volume desse canal nas caixas laterais.
   - ⚠ **Modo POST (segundo botão PRE solto):** Como está configurado em modo POST, quando você abaixa o fader de um canal, o som também reduz nas caixas laterais.
 
+> ⚠️ **Operação avançada — contra-rotacionar fader e AUX 4:** Em determinadas situações você pode perceber (caminhando pela igreja) que o som está um pouco fraco perto da caixa grande do fundo, mas já está bom nos corredores. Nesse caso, é tentador subir o fader branco daquele canal — mas como o AUX 4 é POST-fader, o volume das caixas laterais vai subir junto. Se os corredores já estavam bons, isso vai desequilibrar o som.
+>
+> A solução é **contra-rotacionar**: ao subir levemente o fader branco para fortalecer o som das caixas grandes, baixe na mesma proporção o botão AUX 4 daquele canal para compensar. Faça movimentos **suaves e graduais** nos dois controles ao mesmo tempo para não criar buracos no som. Essa manobra exige atenção e prática — é indicada apenas para operadores com alguma experiência na mesa.
+>
 > 💡 **Por que POST e não PRE para o AUX 4?**
 >
 > O AUX 4 alimenta as 12 caixas pequenas laterais, que são um **reforço** do som principal para a nave. Faz sentido que elas acompanhem o fader branco, porque:
