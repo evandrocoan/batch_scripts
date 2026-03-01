@@ -31,6 +31,7 @@ Manual oficial do mesa: <https://usa.yamaha.com/files/download/other_assets/9/33
   - [AUX 3 e 4 - configurando como auxiliares POST](#aux-3-e-4---configurando-como-auxiliares-post)
 - [5. Entendendo as saídas: onde ligar a gravação?](#5-entendendo-as-saídas-onde-ligar-a-gravação)
   - [A vencedora: ST SUB OUT (a profissional)](#a-vencedora-st-sub-out-a-profissional)
+  - [AUX 3 OUT - mixagem personalizada (avançado)](#aux-3-out---mixagem-personalizada-avançado)
   - [As perigosas](#as-perigosas)
     - [MONO OUT - o som fica "abafado"](#mono-out---o-som-fica-abafado)
     - [REC OUT (RCA) - sem controle de volume](#rec-out-rca---sem-controle-de-volume)
@@ -443,6 +444,31 @@ Imagine que o som na igreja está perfeito, mas o responsável pela transmissão
 - ✅ Sem botões de filtro que possam ser apertados por engano
 
 **Uso ideal:** Gravação de missas, transmissão ao vivo (YouTube/Facebook), envio de som para salas auxiliares.
+
+### AUX 3 OUT - mixagem personalizada (avançado)
+
+A saída **AUX 3** é uma alternativa avançada à ST SUB OUT, útil quando você precisa enviar para a gravação uma **mixagem diferente** da que está indo para as caixas da igreja — por exemplo, mais voz do coral e menos instrumentos.
+
+**Como funciona:**
+
+Em vez de capturar o som já misturado (como faz a ST SUB OUT), o AUX 3 coleta o sinal de cada canal individualmente, pelo **botão azul AUX 3** de cada canal. Você controla quanto de cada instrumento/voz entra na gravação de forma totalmente independente do som da igreja.
+
+**Vantagens:**
+
+- ✅ Cabo balanceado (livre de chiados)
+- ✅ Controle de volume por canal (cada botão AUX 3 é independente)
+- ✅ Sem filtros perigosos
+- ✅ Mixagem personalizada — a gravação pode soar diferente do som da igreja
+
+**Limitações:**
+
+- ⚠ **Modo POST:** o volume de cada canal na saída AUX 3 acompanha o fader branco. Se você abaixar um canal na mesa, ele também abaixa na gravação.
+- ⚠ **Trabalhoso:** exige configurar o botão AUX 3 em *todos* os canais desejados. Se um novo canal for ligado e o operador esquecer de girar o botão AUX 3, ele não entra na gravação.
+- ⚠ **Não obedece os faders de grupo:** o AUX 3 captura o sinal de cada canal individualmente, antes de chegar aos faders de grupo. Se você usar os subgrupos 1-2 ou 3-4 para ajustar o volume geral de um instrumento (ex: abaixar toda a bateria de uma vez pelo fader do grupo), esse ajuste **não reflete no AUX 3** — ele continuará recebendo cada canal da bateria no volume individual do fader branco, ignorando a atenuação do grupo.
+
+**Quando usar:**
+
+Use o AUX 3 quando quiser que a gravação/transmissão tenha uma mixagem diferente da que a assembleia ouve — por exemplo, enfatizar mais as vozes e menos os instrumentos numa transmissão online. Para o uso cotidiano (gravar a missa como ela soa na igreja), **prefira a ST SUB OUT**.
 
 ### As perigosas
 
