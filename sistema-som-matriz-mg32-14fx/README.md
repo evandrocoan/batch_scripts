@@ -200,12 +200,19 @@ Para que o som saia nas caixas principais da igreja, o botão **ST (Stereo)** de
 > - **No canal:** Aperte **1-2** (o som vai para o grupo)
 > - **No fader do grupo 1-2:** Aperte **ST** (o grupo vai para as caixas)
 > - Se esquecer o ST no grupo, o som fica preso no grupo e não sai nas caixas!
+>
+> 🔇 **Informação prática:** Atrás da mesa existem saídas físicas para os Grupos 1, 2, 3 e 4. Como não há nada conectado nessas saídas atualmente, o som que vai para os grupos só sai nas caixas se o botão **ST** dos faders de grupo estiver apertado. Sem isso, o som não vai para lugar nenhum.
+>
+> ⚡ **Uso avançado — ganho extra sem afetar o AUX 4:** Como o AUX 4 (caixas dos corredores) é POST-fader do canal, ele acompanha o fader branco. Os faders de grupo, porém, ficam *depois* do roteamento 1-2/3-4 e *antes* do ST final — então você pode usar o fader de grupo para dar um **ganho extra** naquele canal sem mexer no fader branco individual e sem alterar o AUX 4. É útil quando você quer reforçar um instrumento nas caixas grandes sem mexer no equilíbrio dos corredores.
+>
+> 🚨 **Perigo: ST + grupo ao mesmo tempo (soma de sinais):** **Nunca** aperte o botão **ST** do canal **e** o botão **1-2** (ou **3-4**) ao mesmo tempo no mesmo canal, a menos que seja intencional. Se o grupo também estiver com ST apertado, o mesmo sinal chegará às caixas por dois caminhos diferentes, dobrando o volume (~3 a 6 dB a mais). Isso pode causar microfonia, distorção e danos ao equipamento. Escolha sempre **um único caminho**: ou ST direto, ou grupo com ST no fader do grupo.
 
 **Resumo:**
 
 - **Sem botão apertado =** Som morre no canal.
 - **Botão ST apertado (direto) =** Som vai para o povo.
 - **Botão 1-2 ou 3-4 apertado =** Som vai para o grupo, **MAS** o grupo também precisa ter ST apertado para sair nas caixas.
+- **ST + 1-2 ao mesmo tempo (grupo com ST) =** ⚠️ Volume dobra (~3 a 6 dB) — evite, pode causar microfonia e distorção.
 
 ### O segredo do som limpo: ganho vs. volume
 
