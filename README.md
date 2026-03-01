@@ -5,7 +5,7 @@ Contains some useful script utilities I use somewhere.
 ## Documentation
 
 - [Fix Slides for OBS](fix_slides_for_obs/README.md) - PowerPoint presentation tool for OBS Studio chroma key overlays
-- [Sound Mixer Guide (Yamaha MG3214FX)](sistema-som-matriz-mg32-14fx/sistema-som-matriz-mg32-14fx.md) - Comprehensive church sound system tutorial
+- [Sound Mixer Guide (Yamaha MG3214FX)](sistema-som-matriz-mg32-14fx/README.md) - Comprehensive church sound system tutorial
 - [Music Sheet Creation Prompt](prompt-para-criar-partituras-de-canto.md) - Visual melodic map generator for vocal arrangements
 
 ## SpeakTimeVBScript

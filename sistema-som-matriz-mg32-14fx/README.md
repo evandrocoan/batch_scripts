@@ -462,7 +462,7 @@ Nossa mesa de som possui várias saídas "mestras" diferentes, e isso pode confu
 - **O que ela captura:** Exatamente o mesmo som que está saindo nas caixas principais da igreja.
 - **O grande diferencial:** Possui um **botão de volume independente** (*botão giratório no painel frontal marcado "ST SUB OUT"*).
 
-> 💡 **Dica:** Pense na ST SUB OUT como o **"Volume de Gravação"**. Tecnicamente, 'ST SUB' significa 'Stereo Submix' - uma cópia derivada do Master Stereo com controle de volume independente.
+> 💡 **Dica:** Pense na ST SUB OUT como o **"Volume de Gravação"**. Tecnicamente, 'ST SUB' significa 'Stereo Submaster' — uma cópia derivada do Master Stereo com controle de volume independente. O 'SUB' significa *submaster* (um nível abaixo do mestre), **não tem relação com subwoofer** (graves).
 
 **Por que usamos:**
 
@@ -774,7 +774,7 @@ Lembre-se: o som litúrgico existe para servir a palavra e a música sagrada, n�
 1. **Reverb / Reverberação** — Efeito que simula o eco natural de ambientes como igrejas ou cavernas. Na mesa, está nos botões brancos AUX 5/6 — devem ser mantidos zerados para não distorcer o som litúrgico.
 1. **Roteamento** — O processo de definir para *onde* o sinal de áudio vai dentro da mesa. Os botões ST, 1-2 e 3-4 ao lado de cada fader são botões de roteamento.
 1. **ST / Stereo** — Abreviação de "estéreo" — som com canal esquerdo e direito. O botão ST em cada canal envia o sinal para a saída principal (as caixas grandes da assembleia).
-1. **ST SUB OUT (Stereo Sub Output)** — Saída de áudio da mesa com volume independente, ideal para gravação e transmissão ao vivo. Envia uma cópia exata do som principal sem interferir no volume das caixas da igreja.
+1. **ST SUB OUT (Stereo Submaster Output)** — Saída de áudio da mesa com volume independente, ideal para gravação e transmissão ao vivo. Envia uma cópia exata do som principal sem interferir no volume das caixas da igreja. O 'SUB' significa *submaster* (um nível abaixo do mestre), **não** tem relação com subwoofer ou graves.
 1. **Subgrupo / Grupo** — Forma de agrupar vários canais em um único controle. Por exemplo, todos os microfones da bateria podem ser agrupados nos "Grupos 1-2", permitindo controlar o volume de toda a bateria com um único fader.
 1. **Subwoofer** — Caixa de som especializada em reproduzir frequências muito graves (bumbo, contrabaixo). A saída MONO da mesa foi projetada para alimentar este tipo de caixa.
 1. **Timbre** — A "cor" ou "textura" de um som — o que diferencia uma flauta de um violão, mesmo tocando a mesma nota. O equalizador (EQ) é a ferramenta para ajustar o timbre.
