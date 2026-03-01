@@ -245,6 +245,8 @@ Siga esta ordem sagrada antes de começar a tocar:
 9. **Verifique o botão PRE dos Aux 3 e 4:** Certifique-se de que o **botão PRE inferior** (entre AUX 4 e AUX 5/6) está **SOLTO** em todos os canais. Se estiver apertado, os Aux 3 e 4 ficam independentes do fader — e aí o volume das caixas dos corredores e da transmissão não vai acompanhar o fader branco. Veja detalhes na [seção AUX 3 e 4](#aux-3-e-4---configurando-como-auxiliares-post).
 10. **Ligue o canal e ajuste os retornos (AUX 1 e 2):** Com o fader branco ainda na posição ∞ (totalmente abaixado), aperte o botão **ON** do canal. O som ainda não sairá nas caixas da igreja (pois o fader está zerado), mas já estará disponível nos retornos dos músicos (AUX 1 e 2), pois eles são PRE-fader. Agora, ajuste os botões azuis **AUX 1** e **AUX 2** para que o músico se ouça no retorno do palco. Peça feedback ao músico antes de prosseguir.
     - ⚠ **Erro comum:** O iniciante sobe o fader, vê o sinal verde piscando, mas esquece de apertar o botão ON. Resultado: silêncio!
+    - ⚠ **Se o músico do lado do altar não se ouve mesmo com AUX 1 ajustado:** A caixa do AUX 1 é ligada diretamente na tomada e tem botão de **power** e botão de **volume** próprios. Antes de mexer mais na mesa, verifique se a caixa está ligada na tomada, se o botão de power está ligado, se o volume dela não foi zerado por algum músico e se o **cabo que sai da mesa até a caixa** não foi desconectado.
+    - ⚠ **Se o músico do lado da bateria não se ouve mesmo com AUX 2 ajustado:** Verifique se o **cabo que sai da saída AUX 2 da mesa até a caixa de retorno** não foi desconectado.
 11. **Abra a torneira (FADER):** Com os retornos ajustados, levante o fader branco devagar até a marca do **0** (a linha mais grossa na régua). Essa é a posição de referência (ganho unitário), que facilita ajustes posteriores durante a celebração — você terá margem tanto para aumentar quanto para diminuir o volume. O AUX 4 (caixas laterais) começará a receber sinal junto com o fader, pois é POST-fader.
 12. **Verifique a cobertura (caminhando pela igreja):** Com todos os canais configurados e os músicos tocando, saia da mesa e caminhe até a caixa grande do fundo e até a porta da igreja. Verifique se o som está em bom volume em todo o percurso. Se necessário, volte à mesa e ajuste o fader branco do canal ou o fader vermelho (Master ST). Veja mais detalhes na [seção sobre cobertura sonora](#a-o-som-principal-as-4-grandes-caixas-dos-cantos).
 
@@ -401,12 +403,14 @@ Os **retornos** (também chamados de "monitores") são as caixas de som viradas 
   - **Use para:** Que os cantores e instrumentistas desse lado se ouçam.
   - **Botão azul AUX 1** (*acima do equalizador, no meio do canal*): gire para a direita para aumentar o volume desse instrumento/voz no retorno esquerdo.
   - **⚠ Configuração atual: Modo PRE (botão apertado):** Nesta configuração, o volume do retorno é independente do fader principal. **Importante:** Se o botão PRE for solto acidentalmente, o comportamento muda - o retorno passará a acompanhar o fader (modo POST).
+  - **⚠ Atenção: a caixa do AUX 1 é ligada diretamente na tomada.** Diferente das caixas principais (que são alimentadas pelos amplificadores), esta caixa possui seu **próprio botão de power** e seu **próprio botão de volume**. Já houve casos de músicos zerarem o volume da caixa ou desligarem ela da tomada (ou pelo botão de power) sem perceber — se o retorno do altar sumir do nada, verifique primeiro esses controles físicos na própria caixa e também se o **cabo que vai da mesa até a caixa** não foi desconectado.
 
 - **AUX 2 🥁 RETORNO LADO DIREITO (Bateria)**
   - **Público:** Músicos do lado direito (lado da mesa de som e bateria, se você estiver de frente para os músicos).
   - **Onde sai:** Na caixa de som próxima à bateria e mesa de som.
   - **Botão azul AUX 2** (*logo abaixo do AUX 1*): gire para a direita para aumentar o volume desse instrumento/voz no retorno direito.
   - **⚠ Configuração atual: Modo PRE (botão apertado):** Nesta configuração, o volume do retorno é independente do fader principal. **Importante:** Se o botão PRE for solto acidentalmente, o comportamento muda - o retorno passará a acompanhar o fader (modo POST).
+  - **⚠ Se o retorno da bateria sumir:** Verifique se o **cabo da saída AUX 2 da mesa até a caixa de retorno** não foi desconectado.
 
 ### A regra de ouro (botão PRE)
 
@@ -776,7 +780,8 @@ Lembre-se: o som litúrgico existe para servir a palavra e a música sagrada, n�
 | **Silêncio Total** | Botão **ON** e **ST** | Aperte o botão **ON** e o botão **ST** do canal (ou se usar grupos, aperte **ST** também no fader do grupo). Suba o fader vermelho Master. |
 | **Som "Rachando"** | Luz Vermelha (**PEAK**) | O som está entrando muito forte. Abaixe o botão **GAIN** (lá em cima). |
 | **Microfonia (Apito)** | Retornos (**AUX 1/2**) | Abaixe um pouco o botão azul **AUX 1 ou 2** do microfone que está apitando. |
-| **Músico não se ouve** | Botões **AUX 1/2** e **PRE** | Verifique se o botão **PRE** está **APERTADO** e se o botão azul **AUX 1 ou 2** do canal está girado para a direita. |
+| **Músico não se ouve (retorno do altar)** | Botões **AUX 1/2**, **PRE**, caixa física e cabo | Verifique se o botão **PRE** está **APERTADO** e se o botão azul **AUX 1** do canal está girado para a direita. Se nada resolver: a caixa do AUX 1 é ligada na tomada e possui botão de **power** e botão de **volume** próprios — músicos já desligaram ou zeraram o volume dela sem perceber. Confira também se o **cabo da saída AUX 1 da mesa até a caixa** não foi desconectado. |
+| **Músico não se ouve (retorno da bateria)** | Botões **AUX 2**, **PRE** e cabo | Verifique se o botão **PRE** está **APERTADO**, se o botão azul **AUX 2** do canal está girado para a direita e se o **cabo da saída AUX 2 da mesa até a caixa de retorno** não foi desconectado. |
 | **Live sem som** | Saída **ST SUB OUT** | Aumente o botão giratório de volume da saída **ST SUB OUT**. |
 | **Microfone condensador sem som** | **Phantom Power (+48V)** | Aperte o botão **+48V** do bloco correto (canais 1-8, 9-16 ou 17-24). Aguarde alguns segundos. |
 | **Som com eco/caverna** | Botões **AUX 5/6 (EFFECT)** | Os botões brancos AUX 5/6 devem estar **ZERADOS** (girados para a esquerda). |
