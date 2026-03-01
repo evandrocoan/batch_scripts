@@ -6,6 +6,7 @@ Manual oficial do mesa: <https://usa.yamaha.com/files/download/other_assets/9/33
 
 ## Índice
 
+- [Visão das conexões](#visão-das-conexões)
 - [1. Introdução](#1-introdução)
   - [Nosso objetivo](#nosso-objetivo)
   - [Princípio orientador](#princípio-orientador)
@@ -57,6 +58,12 @@ Manual oficial do mesa: <https://usa.yamaha.com/files/download/other_assets/9/33
 - [Glossário](#glossário)
   - [Termos de áudio e equipamento](#termos-de-áudio-e-equipamento)
   - [Termos litúrgicos](#termos-litúrgicos)
+
+## Visão das conexões
+
+![mg32-14fx-painel-frontal](mg32_14fx_en_om_e0png_Page1.png)
+
+![mg32-14fx-pagina-9](mg32_14fx_en_om_e0png_Page9.png)
 
 ## 1. Introdução
 
