@@ -1,6 +1,6 @@
 # Guia Mesa de Som
 
-![mesa-som-visao-geral](mesa-som-visao-geral.png)
+![mesa-som-visao-geral](mesa-som-visao-geral.jpg)
 
 Manual oficial do mesa: <https://usa.yamaha.com/files/download/other_assets/9/333859/mg32_14fx_pt.pdf>
 
