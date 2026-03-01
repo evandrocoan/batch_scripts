@@ -54,6 +54,9 @@ Manual oficial do mesa: <https://usa.yamaha.com/files/download/other_assets/9/33
   - [Como usar para ajustar o GAIN (método profissional)](#como-usar-para-ajustar-o-gain-método-profissional)
 - [8. Conclusão](#8-conclusão)
 - [Anexo: Tabela de Salvação Rápida](#anexo-tabela-de-salvação-rápida)
+- [Glossário](#glossário)
+  - [Termos de áudio e equipamento](#termos-de-áudio-e-equipamento)
+  - [Termos litúrgicos](#termos-litúrgicos)
 
 ## 1. Introdução
 
@@ -732,127 +735,49 @@ Lembre-se: o som litúrgico existe para servir a palavra e a música sagrada, n�
 
 ## Glossário
 
+### Termos litúrgicos
+
+1. **Assembleia** — Na liturgia católica, o conjunto de fiéis presentes na celebração. No contexto deste guia, é o "público" para quem o som é destinado.
+1. **Homilia** — Parte da missa em que o celebrante (padre ou diácono) faz a pregação sobre as leituras do dia. Exige clareza total no som.
+1. **Litúrgico / Liturgia** — Diz respeito às celebrações religiosas e seus rituais. "Som litúrgico" é o som produzido e gerenciado durante as celebrações da igreja.
+1. **Nave** — Na arquitetura de igrejas, a nave é o espaço central e principal onde os fiéis se sentam, entre a entrada e o altar. É diferente do presbitério (área do altar) e da sacristia.
+1. **Palco / Altar** — Neste guia, esses termos são usados de forma intercambiável para se referir à área elevada na frente da igreja onde ficam os músicos, cantores e o celebrante.
+1. **Presbitério** — Área da igreja onde fica o altar, o ambão (púlpito) e as cadeiras do celebrante. É a zona de onde vem a maioria dos microfones.
+1. **Púlpito / Ambão** — Estrutura elevada de onde são feitas as leituras bíblicas e a homilia. Normalmente possui um microfone fixo tipo "pescoço de ganso".
+
 ### Termos de áudio e equipamento
 
-**AFL (After-Fader Listen)**
-"Escutar depois do fader." Botão que permite ao operador ouvir no fone o que está saindo de um canal *depois* de passar pelo controle de volume. Útil para verificar o som final sem alterar o que chega às caixas.
-
-**Assembleia**
-Na liturgia católica, o conjunto de fiéis presentes na celebração. No contexto deste guia, é o "público" para quem o som é destinado.
-
-**AUX (Auxiliar)**
-Saída secundária da mesa de som. Permite enviar o som de um canal para um destino diferente das caixas principais — como retornos de palco, gravação ou caixas laterais.
-
-**Balanceado (cabo/sinal)**
-Tipo de cabo ou conexão elétrica que usa 3 fios (ao invés de 2) para eliminar ruídos e interferências. Identifica-se pelo conector XLR (aquele grande, redondo, com trava) ou pelo plug P10 de três contatos. É o padrão profissional.
-
-**Cabine de som**
-Local onde fica a mesa de som e o operador de áudio durante as celebrações.
-
-**Canal**
-Cada "faixa" vertical da mesa de som, onde se conecta um microfone ou instrumento. Cada canal tem seus próprios controles de ganho, equalização e volume.
-
-**Condensador (microfone)**
-Tipo de microfone que precisa de energia elétrica (phantom power) para funcionar. São mais sensíveis e captam detalhes finos do som. Exemplos comuns: microfones de coral, de púlpito e de lapela.
-
-**dB (decibel)**
-Unidade de medida do volume sonoro. Na mesa, a escala dos medidores usa dB. O ponto ideal de operação é perto do 0 dB.
-
-**Dinâmico (microfone)**
-Tipo de microfone que *não* precisa de energia elétrica. É o mais comum e resistente — como o Shure SM58, muito usado em palcos. Aguenta bem pressão sonora alta.
-
-**Distorção / "som rachado"**
-Quando o sinal de áudio é forte demais para o equipamento processar, o som "rasga" e fica desagradável. Indica-se pela luz vermelha PEAK acesa na mesa.
-
-**EQ / Equalizador**
-Conjunto de controles que ajustam o timbre do som — graves, médios e agudos. Permite deixar a voz mais clara ou tirar o "peso" de um instrumento.
-
-**Fader**
-O botão deslizante (como um controle de volume em formato de régua) presente em cada canal e no master da mesa. Controla o volume de saída.
-
-**Gain / Ganho**
-Botão giratório no topo do canal que ajusta a intensidade do sinal que entra na mesa vindo do microfone ou instrumento. É o primeiro ponto de ajuste antes de qualquer outra coisa.
-
-**Homilia**
-Parte da missa em que o celebrante (padre ou diácono) faz a pregação sobre as leituras do dia. Exige clareza total no som.
-
-**LPF (Low Pass Filter)**
-"Filtro passa-baixo." Remove as frequências agudas e médias, deixando passar apenas os graves. Na saída MONO da mesa, este filtro pode ser ativado por engano, deixando o som "abafado", como se viesse de dentro d'água.
-
-**Litúrgico / Liturgia**
-Diz respeito às celebrações religiosas e seus rituais. "Som litúrgico" é o som produzido e gerenciado durante as celebrações da igreja.
-
-**Master / Fader mestre**
-O controle de volume geral da mesa, que afeta o som de todas as caixas principais ao mesmo tempo. Na Yamaha MG32/14FX, é o fader vermelho (STEREO OUT).
-
-**Mesa de som / Mesa de mixagem**
-O equipamento central com todos os botões e faders que recebe os sinais dos microfones e instrumentos, processa e distribui para as caixas de som.
-
-**Microfonia / Apito**
-O chiado agudo e irritante que ocorre quando o som de uma caixa é captado por um microfone próximo, criando um ciclo de retroalimentação. É o "apito" que todo mundo já ouviu numa celebração.
-
-**Monitor / Retorno**
-Caixa de som virada para os músicos no palco, para que eles se ouçam durante a execução. É diferente das caixas voltadas para a assembleia.
-
-**Nave**
-Na arquitetura de igrejas, a nave é o espaço central e principal onde os fiéis se sentam, entre a entrada e o altar. É diferente do presbitério (área do altar) e da sacristia.
-
-**Palco / Altar**
-Neste guia, esses termos são usados de forma intercambiável para se referir à área elevada na frente da igreja onde ficam os músicos, cantores e o celebrante.
-
-**PAN**
-Botão giratório que controla o balanço estéreo — ou seja, se o som de um canal vai mais para a caixa da esquerda ou da direita. Deve ficar sempre no centro (posição 12 horas).
-
-**Phantom Power (+48V)**
-Energia elétrica enviada pelo cabo XLR da mesa para alimentar microfones condensadores. Invisível e segura para microfones dinâmicos comuns, mas pode causar problemas em cabos desbalanceados ou equipamentos domésticos.
-
-**PFL (Pre-Fader Listen)**
-"Escutar antes do fader." Botão que permite ouvir o sinal de um canal *antes* do controle de volume, diretamente no fone. Útil para verificar se um microfone está funcionando mesmo com o volume abaixado.
-
-**POST (modo pós-fader)**
-Configuração em que o sinal auxiliar *acompanha* o fader. Se você abaixa o volume do canal, o sinal enviado pelo AUX também abaixa proporcionalmente.
-
-**PRE (modo pré-fader)**
-Configuração em que o sinal auxiliar é captado *antes* do fader, tornando-o independente do volume principal. Essencial para retornos de músicos.
-
-**Presbitério**
-Área da igreja onde fica o altar, o ambão (púlpito) e as cadeiras do celebrante. É a zona de onde vem a maioria dos microfones.
-
-**Púlpito / Ambão**
-Estrutura elevada de onde são feitas as leituras bíblicas e a homilia. Normalmente possui um microfone fixo tipo "pescoço de ganso".
-
-**RCA (conector)**
-Conector vermelho e branco comum em aparelhos domésticos (televisores, aparelhos de som). É desbalanceado e, por isso, suscetível a ruídos em cabos longos. Não recomendado para gravação profissional.
-
-**Retorno**
-Veja *Monitor*.
-
-**Reverb / Reverberação**
-Efeito que simula o eco natural de ambientes como igrejas ou cavernas. Na mesa, está nos botões brancos AUX 5/6 — devem ser mantidos zerados para não distorcer o som litúrgico.
-
-**Roteamento**
-O processo de definir para *onde* o sinal de áudio vai dentro da mesa. Os botões ST, 1-2 e 3-4 ao lado de cada fader são botões de roteamento.
-
-**ST / Stereo**
-Abreviação de "estéreo" — som com canal esquerdo e direito. O botão ST em cada canal envia o sinal para a saída principal (as caixas grandes da assembleia).
-
-**ST SUB OUT**
-Saída de áudio da mesa com volume independente, ideal para gravação e transmissão ao vivo. Envia uma cópia exata do som principal sem interferir no volume das caixas da igreja.
-
-**Subgrupo / Grupo**
-Forma de agrupar vários canais em um único controle. Por exemplo, todos os microfones da bateria podem ser agrupados nos "Grupos 1-2", permitindo controlar o volume de toda a bateria com um único fader.
-
-**Subwoofer**
-Caixa de som especializada em reproduzir frequências muito graves (bumbo, contrabaixo). A saída MONO da mesa foi projetada para alimentar este tipo de caixa.
-
-**Timbre**
-A "cor" ou "textura" de um som — o que diferencia uma flauta de um violão, mesmo tocando a mesma nota. O equalizador (EQ) é a ferramenta para ajustar o timbre.
-
-**Transiente**
-Um pico súbito e breve de energia elétrica, como o "estalo" que ocorre ao ligar um amplificador. Pode danificar alto-falantes, por isso existe a "Ordem Sagrada de Ligar e Desligar".
-
-**V.U. Meter (Volume Unit Meter)**
-As fileiras de luzes coloridas na mesa que indicam o volume do sinal em tempo real. São o "velocímetro" do áudio.
-
-**XLR**
-Tipo de conector profissional de áudio, redondo e com trava de segurança (normalmente com 3 pinos). É o conector dos cabos de microfone e da maioria das saídas balanceadas da mesa.
+1. **AFL (After-Fader Listen)** — "Escutar depois do fader." Botão que permite ao operador ouvir no fone o que está saindo de um canal *depois* de passar pelo controle de volume. Útil para verificar o som final sem alterar o que chega às caixas.
+1. **AUX (Auxiliar)** — Saída secundária da mesa de som. Permite enviar o som de um canal para um destino diferente das caixas principais — como retornos de palco, gravação ou caixas laterais.
+1. **Balanceado (cabo/sinal)** — Tipo de cabo ou conexão elétrica que usa 3 fios (ao invés de 2) para eliminar ruídos e interferências. Identifica-se pelo conector XLR (aquele grande, redondo, com trava) ou pelo plug P10 de três contatos. É o padrão profissional.
+1. **Cabine de som** — Local onde fica a mesa de som e o operador de áudio durante as celebrações.
+1. **Canal** — Cada "faixa" vertical da mesa de som, onde se conecta um microfone ou instrumento. Cada canal tem seus próprios controles de ganho, equalização e volume.
+1. **Condensador (microfone)** — Tipo de microfone que precisa de energia elétrica (phantom power) para funcionar. São mais sensíveis e captam detalhes finos do som. Exemplos comuns: microfones de coral, de púlpito e de lapela.
+1. **dB (decibel)** — Unidade de medida do volume sonoro. Na mesa, a escala dos medidores usa dB. O ponto ideal de operação é perto do 0 dB.
+1. **Dinâmico (microfone)** — Tipo de microfone que *não* precisa de energia elétrica. É o mais comum e resistente — como o Shure SM58, muito usado em palcos. Aguenta bem pressão sonora alta.
+1. **Distorção / "som rachado"** — Quando o sinal de áudio é forte demais para o equipamento processar, o som "rasga" e fica desagradável. Indica-se pela luz vermelha PEAK acesa na mesa.
+1. **EQ / Equalizador** — Conjunto de controles que ajustam o timbre do som — graves, médios e agudos. Permite deixar a voz mais clara ou tirar o "peso" de um instrumento.
+1. **Fader** — O botão deslizante (como um controle de volume em formato de régua) presente em cada canal e no master da mesa. Controla o volume de saída.
+1. **Gain / Ganho** — Botão giratório no topo do canal que ajusta a intensidade do sinal que entra na mesa vindo do microfone ou instrumento. É o primeiro ponto de ajuste antes de qualquer outra coisa.
+1. **LPF (Low Pass Filter)** — "Filtro passa-baixo." Remove as frequências agudas e médias, deixando passar apenas os graves. Na saída MONO da mesa, este filtro pode ser ativado por engano, deixando o som "abafado", como se viesse de dentro d'água.
+1. **Master / Fader mestre** — O controle de volume geral da mesa, que afeta o som de todas as caixas principais ao mesmo tempo. Na Yamaha MG32/14FX, é o fader vermelho (STEREO OUT).
+1. **Mesa de som / Mesa de mixagem** — O equipamento central com todos os botões e faders que recebe os sinais dos microfones e instrumentos, processa e distribui para as caixas de som.
+1. **Microfonia / Apito** — O chiado agudo e irritante que ocorre quando o som de uma caixa é captado por um microfone próximo, criando um ciclo de retroalimentação. É o "apito" que todo mundo já ouviu numa celebração.
+1. **Monitor / Retorno** — Caixa de som virada para os músicos no palco, para que eles se ouçam durante a execução. É diferente das caixas voltadas para a assembleia.
+1. **PAN (Panorama)** — Botão giratório que controla o balanço estéreo — ou seja, se o som de um canal vai mais para a caixa da esquerda ou da direita. Deve ficar sempre no centro (posição 12 horas).
+1. **Phantom Power (+48V)** — Energia elétrica enviada pelo cabo XLR da mesa para alimentar microfones condensadores. Invisível e segura para microfones dinâmicos comuns, mas pode causar problemas em cabos desbalanceados ou equipamentos domésticos.
+1. **PFL (Pre-Fader Listen)** — "Escutar antes do fader." Botão que permite ouvir o sinal de um canal *antes* do controle de volume, diretamente no fone. Útil para verificar se um microfone está funcionando mesmo com o volume abaixado.
+1. **POST (modo pós-fader)** — Configuração em que o sinal auxiliar *acompanha* o fader. Se você abaixa o volume do canal, o sinal enviado pelo AUX também abaixa proporcionalmente.
+1. **PRE (modo pré-fader)** — Configuração em que o sinal auxiliar é captado *antes* do fader, tornando-o independente do volume principal. Essencial para retornos de músicos.
+1. **RCA (Radio Corporation of America)** — Conector vermelho e branco comum em aparelhos domésticos (televisores, aparelhos de som). É desbalanceado e, por isso, suscetível a ruídos em cabos longos. Não recomendado para gravação profissional.
+1. **Retorno** — Veja *Monitor*.
+1. **Reverb / Reverberação** — Efeito que simula o eco natural de ambientes como igrejas ou cavernas. Na mesa, está nos botões brancos AUX 5/6 — devem ser mantidos zerados para não distorcer o som litúrgico.
+1. **Roteamento** — O processo de definir para *onde* o sinal de áudio vai dentro da mesa. Os botões ST, 1-2 e 3-4 ao lado de cada fader são botões de roteamento.
+1. **ST / Stereo** — Abreviação de "estéreo" — som com canal esquerdo e direito. O botão ST em cada canal envia o sinal para a saída principal (as caixas grandes da assembleia).
+1. **ST SUB OUT (Stereo Sub Output)** — Saída de áudio da mesa com volume independente, ideal para gravação e transmissão ao vivo. Envia uma cópia exata do som principal sem interferir no volume das caixas da igreja.
+1. **Subgrupo / Grupo** — Forma de agrupar vários canais em um único controle. Por exemplo, todos os microfones da bateria podem ser agrupados nos "Grupos 1-2", permitindo controlar o volume de toda a bateria com um único fader.
+1. **Subwoofer** — Caixa de som especializada em reproduzir frequências muito graves (bumbo, contrabaixo). A saída MONO da mesa foi projetada para alimentar este tipo de caixa.
+1. **Timbre** — A "cor" ou "textura" de um som — o que diferencia uma flauta de um violão, mesmo tocando a mesma nota. O equalizador (EQ) é a ferramenta para ajustar o timbre.
+1. **Transiente** — Um pico súbito e breve de energia elétrica, como o "estalo" que ocorre ao ligar um amplificador. Pode danificar alto-falantes, por isso existe a "Ordem Sagrada de Ligar e Desligar".
+1. **V.U. Meter (Volume Unit Meter)** — As fileiras de luzes coloridas na mesa que indicam o volume do sinal em tempo real. São o "velocímetro" do áudio.
+1. **XLR (eXternal Line Return)** — Tipo de conector profissional de áudio, redondo e com trava de segurança (normalmente com 3 pinos). É o conector dos cabos de microfone e da maioria das saídas balanceadas da mesa.
