@@ -491,6 +491,8 @@ Se você apertar o botão PRE inferior acidentalmente, AUX 3 e 4 viram PRE (igua
 
 ![Conexoes-MONO-e-STEREO](conexoes-mono-stereo.png)
 
+![saida-rec-st-sub-out](saida-rec-st-sub-out.png)
+
 Nossa mesa de som possui várias saídas "mestras" diferentes, e isso pode confundir na hora de conectar um gravador ou fazer a transmissão da missa. A boa notícia é que **só uma delas é a correta para lives e gravações**.
 
 ### A vencedora: ST SUB OUT (a profissional)
