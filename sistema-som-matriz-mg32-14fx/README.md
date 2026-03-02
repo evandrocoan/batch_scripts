@@ -19,6 +19,7 @@ Manual oficial do mesa: <https://usa.yamaha.com/files/download/other_assets/9/33
     - [A solução padrão (o "ST")](#a-solução-padrão-o-st)
   - [O segredo do som limpo: ganho vs. volume](#o-segredo-do-som-limpo-ganho-vs-volume)
   - [Como regular um canal do zero (passo a passo)](#como-regular-um-canal-do-zero-passo-a-passo)
+  - [Por que a igreja fica com eco quando está vazia?](#por-que-a-igreja-fica-com-eco-quando-está-vazia)
   - [O problema da dinâmica de voz (e por que o GAIN sozinho não resolve)](#o-problema-da-dinâmica-de-voz-e-por-que-o-gain-sozinho-não-resolve)
   - [Entendendo as luzes (o semáforo do som)](#entendendo-as-luzes-o-semáforo-do-som)
 - [3. Controles adicionais do canal](#3-controles-adicionais-do-canal)
@@ -31,6 +32,8 @@ Manual oficial do mesa: <https://usa.yamaha.com/files/download/other_assets/9/33
   - [A regra de ouro (botão PRE)](#a-regra-de-ouro-botão-pre)
   - [O cenário do caos (o que acontece se o PRE estiver solto)](#o-cenário-do-caos-o-que-acontece-se-o-pre-estiver-solto)
   - [AUX 3 e 4 - configurando como auxiliares POST](#aux-3-e-4---configurando-como-auxiliares-post)
+  - [O equilíbrio certo: caixas grandes vs. pequenas](#o-equilíbrio-certo-caixas-grandes-vs-pequenas)
+  - [A pirâmide do volume: quem manda em quem?](#a-pirâmide-do-volume-quem-manda-em-quem)
 - [5. Entendendo as saídas: onde ligar a gravação?](#5-entendendo-as-saídas-onde-ligar-a-gravação)
   - [A vencedora: ST SUB OUT (a profissional)](#a-vencedora-st-sub-out-a-profissional)
   - [AUX 3 OUT - mixagem personalizada (avançado)](#aux-3-out---mixagem-personalizada-avançado)
@@ -41,6 +44,7 @@ Manual oficial do mesa: <https://usa.yamaha.com/files/download/other_assets/9/33
 - [6. Como usar AFL e PFL (os botões de escuta solo)](#6-como-usar-afl-e-pfl-os-botões-de-escuta-solo)
   - [O que significam as siglas?](#o-que-significam-as-siglas)
   - [Como usar na prática](#como-usar-na-prática)
+  - [Os 4 destinos que você pode espiar pelo fone](#os-4-destinos-que-você-pode-espiar-pelo-fone)
   - [Quando usar (casos práticos)](#quando-usar-casos-práticos)
   - [Importante: não afeta o som da igreja](#importante-não-afeta-o-som-da-igreja)
   - [AFL nos grupos (1-2, 3-4) e Master (ST/MONO)](#afl-nos-grupos-1-2-3-4-e-master-stmono)
@@ -56,8 +60,8 @@ Manual oficial do mesa: <https://usa.yamaha.com/files/download/other_assets/9/33
 - [8. Conclusão](#8-conclusão)
 - [Anexo: Tabela de Salvação Rápida](#anexo-tabela-de-salvação-rápida)
 - [Glossário](#glossário)
-  - [Termos de áudio e equipamento](#termos-de-áudio-e-equipamento)
   - [Termos litúrgicos](#termos-litúrgicos)
+  - [Termos de áudio e equipamento](#termos-de-áudio-e-equipamento)
 
 ## Visão das conexões
 
@@ -130,7 +134,7 @@ Microfone → GAIN → EQ →
            ↓
    ← ← ← ← ↓ → → ST e Grupos 1 à 4
   ↓        ↓             ↓
-  ↓        ↓     4 Caixas Caixas Grandes (frente/fundo)
+  ↓        ↓     2+2 Caixas Grandes (frente/fundo)
   ↓        ↓
   ↓     AUX 3 (configurado POST)
   ↓                      ↓
@@ -138,12 +142,12 @@ Microfone → GAIN → EQ →
   ↓
   ↓ → → AUX 4 (configurado POST)
                          ↓
-             12 Caixas Pequenas Laterais
+             10 Caixas Pequenas Laterais
 ```
 
 - **GAIN:** Ajusta a "pressão" do sinal que entra (volume de entrada)
 - **EQ:** Modifica o timbre (graves, médios, agudos)
-- **Fader Branco:** Controla o volume final para as 4 caixas grandes principais e 12 caixas pequenas
+- **Fader Branco:** Controla o volume final para as 4 caixas grandes principais e 10 caixas pequenas
 - **ST e Grupos 1 à 4:** Encaminha o som para as saídas corretas
 - **AUX 1 (configurado PRE):** Envio independente para os retornos dos músicos lado do altar
 - **AUX 2 (configurado PRE):** Envio independente para os retornos dos músicos lado da bateria
@@ -160,9 +164,16 @@ O fader branco de cada canal define o volume individual que aquele instrumento/v
 
 Cada tipo de caixa tem uma função diferente na cobertura sonora da nave:
 
-- **4 caixas grandes (cantos):** Servem para **empurrar o som para dentro da igreja** — elas têm potência e alcance para que o som chegue ao fundo da nave.
-- **12 caixas pequenas (laterais/corredores):** Servem para **preencher o som** nas áreas intermediárias onde o alcance das caixas grandes é menor, garantindo uniformidade ao longo dos corredores.
+- **2 caixas grandes da frente:** São a referência principal de volume — empurram o som da frente para o fundo, cobrindo do 1º banco até os 2/3 da nave.
+- **2 caixas grandes do fundo:** Apontadas para o altar, jogam o som de volta para dentro da nave, cobrindo o terço final que as caixas da frente não alcançam bem. O volume adequado depende do alinhamento de tempo (delay) do sistema — veja mais detalhes em [A pirâmide do volume](#a-pirâmide-do-volume-quem-manda-em-quem).
+- **10 caixas pequenas (laterais/corredores):** Servem para **preencher o som** nas áreas intermediárias onde o alcance das caixas grandes é menor, garantindo uniformidade ao longo dos corredores.
 
+> 🔊 **Regra de ouro — as caixas grandes devem ser a referência principal de volume:** As 2 caixas grandes da frente são a locomotiva do som na nave. As 2 caixas do fundo (apontadas para o altar) cobrem o terço final da nave jogando o som de volta para dentro — o volume delas depende do alinhamento de tempo (delay) do sistema. As 10 caixas pequenas dos corredores servem apenas para *clarear* o som onde as grandes não chegam bem — elas **não devem gritar na orelha dos fiéis**.
+>
+> Se as caixas pequenas estiverem mais altas do que as grandes, acontece um efeito psicoacústico indesejado: o cérebro do fiel percebe que o som vem da parede ao lado, e não do altar. Isso tira a atenção da celebração e dá a sensação de som artificial e deslocado.
+>
+> A configuração correta é: **caixas grandes = referência principal → caixas pequenas = complemento discreto**.
+>
 > 💡 **Como verificar se a cobertura está boa:** Com os músicos tocando, saia da mesa e caminhe até a caixa grande do fundo e até a porta da igreja. O som deve estar em bom volume em todo o percurso. Perto da caixa grande do fundo ele será naturalmente um pouco mais alto — isso é normal e esperado. Se o som estiver equilibrado nesse trajeto, a mesa está bem configurada.
 >
 > ⚠️ **Cuidado com a caixa pequena bem acima da cabine de som:** Ela é enganadora como referência, pois você também está próximo dos retornos dos músicos logo à frente. Para ter uma noção real das caixas laterais, caminhe pelo menos **2 metros para dentro** depois daquela caixa pequena na esquina — a partir daí o som das laterais já dá uma noção mais fidedigna.
@@ -259,6 +270,45 @@ Siga esta ordem sagrada antes de começar a tocar:
 12. **Verifique a cobertura (caminhando pela igreja):** Com todos os canais configurados e os músicos tocando, saia da mesa e caminhe até a caixa grande do fundo e até a porta da igreja. Verifique se o som está em bom volume em todo o percurso. Se necessário, volte à mesa e ajuste o fader branco do canal ou o fader vermelho (Master ST). Veja mais detalhes na [seção sobre cobertura sonora](#a-o-som-principal-as-4-grandes-caixas-dos-cantos).
 
 > 💡 **Resumo da sequência operacional:** A ordem correta para configurar um canal novo é: ① Calibrar o GAIN (passos 1–9) → ② Ligar o canal e ajustar os retornos AUX 1/2 para os músicos (passo 10) → ③ Subir o fader branco para o som da igreja e AUX 4 (passo 11) → ④ Caminhar pela igreja para verificar a cobertura (passo 12). Essa sequência garante que os músicos já estejam se ouvindo antes de o som chegar à assembleia.
+
+---
+
+### Por que a igreja fica com eco quando está vazia?
+
+Durante a passagem de som, a igreja costuma estar vazia ou quase vazia. Nesse momento, é comum ouvir muito eco e reverberação — e a tentação é corrigir isso na mesa, tirando brilho e médios do EQ. Isso é um erro. Para entender por quê, é preciso entender o que causa o eco.
+
+O fenômeno é chamado de **reverberação excessiva**, causado pela combinação de três fatores:
+
+#### 1. As superfícies são "espelhos de som"
+
+A maioria das igrejas é construída com materiais duros e lisos: piso de cerâmica, paredes de alvenaria, janelas de vidro, forro de gesso ou PVC. Esses materiais não absorvem o som — eles o refletem. A onda sonora sai da caixa, bate na parede, vai para o chão, sobe para o teto e continua ricocheteando por vários segundos.
+
+#### 2. A ausência das "esponjas humanas"
+
+Seres humanos são excelentes absorvedores acústicos — somos feitos majoritariamente de água e usamos roupas de tecido. Quando a igreja está cheia, cada pessoa absorve uma parte das ondas sonoras, impedindo que elas continuem ricocheteando. Quando a igreja está vazia, não há nada para frear o som. A energia sonora viaja livremente de um lado para o outro.
+
+#### 3. O ambiente fechado aprisiona a energia
+
+Igrejas costumam ter pé direito alto e são compridas. Em ambientes fechados grandes, o som demora mais para encontrar uma superfície e perder força. Com portas e janelas fechadas, a energia sonora fica aprisionada — acumulando reflexo sobre reflexo.
+
+#### A diferença entre eco e reverberação
+
+Embora popularmente chamemos tudo de "eco", tecnicamente são fenômenos diferentes:
+
+- **Eco:** Você fala "Alô" e ouve "Alô... Alô..." — repetições distintas e separadas. Ocorre em distâncias muito grandes.
+- **Reverberação:** Você fala "Alô" e ouve um "Alôooouuumm" — o som se estica e demora a sumir. É o que torna difícil entender a pregação, pois a sílaba anterior ainda está soando quando o celebrante fala a próxima.
+
+O que ocorre na igreja vazia é geralmente **reverberação**, não eco propriamente dito.
+
+#### A armadilha da passagem de som com a igreja vazia
+
+> ⚠️ **Nunca equalize o som pensando na igreja vazia.**
+>
+> Quando a igreja está vazia durante o ensaio, o som parece com muito eco e excesso de agudos/médios. O erro clássico é tirar esse brilho no EQ para o som ficar "seco" e agradável com a igreja vazia.
+>
+> Quando a celebração começa e a igreja enche, as pessoas absorvem boa parte da reverberação. Se o operador já tinha abafado o som para compensar o eco do ensaio, o resultado na hora cheia será um som **morto, abafado e sem clareza** — difícil de entender a voz do celebrante.
+>
+> **A regra prática:** Calibre o som sempre pensando na igreja cheia. Um pouco de brilho a mais durante o ensaio vazio é normal e esperado — ele vai sumir quando o povo chegar.
 
 ---
 
@@ -466,7 +516,7 @@ Se você apertar o botão PRE inferior acidentalmente, AUX 3 e 4 viram PRE (igua
 
 - **AUX 4 🔉 CAIXAS DE REFORÇO (zona intermediária)**
   - **Público:** Fiéis sentados nas laterais/corredor.
-  - **Onde sai:** Nas caixas pequenas instaladas nas laterais da nave (configuração da nossa igreja: 6 de cada lado, distribuídas entre as caixas principais da frente e de trás, cobrindo a zona intermediária onde o som das caixas principais pode ter menos alcance).
+  - **Onde sai:** Nas caixas pequenas instaladas nas laterais da nave (configuração da nossa igreja: 5 de cada lado, distribuídas entre as caixas principais da frente e de trás, cobrindo a zona intermediária onde o som das caixas principais pode ter menos alcance).
   - **Como usar:** Este volume serve para preencher o som no meio da igreja.
   - **Botão azul AUX 4** (*o último dos botões azuis*): gire para a direita para aumentar o volume desse canal nas caixas laterais.
   - **Volume geral do AUX 4:** Além do botão azul em cada canal, existe um **controle master (geral) do AUX 4** — um botão giratório localizado no **canto superior direito da mesa, ao lado das luzes de sinal (V.U. Meters)**. Esse controle define o volume geral de todas as caixas pequenas laterais. Os controles master dos outros auxiliares (AUX 1, 2 e 3) também ficam nessa mesma região.
@@ -478,7 +528,7 @@ Se você apertar o botão PRE inferior acidentalmente, AUX 3 e 4 viram PRE (igua
 >
 > 💡 **Por que POST e não PRE para o AUX 4?**
 >
-> O AUX 4 alimenta as 12 caixas pequenas laterais, que são um **reforço** do som principal para a nave. Faz sentido que elas acompanhem o fader branco, porque:
+> O AUX 4 alimenta as 10 caixas pequenas laterais, que são um **reforço** do som principal para a nave. Faz sentido que elas acompanhem o fader branco, porque:
 >
 > - Se você **sobe** o fader de um canal → o som aumenta tanto nas 4 caixas grandes **quanto** nas caixas laterais. Consistente.
 > - Se você **abaixa** o fader → as laterais também abaixam. O som da nave fica equilibrado.
@@ -491,6 +541,56 @@ Se você apertar o botão PRE inferior acidentalmente, AUX 3 e 4 viram PRE (igua
 > | --- | --- | --- |
 > | AUX 1 e 2 (retornos dos músicos) | **PRE** | Independente do fader — músico não perde o retorno se você abaixar o volume da igreja |
 > | AUX 4 (caixas laterais) | **POST** | Acompanha o fader — o som das laterais fica sempre proporcional ao som principal |
+
+### O equilíbrio certo: caixas grandes vs. pequenas
+
+Muitos operadores acham que, como temos 10 caixas laterais, elas devem falar alto para "encher a igreja". Isso está **errado**.
+
+**A função de cada uma:**
+
+- **As 2 caixas grandes da frente (Stereo — fader branco):** São o "Sol". Elas fornecem a força e o corpo do som, e garantem que a voz do padre e da música pareça vir lá da frente, do altar. Devem ter o volume mais alto de todo o sistema.
+- **As 2 caixas grandes do fundo (Stereo — fader branco):** Apontadas para o altar, cobrem o terço final da nave jogando o som de volta para dentro. O volume adequado depende do alinhamento de tempo (delay) do sistema — veja [A pirâmide do volume](#a-pirâmide-do-volume-quem-manda-em-quem).
+- **As 10 caixas pequenas (AUX 4 — master vermelho):** São as "lanternas". Servem apenas para dar **clareza** (inteligibilidade) a quem senta longe ou atrás de colunas — elas recuperam os agudos ("S", "T", "Ch") que se perdem na distância.
+
+**A regra da invisibilidade:**
+
+As caixas laterais devem ser **invisíveis aos ouvidos**.
+
+- ❌ **Errado:** Uma pessoa sentada no banco do meio diz: *"Nossa, essa caixinha aqui do meu lado está alta!"* — o volume está alto demais.
+- ✅ **Correto:** A pessoa ouve a voz do padre perfeitamente, mas tem a sensação de que o som vem lá da frente. Ela só percebe que a caixinha existe se você **desligá-la** — aí o som fica embolado.
+
+**Como regular (o passeio pela nave):**
+
+Você não consegue regular esse equilíbrio sentado na mesa de som. Você (ou um auxiliar) precisa andar pela igreja:
+
+1. **Desligue as laterais:** Abaixe o master AUX 4 totalmente.
+2. **Ajuste as caixas grandes:** Com alguém falando ou música tocando, ajuste o fader branco e o master ST até o volume ficar bom na frente da nave.
+3. **Caminhe para o meio:** Vá até o meio da igreja. O som provavelmente ficará "embolado" ou mais fraco.
+4. **Suba as laterais devagar:** Peça ao operador para ir subindo o master AUX 4 bem devagar.
+5. **Pare no ponto certo:** Pare de aumentar assim que a voz ficar clara — mas antes que a caixinha comece a "gritar" mais alto do que o som que vem da frente.
+
+> 🧂 **Resumo:** Volume das caixas grandes > volume das laterais. As caixas laterais são apenas o "tempero" para dar nitidez. Sal demais estraga a comida — volume demais nas laterais estraga a atenção na missa.
+
+### A pirâmide do volume: quem manda em quem?
+
+As 4 caixas grandes não são iguais entre si. As 2 da **frente** e as 2 do **fundo** têm papéis diferentes na cobertura da nave.
+
+| Grupo | Volume relativo | Função |
+| --- | --- | --- |
+| **2 caixas grandes da frente** | 🔊 Alto (referência 100%) | "A locomotiva" — empurram o som da frente para o fundo, cobrindo do 1º banco até os 2/3 da nave |
+| **2 caixas grandes do fundo** | 🔊 Alto (volume similar ao das da frente) | Apontadas para o altar — cobrem o terço final da nave jogando o som de volta para dentro |
+| **10 caixas pequenas dos corredores** | 🔉 Mais baixo que as grandes (~40–60%) | "O tempero" — brilho e clareza nas áreas intermediárias |
+
+**O alinhamento de tempo (delay) das caixas do fundo:**
+
+A nossa igreja tem aproximadamente 20 metros de comprimento e 15 metros de largura. O som viaja a ~340 m/s e demora cerca de **59 milissegundos** para percorrer os 20 metros da frente até o fundo. Se as caixas do fundo e as da frente tocarem o mesmo sinal ao mesmo tempo e sem alinhamento, criam-se dois problemas:
+
+- **Problema 1 — eco e voz dupla:** O fiel ouve o som das caixas da frente e, 59 ms depois, o mesmo som vindo do fundo — como um eco.
+- **Problema 2 — percepção invertida de direção:** Pelo **efeito de Haas** (efeito de precedência), o cérebro localiza a fonte sonora pelo som que chega *primeiro*, não pelo mais alto. Se o fundo não estiver alinhado no tempo, o fiel pode sentir que o som vem de trás, não do altar.
+
+A solução para ambos os problemas é **atrasar eletronicamente o sinal que vai para as caixas do fundo** (~59 ms ou um pouco mais, ex: 65 ms), para que a onda sonora das caixas do fundo chegue ao ouvido das pessoas na última fileira exatamente ao mesmo tempo que a onda das caixas da frente. **Na nossa instalação esse delay já está configurado**, por isso o volume das caixas do fundo pode ser levantado sem gerar eco.
+
+> ⚠️ **Sinal de problema:** Se em algum momento você começar a ouvir eco ou "voz dupla" no fundo da igreja, o delay pode ter sido alterado ou desativado acidentalmente no processador/amplificador das caixas do fundo. Verifique as configurações do equipamento antes de mexer nos volumes da mesa.
 
 ---
 
