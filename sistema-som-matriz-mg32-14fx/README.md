@@ -34,6 +34,7 @@ Manual oficial do mesa: <https://usa.yamaha.com/files/download/other_assets/9/33
   - [AUX 3 e 4 - configurando como auxiliares POST](#aux-3-e-4---configurando-como-auxiliares-post)
   - [O equilíbrio certo: caixas grandes vs. pequenas](#o-equilíbrio-certo-caixas-grandes-vs-pequenas)
   - [A pirâmide do volume: quem manda em quem?](#a-pirâmide-do-volume-quem-manda-em-quem)
+  - [Por que nunca virar as caixas do fundo contra o fluxo](#por-que-nunca-virar-as-caixas-do-fundo-contra-o-fluxo)
 - [5. Entendendo as saídas: onde ligar a gravação?](#5-entendendo-as-saídas-onde-ligar-a-gravação)
   - [A vencedora: ST SUB OUT (a profissional)](#a-vencedora-st-sub-out-a-profissional)
   - [AUX 3 OUT - mixagem personalizada (avançado)](#aux-3-out---mixagem-personalizada-avançado)
@@ -591,6 +592,34 @@ A nossa igreja tem aproximadamente 20 metros de comprimento e 15 metros de largu
 A solução para ambos os problemas é **atrasar eletronicamente o sinal que vai para as caixas do fundo** (~59 ms ou um pouco mais, ex: 65 ms), para que a onda sonora das caixas do fundo chegue ao ouvido das pessoas na última fileira exatamente ao mesmo tempo que a onda das caixas da frente. **Na nossa instalação esse delay já está configurado**, por isso o volume das caixas do fundo pode ser levantado sem gerar eco.
 
 > ⚠️ **Sinal de problema:** Se em algum momento você começar a ouvir eco ou "voz dupla" no fundo da igreja, o delay pode ter sido alterado ou desativado acidentalmente no processador/amplificador das caixas do fundo. Verifique as configurações do equipamento antes de mexer nos volumes da mesa.
+
+### Por que nunca virar as caixas do fundo contra o fluxo
+
+Imagine que o som na igreja é um **rio** que deve correr em uma única direção: do altar (nascente) para o fundo (foz). As caixas da frente empurram o som para trás, e as caixas do fundo reforçam esse fluxo jogando o som de volta para dentro da nave, no mesmo sentido.
+
+Se alguém virar as caixas do fundo para o meio da igreja (contra o fluxo), três problemas graves aparecem:
+
+#### 1. Cancelamento de fase ("turbulência")
+
+Se as caixas da frente empurram o som para trás, e as caixas do fundo empurram o som para o meio (contra o fluxo), você cria uma colisão. Onde as ondas sonoras se encontram (no meio da igreja), o som vai ficar estranho — em alguns bancos o som vai sumir (ficar magro, sem grave), e em outros vai ficar embolado. Isso se chama **cancelamento de fase**: é como ligar dois ventiladores um de frente para o outro — o vento não circula, ele se anula e cria turbulência.
+
+#### 2. A "voz na nuca"
+
+Para quem está sentado no meio da igreja, os olhos veem o celebrante na frente, mas os ouvidos escutam o som vindo das costas (da caixa virada). Isso causa desconforto e distração — o cérebro não consegue focar na mensagem porque a localização está errada.
+
+#### 3. O delay para de funcionar corretamente
+
+O delay foi calculado para o som viajar do fundo **para trás** (em direção ao altar, seguindo o fluxo). Se você vira a caixa para o **meio**, o som viaja **para a frente**. Para quem está sentado no meio da igreja, o cálculo de tempo vai errar — a pessoa vai ouvir o som da caixa de trás fora de tempo em relação ao som que vem do altar, criando eco.
+
+#### Se as pessoas do fundo reclamam que o som incomoda
+
+O problema não é a direção da caixa, é a **agressividade** do som. Caixas grandes feitas para longe estão tocando na orelha de quem está perto. A solução é "amansar" essas caixas sem virar a direção:
+
+1. **Mantenha a direção:** Deixe as caixas apontadas para o altar (seguindo o fluxo do rio).
+2. **Atenue os agudos:** O que dói no ouvido não é o grave, é o agudo (a voz estridente, o "ts ts ts" do prato da bateria). Na mesa de som ou no processador, na via dessas caixas do fundo, tire **bastante** agudo (High) e um pouco de médio-agudo (High-Mid). Isso tira a "dor" do ouvido de quem está perto.
+3. **Baixe o volume:** Reduza o volume até as pessoas pararem de reclamar. Lembre-se: elas só precisam entender o que é falado. Se o som estiver baixinho, mas claro, ninguém vai reclamar.
+
+> 🚨 **Resumo:** Não vire a caixa contra o fluxo. Em vez disso, tire o "veneno" do som (agudos) e baixe o volume.
 
 ---
 
