@@ -18,6 +18,7 @@ Manual oficial do mesa: <https://usa.yamaha.com/files/download/other_assets/9/33
     - [O que acontece se nenhum estiver apertado?](#o-que-acontece-se-nenhum-estiver-apertado)
     - [A solução padrão (o "ST")](#a-solução-padrão-o-st)
   - [O segredo do som limpo: ganho vs. volume](#o-segredo-do-som-limpo-ganho-vs-volume)
+  - [Como ler a escala do botão GAIN (mapa do potenciômetro)](#como-ler-a-escala-do-botão-gain-mapa-do-potenciômetro)
   - [Como regular um canal do zero (passo a passo)](#como-regular-um-canal-do-zero-passo-a-passo)
   - [Por que a igreja fica com eco quando está vazia?](#por-que-a-igreja-fica-com-eco-quando-está-vazia)
   - [O problema da dinâmica de voz (e por que o GAIN sozinho não resolve)](#o-problema-da-dinâmica-de-voz-e-por-que-o-gain-sozinho-não-resolve)
@@ -277,6 +278,37 @@ O objetivo é o **Equilíbrio**. Você quer o sinal forte o suficiente para cobr
 - **Ganho errado (alto):** Gera distorção, som sujo (ambiente) e apitos (microfonia).
 
 O **Ganho** prepara a qualidade do som. O **Fader** escolhe o volume do som.
+
+---
+
+### Como ler a escala do botão GAIN (mapa do potenciômetro)
+
+A Yamaha usa uma escala técnica que confunde quem está acostumado com "Volume de 0 a 10". Não existe uma posição fixa de "0" universal — o ponto certo depende do que está ligado no canal.
+
+#### A marca das "10 horas" (o triângulo ou traço grosso)
+
+Aquela marcação especial indica o **nível de linha (Line Level)**.
+
+- **Para que serve:** É onde você deixa o botão ao ligar um **teclado, celular, computador ou CD player**.
+- Esses aparelhos já entregam sinal forte. Se você passar dessa marca (girar para a direita), o som distorce imediatamente.
+
+#### A zona dos microfones
+
+Para microfones, a marca das 10 horas é muito baixa — o som ficará fraco. A zona correta fica geralmente entre **12h (meio-dia) e 3h da tarde**.
+
+Os números impressos ao redor do botão (como −40, −60) não são volume negativo: indicam o quão fraco é o sinal que entra. Quanto mais negativo, mais o pré-amplificador precisa trabalhar — e mais você gira para a direita.
+
+**Referência prática para a MG32/14FX:**
+
+| Fonte | Posição aproximada do GAIN |
+|---|---|
+| Celular / PC / teclado | 10h (marca de linha) ou totalmente à esquerda |
+| Microfone de mão (perto da boca) | 12h a 1h |
+| Microfone de mão (no peito, longe da boca) | 2h a 3h (atenção à microfonia) |
+
+#### O "zero real" está nas luzes, não no botão
+
+Ignore a posição do desenho. O ponto certo é aquele em que as luzes do medidor (V.U.) batem no **0 dB** com o PFL apertado — seja o botão apontando para cima ou para o lado. Se as luzes batem no zero, o ganho está correto.
 
 ---
 
