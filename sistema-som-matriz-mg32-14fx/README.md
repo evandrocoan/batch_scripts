@@ -244,6 +244,41 @@ Muitos problemas de som (chiadeira ou distorção) acontecem porque confundimos 
 - **GAIN** (Botão giratório *lá no topo do canal*): É a **PRESSÃO** da água que vem da rua (o microfone/instrumento).
 - **FADER** (Botão de deslizar *lá embaixo*): É a **TORNEIRA** que você abre para encher o copo (o volume que sai nas caixas).
 
+Essa é a dúvida mais comum e importante de quem está começando no áudio! Parece que os dois fazem a mesma coisa (aumentar o volume), mas eles agem em lugares diferentes e geram "sujeiras" diferentes.
+
+#### 1. O problema do ganho BAIXO (e fader alto)
+
+Imagine que o som do microfone é uma **foto pequena e escura**.
+
+- Se o **Ganho** estiver muito baixo, o sinal entra na mesa "fraco".
+- Para ouvir alguma coisa, você tem que empurrar o **Fader** lá para cima (no máximo).
+- **O resultado:** Ao forçar o fader no máximo para compensar a entrada fraca, você começa a ouvir o **"Ruído de Piso" (Self-Noise)** da própria mesa. É aquele "Ssshhhhhh" elétrico, constante, como chuva fina.
+- **Analogia:** É como pegar uma foto pequena e com baixa resolução no computador e dar um zoom gigantesco. A imagem fica "pixelada" e feia.
+
+#### 2. O problema do ganho ALTO (e fader baixo)
+
+Agora imagine que você abre o **Ganho** demais.
+
+- O microfone fica **hipersensível**. Ele capta a voz, mas também capta a respiração, o ar condicionado, o passo no palco e até o mosquito voando.
+- O sinal fica tão forte que bate no "teto" dos componentes eletrônicos e **distorce** (fica rachado, parecendo robô).
+- E o pior: **Microfonia (Feedback)**. O microfone fica tão sensível que qualquer som das caixas volta para ele e causa aquele apito agudo.
+- **Analogia:** É como tirar uma foto apontando direto para o sol. A imagem "estoura", fica tudo branco e você perde os detalhes.
+
+---
+
+#### O segredo: "Estrutura de ganho" (Gain Staging)
+
+O objetivo é o **Equilíbrio**. Você quer o sinal forte o suficiente para cobrir o chiado elétrico da mesa, mas não tão forte a ponto de distorcer.
+
+**Resumo da diferença:**
+
+- **Ganho errado (baixo):** Gera chiado elétrico constante (Hiss) e som "magro".
+- **Ganho errado (alto):** Gera distorção, som sujo (ambiente) e apitos (microfonia).
+
+O **Ganho** prepara a qualidade do som. O **Fader** escolhe o volume do som.
+
+---
+
 ### Como regular um canal do zero (passo a passo)
 
 Siga esta ordem sagrada antes de começar a tocar:
