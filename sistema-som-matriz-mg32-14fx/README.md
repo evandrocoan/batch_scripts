@@ -21,6 +21,7 @@ Manual oficial do mesa: <https://usa.yamaha.com/files/download/other_assets/9/33
   - [Como regular um canal do zero (passo a passo)](#como-regular-um-canal-do-zero-passo-a-passo)
   - [Por que a igreja fica com eco quando está vazia?](#por-que-a-igreja-fica-com-eco-quando-está-vazia)
   - [O problema da dinâmica de voz (e por que o GAIN sozinho não resolve)](#o-problema-da-dinâmica-de-voz-e-por-que-o-gain-sozinho-não-resolve)
+  - [A distância do microfone e a lei do inverso do quadrado](#a-distância-do-microfone-e-a-lei-do-inverso-do-quadrado)
   - [Entendendo as luzes (o semáforo do som)](#entendendo-as-luzes-o-semáforo-do-som)
 - [3. Controles adicionais do canal](#3-controles-adicionais-do-canal)
   - [Equalização básica (EQ) - deixando o som claro](#equalização-básica-eq---deixando-o-som-claro)
@@ -375,6 +376,45 @@ Como não temos compressor, a regra prática é:
 4. Se o microfone for **fixo de uma pessoa só** (exemplo: microfone do ambão usado apenas pelo leitor), aí sim você pode calibrar o GAIN para aquela voz específica sem se preocupar com outras.
 
 > 💡 **Dica:** Se perceber que a luz SIGNAL não acende para uma pessoa mesmo com o fader no 0, não suba o GAIN — suba o **fader**. O som ainda chega nas caixas mesmo que a SIGNAL não pisque, desde que o fader esteja levantado.
+
+---
+
+### A distância do microfone e a lei do inverso do quadrado
+
+Um dos problemas mais comuns na liturgia é o celebrante ou leitor que segura o microfone longe do rosto — ou pior, o apoia no peito enquanto fala. Parece pouco, mas para o som a diferença é brutal. Isso é consequência da **Lei do Inverso do Quadrado da Distância**.
+
+#### Por que a distância importa tanto?
+
+- **Microfone na boca (2–5 cm):** O som chega com pressão total. O microfone capta quase só a voz.
+- **Microfone no peito (30–40 cm):** Parece pouco, mas o sinal perde **70% a 80% da energia** nesse trajeto.
+  - Para compensar, o operador é forçado a empurrar o fader até o máximo (+10 dB).
+  - Com o fader no máximo, o microfone fica hipersensível: começa a captar as caixas da igreja e o risco de microfonia (apito agudo) aumenta muito.
+
+#### Quando usar o ganho vs. o fader para compensar?
+
+A resposta depende de quantas pessoas vão usar aquele microfone:
+
+**Cenário 1: microfone compartilhado (passa de mão em mão)**
+
+NÃO aumente o Ganho para compensar quem segura o microfone longe. Se o Ganho estiver alto para o "peito", quando o próximo pegar e falar perto da boca, o sinal entra com força explosiva, acende o PEAK e o som sai rachado.
+
+- **A regra:** Ajuste o Ganho pensando no **uso mais próximo** (mais forte). Use o **Fader** para compensar quem segura mais longe.
+- **Dica prática:** Marque com fita crepe ao lado do fader onde fica o ponto "boca" (0 dB) e o ponto "peito" (+5 ou +10 dB). Na hora, você só desliza o dedo até a marca.
+
+**Cenário 2: cada pessoa tem o seu próprio microfone (canais separados)**
+
+Aqui sim você pode personalizar:
+
+- **Canal do microfone usado perto da boca:** Ganho normal (ex.: posição 12h no relógio).
+- **Canal do microfone usado no peito:** Ganho bem mais alto (ex.: posição 3h ou 4h no relógio).
+
+Assim, com os dois faders na posição 0 dB, os dois volumes sairão equilibrados nas caixas. O Ganho compensou a diferença de distância antes da missa começar, e você não precisa ficar no fader durante a celebração.
+
+#### O filtro HPF (80 Hz) ajuda aqui
+
+Quando o microfone está longe (no peito), ele capta muito mais som grave do ambiente (ar-condicionado, passos, reverberação grave). Certifique-se de que o **botão 80 Hz** (filtro passa-alta, logo acima do Ganho) está **apertado** para esse canal. Ele corta esses graves inúteis, deixa a voz mais clara e reduz o risco de microfonia quando o fader precisa ser levantado.
+
+> 💡 **Resumo:** A física força o operador a empurrar o fader quando o microfone está longe — isso não é erro do operador. O erro evitável é aumentar o Ganho pensando no "peito" sem lembrar que a mesma pessoa (ou outra) vai usar o microfone perto da boca depois.
 
 ---
 
