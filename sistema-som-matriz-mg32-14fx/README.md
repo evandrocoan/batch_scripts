@@ -165,11 +165,11 @@ O fader branco de cada canal define o volume individual que aquele instrumento/v
 
 Cada tipo de caixa tem uma função diferente na cobertura sonora da nave:
 
-- **2 caixas grandes da frente:** São a referência principal de volume — empurram o som da frente para o fundo, cobrindo do 1º banco até os 2/3 da nave.
-- **2 caixas grandes do fundo:** Apontadas para o altar, jogam o som de volta para dentro da nave, cobrindo o terço final que as caixas da frente não alcançam bem. O volume adequado depende do alinhamento de tempo (delay) do sistema — veja mais detalhes em [A pirâmide do volume](#a-pirâmide-do-volume-quem-manda-em-quem).
+- **2 caixas grandes da frente:** Cobrem do 1º banco até aproximadamente os 2/3 da nave. O som delas não chega com volume suficiente ao fundo da igreja.
+- **2 caixas grandes do fundo:** Apontadas para os últimos bancos, cobrem o terço final da nave que as caixas da frente não alcançam. Funcionam como um segundo par principal, com volume similar ao das da frente. O alinhamento de tempo (delay) garante que quem está no fundo não ouvça eco — veja mais detalhes em [A pirâmide do volume](#a-pirâmide-do-volume-quem-manda-em-quem).
 - **10 caixas pequenas (laterais/corredores):** Servem para **preencher o som** nas áreas intermediárias onde o alcance das caixas grandes é menor, garantindo uniformidade ao longo dos corredores.
 
-> 🔊 **Regra de ouro — as caixas grandes devem ser a referência principal de volume:** As 2 caixas grandes da frente são a locomotiva do som na nave. As 2 caixas do fundo (apontadas para o altar) cobrem o terço final da nave jogando o som de volta para dentro — o volume delas depende do alinhamento de tempo (delay) do sistema. As 10 caixas pequenas dos corredores servem apenas para *clarear* o som onde as grandes não chegam bem — elas **não devem gritar na orelha dos fiéis**.
+> 🔊 **Regra de ouro — as caixas grandes são a referência principal de volume:** As 2 caixas grandes da frente cobrem os primeiros 2/3 da nave. As 2 caixas do fundo (apontadas para os últimos bancos) cobrem o terço final que as da frente não alcançam — com volume similar e delay configurado para evitar eco. As 10 caixas pequenas dos corredores servem apenas para *clarear* o som nas áreas intermediárias — elas **não devem gritar na orelha dos fiéis**.
 >
 > Se as caixas pequenas estiverem mais altas do que as grandes, acontece um efeito psicoacústico indesejado: o cérebro do fiel percebe que o som vem da parede ao lado, e não do altar. Isso tira a atenção da celebração e dá a sensação de som artificial e deslocado.
 >
@@ -550,7 +550,7 @@ Muitos operadores acham que, como temos 10 caixas laterais, elas devem falar alt
 **A função de cada uma:**
 
 - **As 2 caixas grandes da frente (Stereo — fader branco):** São o "Sol". Elas fornecem a força e o corpo do som, e garantem que a voz do padre e da música pareça vir lá da frente, do altar. Devem ter o volume mais alto de todo o sistema.
-- **As 2 caixas grandes do fundo (Stereo — fader branco):** Apontadas para o altar, cobrem o terço final da nave jogando o som de volta para dentro. O volume adequado depende do alinhamento de tempo (delay) do sistema — veja [A pirâmide do volume](#a-pirâmide-do-volume-quem-manda-em-quem).
+- **As 2 caixas grandes do fundo (Stereo — fader branco):** Apontadas para os últimos bancos, cobrem o terço final da nave que as caixas da frente não alcançam. Funcionam como um segundo par principal, com volume similar ao das da frente e delay configurado para evitar eco — veja [A pirâmide do volume](#a-pirâmide-do-volume-quem-manda-em-quem).
 - **As 10 caixas pequenas (AUX 4 — master vermelho):** São as "lanternas". Servem apenas para dar **clareza** (inteligibilidade) a quem senta longe ou atrás de colunas — elas recuperam os agudos ("S", "T", "Ch") que se perdem na distância.
 
 **A regra da invisibilidade:**
@@ -578,8 +578,8 @@ As 4 caixas grandes não são iguais entre si. As 2 da **frente** e as 2 do **fu
 
 | Grupo | Volume relativo | Função |
 | --- | --- | --- |
-| **2 caixas grandes da frente** | 🔊 Alto (referência 100%) | "A locomotiva" — empurram o som da frente para o fundo, cobrindo do 1º banco até os 2/3 da nave |
-| **2 caixas grandes do fundo** | 🔊 Alto (volume similar ao das da frente) | Apontadas para o altar — cobrem o terço final da nave jogando o som de volta para dentro |
+| **2 caixas grandes da frente** | 🔊 Alto (referência 100%) | Cobrem do 1º banco até ~2/3 da nave |
+| **2 caixas grandes do fundo** | 🔊 Alto (volume similar às da frente) | Apontadas para os últimos bancos — cobrem o terço final que as da frente não alcançam |
 | **10 caixas pequenas dos corredores** | 🔉 Mais baixo que as grandes (~40–60%) | "O tempero" — brilho e clareza nas áreas intermediárias |
 
 **O alinhamento de tempo (delay) das caixas do fundo:**
@@ -609,13 +609,13 @@ Para quem está sentado no meio da igreja, os olhos veem o celebrante na frente,
 
 #### 3. O delay para de funcionar corretamente
 
-O delay foi calculado para o som viajar do fundo **para trás** (em direção ao altar, seguindo o fluxo). Se você vira a caixa para o **meio**, o som viaja **para a frente**. Para quem está sentado no meio da igreja, o cálculo de tempo vai errar — a pessoa vai ouvir o som da caixa de trás fora de tempo em relação ao som que vem do altar, criando eco.
+O delay foi calculado assumindo que as caixas do fundo estão apontadas para os últimos bancos — ou seja, jogando o som diretamente para quem está na última fileira. O tempo de atraso (~59 ms) foi ajustado exatamente para essa geometria, fazendo o som das caixas do fundo chegar ao ouvido das pessoas no mesmo instante que o som das caixas da frente. Se você vira a caixa para o **meio** da nave, a distância entre a caixa e os ouvintes muda completamente — o cálculo de tempo vai errar, e a pessoa no meio da igreja vai ouvir o som fora de tempo em relação ao som que vem do altar, criando eco.
 
 #### Se as pessoas do fundo reclamam que o som incomoda
 
 O problema não é a direção da caixa, é a **agressividade** do som. Caixas grandes feitas para longe estão tocando na orelha de quem está perto. A solução é "amansar" essas caixas sem virar a direção:
 
-1. **Mantenha a direção:** Deixe as caixas apontadas para o altar (seguindo o fluxo do rio).
+1. **Mantenha a direção:** Deixe as caixas apontadas para os últimos bancos (seguindo o fluxo do rio).
 2. **Atenue os agudos:** O que dói no ouvido não é o grave, é o agudo (a voz estridente, o "ts ts ts" do prato da bateria). Na mesa de som ou no processador, na via dessas caixas do fundo, tire **bastante** agudo (High) e um pouco de médio-agudo (High-Mid). Isso tira a "dor" do ouvido de quem está perto.
 3. **Baixe o volume:** Reduza o volume até as pessoas pararem de reclamar. Lembre-se: elas só precisam entender o que é falado. Se o som estiver baixinho, mas claro, ninguém vai reclamar.
 
