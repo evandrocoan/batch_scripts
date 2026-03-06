@@ -539,6 +539,21 @@ Se você ligar um desses microfones e ele **não funcionar** (luz verde não ace
 
 Logo acima do equalizador, temos os botões azuis chamados **AUX**. Eles funcionam como torneiras independentes que enviam o som para zonas específicas da igreja - diferentes das caixas principais.
 
+**Como ler a posição dos knobs AUX:**
+
+A mesa tem uma **setinha impressa** no painel ao lado de cada knob indicando a posição de referência (o "zero" daquele controle). Ela não é a mesma para todos — cada tipo de knob tem seu neutro em um lugar diferente:
+
+| Knob | Posição da setinha | Significado |
+|---|---|---|
+| AUX 1, 2, 3, 4 por canal (azuis) | **~1h (levemente à direita do centro)** | A setinha aponta para um valor baixo mas não zero — ponto de partida que garante algum envio sem estourar. Ajuste para cima ou para baixo conforme o músico pede. |
+| AUX 5 / 6 por canal (brancos, efeitos) | **Mínimo (7h, totalmente à esquerda)** | Padrão: sem efeito. Mantenha sempre aqui. |
+| Knobs master gerais de AUX 1–4 (canto superior direito) | **~3h (levemente acima do meio)** | A setinha indica um nível de saída já "aberto" — esses masters controlam o volume geral de cada saída AUX e devem ser deixados na posição de fábrica (setinha) salvo ajuste deliberado. |
+| EQ (LOW / MID / HIGH) | **Centro (12h)** | Neutro: sem corte nem boost. Desviar para a direita aumenta, para a esquerda reduz. |
+| PAN (balanço) | **Centro (12h)** | Neutro: som igual nos dois lados. |
+| GAIN | **Variável (não tem setinha fixa)** | O ponto certo é encontrado pelas luzes do medidor (V.U.) com o PFL apertado — veja a [seção anterior](#como-ler-a-escala-do-botão-gain-mapa-do-potenciômetro). |
+
+> 💡 **Dica prática:** Se você se perder nos knobs durante a celebração, procure a setinha impressa e volte para ela — é o ponto neutro seguro para qualquer knob que não seja o GAIN.
+
 Em resumo:
 
 - **AUX 1 e 2 (azuis):** Retornos para os músicos (o que a banda ouve no palco).
