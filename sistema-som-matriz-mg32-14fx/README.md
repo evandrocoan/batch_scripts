@@ -1,6 +1,8 @@
+<!-- markdownlint-disable MD033 -->
+
 # Guia Mesa de Som
 
-![mesa-som-visao-geral](mesa-som-visao-geral.jpg)
+<a href="mesa-som-visao-geral.jpg"><img src="mesa-som-visao-geral.jpg" alt="mesa-som-visao-geral"></a>
 
 Manual oficial do mesa: <https://usa.yamaha.com/files/download/other_assets/9/333859/mg32_14fx_pt.pdf>
 
@@ -68,9 +70,9 @@ Manual oficial do mesa: <https://usa.yamaha.com/files/download/other_assets/9/33
 
 ## Visão das conexões
 
-![mg32-14fx-painel-frontal](mg32_14fx_en_om_e0png_Page1.png)
+<a href="mg32_14fx_en_om_e0png_Page1.png"><img src="mg32_14fx_en_om_e0png_Page1.png" alt="mg32-14fx-painel-frontal"></a>
 
-![mg32-14fx-pagina-9](mg32_14fx_en_om_e0png_Page9.png)
+<a href="mg32_14fx_en_om_e0png_Page9.png"><img src="mg32_14fx_en_om_e0png_Page9.png" alt="mg32-14fx-pagina-9"></a>
 
 ## 1. Introdução
 
@@ -113,7 +115,7 @@ Na nossa mesa de som, cada canal (cada tira vertical onde ligamos um microfone o
 
 Para operar corretamente, divida a igreja em 3 zonas mentais Altar/Palco, Cantos e Corredor Lateral.
 
-![Grupos-de-Canais](grupos-canais.png)
+<a href="grupos-canais.png"><img src="grupos-canais.png" alt="Grupos-de-Canais"></a>
 
 ### O caminho do som (visão geral)
 
@@ -187,7 +189,7 @@ Cada tipo de caixa tem uma função diferente na cobertura sonora da nave:
 
 ### A regra dos 3 botões (onde o som morre)
 
-![Botao-ST-12-34](botao-st-12-34.png)
+<a href="botao-st-12-34.png"><img src="botao-st-12-34.png" alt="Botao-ST-12-34"></a>
 
 Essa é uma dúvida fundamental e a causa de muitos problemas de "som mudo". Se você não apertar nenhum desses botões, o som **morre** dentro do canal.
 
@@ -239,7 +241,7 @@ Para que o som saia nas caixas principais da igreja, o botão **ST (Stereo)** de
 
 ### O segredo do som limpo: ganho vs. volume
 
-![fader-vs-gain](fader-vs-gain.png)
+<a href="fader-vs-gain.png"><img src="fader-vs-gain.png" alt="fader-vs-gain"></a>
 
 Muitos problemas de som (chiadeira ou distorção) acontecem porque confundimos esses dois controles. Para operar a mesa Yamaha MG32/14FX, pense nela como um sistema de água:
 
@@ -301,7 +303,7 @@ Os números impressos ao redor do botão (como −40, −60) não são volume ne
 **Referência prática para a MG32/14FX:**
 
 | Fonte | Posição aproximada do GAIN |
-|---|---|
+| --- | --- |
 | Celular / PC / teclado | 10h (marca de linha) ou totalmente à esquerda |
 | Microfone de mão (perto da boca) | 12h a 1h |
 | Microfone de mão (no peito, longe da boca) | 2h a 3h (atenção à microfonia) |
@@ -426,14 +428,14 @@ Um dos problemas mais comuns na liturgia é o celebrante ou leitor que segura o 
 
 A resposta depende de quantas pessoas vão usar aquele microfone:
 
-**Cenário 1: microfone compartilhado (passa de mão em mão)**
+#### Cenário 1: microfone compartilhado (passa de mão em mão)
 
 NÃO aumente o Ganho para compensar quem segura o microfone longe. Se o Ganho estiver alto para o "peito", quando o próximo pegar e falar perto da boca, o sinal entra com força explosiva, acende o PEAK e o som sai rachado.
 
 - **A regra:** Ajuste o Ganho pensando no **uso mais próximo** (mais forte). Use o **Fader** para compensar quem segura mais longe.
 - **Dica prática:** Marque com fita crepe ao lado do fader onde fica o ponto "boca" (0 dB) e o ponto "peito" (+5 ou +10 dB). Na hora, você só desliza o dedo até a marca.
 
-**Cenário 2: cada pessoa tem o seu próprio microfone (canais separados)**
+#### Cenário 2: cada pessoa tem o seu próprio microfone (canais separados)
 
 Aqui sim você pode personalizar:
 
@@ -454,7 +456,7 @@ Quando o microfone está longe (no peito), ele capta muito mais som grave do amb
 
 Ao lado de cada fader (volume deslizante), existem duas luzes pequenas. Elas são os seus olheiros
 
-![peak-signal-leds](peak-signal-leds.png)
+<a href="peak-signal-leds.png"><img src="peak-signal-leds.png" alt="peak-signal-leds"></a>
 
 💚 Luz verde (SIGNAL)
 
@@ -477,7 +479,7 @@ Agora que você domina o básico (GAIN, Fader, ON, ST e luzes), vamos conhecer o
 
 ### Equalização básica (EQ) - deixando o som claro
 
-![equalizers-knobs](equalizers-knobs.png)
+<a href="equalizers-knobs.png"><img src="equalizers-knobs.png" alt="equalizers-knobs"></a>
 
 Os botões giratórios coloridos no meio do canal são o **equalizador (EQ)**. Eles permitem ajustar o "timbre" do som - deixar a voz mais clara, tirar o "peso" do violão, etc.
 
@@ -497,7 +499,7 @@ Os botões giratórios coloridos no meio do canal são o **equalizador (EQ)**. E
 
 ### O botão PAN (balanço) - não mexa sem necessidade
 
-![pan-knob](pan-knob.png)
+<a href="pan-knob.png"><img src="pan-knob.png" alt="pan-knob"></a>
 
 Logo acima do fader, existe um botão giratório chamado **PAN**.
 
@@ -509,7 +511,7 @@ Logo acima do fader, existe um botão giratório chamado **PAN**.
 
 ### Phantom Power (+48V) - para microfones especiais
 
-![phantom-power-knob](phantom-power-knob.png)
+<a href="phantom-power-knob.png"><img src="phantom-power-knob.png" alt="phantom-power-knob"></a>
 
 Alguns microfones precisam de energia elétrica para funcionar. São os chamados **microfones condensadores** - comuns em:
 
@@ -544,7 +546,7 @@ Logo acima do equalizador, temos os botões azuis chamados **AUX**. Eles funcion
 A mesa tem uma **setinha impressa** no painel ao lado de cada knob indicando a posição de referência (o "zero" daquele controle). Ela não é a mesma para todos — cada tipo de knob tem seu neutro em um lugar diferente:
 
 | Knob | Posição da setinha | Significado |
-|---|---|---|
+| --- | --- | --- |
 | AUX 1, 2, 3, 4 por canal (azuis) | **~1h (levemente à direita do centro)** | A setinha aponta para um valor baixo mas não zero — ponto de partida que garante algum envio sem estourar. Ajuste para cima ou para baixo conforme o músico pede. |
 | AUX 5 / 6 por canal (brancos, efeitos) | **Mínimo (7h, totalmente à esquerda)** | Padrão: sem efeito. Mantenha sempre aqui. |
 | Knobs master gerais de AUX 1–4 (canto superior direito) | **~3h (levemente acima do meio)** | A setinha indica um nível de saída já "aberto" — esses masters controlam o volume geral de cada saída AUX e devem ser deixados na posição de fábrica (setinha) salvo ajuste deliberado. |
@@ -572,7 +574,7 @@ Agora que você entende o básico dos botões AUX, vamos aprender **como usá-lo
 
 ## 4. Controlando os retornos (o que os músicos ouvem)
 
-![monitors-knobs](monitors-knobs.png)
+<a href="monitors-knobs.png"><img src="monitors-knobs.png" alt="monitors-knobs"></a>
 
 Os **retornos** (também chamados de "monitores") são as caixas de som viradas para os músicos no palco/altar. Eles permitem que cada músico se ouça durante a execução. Sem retorno adequado, o músico não consegue cantar no tom correto ou tocar no ritmo certo.
 
@@ -595,7 +597,7 @@ Os **retornos** (também chamados de "monitores") são as caixas de som viradas 
 
 ### A regra de ouro (botão PRE)
 
-![botoes-auxiliares-pre](botoes-auxiliares-pre.png)
+<a href="botoes-auxiliares-pre.png"><img src="botoes-auxiliares-pre.png" alt="botoes-auxiliares-pre"></a>
 
 🛑 **AVISO CRÍTICO:** Mantenha o botão **PRE** sempre **APERTADO** nos canais que vão para os retornos dos músicos!
 
@@ -747,9 +749,9 @@ O problema não é a direção da caixa, é a **agressividade** do som. Caixas g
 
 ## 5. Entendendo as saídas: onde ligar a gravação?
 
-![Conexoes-MONO-e-STEREO](conexoes-mono-stereo.png)
+<a href="conexoes-mono-stereo.png"><img src="conexoes-mono-stereo.png" alt="Conexoes-MONO-e-STEREO"></a>
 
-![saida-rec-st-sub-out](saida-rec-st-sub-out.png)
+<a href="saida-rec-st-sub-out.png"><img src="saida-rec-st-sub-out.png" alt="saida-rec-st-sub-out"></a>
 
 Nossa mesa de som possui várias saídas "mestras" diferentes, e isso pode confundir na hora de conectar um gravador ou fazer a transmissão da missa. A boa notícia é que **só uma delas é a correta para lives e gravações**.
 
@@ -841,7 +843,7 @@ Para gravar missas ou transmitir lives, **sempre use a ST SUB OUT**. Ela oferece
 
 ## 6. Como usar AFL e PFL (os botões de escuta solo)
 
-![botoes-afl-pfl](botoes-afl-pfl.png)
+<a href="botoes-afl-pfl.png"><img src="botoes-afl-pfl.png" alt="botoes-afl-pfl"></a>
 
 AFL e PFL são ferramentas de diagnóstico profissional que permitem ao operador de som "espiar" o sinal de um canal específico através do fone de ouvido, sem afetar o som que está saindo nas caixas da igreja.
 
@@ -941,7 +943,7 @@ Se você apertar AFL de **dois grupos juntos** (ex: 1 e 2), a mesa vai **mistura
 
 ## 7. Entendendo os medidores (as 4 fileiras de luzes)
 
-![stereo-fpl-afl-lights](stereo-fpl-afl-lights.png)
+<a href="stereo-fpl-afl-lights.png"><img src="stereo-fpl-afl-lights.png" alt="stereo-fpl-afl-lights"></a>
 
 Localize as 4 fileiras verticais de luzes coloridas **no canto superior direito da mesa**, próximo ao Fader Vermelho Master. São **4 fileiras de luzes** com 12 LEDs cada uma. Elas são o "painel de instrumentos" da mesa - assim como o velocímetro do carro mostra a velocidade, essas luzes (chamadas de **V.U. Meters**) mostram o volume do sinal de áudio.
 

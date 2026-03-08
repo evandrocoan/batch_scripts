@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD033 -->
+
 # PASCOM - Guia de Boas Práticas para Transmissão de Celebrações Litúrgicas
 
 - [Pré-Celebração / Preparação](#pré-celebração--preparação)
@@ -142,8 +144,8 @@ Temos 5 tripés. 3 de 2 metros, 1 de 2 e 1 de 4 metros. Com exceção do de 2 me
 
 O ip do meu DroidCam ficava trocando toda missa, daí vi que nas minhas configurações do wi-fi tinha marcado essa opção "Privacy (Use randomized MAC)", conforme a figura a seguir:
 
-![configuracao-wifi-privacy-mac-randomized][configuracao-wifi-privacy-mac-randomized]
-![configuracao-wifi-privacy-mac-device][configuracao-wifi-privacy-mac-device]
+<a href="images/configuracao-wifi-privacy-mac-randomized.png"><img src="images/configuracao-wifi-privacy-mac-randomized.png" alt="configuracao-wifi-privacy-mac-randomized"></a>
+<a href="images/configuracao-wifi-privacy-mac-device.png"><img src="images/configuracao-wifi-privacy-mac-device.png" alt="configuracao-wifi-privacy-mac-device"></a>
 
 Trocando ela para "Use device MAC", nós ficamos sempre com o mesmo ip no DroidCam. Isso funciona porque o roteador usa MAC para distribuir ip, e se celular manda um MAC diferente toda vez, o roteador não sabe que é o mesmo celular, daí ele distribui um ip diferente.
 
@@ -155,38 +157,38 @@ Essa é uma feature de segurança, para dificultar em redes públicas, alguém i
 
 1. Caso dispositivo principal `Mic/Aux` não esteja apresentando som, clique nos três pontinhos verticais do item `Mic/Aux` no painel `Mixer de Áudio` e vá em `Propriedades`:
 
-   ![obs-menu-propriedades-mic-aux][obs-menu-propriedades-mic-aux]
+   <a href="images/obs-menu-propriedades-mic-aux.png"><img src="images/obs-menu-propriedades-mic-aux.png" alt="obs-menu-propriedades-mic-aux"></a>
 2. Então, em `Dispositivo` selecione `Line 1/2 (4-M-AUDIO Fast Track Pro)`:
 
-   ![obs-selecionar-dispositivo-m-audio][obs-selecionar-dispositivo-m-audio]
+   <a href="images/obs-selecionar-dispositivo-m-audio.png"><img src="images/obs-selecionar-dispositivo-m-audio.png" alt="obs-selecionar-dispositivo-m-audio"></a>
 3. E clique em OK.
 
 ## Verificar se dispositivos de som estão conectados corretamente
 
 1. Clique com botão esquerdo no ícone de som na barra de tarefas e selecione a opção `Som`:
 
-   ![windows-menu-som-barra-tarefas][windows-menu-som-barra-tarefas]
+   <a href="images/windows-menu-som-barra-tarefas.png"><img src="images/windows-menu-som-barra-tarefas.png" alt="windows-menu-som-barra-tarefas"></a>
 2. Vá em `Gravação`, e verifique se `Line 1/2 (4-M-Audio Fast Track Pro)` está recebendo som:
 
-   ![windows-gravacao-m-audio-recebendo-som][windows-gravacao-m-audio-recebendo-som]
+   <a href="images/windows-gravacao-m-audio-recebendo-som.png"><img src="images/windows-gravacao-m-audio-recebendo-som.png" alt="windows-gravacao-m-audio-recebendo-som"></a>
    - Caso esteja com barrinhas verdes OK, o dispositivo de som da igreja está conectado corretamente.
    - Note que usualmente as barrinhas verdes de áudio podem não aparecer para dispositivo `Line 1/2`, porque por padrão seu volume fica selecionado mais baixo, nesse caso, é só ajustar o controle de volume (imagem abaixo, `4-M-Audio Fast Track Pro`) na mesa de som, girando um pouco para aumentar, que sons mais baixos irão fazer as barrinhas verdes aparecerem.
 
-     ![m-audio-controle-volume][m-audio-controle-volume]
+     <a href="images/m-audio-controle-volume.png"><img src="images/m-audio-controle-volume.png" alt="m-audio-controle-volume"></a>
    - Para saber se está chegando no dispositivo `4-M-Audio Fast Track Pro`, basta verificar se a luz `Signal` (imagem acima) está acendendo. Quanto mais baixo volume, mais fraco ela acende, quanto mais forte o volume, mais forte ela acende.
 3. Nota, na mesa de transmissão, em cima do roteador, encontra-se o dispositivo `Line 1/2 (4-M-Audio Fast Track Pro)`, que está conectado por USB no computador. Ele puxa o áudio do sistema de som da igreja (`Yamaha Mixing Console MG32/14FX`) no cabo 6 da figura abaixo, e é a fonte `Mic/Aux` que utilizamos no OBS Studio.
 
-   ![m-audio-conexao-mesa-som-yamaha][m-audio-conexao-mesa-som-yamaha]
+   <a href="images/m-audio-conexao-mesa-som-yamaha.png"><img src="images/m-audio-conexao-mesa-som-yamaha.png" alt="m-audio-conexao-mesa-som-yamaha"></a>
 4. Caso o som não esteja chegando no dispositivo 4-M-Áudio, a configuração da mesa de som `MG32/14FX`, precisa ser revista, para que ela encaminhe o áudio na porta do cabo 6, ou conectar esse cabo em outra porta que terá a saída do áudio.
 
 ## Ruídos nas transmissão
 
 1. Tentei aumentar o volume da transmissão aumentando esse controle aqui, mas adicionou um chiado junto (menor que o de ontem, daí não percebi na hora). Só cuidar com esse botão para deixar ele mais baixo e se precisar mexer ali, escutar bem o áudio. Acho que para aumentar o áudio, precisa mesmo ver na mesa de som que manda o sinal para cá.
 
-   ![m-audio-controle-volume-chiado][m-audio-controle-volume-chiado]
+   <a href="images/m-audio-controle-volume-chiado.png"><img src="images/m-audio-controle-volume-chiado.png" alt="m-audio-controle-volume-chiado"></a>
 2. A transmissão ficou com chiado hoje vindo da mesa de som. Verifiquei com Irene durante a missa e estavam ok os microfones. No final da missa verifiquei os cabos e resolvi ao recolocar esse cabo.
 
-   ![cabo-mesa-som-resolver-chiado][cabo-mesa-som-resolver-chiado]
+   <a href="images/cabo-mesa-som-resolver-chiado.png"><img src="images/cabo-mesa-som-resolver-chiado.png" alt="cabo-mesa-som-resolver-chiado"></a>
 3. ?
 
 ## Utilizar supressor de ruído
@@ -197,24 +199,24 @@ Quando fizemos os testes vimos que tinha um ruído saído da mesa de som. Daí a
 
 1. Clique nos três pontinhos para abrir menu da interface de áudio para ter ruído suprimido:
 
-   ![obs-menu-audio-filtros][obs-menu-audio-filtros]
+   <a href="images/obs-menu-audio-filtros.png"><img src="images/obs-menu-audio-filtros.png" alt="obs-menu-audio-filtros"></a>
 2. Clique em adicionar:
 
-   ![obs-adicionar-filtro-audio][obs-adicionar-filtro-audio]
+   <a href="images/obs-adicionar-filtro-audio.png"><img src="images/obs-adicionar-filtro-audio.png" alt="obs-adicionar-filtro-audio"></a>
 3. Selecione `Noise Suppression`
 
-   ![obs-selecionar-noise-suppression][obs-selecionar-noise-suppression]
+   <a href="images/obs-selecionar-noise-suppression.png"><img src="images/obs-selecionar-noise-suppression.png" alt="obs-selecionar-noise-suppression"></a>
 4. Selecione o método de supressão:
 
-   ![obs-metodo-supressao-ruido][obs-metodo-supressao-ruido]
+   <a href="images/obs-metodo-supressao-ruido.png"><img src="images/obs-metodo-supressao-ruido.png" alt="obs-metodo-supressao-ruido"></a>
 5. Esses métodos de supressão são dinâmicos, ou seja, durante a transmissão ao vivo, ele podem ser adicionados, removidos ou configurados. Por isso, é importante sempre estar escutando áudio da missa para observar que efeitos eles estão tendo.
    1. Por exemplo, se o chiado está forte, o filtro de ruído pode ser adicionado em uma saída de áudio para ser usada durante as falas, mas removido em outra saída durante a música.
    2. Para isso, vá em Configurações de áudio, e configure duas saídas utilizando o mesmo dispositivo de áudio com o som da missa:
 
-      ![obs-configurar-duas-saidas-audio][obs-configurar-duas-saidas-audio]
+      <a href="images/obs-configurar-duas-saidas-audio.png"><img src="images/obs-configurar-duas-saidas-audio.png" alt="obs-configurar-duas-saidas-audio"></a>
    3. Depois, adicione o filtro em um dispositivo e remova do outro, assim, para alternar entre um e outro, mute um e desmute o outro, e vice-versa para destrocar, e alternar entre a saída com filtro e a sem.
 
-      ![obs-alternar-audio-com-sem-filtro][obs-alternar-audio-com-sem-filtro]
+      <a href="images/obs-alternar-audio-com-sem-filtro.png"><img src="images/obs-alternar-audio-com-sem-filtro.png" alt="obs-alternar-audio-com-sem-filtro"></a>
 6. ?
 
 ## Como ajustar volume da transmissão na mesa de som
@@ -223,13 +225,13 @@ Para mais detalhes da mesa de som, veja o documento: [Guia Rápido Mesa de Som -
 
 De acordo com manual da mesa de som, [manual-mesa-de-som-mg32\_14fx.pdf](https://drive.google.com/file/d/1OGnDt-h1bqmv2ZekQLmICiYv1gARXX6E/view?usp=drive_link), nossa saída de áudio é a ST SUB OUT, localizada no seguinte controle:
 
-![yamaha-controle-st-sub-out][yamaha-controle-st-sub-out]
+<a href="images/yamaha-controle-st-sub-out.png"><img src="images/yamaha-controle-st-sub-out.png" alt="yamaha-controle-st-sub-out"></a>
 
 Essa saída foi feita especialmente gravação do som, assim, ela é independente dos ajustes feitos nas saídas para caixas de som. No nosso caso ela é usada para transmissão.
 
 Atrás da mesa de som, ST SUB OUT se encontra no item 8 da imagem a seguir, conforme manual da mesa de som:
 
-![yamaha-st-sub-out-traseira][yamaha-st-sub-out-traseira]
+<a href="images/yamaha-st-sub-out-traseira.png"><img src="images/yamaha-st-sub-out-traseira.png" alt="yamaha-st-sub-out-traseira"></a>
 
 ## Como fazer
 
@@ -241,7 +243,7 @@ Caso queira criar uma variação do cenário Tripé 2 ou 4 metros, você pode ir
 
 Antes de começar, faça a seleção do cenário correto para transmissão, indo no menu `Coleção de cenas` e selecionando as cenas do cenário `Tripé 2 metros` ou `Tripé 4 metros`. Necessário, pois ambos os cenários, possuem cenas muito diferentes e sempre recriar/configurar as cenas de um para outro, é relativamente trabalhoso.
 
-![obs-menu-colecao-cenas][obs-menu-colecao-cenas]
+<a href="images/obs-menu-colecao-cenas.png"><img src="images/obs-menu-colecao-cenas.png" alt="obs-menu-colecao-cenas"></a>
 
 ## Como usar extensões USB
 
@@ -259,7 +261,7 @@ Para compartilhar uma USB com longas distâncias, é necessário um adaptador US
 1. Basta acessar no navegador, o endereço: [http://192.168.0.3:4747/remote](http://192.168.0.3:4747/remote)
 2. Clicar no ícone de câmera e selecionar sua câmera.
 
-![droidcam-controle-remoto-flip-camera][droidcam-controle-remoto-flip-camera]
+<a href="images/droidcam-controle-remoto-flip-camera.png"><img src="images/droidcam-controle-remoto-flip-camera.png" alt="droidcam-controle-remoto-flip-camera"></a>
 
 ## Como iniciar transmissão
 
@@ -273,7 +275,7 @@ Em um cenário com falta de tempo/imprevistos, uma vez configurado pelo menos um
 
 Antes de iniciar as transmissões, certifique-se que a cena principal é a de entrada, e os áudios dos microfones estão desativados:
 
-![obs-cena-entrada-audio-desativado][obs-cena-entrada-audio-desativado]
+<a href="images/obs-cena-entrada-audio-desativado.png"><img src="images/obs-cena-entrada-audio-desativado.png" alt="obs-cena-entrada-audio-desativado"></a>
 
 - Depois, ao iniciar a missa, fique atento para ligar o áudio dos microfones.
 - Não iniciar a transmissão da missa, muito tempos antes da missa começar, pois quem está acompanhando pela internet, pode ser alguém de mais idade que vai ficar sem entender porque nada aparece. Assim, eventualmente, vamos adicionar um cronômetro que informa horário da missa e quanto tempo falta para iniciar.
@@ -282,7 +284,7 @@ Antes de iniciar as transmissões, certifique-se que a cena principal é a de en
 
 Uma vez que a transmissão já iniciou, conforme as seções a seguir, é necessário observar no OBS se está acontecendo perda de frames:
 
-![obs-verificar-perda-frames][obs-verificar-perda-frames]
+<a href="images/obs-verificar-perda-frames.png"><img src="images/obs-verificar-perda-frames.png" alt="obs-verificar-perda-frames"></a>
 
 Caso, esteja acontecendo logo no início, e seja uma perda constante, é necessário parar a transmissão e reduzir a resolução e a taxa de bitrate utilizado. Por padrão, é utilizado 5000 Kbps de bitrate e 1080p como resolução de saída. O que controla a largura de banda utilizada (internet) é a taxa de bitrate.
 
@@ -290,20 +292,20 @@ Caso, esteja acontecendo logo no início, e seja uma perda constante, é necess�
 2. Transmitir com um bitrate de 2500 Kbps com uma resolução de 1080p, não será dados suficientes e a transmissão ficará sendo com a resolução de 720p, pois 2500 Kbps não tem informações suficientes para resolução de 1080p. Assim, é necessário ajudar a taxa de bitrate de acordo com a resolução utilizada.
 3. Também cuidar com qual chave de API do youtube ou outro sistema de stream utilizado, pois por padrão youtube esperar um bitrate variável, mas chaves específicas para um bitrate fixo pode ser criado.
 
-   ![obs-configuracao-bitrate-parte1][obs-configuracao-bitrate-parte1]
+   <a href="images/obs-configuracao-bitrate-parte1.png"><img src="images/obs-configuracao-bitrate-parte1.png" alt="obs-configuracao-bitrate-parte1"></a>
 
-   ![obs-configuracao-bitrate-parte2][obs-configuracao-bitrate-parte2]
+   <a href="images/obs-configuracao-bitrate-parte2.png"><img src="images/obs-configuracao-bitrate-parte2.png" alt="obs-configuracao-bitrate-parte2"></a>
 4. ?
 
 ## Também acessar a plataforma de transmissão
 
 1. E observar nas estatísticas dela se ela reporta alguma perda de frame ou qualidade baixa para transmissão:
 
-   ![youtube-estatisticas-transmissao][youtube-estatisticas-transmissao]
+   <a href="images/youtube-estatisticas-transmissao.png"><img src="images/youtube-estatisticas-transmissao.png" alt="youtube-estatisticas-transmissao"></a>
 2. Também monitorar durante a transmissão a seção de live-chat para ver se alguém reportou algum problema com a transmissão que não foi detectado por nós.
 3. Nela, se configurável, preferir latências mais altas, por exemplo, no youtube é permitido configurar Normal, Low-Latency e Ultra low-latency. Sempre preferir a opção `Normal`, pois os que assistem a missa pela internet não vão se importar de esperar um pouco entre o que acontece na missa, e o que chega na transmissão em tempo real. Mas vão se incomodar se por uma instabilidade da internet da igreja, cortar um pedaço da missa, que ficará gravada, faltando partes.
 
-   ![youtube-configuracao-latencia][youtube-configuracao-latencia]
+   <a href="images/youtube-configuracao-latencia.png"><img src="images/youtube-configuracao-latencia.png" alt="youtube-configuracao-latencia"></a>
 
    **Descrição:** A latência de transmissão é o atraso entre o que sua câmera captura e o momento em que é exibido aos espectadores. A opção Normal oferece maior qualidade de vídeo e é ideal se você não quiser interagir com o público; a opção Baixa, se quiser interagir quase em tempo real; e a opção Ultra Baixa, se quiser alta interação e engajamento.
    1. Com um nível normal, demora mais para uma cena parecer na transmissão, pois o YouTube espera mais tempo antes de mostrar a cena, para garantir que ele recebeu todos os dados. Isso é essencial para conexões que podem ser instáveis, assim, caso a internet engasgue por alguns segundos, isso não é perceptível na transmissão, pois ela consegue recuperar os dados.
@@ -318,16 +320,16 @@ Esse é nosso método principal de transmissão. A missa, precisa no mínimo ser
 3. Caso seja perguntado, clique em `Agora mesmo`, `Iniciar` e em `Software Streaming`.
 4. Clique em `Editar`, e coloque o título da missa de acordo com o livrinho das missas para o dia de hoje, e edite a descrição do vídeo com a data da missa. Depois clique em `Copiar` para copiar o token de transmissão do youtube.
 
-   ![youtube-editar-transmissao-copiar-token][youtube-editar-transmissao-copiar-token]
+   <a href="images/youtube-editar-transmissao-copiar-token.png"><img src="images/youtube-editar-transmissao-copiar-token.png" alt="youtube-editar-transmissao-copiar-token"></a>
 5. Agora, volte o OBS e clique em `Configurações` no painel `Controles`:
 
-   ![obs-painel-controles-configuracoes][obs-painel-controles-configuracoes]
+   <a href="images/obs-painel-controles-configuracoes.png"><img src="images/obs-painel-controles-configuracoes.png" alt="obs-painel-controles-configuracoes"></a>
 6. Vá em `Transmissão -> Usar chave de transmissão (avançado)`.
 
-   ![obs-transmissao-chave-avancado][obs-transmissao-chave-avancado]
+   <a href="images/obs-transmissao-chave-avancado.png"><img src="images/obs-transmissao-chave-avancado.png" alt="obs-transmissao-chave-avancado"></a>
 7. Então adicione a chave de transmissão e clique OK.
 
-   ![obs-adicionar-chave-transmissao][obs-adicionar-chave-transmissao]
+   <a href="images/obs-adicionar-chave-transmissao.png"><img src="images/obs-adicionar-chave-transmissao.png" alt="obs-adicionar-chave-transmissao"></a>
 8. Depois, vá novamente no painel `Controles` e clique em `Iniciar transmissão`:
 9. Por fim, volte na página do Youtube, e verifique se a transmissão iniciou corretamente.
 10. Espere até a missa iniciar e faça a transição para `Ambão` ou mesa de `Preces` e reative o áudio dos microfones.
@@ -343,20 +345,20 @@ Este é o nosso método secundário de transmissão. Caso tenha algum problema, 
 2. Clique em `Fazer live`.
 3. Em `Adicionar detalhes do post`, copie o título da missa e a descrição dela do Youtube
 
-   ![facebook-adicionar-detalhes-post][facebook-adicionar-detalhes-post]
+   <a href="images/facebook-adicionar-detalhes-post.png"><img src="images/facebook-adicionar-detalhes-post.png" alt="facebook-adicionar-detalhes-post"></a>
 4. Em `Selecionar a origem do vídeo` clique em `Software de streaming` e copie a `Chave de stream`.
 
-   ![facebook-copiar-chave-stream][facebook-copiar-chave-stream]
+   <a href="images/facebook-copiar-chave-stream.png"><img src="images/facebook-copiar-chave-stream.png" alt="facebook-copiar-chave-stream"></a>
 5. Agora no OBS, vá no painel `Múltiplas saídas -> Facebook`, e clique em `Alterar`.
 
-   ![obs-multiplas-saidas-facebook-alterar][obs-multiplas-saidas-facebook-alterar]
+   <a href="images/obs-multiplas-saidas-facebook-alterar.png"><img src="images/obs-multiplas-saidas-facebook-alterar.png" alt="obs-multiplas-saidas-facebook-alterar"></a>
 6. Então insira a chave de transmissão copiada no campo `Chave de transmissão` e clique em OK.
 
-   ![obs-facebook-inserir-chave-transmissao][obs-facebook-inserir-chave-transmissao]
+   <a href="images/obs-facebook-inserir-chave-transmissao.png"><img src="images/obs-facebook-inserir-chave-transmissao.png" alt="obs-facebook-inserir-chave-transmissao"></a>
 7. Agora no painel `Múltiplas saídas` clique em `Iniciar`.
 8. Volte no facebook e clique em `Transmitir ao vivo` para iniciar a transmissão para valer.
 
-   ![facebook-transmitir-ao-vivo][facebook-transmitir-ao-vivo]
+   <a href="images/facebook-transmitir-ao-vivo.png"><img src="images/facebook-transmitir-ao-vivo.png" alt="facebook-transmitir-ao-vivo"></a>
    1. Diferente do youtube, onde a transmissão inicia ao clicar que iniciar transmissão o OBS, para facebook, é necessário além de clicar em `Iniciar` no OBS, é necessário também fazer o mesmo na página do facebook.
 9. Transmissão feita com sucesso, agora do mesmo modo que com youtube, também monitore ocasionalmente a página do facebook para:
    1. Ver se alguém reclama de algum problema na transmissão como áudio mudo.
@@ -369,13 +371,13 @@ Somente usar essa opção em um momento de pane onde não é conseguido obter o 
 
 1. Caso áudio principal Mic/Aux abaixo não esteja recebendo som:
 
-   ![obs-audio-mic-aux-sem-som][obs-audio-mic-aux-sem-som]
+   <a href="images/obs-audio-mic-aux-sem-som.png"><img src="images/obs-audio-mic-aux-sem-som.png" alt="obs-audio-mic-aux-sem-som"></a>
 2. Ative o áudio pela câmera do seu celular, indo das propriedades do dispositivo `DroidCam OBS 3`, e marque a opção, `Desativar`, depois clique em `Habilitar áudio`, então clique em `Ativar` e então OK para salvar:
 
-   ![obs-droidcam-habilitar-audio][obs-droidcam-habilitar-audio]
+   <a href="images/obs-droidcam-habilitar-audio.png"><img src="images/obs-droidcam-habilitar-audio.png" alt="obs-droidcam-habilitar-audio"></a>
 3. Por fim, habilite o áudio da câmera OBS no `Mixer de áudio`. Isso deve ser suficiente para ter algum áudio disponível na missa:
 
-   ![obs-mixer-audio-habilitar-droidcam][obs-mixer-audio-habilitar-droidcam]
+   <a href="images/obs-mixer-audio-habilitar-droidcam.png"><img src="images/obs-mixer-audio-habilitar-droidcam.png" alt="obs-mixer-audio-habilitar-droidcam"></a>
 4. Infelizmente, nesse modo, é necessário manter a câmera principal sempre ativa, caso contrário o dispositivo de som é desativado.
    - No cenário Tripé 4 metros é possível cobrir todo altar somente com a câmera principal, incluindo comunhão de costas frente ao altar. Assim, não é muito problema usar somente a câmera principal.
 
@@ -386,7 +388,7 @@ Somente usar essa opção em um momento de pane onde não é conseguido obter o 
 1. Para novas opções de áudio aparecerem no painel, `Mixer de Áudio` é necessário habilitar elas pelo menu `Arquivo -> Configurações -> Áudio`.
 2. Então selecione um dispositivo e mude de `Desativado` para no nome da interface de áudio que você quer capturar (webcam).
 
-   ![obs-configuracoes-audio-adicionar-interface][obs-configuracoes-audio-adicionar-interface]
+   <a href="images/obs-configuracoes-audio-adicionar-interface.png"><img src="images/obs-configuracoes-audio-adicionar-interface.png" alt="obs-configuracoes-audio-adicionar-interface"></a>
 3. Então, clique em OK e essa nova interface irá aparecer no painel `Mixer de Áudio`.
 
 ## Como configurar uma webcam no OBS
@@ -396,18 +398,18 @@ Note que já existem fontes configuradas no OBS, assim, não é necessário re-a
 1. Vá no panel `Fontes`
 2. Clique em adicionar
 
-   ![obs-fontes-adicionar][obs-fontes-adicionar]
+   <a href="images/obs-fontes-adicionar.png"><img src="images/obs-fontes-adicionar.png" alt="obs-fontes-adicionar"></a>
 3. Selecione `Dispositivos de captura de vídeo`
 
-   ![obs-adicionar-dispositivo-captura-video][obs-adicionar-dispositivo-captura-video]
+   <a href="images/obs-adicionar-dispositivo-captura-video.png"><img src="images/obs-adicionar-dispositivo-captura-video.png" alt="obs-adicionar-dispositivo-captura-video"></a>
 4. Escolha `Criar nova` ou `Reutilizar existente`
 
-   ![obs-criar-nova-ou-reutilizar-fonte][obs-criar-nova-ou-reutilizar-fonte]
+   <a href="images/obs-criar-nova-ou-reutilizar-fonte.png"><img src="images/obs-criar-nova-ou-reutilizar-fonte.png" alt="obs-criar-nova-ou-reutilizar-fonte"></a>
    1. Criar nova, vai criar uma nova fonte independente que pode ser configurada isolada.
    2. Reutilizar existente, vai usar uma fonte já existente, e caso ela seja modificada, como resolução e brilho, todas as cenas que utilizam essa fonte vão ser afetadas. Bom para configurar somente uma vez e ter a mesma configuração propaganda para todos os cenários.
 5. Ao criar o dispositivo, selecione a webcam na lista, e clique em `Ativar` para começar a mostrar a imagem dela:
 
-   ![obs-configurar-webcam][obs-configurar-webcam]
+   <a href="images/obs-configurar-webcam.png"><img src="images/obs-configurar-webcam.png" alt="obs-configurar-webcam"></a>
    1. As webcams que conectam no cabo de 15 metros, podem não ser reconhecidas de primeira. Para reconhecer ela, é preciso paciência e não esperar por ela para iniciar a transmissão da missa. Assim, para evitar problemas, usar o cabo de 15 metros somente ao montar cenário com `Tripé 4 metros`, pois com ele, o uso da webcam com cabo de 15 metros fica opcional, pois a vista do ambão já é coberta pela câmera principal. E a visão povo, pode ser coberta pela webcam que conecta diretamente no computador.
    2. Para tentar fazer a webcam com cabo de 15 metros, conectar, podemos tentar ir no campo `Resolução/Tipo de FPS` e Selecionar `Personalizada` e depois voltar ao `Padrão do dispositivo`. Tentar clicar e `Ativar` e `Desativar` o dispositivo. Tentar desconectar e reconectar o cabo em outra USB.
    3. Caso ela não ligue, continue a somente com a missa com a câmera principal. Para mostrar o ambão, você pode usar o celular que fica com câmera do canto virada para o ambão com zoom. Ou também, como é um celular, se ele tiver bateria, você pode levar ele com tripé e colocar no lugar do câmera do ambão.
@@ -420,18 +422,18 @@ Note que já existem fontes configuradas no OBS, assim, não é necessário re-a
 1. Vá no panel `Fontes`
 2. Clique em adicionar
 
-   ![obs-fontes-adicionar][obs-fontes-adicionar]
+   <a href="images/obs-fontes-adicionar.png"><img src="images/obs-fontes-adicionar.png" alt="obs-fontes-adicionar"></a>
 3. Selecione `DroidCam OBS`
 
-   ![obs-adicionar-droidcam-obs][obs-adicionar-droidcam-obs]
+   <a href="images/obs-adicionar-droidcam-obs.png"><img src="images/obs-adicionar-droidcam-obs.png" alt="obs-adicionar-droidcam-obs"></a>
 4. Escolha `Criar nova` ou `Reutilizar existente`
 
-   ![obs-droidcam-criar-nova-ou-reutilizar][obs-droidcam-criar-nova-ou-reutilizar]
+   <a href="images/obs-droidcam-criar-nova-ou-reutilizar.png"><img src="images/obs-droidcam-criar-nova-ou-reutilizar.png" alt="obs-droidcam-criar-nova-ou-reutilizar"></a>
    1. Criar nova, vai criar uma nova fonte independente que pode ser configurada isolada.
    2. Reutilizar existente, vai usar uma fonte já existente, e caso ela seja modificada, como resolução e brilho, todas as cenas que utilizam essa fonte vão ser afetadas. Bom para configurar somente uma vez e ter a mesma configuração propaganda para todos os cenários.
 5. Ao criar o dispositivo, preencha com ip do seu celular, que é mostrado ao abrir aplicativo `DroidCam Webcam & OBS Camera`, e clique em `Ativar` para começar a mostrar a imagem dela:
 
-   ![obs-droidcam-configurar-ip][obs-droidcam-configurar-ip]
+   <a href="images/obs-droidcam-configurar-ip.png"><img src="images/obs-droidcam-configurar-ip.png" alt="obs-droidcam-configurar-ip"></a>
    1. Caso a imagem fique preta ao ativar a câmera, verifique se a tela do seu celular está ligada e o aplicativo DroidCam está aberto. Caso a tela tenha desligado antes do OBS conectar com seu celular, ele não vai conseguir conectar até você religar a tela do seu celular.
    2. Outro motivo para a tela ficar preta, é a resolução configurada no OBS, não ser suportada pelo seu celular. Nesse caso, irá ter um erro aparecendo no canto inferior da tela do seu celular dizendo que a resolução não é suportada. Nesse caso, troque para outra resolução. Você pode usar o aplicativo `Camera2 API Probe` para ver quais resoluções são suportadas pela sua câmera, e digitar a resolução correta no campo `Resolução`.
    3. Desmarque a opção `Habilitar Áudio`, pois isso irá gerar um processamento extra e gastar mais bateria do seu celular. A não ser que você vá usar o áudio do celular, para incluir na transmissão as respostas eucarísticas do povo.
@@ -441,7 +443,7 @@ Note que já existem fontes configuradas no OBS, assim, não é necessário re-a
 
 ### Distribuição das câmeras com tripé 4 metros
 
-![distribuicao-cameras-tripe-4-metros][distribuicao-cameras-tripe-4-metros]
+<a href="images/distribuicao-cameras-tripe-4-metros.png"><img src="images/distribuicao-cameras-tripe-4-metros.png" alt="distribuicao-cameras-tripe-4-metros"></a>
 
 Cenário de configuração mais complexa, pois envolve mais cuidados com câmera principal que precisa estar muito bem posicionada, em um ângulo de inclinação e altura exata do tripé. Mas com a configuração correta, podemos:
 
@@ -518,15 +520,15 @@ lateral |_______________________|    |____________________|  |
 
 Em dias de sol, se a webcam conseguir enxergar a janela, a imagem ficará com muita saturação e brilho. Isso porque a câmera tenta fazer controle de brilho automático. Para resolver, basta desativar controle de brilho automático, editando as configurações da webcam em `Propriedades -\> Configurar Vídeo`:
 
-![obs-configurar-brilho-webcam][obs-configurar-brilho-webcam]
+<a href="images/obs-configurar-brilho-webcam.png"><img src="images/obs-configurar-brilho-webcam.png" alt="obs-configurar-brilho-webcam"></a>
 
 Depois, desativar o `Exposure`:
 
-![obs-desativar-exposure-webcam][obs-desativar-exposure-webcam]
+<a href="images/obs-desativar-exposure-webcam.png"><img src="images/obs-desativar-exposure-webcam.png" alt="obs-desativar-exposure-webcam"></a>
 
 Ou ajustar o brilho e saturação:
 
-![obs-ajustar-brilho-saturacao-webcam][obs-ajustar-brilho-saturacao-webcam]
+<a href="images/obs-ajustar-brilho-saturacao-webcam.png"><img src="images/obs-ajustar-brilho-saturacao-webcam.png" alt="obs-ajustar-brilho-saturacao-webcam"></a>
 
 ## Como corrigir brilho do celular
 
@@ -535,14 +537,14 @@ Caso o celular esteja vendo a janela em um dia de sol, a imagem de dentro da igr
 1. Então, usando os mesmos controles remotos para fazer o flip do celular, podemos forçar um determinado nível de brilho.
 2. Basta acessar endereço [`http://ip.seu.celular:4747/remote`](http://ip.seu.celular:4747/remote), então clicar em EV (Exposure) e ajustar o valor até ficar iluminação adequada
 
-   ![droidcam-ajustar-exposure-ev][droidcam-ajustar-exposure-ev]
+   <a href="images/droidcam-ajustar-exposure-ev.png"><img src="images/droidcam-ajustar-exposure-ev.png" alt="droidcam-ajustar-exposure-ev"></a>
 3. Também clique na opção `EL` (Auto Exposure Lock) para que o celular não desfaça a configuração que acabamos de forçar.
 
-   ![droidcam-auto-exposure-lock][droidcam-auto-exposure-lock]
+   <a href="images/droidcam-auto-exposure-lock.png"><img src="images/droidcam-auto-exposure-lock.png" alt="droidcam-auto-exposure-lock"></a>
 4. A opção `EL`, deve estar com cadeado fechado como acima.
 5. A opção `WB` (White Balance) também pode ser necessária ajuste. Primeiro é necessário clicar na opção `🔒`, antes de selecionar `Manual` e poder alterar o valor.
 
-   ![droidcam-white-balance-manual][droidcam-white-balance-manual]
+   <a href="images/droidcam-white-balance-manual.png"><img src="images/droidcam-white-balance-manual.png" alt="droidcam-white-balance-manual"></a>
 6. Para reverter ao normal, basta clicar em `Auto` no início e a câmera irá se auto configurar novamente.
 
 ## Transmissão em 4K
@@ -557,13 +559,13 @@ Para ativar alta resolução com alta qualidade, basta acessar as configuraçõe
 
 1. Três pontinho no canto esquerdo superior: ... -\> Settings
 
-   ![droidcam-android-settings-menu][droidcam-android-settings-menu]
+   <a href="images/droidcam-android-settings-menu.png"><img src="images/droidcam-android-settings-menu.png" alt="droidcam-android-settings-menu"></a>
 2. Opção: Video
 
-   ![droidcam-android-video-settings][droidcam-android-video-settings]
+   <a href="images/droidcam-android-video-settings.png"><img src="images/droidcam-android-video-settings.png" alt="droidcam-android-video-settings"></a>
 3. Selecionar: Very high em Target Quality
 
-   ![droidcam-android-target-quality-very-high][droidcam-android-target-quality-very-high]
+   <a href="images/droidcam-android-target-quality-very-high.png"><img src="images/droidcam-android-target-quality-very-high.png" alt="droidcam-android-target-quality-very-high"></a>
 
 ### Congelamentos com DroidCam em 4K ou 720p
 
@@ -577,11 +579,11 @@ Por padrão, o plugin OBS para droidcam ([https://github.com/dev47apps/droidcam-
 
 1. Ao abrir ele, procure sua câmera frontal e veja qual tem maior resolução suportada. Nesse caso, é 2304x1728 (superior à Full HD 1080 x 1920). Na lista terá todas as suas câmeras suportadas, navegue por ela até encontrar as duas duas câmeras e encontre a maior resolução em comum entre elas.
 
-   ![camera2-api-probe-resolucoes-suportadas][camera2-api-probe-resolucoes-suportadas]
+   <a href="images/camera2-api-probe-resolucoes-suportadas.png"><img src="images/camera2-api-probe-resolucoes-suportadas.png" alt="camera2-api-probe-resolucoes-suportadas"></a>
 2. Apesar de ter aspecto 4:3, capta a mesma área de visão que em 1080p, com a diferença que agora temos muito mais visão na vertical (para cima e para baixo). Isso acontece aqui, porque essa câmara foi construída no formato 4:3, e para transformar isso em 16:9, as bordas superiores e inferiores são cortadas, dando criando a imagem 16:9 em 1080p.
 3. Agora no OBS Studio, digite a maior resolução da sua câmera frontal, e salve as modificações.
 
-   ![obs-droidcam-resolucao-customizada][obs-droidcam-resolucao-customizada]
+   <a href="images/obs-droidcam-resolucao-customizada.png"><img src="images/obs-droidcam-resolucao-customizada.png" alt="obs-droidcam-resolucao-customizada"></a>
 4. Somente lembrar de verificar que essa maior resolução também é suportada por sua câmera traseira, caso contrário ao fazer flip das câmeras, a tela irá ficar preta até você ajustar para uma resolução suportada pela outra câmera.
 
 ### Como ativar 4K no DroidCam OBS Studio
@@ -598,7 +600,7 @@ Latest (v4.0+) of [DroidCam apps](https://droidcam.app/obs/#apps).
 3\. Select 'Use WIFI IP' in the Device drop-down, enter 4k in the WiFi IP field, and click \[Activate\].
 You should see a confirmation message. Dismiss the message and click "OK" to save the changes.
 
-![droidcam-obs-ativar-4k-confirmacao][droidcam-obs-ativar-4k-confirmacao]
+<a href="images/droidcam-obs-ativar-4k-confirmacao.png"><img src="images/droidcam-obs-ativar-4k-confirmacao.png" alt="droidcam-obs-ativar-4k-confirmacao"></a>
 
 Re-open the Properties of this source, and check the Resolution drop-down for new options.
 Be sure 'Allow hardware acceleration' is ticked, and give it a go by [connecting to your phone](https://droidcam.app/obs/usage/).
@@ -611,67 +613,6 @@ Be sure 'Allow hardware acceleration' is ticked, and give it a go by [connecting
 2560x1440 - 16:9 QHD
 3840x2160 - 16:9 UHD
 
-![droidcam-obs-resolucoes-4k-disponiveis][droidcam-obs-resolucoes-4k-disponiveis]
+<a href="images/droidcam-obs-resolucoes-4k-disponiveis.png"><img src="images/droidcam-obs-resolucoes-4k-disponiveis.png" alt="droidcam-obs-resolucoes-4k-disponiveis"></a>
 
 If your phone does not support the exact built-in resolutions listed above, you can input custom values into the 'Resolution' field of your DroidCam OBS source. This is available as of [version 2.4.0](https://github.com/dev47apps/droidcam-obs-plugin/releases) of the DroidCam plugin. Use the 'Camera Information' option in the DroidCam app settings to get a list of supported capture resolutions on you particular device.
-
-[configuracao-wifi-privacy-mac-randomized]: images/configuracao-wifi-privacy-mac-randomized.png
-[configuracao-wifi-privacy-mac-device]: images/configuracao-wifi-privacy-mac-device.png
-[obs-menu-propriedades-mic-aux]: images/obs-menu-propriedades-mic-aux.png
-[obs-selecionar-dispositivo-m-audio]: images/obs-selecionar-dispositivo-m-audio.png
-[windows-menu-som-barra-tarefas]: images/windows-menu-som-barra-tarefas.png
-[windows-gravacao-m-audio-recebendo-som]: images/windows-gravacao-m-audio-recebendo-som.png
-[m-audio-controle-volume]: images/m-audio-controle-volume.png
-[m-audio-conexao-mesa-som-yamaha]: images/m-audio-conexao-mesa-som-yamaha.png
-[m-audio-controle-volume-chiado]: images/m-audio-controle-volume-chiado.png
-[cabo-mesa-som-resolver-chiado]: images/cabo-mesa-som-resolver-chiado.png
-[obs-menu-audio-filtros]: images/obs-menu-audio-filtros.png
-[obs-adicionar-filtro-audio]: images/obs-adicionar-filtro-audio.png
-[obs-selecionar-noise-suppression]: images/obs-selecionar-noise-suppression.png
-[obs-metodo-supressao-ruido]: images/obs-metodo-supressao-ruido.png
-[obs-configurar-duas-saidas-audio]: images/obs-configurar-duas-saidas-audio.png
-[obs-alternar-audio-com-sem-filtro]: images/obs-alternar-audio-com-sem-filtro.png
-[yamaha-controle-st-sub-out]: images/yamaha-controle-st-sub-out.png
-[yamaha-st-sub-out-traseira]: images/yamaha-st-sub-out-traseira.png
-[obs-menu-colecao-cenas]: images/obs-menu-colecao-cenas.png
-[droidcam-controle-remoto-flip-camera]: images/droidcam-controle-remoto-flip-camera.png
-[obs-cena-entrada-audio-desativado]: images/obs-cena-entrada-audio-desativado.png
-[obs-verificar-perda-frames]: images/obs-verificar-perda-frames.png
-[obs-configuracao-bitrate-parte1]: images/obs-configuracao-bitrate-parte1.png
-[obs-configuracao-bitrate-parte2]: images/obs-configuracao-bitrate-parte2.png
-[youtube-estatisticas-transmissao]: images/youtube-estatisticas-transmissao.png
-[youtube-configuracao-latencia]: images/youtube-configuracao-latencia.png
-[youtube-editar-transmissao-copiar-token]: images/youtube-editar-transmissao-copiar-token.png
-[obs-painel-controles-configuracoes]: images/obs-painel-controles-configuracoes.png
-[obs-transmissao-chave-avancado]: images/obs-transmissao-chave-avancado.png
-[obs-adicionar-chave-transmissao]: images/obs-adicionar-chave-transmissao.png
-[facebook-adicionar-detalhes-post]: images/facebook-adicionar-detalhes-post.png
-[facebook-copiar-chave-stream]: images/facebook-copiar-chave-stream.png
-[obs-multiplas-saidas-facebook-alterar]: images/obs-multiplas-saidas-facebook-alterar.png
-[obs-facebook-inserir-chave-transmissao]: images/obs-facebook-inserir-chave-transmissao.png
-[facebook-transmitir-ao-vivo]: images/facebook-transmitir-ao-vivo.png
-[obs-audio-mic-aux-sem-som]: images/obs-audio-mic-aux-sem-som.png
-[obs-droidcam-habilitar-audio]: images/obs-droidcam-habilitar-audio.png
-[obs-mixer-audio-habilitar-droidcam]: images/obs-mixer-audio-habilitar-droidcam.png
-[obs-configuracoes-audio-adicionar-interface]: images/obs-configuracoes-audio-adicionar-interface.png
-[obs-fontes-adicionar]: images/obs-fontes-adicionar.png
-[obs-adicionar-dispositivo-captura-video]: images/obs-adicionar-dispositivo-captura-video.png
-[obs-criar-nova-ou-reutilizar-fonte]: images/obs-criar-nova-ou-reutilizar-fonte.png
-[obs-configurar-webcam]: images/obs-configurar-webcam.png
-[obs-adicionar-droidcam-obs]: images/obs-adicionar-droidcam-obs.png
-[obs-droidcam-criar-nova-ou-reutilizar]: images/obs-droidcam-criar-nova-ou-reutilizar.png
-[obs-droidcam-configurar-ip]: images/obs-droidcam-configurar-ip.png
-[distribuicao-cameras-tripe-4-metros]: images/distribuicao-cameras-tripe-4-metros.png
-[obs-configurar-brilho-webcam]: images/obs-configurar-brilho-webcam.png
-[obs-desativar-exposure-webcam]: images/obs-desativar-exposure-webcam.png
-[obs-ajustar-brilho-saturacao-webcam]: images/obs-ajustar-brilho-saturacao-webcam.png
-[droidcam-ajustar-exposure-ev]: images/droidcam-ajustar-exposure-ev.png
-[droidcam-auto-exposure-lock]: images/droidcam-auto-exposure-lock.png
-[droidcam-white-balance-manual]: images/droidcam-white-balance-manual.png
-[droidcam-android-settings-menu]: images/droidcam-android-settings-menu.png
-[droidcam-android-video-settings]: images/droidcam-android-video-settings.png
-[droidcam-android-target-quality-very-high]: images/droidcam-android-target-quality-very-high.png
-[camera2-api-probe-resolucoes-suportadas]: images/camera2-api-probe-resolucoes-suportadas.png
-[obs-droidcam-resolucao-customizada]: images/obs-droidcam-resolucao-customizada.png
-[droidcam-obs-ativar-4k-confirmacao]: images/droidcam-obs-ativar-4k-confirmacao.png
-[droidcam-obs-resolucoes-4k-disponiveis]: images/droidcam-obs-resolucoes-4k-disponiveis.png
