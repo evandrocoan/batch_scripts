@@ -298,7 +298,17 @@ Aquela marcação especial indica o **nível de linha (Line Level)**.
 
 Para microfones, a marca das 10 horas é muito baixa — o som ficará fraco. A zona correta fica geralmente entre **12h (meio-dia) e 3h da tarde**.
 
-Os números impressos ao redor do botão (como −40, −60) não são volume negativo: indicam o quão fraco é o sinal que entra. Quanto mais negativo, mais o pré-amplificador precisa trabalhar — e mais você gira para a direita.
+#### O que significam os números impressos no painel (-16/+10, -60/-34)
+
+Os pares de números ao redor do botão são a **escala de sensibilidade de entrada em dBu**. Eles indicam a faixa de sinal que o canal consegue receber naquela posição:
+
+- **Posição 7h (mínimo, totalmente à esquerda) — `-16/+10`:** O canal aceita sinais de entrada de até **+10 dBu** antes de saturar. É a posição para sinais mais fortes.
+- **Posição 10h (marquinha branca/triângulo) — marca de linha:** Ponto de referência para aparelhos como teclados, celulares e computadores.
+- **Posição 5h (máximo, totalmente à direita) — `-60/-34`:** O canal consegue amplificar sinais tão fracos quanto **−60 dBu**. É a posição para microfones a distância ou sinais muito fracos.
+
+O número da **esquerda** de cada par (ex.: `−16`, `−60`) é a sensibilidade mínima de entrada naquela posição; o da **direita** (ex.: `+10`, `−34`) é o nível máximo antes de distorcer.
+
+**Resumo prático:** quanto mais você gira à direita, mais amplificação o canal aplica — e mais fraco pode ser o sinal que ele ainda capta sem chiado. Os números não são "volume negativo", são uma medida de força do sinal elétrico que entra.
 
 **Referência prática para a MG32/14FX:**
 
