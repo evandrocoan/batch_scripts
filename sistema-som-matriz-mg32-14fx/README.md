@@ -8,65 +8,101 @@ Manual oficial do mesa: <https://usa.yamaha.com/files/download/other_assets/9/33
 
 ## Índice
 
-- [Visão das conexões](#visão-das-conexões)
-- [1. Introdução](#1-introdução)
-  - [Nosso objetivo](#nosso-objetivo)
-  - [Princípio orientador](#princípio-orientador)
-  - [Antes de começar (checklist de segurança)](#antes-de-começar-checklist-de-segurança)
-- [2. Operação básica de um canal](#2-operação-básica-de-um-canal)
-  - [O caminho do som (visão geral)](#o-caminho-do-som-visão-geral)
-  - [A. O som principal (as 4 grandes caixas dos cantos)](#a-o-som-principal-as-4-grandes-caixas-dos-cantos)
-  - [A regra dos 3 botões (onde o som morre)](#a-regra-dos-3-botões-onde-o-som-morre)
-    - [O que acontece se nenhum estiver apertado?](#o-que-acontece-se-nenhum-estiver-apertado)
-    - [A solução padrão (o "ST")](#a-solução-padrão-o-st)
-  - [O segredo do som limpo: ganho vs. volume](#o-segredo-do-som-limpo-ganho-vs-volume)
-  - [Como ler a escala do botão GAIN (mapa do potenciômetro)](#como-ler-a-escala-do-botão-gain-mapa-do-potenciômetro)
-  - [Como regular um canal do zero (passo a passo)](#como-regular-um-canal-do-zero-passo-a-passo)
-  - [Por que a igreja fica com eco quando está vazia?](#por-que-a-igreja-fica-com-eco-quando-está-vazia)
-  - [O problema da dinâmica de voz (e por que o GAIN sozinho não resolve)](#o-problema-da-dinâmica-de-voz-e-por-que-o-gain-sozinho-não-resolve)
-  - [A distância do microfone e a lei do inverso do quadrado](#a-distância-do-microfone-e-a-lei-do-inverso-do-quadrado)
-  - [Entendendo as luzes (o semáforo do som)](#entendendo-as-luzes-o-semáforo-do-som)
-- [3. Controles adicionais do canal](#3-controles-adicionais-do-canal)
-  - [Equalização básica (EQ) - deixando o som claro](#equalização-básica-eq---deixando-o-som-claro)
-  - [O botão PAN (balanço) - não mexa sem necessidade](#o-botão-pan-balanço---não-mexa-sem-necessidade)
-  - [Phantom Power (+48V) - para microfones especiais](#phantom-power-48v---para-microfones-especiais)
-  - [Os botões giratórios AUX (visão geral)](#os-botões-giratórios-aux-visão-geral)
-- [4. Controlando os retornos (o que os músicos ouvem)](#4-controlando-os-retornos-o-que-os-músicos-ouvem)
-  - [AUX 1 e 2 - retornos dos músicos](#aux-1-e-2---retornos-dos-músicos)
-  - [A regra de ouro (botão PRE)](#a-regra-de-ouro-botão-pre)
-  - [O cenário do caos (o que acontece se o PRE estiver solto)](#o-cenário-do-caos-o-que-acontece-se-o-pre-estiver-solto)
-  - [AUX 3 e 4 - configurando como auxiliares POST](#aux-3-e-4---configurando-como-auxiliares-post)
-  - [O equilíbrio certo: caixas grandes vs. pequenas](#o-equilíbrio-certo-caixas-grandes-vs-pequenas)
-  - [A pirâmide do volume: quem manda em quem?](#a-pirâmide-do-volume-quem-manda-em-quem)
-  - [Por que nunca virar as caixas do fundo contra o fluxo](#por-que-nunca-virar-as-caixas-do-fundo-contra-o-fluxo)
-- [5. Entendendo as saídas: onde ligar a gravação?](#5-entendendo-as-saídas-onde-ligar-a-gravação)
-  - [A vencedora: ST SUB OUT (a profissional)](#a-vencedora-st-sub-out-a-profissional)
-  - [AUX 3 OUT - mixagem personalizada (avançado)](#aux-3-out---mixagem-personalizada-avançado)
-  - [As perigosas](#as-perigosas)
-    - [MONO OUT - o som fica "abafado"](#mono-out---o-som-fica-abafado)
-    - [REC OUT (RCA) - sem controle de volume](#rec-out-rca---sem-controle-de-volume)
-  - [Veredito final](#veredito-final)
-- [6. Como usar AFL e PFL (os botões de escuta solo)](#6-como-usar-afl-e-pfl-os-botões-de-escuta-solo)
-  - [O que significam as siglas?](#o-que-significam-as-siglas)
-  - [Como usar na prática](#como-usar-na-prática)
-  - [Os 4 destinos que você pode espiar pelo fone](#os-4-destinos-que-você-pode-espiar-pelo-fone)
-  - [Quando usar (casos práticos)](#quando-usar-casos-práticos)
-  - [Importante: não afeta o som da igreja](#importante-não-afeta-o-som-da-igreja)
-  - [AFL nos grupos (1-2, 3-4) e Master (ST/MONO)](#afl-nos-grupos-1-2-3-4-e-master-stmono)
-    - [O que muda?](#o-que-muda)
-    - [Exemplo prático: monitorar a bateria agrupada](#exemplo-prático-monitorar-a-bateria-agrupada)
-    - [Apertar AFL de dois grupos ao mesmo tempo](#apertar-afl-de-dois-grupos-ao-mesmo-tempo)
-- [7. Entendendo os medidores (as 4 fileiras de luzes)](#7-entendendo-os-medidores-as-4-fileiras-de-luzes)
-  - [A escala numérica (o "semáforo" do áudio)](#a-escala-numérica-o-semáforo-do-áudio)
-  - [As 4 fileiras de luzes](#as-4-fileiras-de-luzes)
-  - [O botão GROUP (a chave seletora)](#o-botão-group-a-chave-seletora)
-  - [A regra de ouro: PFL manda em tudo](#a-regra-de-ouro-pfl-manda-em-tudo)
-  - [Como usar para ajustar o GAIN (método profissional)](#como-usar-para-ajustar-o-gain-método-profissional)
-- [8. Conclusão](#8-conclusão)
-- [Anexo: Tabela de Salvação Rápida](#anexo-tabela-de-salvação-rápida)
-- [Glossário](#glossário)
-  - [Termos litúrgicos](#termos-litúrgicos)
-  - [Termos de áudio e equipamento](#termos-de-áudio-e-equipamento)
+- [Guia Mesa de Som](#guia-mesa-de-som)
+  - [Índice](#índice)
+  - [Visão das conexões](#visão-das-conexões)
+  - [1. Introdução](#1-introdução)
+    - [Nosso objetivo](#nosso-objetivo)
+    - [Princípio orientador](#princípio-orientador)
+    - [Antes de começar (checklist de segurança)](#antes-de-começar-checklist-de-segurança)
+  - [2. Operação básica de um canal](#2-operação-básica-de-um-canal)
+    - [O caminho do som (visão geral)](#o-caminho-do-som-visão-geral)
+    - [A. O som principal (as 4 grandes caixas dos cantos)](#a-o-som-principal-as-4-grandes-caixas-dos-cantos)
+    - [A regra dos 3 botões (onde o som morre)](#a-regra-dos-3-botões-onde-o-som-morre)
+      - [O que acontece se nenhum estiver apertado?](#o-que-acontece-se-nenhum-estiver-apertado)
+      - [A solução padrão (o "ST")](#a-solução-padrão-o-st)
+    - [O segredo do som limpo: ganho vs. volume](#o-segredo-do-som-limpo-ganho-vs-volume)
+      - [1. O problema do ganho BAIXO (e fader alto)](#1-o-problema-do-ganho-baixo-e-fader-alto)
+      - [2. O problema do ganho ALTO (e fader baixo)](#2-o-problema-do-ganho-alto-e-fader-baixo)
+      - [O segredo: "Estrutura de ganho" (Gain Staging)](#o-segredo-estrutura-de-ganho-gain-staging)
+    - [Como ler a escala do botão GAIN (mapa do potenciômetro)](#como-ler-a-escala-do-botão-gain-mapa-do-potenciômetro)
+      - [A marca das "10 horas" (o triângulo ou traço grosso)](#a-marca-das-10-horas-o-triângulo-ou-traço-grosso)
+      - [A zona dos microfones](#a-zona-dos-microfones)
+      - [O que significam os números impressos no painel (-16/+10, -60/-34)](#o-que-significam-os-números-impressos-no-painel--1610--60-34)
+      - [O "zero real" está nas luzes, não no botão](#o-zero-real-está-nas-luzes-não-no-botão)
+    - [Como regular um canal do zero (passo a passo)](#como-regular-um-canal-do-zero-passo-a-passo)
+    - [Por que a igreja fica com eco quando está vazia?](#por-que-a-igreja-fica-com-eco-quando-está-vazia)
+      - [1. As superfícies são "espelhos de som"](#1-as-superfícies-são-espelhos-de-som)
+      - [2. A ausência das "esponjas humanas"](#2-a-ausência-das-esponjas-humanas)
+      - [3. O ambiente fechado aprisiona a energia](#3-o-ambiente-fechado-aprisiona-a-energia)
+      - [A diferença entre eco e reverberação](#a-diferença-entre-eco-e-reverberação)
+      - [A armadilha da passagem de som com a igreja vazia](#a-armadilha-da-passagem-de-som-com-a-igreja-vazia)
+    - [O problema da dinâmica de voz (e por que o GAIN sozinho não resolve)](#o-problema-da-dinâmica-de-voz-e-por-que-o-gain-sozinho-não-resolve)
+      - [O que um compressor de áudio resolveria](#o-que-um-compressor-de-áudio-resolveria)
+      - [Como compensar manualmente (sem compressor)](#como-compensar-manualmente-sem-compressor)
+    - [A distância do microfone e a lei do inverso do quadrado](#a-distância-do-microfone-e-a-lei-do-inverso-do-quadrado)
+      - [Por que a distância importa tanto?](#por-que-a-distância-importa-tanto)
+      - [Quando usar o ganho vs. o fader para compensar?](#quando-usar-o-ganho-vs-o-fader-para-compensar)
+      - [Cenário 1: microfone compartilhado (passa de mão em mão)](#cenário-1-microfone-compartilhado-passa-de-mão-em-mão)
+      - [Cenário 2: cada pessoa tem o seu próprio microfone (canais separados)](#cenário-2-cada-pessoa-tem-o-seu-próprio-microfone-canais-separados)
+      - [O filtro HPF (80 Hz) ajuda aqui](#o-filtro-hpf-80-hz-ajuda-aqui)
+    - [Entendendo as luzes (o semáforo do som)](#entendendo-as-luzes-o-semáforo-do-som)
+  - [3. Controles adicionais do canal](#3-controles-adicionais-do-canal)
+    - [Equalização básica (EQ) - deixando o som claro](#equalização-básica-eq---deixando-o-som-claro)
+    - [O botão PAN (balanço) - não mexa sem necessidade](#o-botão-pan-balanço---não-mexa-sem-necessidade)
+    - [Phantom Power (+48V) - para microfones especiais](#phantom-power-48v---para-microfones-especiais)
+    - [Os botões giratórios AUX (visão geral)](#os-botões-giratórios-aux-visão-geral)
+  - [4. Controlando os retornos (o que os músicos ouvem)](#4-controlando-os-retornos-o-que-os-músicos-ouvem)
+    - [AUX 1 e 2 - retornos dos músicos](#aux-1-e-2---retornos-dos-músicos)
+    - [A regra de ouro (botão PRE)](#a-regra-de-ouro-botão-pre)
+    - [O cenário do caos (o que acontece se o PRE estiver solto)](#o-cenário-do-caos-o-que-acontece-se-o-pre-estiver-solto)
+    - [AUX 3 e 4 - configurando como auxiliares POST](#aux-3-e-4---configurando-como-auxiliares-post)
+    - [A proteção das caixas pequenas (o "filtro" do AUX 4)](#a-proteção-das-caixas-pequenas-o-filtro-do-aux-4)
+      - [Por que o bumbo e o contrabaixo são os "assassinos" de alto-falantes menores?](#por-que-o-bumbo-e-o-contrabaixo-são-os-assassinos-de-alto-falantes-menores)
+        - [1. Grave = energia bruta (o problema elétrico)](#1-grave--energia-bruta-o-problema-elétrico)
+        - [2. O pulo do cone (o problema mecânico)](#2-o-pulo-do-cone-o-problema-mecânico)
+        - [3. O perigo oculto: o amplificador clipando](#3-o-perigo-oculto-o-amplificador-clipando)
+      - [Por que os graves não precisam de ajuda para chegar ao corredor](#por-que-os-graves-não-precisam-de-ajuda-para-chegar-ao-corredor)
+      - [Regra por peça da bateria no AUX 4](#regra-por-peça-da-bateria-no-aux-4)
+      - [Cenário especial: bateria chega em um único canal](#cenário-especial-bateria-chega-em-um-único-canal)
+    - [O equilíbrio certo: caixas grandes vs. pequenas](#o-equilíbrio-certo-caixas-grandes-vs-pequenas)
+    - [A pirâmide do volume: quem manda em quem?](#a-pirâmide-do-volume-quem-manda-em-quem)
+    - [Por que nunca virar as caixas do fundo contra o fluxo](#por-que-nunca-virar-as-caixas-do-fundo-contra-o-fluxo)
+      - [1. Cancelamento de fase ("turbulência")](#1-cancelamento-de-fase-turbulência)
+      - [2. A "voz na nuca"](#2-a-voz-na-nuca)
+      - [3. O delay para de funcionar corretamente](#3-o-delay-para-de-funcionar-corretamente)
+      - [Se as pessoas do fundo reclamam que o som incomoda](#se-as-pessoas-do-fundo-reclamam-que-o-som-incomoda)
+  - [5. Entendendo as saídas: onde ligar a gravação?](#5-entendendo-as-saídas-onde-ligar-a-gravação)
+    - [A vencedora: ST SUB OUT (a profissional)](#a-vencedora-st-sub-out-a-profissional)
+    - [AUX 3 OUT - mixagem personalizada (avançado)](#aux-3-out---mixagem-personalizada-avançado)
+    - [As perigosas](#as-perigosas)
+      - [MONO OUT - o som fica "abafado"](#mono-out---o-som-fica-abafado)
+      - [REC OUT (RCA) - sem controle de volume](#rec-out-rca---sem-controle-de-volume)
+    - [Veredito final](#veredito-final)
+  - [6. Como usar AFL e PFL (os botões de escuta solo)](#6-como-usar-afl-e-pfl-os-botões-de-escuta-solo)
+    - [O que significam as siglas?](#o-que-significam-as-siglas)
+    - [Como usar na prática](#como-usar-na-prática)
+    - [Os 4 destinos que você pode espiar pelo fone](#os-4-destinos-que-você-pode-espiar-pelo-fone)
+    - [Quando usar (casos práticos)](#quando-usar-casos-práticos)
+    - [Importante: não afeta o som da igreja](#importante-não-afeta-o-som-da-igreja)
+    - [AFL nos grupos (1-2, 3-4) e Master (ST/MONO)](#afl-nos-grupos-1-2-3-4-e-master-stmono)
+      - [O que muda?](#o-que-muda)
+      - [Exemplo prático: monitorar a bateria agrupada](#exemplo-prático-monitorar-a-bateria-agrupada)
+      - [Apertar AFL de dois grupos ao mesmo tempo](#apertar-afl-de-dois-grupos-ao-mesmo-tempo)
+  - [7. Entendendo os medidores (as 4 fileiras de luzes)](#7-entendendo-os-medidores-as-4-fileiras-de-luzes)
+    - [A escala numérica (o "semáforo" do áudio)](#a-escala-numérica-o-semáforo-do-áudio)
+    - [As 4 fileiras de luzes](#as-4-fileiras-de-luzes)
+      - [Par esquerdo: STEREO L e R (fixos)](#par-esquerdo-stereo-l-e-r-fixos)
+      - [Par direito: PFL-AFL / GROUP (camaleão)](#par-direito-pfl-afl--group-camaleão)
+    - [O botão GROUP (a chave seletora)](#o-botão-group-a-chave-seletora)
+    - [A regra de ouro: PFL manda em tudo](#a-regra-de-ouro-pfl-manda-em-tudo)
+    - [Como usar para ajustar o GAIN (método profissional)](#como-usar-para-ajustar-o-gain-método-profissional)
+  - [8. Conclusão](#8-conclusão)
+    - [Como trabalhar de forma fácil no domingo](#como-trabalhar-de-forma-fácil-no-domingo)
+  - [Anexo: Tabela de Salvação Rápida](#anexo-tabela-de-salvação-rápida)
+  - [Glossário](#glossário)
+    - [Termos litúrgicos](#termos-litúrgicos)
+    - [Termos de áudio e equipamento](#termos-de-áudio-e-equipamento)
 
 ## Visão das conexões
 
@@ -334,7 +370,7 @@ Siga esta ordem sagrada antes de começar a tocar:
 4. **Encaminhe para as caixas (ST):** Garanta que o botão **ST** (*o botão quadrado pequeno ao lado do fader*) esteja **APERTADO** (afundado).
 5. **Confira o fader master:** Verifique se o **fader vermelho (STEREO OUT)** está levantado (conforme visto no [checklist de segurança](#antes-de-começar-checklist-de-segurança)).
 6. **Som real:** Peça para o músico cantar ou tocar no volume **mais intenso** que ele vai usar durante a missa/louvor (exemplo: um refrão animado, não apenas um murmúrio). Isso garante que o GAIN seja ajustado para os momentos de pico.
-7. **Ajuste a pressão (GAIN):** Enquanto ele toca, vá girando o GAIN devagar para a direita até a luzinha verde SIGNAL (*ao lado do fader*) piscar — isso confirma que há sinal chegando naquele canal. **Evite que a luz vermelha (PEAK) acenda!** Com a SIGNAL acendendo, aperte o botão redondo **PFL** do canal e olhe para as luzes coloridas grandes (V.U. Meters) à direita da mesa. Gire o ganho até que as luzes batam perto do **0**, sem deixar a luz vermelha (PEAK) acender no topo. Esse é o método mais preciso para regular o ganho. Veja mais detalhes na [Seção 6 - PFL/AFL](#6-como-usar-afl-e-pfl-os-botões-de-escuta-solo).
+7. **Ajuste a pressão (GAIN):** Enquanto ele toca, vá girando o GAIN devagar para a direita até a luzinha verde SIGNAL (*ao lado do fader*) piscar — isso confirma que há sinal chegando naquele canal. **Evite que a luz vermelha (PEAK) acenda!** Com a SIGNAL acendendo, aperte o botão redondo **PFL** do canal e olhe para as luzes coloridas grandes (V.U. Meters) à direita da mesa. Gire o ganho até que as luzes batam perto do **0**, sem deixar a luz vermelha (PEAK) acender no topo. Esse é o método mais preciso para regular o ganho. Veja mais detalhes na [seção "Como usar AFL e PFL"](#6-como-usar-afl-e-pfl-os-botões-de-escuta-solo).
    > 💡 **Dica:** Se o seu instrumento precisar de muito ganho na mesa, verifique primeiro se o volume no próprio instrumento está no máximo. Se já estiver e ainda assim precisar de muito ganho, confirme com o fone de ouvido pelo botão **PFL** que o sinal ficou limpo (sem chiado).
    >
    > ⚠️ **Sinal muito forte (distorcendo mesmo com GAIN no mínimo):** Se mesmo com o GAIN girado todo para a esquerda (mínimo) o sinal já acende o PEAK, aperte o botão **PAD** (*localizado logo acima do botão GAIN, no topo do canal*). Ele aplica uma redução fixa de **26 dB** no sinal antes de chegar ao ganho, trazendo o nível de volta a uma faixa segura para trabalhar. Depois de apertar o PAD, suba o GAIN novamente a partir do mínimo para calibrar normalmente.
@@ -342,13 +378,13 @@ Siga esta ordem sagrada antes de começar a tocar:
    > 🔇 **Sinal fraco não tem solução fácil:** Se mesmo com o GAIN no máximo o sinal chega fraco, **não há milagre a ser feito** — nem por equipamentos de estúdio caros. Amplificar um sinal fraco aumenta junto o ruído de fundo, gerando chiado e microfonia. Isso vale para qualquer estágio da cadeia: o GAIN da mesa, os amplificadores das caixas, ou qualquer amplificador que venha antes ou depois da mesa. A solução correta é resolver o problema na origem — revisar o instrumento, o microfone, o cabo, ou o volume de saída do equipamento — para que o sinal chegue à mesa com força suficiente.
 8. **Confirme o ganho com o fone de ouvido (teste de chiado):** Com o instrumento/microfone em silêncio, pegue o fone de ouvido pendurado embaixo da mesa, conecte-o na entrada PHONES (painel frontal), **aperte bem os fones na cabeça** para isolar o som ambiente, aperte o botão **PFL** do canal e **aumente o volume dos fones de ouvido ao máximo**. Se em silêncio não houver nenhum chiado, o ganho está seguro e o canal pode ser trabalhado com qualidade. Se houver chiado, reduza o GAIN até ele desaparecer. **Depois, abaixe um pouco o volume dos fones** para não assustar quando você ou outra pessoa apertar o PFL de um canal com sinal alto.
    > 🎧 **Sobre o fone de ouvido usado na mesa:** O fone fixo disponível na mesa atualmente é o **Bright 0181**, um modelo de uso doméstico. Ele funciona para uso casual, mas tem drivers frágeis que distorcem com picos de sinal mesmo quando a mesa **não está clipando** — ou seja, as luzes laranjas do medidor podem estar dentro do normal e o som da igreja pode estar perfeito, mas o fone estoura sozinho por não suportar a dinâmica real de uma apresentação ao vivo (bateria, palmas, notas altas). Esse estouro **não indica problema na mesa nem no sinal** — é limitação do próprio fone. Outro sinal desse problema: precisar deixar o knob **PHONES no máximo (10)** para ouvir em volume razoável durante a missa. Se isso ocorrer com frequência, considere substituí-lo por um fone de monitoramento profissional (ex.: Audio-Technica ATH-M20x, Sony MDR-7506 ou Sennheiser HD 280 Pro) — com esses modelos, o volume suficiente é atingido em torno de **5–6**, sobrando margem de segurança antes de saturar o amplificador de fone da mesa.
-9. **Verifique o botão PRE dos Aux 3 e 4:** Certifique-se de que o **botão PRE inferior** (entre AUX 4 e AUX 5/6) está **SOLTO** em todos os canais. Se estiver apertado, os Aux 3 e 4 ficam independentes do fader — e aí o volume das caixas dos corredores e da transmissão não vai acompanhar o fader branco. Veja detalhes na [seção AUX 3 e 4](#aux-3-e-4---configurando-como-auxiliares-post).
+9. **Verifique o botão PRE dos Aux 3 e 4:** Certifique-se de que o **botão PRE inferior** (entre AUX 4 e AUX 5/6) está **SOLTO** em todos os canais. Se estiver apertado, os Aux 3 e 4 ficam independentes do fader — e aí o volume das caixas dos corredores e da transmissão não vai acompanhar o fader branco. Veja detalhes na seção [AUX 3 e 4 - configurando como auxiliares POST](#aux-3-e-4---configurando-como-auxiliares-post).
 10. **Ligue o canal e ajuste os retornos (AUX 1 e 2):** Com o fader branco ainda na posição ∞ (totalmente abaixado), aperte o botão **ON** do canal. O som ainda não sairá nas caixas da igreja (pois o fader está zerado), mas já estará disponível nos retornos dos músicos (AUX 1 e 2), pois eles são PRE-fader. Agora, ajuste os botões azuis **AUX 1** e **AUX 2** para que o músico se ouça no retorno do palco. Peça feedback ao músico antes de prosseguir.
     - ⚠ **Erro comum:** O iniciante sobe o fader, vê o sinal verde piscando, mas esquece de apertar o botão ON. Resultado: silêncio!
     - ⚠ **Se o músico do lado do altar não se ouve mesmo com AUX 1 ajustado:** A caixa do AUX 1 é ligada diretamente na tomada e tem botão de **power** e botão de **volume** próprios. Antes de mexer mais na mesa, verifique se a caixa está ligada na tomada, se o botão de power está ligado, se o volume dela não foi zerado por algum músico e se o **cabo que sai da mesa até a caixa** não foi desconectado.
     - ⚠ **Se o músico do lado da bateria não se ouve mesmo com AUX 2 ajustado:** Verifique se o **cabo que sai da saída AUX 2 da mesa até a caixa de retorno** não foi desconectado.
 11. **Abra a torneira (FADER):** Com os retornos ajustados, levante o fader branco devagar até a marca do **0** (a linha mais grossa na régua). Essa é a posição de referência (ganho unitário), que facilita ajustes posteriores durante a celebração — você terá margem tanto para aumentar quanto para diminuir o volume. O AUX 4 (caixas laterais) começará a receber sinal junto com o fader, pois é POST-fader.
-12. **Verifique a cobertura (caminhando pela igreja):** Com todos os canais configurados e os músicos tocando, saia da mesa e caminhe até a caixa grande do fundo e até a porta da igreja. Verifique se o som está em bom volume em todo o percurso. Se necessário, volte à mesa e ajuste o fader branco do canal ou o fader vermelho (Master ST). Veja mais detalhes na [seção sobre cobertura sonora](#a-o-som-principal-as-4-grandes-caixas-dos-cantos).
+12. **Verifique a cobertura (caminhando pela igreja):** Com todos os canais configurados e os músicos tocando, saia da mesa e caminhe até a caixa grande do fundo e até a porta da igreja. Verifique se o som está em bom volume em todo o percurso. Se necessário, volte à mesa e ajuste o fader branco do canal ou o fader vermelho (Master ST). Veja mais detalhes na seção [O som principal (as 4 grandes caixas dos cantos)](#a-o-som-principal-as-4-grandes-caixas-dos-cantos).
 
 > 💡 **Resumo da sequência operacional:** A ordem correta para configurar um canal novo é: ① Calibrar o GAIN (passos 1–9) → ② Ligar o canal e ajustar os retornos AUX 1/2 para os músicos (passo 10) → ③ Subir o fader branco para o som da igreja e AUX 4 (passo 11) → ④ Caminhar pela igreja para verificar a cobertura (passo 12). Essa sequência garante que os músicos já estejam se ouvindo antes de o som chegar à assembleia.
 
@@ -562,7 +598,7 @@ A mesa tem uma **setinha impressa** no painel ao lado de cada knob indicando a p
 | Knobs master gerais de AUX 1–4 (canto superior direito) | **~3h (levemente acima do meio)** | A setinha indica um nível de saída já "aberto" — esses masters controlam o volume geral de cada saída AUX e devem ser deixados na posição de fábrica (setinha) salvo ajuste deliberado. |
 | EQ (LOW / MID / HIGH) | **Centro (12h)** | Neutro: sem corte nem boost. Desviar para a direita aumenta, para a esquerda reduz. |
 | PAN (balanço) | **Centro (12h)** | Neutro: som igual nos dois lados. |
-| GAIN | **Variável (não tem setinha fixa)** | O ponto certo é encontrado pelas luzes do medidor (V.U.) com o PFL apertado — veja a [seção anterior](#como-ler-a-escala-do-botão-gain-mapa-do-potenciômetro). |
+| GAIN | **Variável (não tem setinha fixa)** | O ponto certo é encontrado pelas luzes do medidor (V.U.) com o PFL apertado — veja a seção [Como ler a escala do botão GAIN (mapa do potenciômetro)](#como-ler-a-escala-do-botão-gain-mapa-do-potenciômetro). |
 
 > 💡 **Dica prática:** Se você se perder nos knobs durante a celebração, procure a setinha impressa e volte para ela — é o ponto neutro seguro para qualquer knob que não seja o GAIN.
 
@@ -645,7 +681,7 @@ Se você apertar o botão PRE inferior acidentalmente, AUX 3 e 4 viram PRE (igua
 **Resumo:** Botão PRE superior = APERTADO (AUX 1 e 2 independentes). Botão PRE inferior = SOLTO (AUX 3 e 4 acompanham o fader).
 
 - **AUX 3 📺 Transmissão/Envio Especial**
-  - **Uso:** Saída auxiliar para enviar uma **mixagem diferente** (ex: mais voz do coral, menos instrumentos) para gravação ou transmissão no YouTube. **Para a maioria dos casos, prefira usar ST SUB OUT** (veja [Seção 5](#5-entendendo-as-saídas-onde-ligar-a-gravação)).
+  - **Uso:** Saída auxiliar para enviar uma **mixagem diferente** (ex: mais voz do coral, menos instrumentos) para gravação ou transmissão no YouTube. **Para a maioria dos casos, prefira usar ST SUB OUT** (veja a seção [Entendendo as saídas: onde ligar a gravação?](#5-entendendo-as-saídas-onde-ligar-a-gravação)).
   - **Botão azul AUX 3** (*abaixo do botão PRE*): gire para a direita para aumentar o volume desse canal na transmissão.
   - ⚠ **Modo POST (segundo botão PRE solto):** Como está configurado em modo POST, se você abaixar o fader, o som da transmissão também abaixa.
 
@@ -676,6 +712,85 @@ Se você apertar o botão PRE inferior acidentalmente, AUX 3 e 4 viram PRE (igua
 > | --- | --- | --- |
 > | AUX 1 e 2 (retornos dos músicos) | **PRE** | Independente do fader — músico não perde o retorno se você abaixar o volume da igreja |
 > | AUX 4 (caixas laterais) | **POST** | Acompanha o fader — o som das laterais fica sempre proporcional ao som principal |
+
+### A proteção das caixas pequenas (o "filtro" do AUX 4)
+
+Esta é uma das vantagens mais importantes — e menos óbvias — de manter as caixas laterais no AUX 4.
+
+As 4 caixas grandes foram projetadas para aguentar a energia de instrumentos pesados como bumbo e contrabaixo. As 10 caixas pequenas dos corredores, muito provavelmente, não foram — e podem distorcer ou até queimar se receberem muito grave.
+
+Com o sistema atual (AUX 4), você tem **controle individual** por canal: pode decidir exatamente quanto de cada instrumento chega nas caixas pequenas. Quando a bateria tem canais separados na mesa, o ideal é zerar o bumbo e o contrabaixo no AUX 4 e abrir apenas a caixa e os pratos — veja a [tabela por peça da bateria](#regra-por-peça-da-bateria-no-aux-4). Quando a bateria chega em um único canal, a solução é usar o equalizador externo do rack para filtrar os graves antes de chegar nas caixas pequenas — veja o [cenário especial](#cenário-especial-bateria-chega-em-um-único-canal).
+
+> 💡 **Regra prática (canais separados):** Zere o botão azul AUX 4 nos canais de bumbo, contrabaixo e surdo. Abra na setinha (~1h) nos canais de caixa da bateria, pratos, vozes, violão e teclado. Se as caixas laterais distorcerem nos momentos de bateria forte, reduza o AUX 4 da caixa da bateria também.
+
+#### Por que o bumbo e o contrabaixo são os "assassinos" de alto-falantes menores?
+
+Caixas de 40 a 50 centímetros são de excelente tamanho (provavelmente abrigam alto-falantes de 8 ou 10 polegadas) e são robustas. Mas no mundo do áudio profissional — especialmente som **ao vivo** — dizer que elas "podem queimar" com graves **não é exagero**, é física. Existem três mecanismos de dano:
+
+##### 1. Grave = energia bruta (o problema elétrico)
+
+Cerca de 70% a 80% de toda a energia elétrica (Watts) gerada por um amplificador durante uma música é gasta apenas para reproduzir os graves (bumbo e contrabaixo). A voz humana e os pratos da bateria usam muito pouca energia. Se você manda o bumbo para a caixa menor, a bobina de cobre (o motor do alto-falante) vai receber pancadas violentas de energia elétrica. Ela vai esquentar muito mais rápido do que se estivesse reproduzindo apenas a voz do padre. Se esquentar demais, o verniz derrete e a caixa "queima" (para de tocar).
+
+##### 2. O pulo do cone (o problema mecânico)
+
+Para fazer um som grave (como o *Buum* do bumbo), o cone do alto-falante precisa ir muito para frente e muito para trás, empurrando uma quantidade gigantesca de ar. As caixas maiores (80 cm, provavelmente com alto-falantes de 15 polegadas) têm suspensões grossas e espaço para o cone "pular" à vontade. Nas caixas de 40/50 cm, o espaço de movimentação do cone é menor. Se o baterista der uma pisada muito forte no pedal, o alto-falante menor vai tentar pular além do seu limite físico — o papelão rasga ou a bobina bate no fundo do ímã (um barulho de *clack clack*). Chamamos isso de **excursão excessiva**.
+
+##### 3. O perigo oculto: o amplificador clipando
+
+Se as 10 caixas menores estão ligadas em um ou dois amplificadores, esses amplificadores têm um limite de força. Se você mandar o bumbo para elas, o amplificador vai fazer um esforço colossal para tentar reproduzir aquele grave. Se ele não aguentar, ele "clipa" (a luz de PEAK do amplificador acende). Quando um amplificador clipa nos graves, ele gera uma distorção quadrada de altíssima energia que viaja direto para os agudos. O resultado: **o alto-falante grande sobrevive, mas o tweeter (a corneta de agudos) da caixa menor queima na hora.** A caixa fica com aquele som de "telefone abafado".
+
+**Como o AUX 4 salva a pátria (canais separados):**
+
+Usando o AUX 4 para as caixas dos corredores com canais separados de bateria, você pode fazer uma mixagem inteligente:
+
+- **Vozes, violão, teclado, sanfona, caixa da bateria, pratos:** Abra o botão azul (AUX 4) nesses canais. O som sai cristalino e seguro nas caixas dos corredores.
+- **Bumbo, contrabaixo, surdo:** Deixe o botão azul (AUX 4) **zerado**. O grave pesado sai *apenas* nas 4 caixas gigantes (que foram feitas para apanhar) — e os fiéis no corredor já ouvem o bumbo pelas caixas grandes, pois o grave é omnidirecional.
+
+Assim, você tem a igreja inteira preenchida de som, a voz do padre super clara nos corredores, e a tranquilidade de que nenhum baterista empolgado vai rasgar os alto-falantes ou queimar os tweeters das 10 caixas laterais.
+
+#### Por que os graves não precisam de ajuda para chegar ao corredor
+
+Pode parecer estranho, mas **não é exagero deixar o bumbo e o contrabaixo zerados no AUX 4**. O motivo está na física do som:
+
+As frequências graves são **omnidirecionais** — elas não viajam em linha reta; se espalham como uma esfera gigantesca, atravessam pilastras, bancos e até os nossos corpos. Quando as 4 caixas grandes tocam o bumbo, a igreja *inteira* treme. A pessoa sentada no corredor lateral, embaixo da caixinha pequena, **já está ouvindo e sentindo o bumbo perfeitamente**, porque o som grave das caixas grandes chegou até ela com facilidade.
+
+Já as vozes, o violão e os pratos da bateria são sons mais direcionais — viajam em linha reta. Se o fiel está atrás de uma pilastra, esses sons batem na pilastra e não chegam até ele. É **exatamente para isso** que as 10 caixinhas servem: devolver a clareza da voz para quem está no ponto cego, não reforçar o que já chega por conta própria.
+
+**O que acontece se você colocar o bumbo no AUX 4 mesmo pela metade:**
+
+- **Embolamento sonoro:** O fiel no corredor vai ouvir o bumbo vindo da caixa gigante da frente e, milésimos de segundo depois, o bumbo vindo da caixinha bem em cima da cabeça dele. Esse atraso transforma o "Pum!" seco da bateria em um "Bwoooom" embolado, e a igreja perde a clareza rítmica.
+- **Desperdício de energia:** A caixinha vai gastar toda a força do amplificador tentando empurrar ar para fazer o grave. Quando o padre falar junto com a batida, a voz sai "engasgada" na caixinha — o alto-falante está ocupado demais tentando reproduzir o bumbo.
+
+#### Regra por peça da bateria no AUX 4
+
+Quando a bateria tem canais separados na mesa, a orientação é:
+
+| Peça | Botão azul AUX 4 | Motivo |
+| --- | --- | --- |
+| Bumbo | **ZERO** | Grave omnidirecional — já chega ao corredor pelas caixas grandes |
+| Surdo / tons graves | **ZERO** (ou quase) | Mesmo motivo do bumbo |
+| Caixa da bateria ("Tá") | **Pode abrir** (~12h ou setinha) | Som direcional — ajuda a marcar o ritmo no corredor |
+| Pratos / chimbal | **Pode abrir** | Dá brilho e senso de tempo no corredor |
+| Contrabaixo elétrico | **ZERO** | Grave omnidirecional — mesma lógica do bumbo |
+
+> 💡 **Teste prático:** Peça para alguém tocar apenas o bumbo com o botão AUX 4 zerado. Vá caminhar pelo corredor lateral. Você vai perceber que ouvirá o bumbo perfeitamente e com peso, mesmo com as caixas pequenas mudas para ele. Esse é o mesmo princípio usado pelos grandes técnicos de shows em sistemas com caixas de reforço lateral (*delay fills* e *front fills*).
+
+#### Cenário especial: bateria chega em um único canal
+
+Se a bateria inteira (bumbo, caixa, pratos) chega à mesa por **um único cabo** — seja uma bateria eletrônica ou microfones que passam por uma submesa antes — a dica de "zerar o bumbo e abrir a caixa" deixa de funcionar. Nesse caso, se você zerar o AUX 4 desse canal, o corredor fica sem ritmo nenhum (sem pratos, sem caixa).
+
+A solução está no **equalizador externo do rack**, que fica na cadeia `AUX 4 → equalizador → amplificador → caixas pequenas`. Como o equalizador age no sinal *antes* de chegar às caixas, ele funciona como um filtro de proteção independente do que a mesa envia:
+
+1. **Vá até o equalizador do AUX 4** (o que cuida apenas das 10 caixas dos corredores).
+2. **Corte os graves:** Pegue os primeiros 4 ou 5 botões deslizantes do lado esquerdo (frequências de 20 Hz, 31 Hz, 40 Hz, 63 Hz, 80 Hz e até 100 Hz) e **abaixe todos eles ao mínimo**.
+3. **Deixe o restante no zero:** Os botões do meio para a direita (médios e agudos) ficam na posição central.
+
+Com esse corte feito no equalizador, você pode **abrir o botão azul AUX 4 na mesa para o canal da bateria** (posição de setinha, 12h ou 1h). A mesa manda a bateria completa para o corredor, mas o equalizador barra as batidas pesadas do bumbo e deixa passar livremente a caixa ("Tá!") e os pratos ("Tssss").
+
+**Resultado:**
+
+- As **4 caixas grandes** (sem esse corte de graves) batem o bumbo forte no peito da igreja.
+- As **10 caixas pequenas** tocam os pratos e a caixa da bateria, dando ritmo ao corredor, enquanto o alto-falante delas mal se move para as frequências graves — garantindo que elas durem muito mais tempo sem queimar.
 
 ### O equilíbrio certo: caixas grandes vs. pequenas
 
@@ -896,7 +1011,7 @@ Enquanto os músicos tocam, use o fone com os botões PFL/AFL para escutar indiv
 **Use PFL quando:**
 
 - Suspeitar que um microfone está com defeito ou desligado
-- Quiser ajustar o GAIN sem interferir no som da igreja (gire o GAIN até que as luzes batam perto do **0** - veja a [Seção 7](#7-entendendo-os-medidores-as-4-fileiras-de-luzes) para entender a escala completa dos medidores)
+- Quiser ajustar o GAIN sem interferir no som da igreja (gire o GAIN até que as luzes batam perto do **0** - veja a [Seção 7 - Entendendo os medidores](#7-entendendo-os-medidores-as-4-fileiras-de-luzes) para entender a escala completa dos medidores)
 - Precisar verificar se há sinal chegando no canal, mesmo com o fader abaixado
 
 **Use AFL quando:**
@@ -1041,6 +1156,14 @@ Operar uma mesa de som não é sobre memorizar todos os botões, mas sim compree
 Lembre-se: o som litúrgico existe para servir a palavra e a música sagrada, não para se destacar. Menos é mais. Antes de aumentar o volume de um instrumento, ouça o conjunto. A mesa de som é uma ferramenta de equilíbrio, não de competição.
 
 **Pratique com paciência.** Cada celebração é uma oportunidade de aprendizado. Aos poucos, seus ouvidos se acostumarão a identificar problemas antes mesmo de olhar para a mesa. E quando surgirem dúvidas, volte a este guia.
+
+### Como trabalhar de forma fácil no domingo
+
+O sistema já está desenhado de forma a simplificar a operação durante a missa. Na prática, siga esta sequência:
+
+1. **Regulagem inicial ("o tempero"):** Coloque todos os faders brancos no **0**. Nos botões azuis AUX 4 das vozes, instrumentos leves (violão, teclado), caixa da bateria e pratos, deixe-os na posição da setinha (~1h). **Se a bateria tiver canais separados na mesa:** nos canais de bumbo, contrabaixo e surdo, deixe o botão azul AUX 4 **zerado** — o grave desses instrumentos já chega ao corredor pelas caixas grandes, pois é omnidirecional. **Com nossa bateria toda chegar em um único canal:** abra o AUX 4 normalmente (~1h) e use o equalizador externo do rack para cortar os graves antes das caixas pequenas — veja a seção [Cenário especial: bateria chega em um único canal](#cenário-especial-bateria-chega-em-um-único-canal).
+2. **Ajuste nos amplificadores:** Com alguém tocando, ajuste o volume dos amplificadores para que as caixas grandes falem no volume adequado para a nave e as caixas pequenas falem em volume mais baixo (como lanterna de complemento, não como fonte principal).
+3. **Durante a missa, esqueça os botões azuis:** Nunca toque nos botões azuis do AUX 4 durante a celebração. Pilote a missa inteira deslizando apenas os faders brancos para cima e para baixo — as caixas grandes e as laterais (nos canais habilitados) acompanharão juntas, sem precisar sincronizar dois controles separados.
 
 ---
 
