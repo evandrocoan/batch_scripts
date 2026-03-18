@@ -25,8 +25,13 @@ Manual oficial do mesa: <https://usa.yamaha.com/files/download/other_assets/9/33
       - [1. O problema do ganho BAIXO (e fader alto)](#1-o-problema-do-ganho-baixo-e-fader-alto)
       - [2. O problema do ganho ALTO (e fader baixo)](#2-o-problema-do-ganho-alto-e-fader-baixo)
       - [O segredo: "Estrutura de ganho" (Gain Staging)](#o-segredo-estrutura-de-ganho-gain-staging)
+      - [Por que o fader vai só até +10 dB?](#por-que-o-fader-vai-só-até-10-db)
+        - [1. O "volume real" mora no botão de Gain, não no fader](#1-o-volume-real-mora-no-botão-de-gain-não-no-fader)
+        - [2. O que o 0 dB realmente significa](#2-o-que-o-0-db-realmente-significa)
+        - [3. Precisão de movimento](#3-precisão-de-movimento)
+        - [4. Proteção contra distorção (headroom)](#4-proteção-contra-distorção-headroom)
     - [Como ler a escala do botão GAIN (mapa do potenciômetro)](#como-ler-a-escala-do-botão-gain-mapa-do-potenciômetro)
-      - [A marca das "10 horas" (o triângulo ou traço grosso)](#a-marca-das-10-horas-o-triângulo-ou-traço-grosso)
+      - [A marca das "10 horas" no knob GAIN (o triângulo ou traço grosso)](#a-marca-das-10-horas-no-knob-gain-o-triângulo-ou-traço-grosso)
       - [A zona dos microfones](#a-zona-dos-microfones)
       - [O que significam os números impressos no painel (-16/+10, -60/-34)](#o-que-significam-os-números-impressos-no-painel--1610--60-34)
       - [O "zero real" está nas luzes, não no botão](#o-zero-real-está-nas-luzes-não-no-botão)
@@ -317,13 +322,35 @@ O objetivo é o **Equilíbrio**. Você quer o sinal forte o suficiente para cobr
 
 O **Ganho** prepara a qualidade do som. O **Fader** escolhe o volume do som.
 
+#### Por que o fader vai só até +10 dB?
+
+A MG32/14FX (como praticamente toda mesa profissional) tem o fader indo do infinito (−∞) lá embaixo até **0 dB** perto do topo, com apenas uma pequena sobra de **+10 dB** acima do zero. Parece pouco — mas existe uma lógica sólida por trás disso.
+
+##### 1. O "volume real" mora no botão de Gain, não no fader
+
+A mesa divide o controle de volume em duas etapas. O botão de **Gain** (lá no topo do canal) cuida da força bruta: ele amplifica o sinal fraco do microfone em até **+60 dB**, adequando-o ao nível interno da mesa. O **Fader** não serve para "dar volume" — ele serve para **misturar** (mixar): equilibrar quem fica um pouco mais alto ou mais baixo em relação aos outros canais.
+
+##### 2. O que o 0 dB realmente significa
+
+A marcação **0 dB** no fader não significa "zero volume". Significa **"zero alteração"** (ganho unitário): o fader está deixando o som passar com exatamente a mesma força que você calibrou no Gain. Os **+10 dB** acima do zero são uma **reserva de emergência** — servem para aquele momento em que o cantor afasta o microfone ou o guitarrista toca mais baixo e você precisa dar um "empurrãozinho" rápido sem ter que mexer no Gain.
+
+##### 3. Precisão de movimento
+
+O trilho do fader tem cerca de 10 cm. Se ele fosse até +30 dB ou +50 dB, 1 milímetro de movimento corresponderia a um salto enorme de volume — impossível fazer ajustes suaves. Limitando o topo a +10 dB, a região ao redor do 0 dB fica "espaçosa", permitindo movimentos delicados e precisos durante a mixagem.
+
+##### 4. Proteção contra distorção (headroom)
+
+A mesa tem 32 canais. Se cada fader pudesse ir a +30 dB, a soma de todos os canais estouraria a saída Master (L/R) — as luzes vermelhas (PEAK/CLIP) acenderiam direto e o som sairia rachado. Limitar o fader a +10 dB protege a mixagem para que a soma dos canais não estoure a saída principal.
+
+> 💡 **Regra prática:** Se o fader já está no +10 dB e o som ainda está baixo, o problema não está no fader — faltou abrir o **Gain** daquele canal. Afine o "peso" do som no Gain e trabalhe com os faders sempre flutuando próximos à marca do **0 dB**.
+
 ---
 
 ### Como ler a escala do botão GAIN (mapa do potenciômetro)
 
 A Yamaha usa uma escala técnica que confunde quem está acostumado com "Volume de 0 a 10". Não existe uma posição fixa de "0" universal — o ponto certo depende do que está ligado no canal.
 
-#### A marca das "10 horas" (o triângulo ou traço grosso)
+#### A marca das "10 horas" no knob GAIN (o triângulo ou traço grosso)
 
 Aquela marcação especial indica o **nível de linha (Line Level)**.
 
@@ -336,15 +363,17 @@ Para microfones, a marca das 10 horas é muito baixa — o som ficará fraco. A 
 
 #### O que significam os números impressos no painel (-16/+10, -60/-34)
 
-Os pares de números ao redor do botão são a **escala de sensibilidade de entrada em dBu**. Eles indicam a faixa de sinal que o canal consegue receber naquela posição:
+Na escala de dBu, **zero não é o meio** — zero já é um sinal relativamente forte. Valores negativos (−16, −60) indicam sinais cada vez mais fracos do que esse referencial. Quanto mais negativo, mais fraco o sinal elétrico.
 
-- **Posição 7h (mínimo, totalmente à esquerda) — `-16/+10`:** O canal aceita sinais de entrada de até **+10 dBu** antes de saturar. É a posição para sinais mais fortes.
-- **Posição 10h (marquinha branca/triângulo) — marca de linha:** Ponto de referência para aparelhos como teclados, celulares e computadores.
-- **Posição 5h (máximo, totalmente à direita) — `-60/-34`:** O canal consegue amplificar sinais tão fracos quanto **−60 dBu**. É a posição para microfones a distância ou sinais muito fracos.
+Ao redor do botão GAIN existem pares de números como **`-16/+10`** e **`-60/-34`**. Cada par descreve a **janela de trabalho** daquela posição do botão: o primeiro número é o **piso** (sinal mínimo que o canal ainda consegue amplificar — abaixo disso o sinal some no ruído elétrico interno da mesa), e o segundo é o **teto** (sinal máximo antes de distorcer).
 
-O número da **esquerda** de cada par (ex.: `−16`, `−60`) é a sensibilidade mínima de entrada naquela posição; o da **direita** (ex.: `+10`, `−34`) é o nível máximo antes de distorcer.
+Conforme você gira o botão para a direita (mais amplificação), essa janela inteira se desloca para baixo na escala — o piso desce (o canal passa a captar fontes mais fracas), mas o teto também desce (o canal distorce com sinais cada vez mais fortes):
 
-**Resumo prático:** quanto mais você gira à direita, mais amplificação o canal aplica — e mais fraco pode ser o sinal que ele ainda capta sem chiado. Os números não são "volume negativo", são uma medida de força do sinal elétrico que entra.
+- **Posição 7h (mínimo, totalmente à esquerda) — `-16/+10`:** A janela fica na parte **alta** da escala. O canal aguenta sinais fortes (até **+10 dBu**) sem distorcer, mas sinais mais fracos que **−16 dBu** não chegam com força suficiente. Use para teclados, celulares e outros aparelhos que já entregam sinal forte.
+- **Posição 10h (marquinha branca/triângulo) — marca de linha:** Ponto de referência padrão para aparelhos como teclados, celulares e computadores.
+- **Posição 5h (máximo, totalmente à direita) — `-60/-34`:** A janela se desloca para a parte **baixa** da escala. O canal agora consegue captar sinais muito fracos (a partir de **−60 dBu**), mas em compensação já distorce com sinais acima de **−34 dBu** — ou seja, qualquer sinal razoavelmente forte vai saturar. Use para microfones muito distantes ou fontes com sinal extremamente fraco, com atenção redobrada ao chiado e à microfonia.
+
+**Resumo prático:** quanto mais você gira à direita, mais amplificação o canal aplica — o piso desce (capta fontes mais fracas) e o teto também desce (distorce com sinais mais fortes). Os números não são "volume negativo" — são uma medida de força do sinal elétrico que entra.
 
 **Referência prática para a MG32/14FX:**
 
