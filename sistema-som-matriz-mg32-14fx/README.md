@@ -54,6 +54,7 @@ Manual oficial do mesa: <https://usa.yamaha.com/files/download/other_assets/9/33
     - [Entendendo as luzes (o semáforo do som)](#entendendo-as-luzes-o-semáforo-do-som)
   - [3. Controles adicionais do canal](#3-controles-adicionais-do-canal)
     - [Equalização básica (EQ) - deixando o som claro](#equalização-básica-eq---deixando-o-som-claro)
+      - [O que significam os números do equalizador (Hz)?](#o-que-significam-os-números-do-equalizador-hz)
       - [Por que a gaita parece mais alta que a voz mesmo com o LED mais baixo?](#por-que-a-gaita-parece-mais-alta-que-a-voz-mesmo-com-o-led-mais-baixo)
         - [1. O ouvido humano não é "plano"](#1-o-ouvido-humano-não-é-plano)
         - [2. Graves gastam muita energia elétrica, agudos quase nada](#2-graves-gastam-muita-energia-elétrica-agudos-quase-nada)
@@ -573,6 +574,23 @@ Os botões giratórios coloridos no meio do canal são o **equalizador (EQ)**. E
 - **Violão muito "pesado"?** Abaixe o LOW.
 
 ⚠ **Importante:** Comece sempre com todos os botões de EQ na posição central (marcação do meio). Só ajuste se necessário!
+
+#### O que significam os números do equalizador (Hz)?
+
+Os números impressos ao redor do botão MID (como 20, 80, 200, 500, 1k, 5k...) são medidos em **Hertz (Hz)** e indicam a **velocidade de vibração** do som — quantas vezes por segundo o ar (e o cone do alto-falante) vai e volta. Um Hertz significa uma vibração por segundo.
+
+Isso confunde quem está começando, porque a lógica é invertida em relação ao que se espera:
+
+- **Som agudo (ex.: prato de bateria, 10.000 Hz):** O ar vibra 10.000 vezes por segundo — muito rápido. A onda de som é curtinha e leve. Para gerar essa vibração, o alto-falante quase não precisa de força.
+- **Som grave (ex.: bumbo, 80 Hz):** O ar vibra apenas 80 vezes por segundo — muito devagar. A onda de som é longa e "pesada", como uma parede de ar empurrando tudo à frente. Para gerar essa vibração, o alto-falante precisa de força física e elétrica bruta.
+
+Um número **menor** no EQ não significa "mais fraco" — significa vibração mais lenta, que é justamente o que exige mais energia para ser produzida.
+
+Essa física aparece em tudo ao redor:
+
+- **Os alto-falantes:** O tweeter (corneta) é minúsculo e leve — basta vibrar um pouquinho de ar em alta velocidade. O subwoofer é um pratão de 15 ou 18 polegadas, pesado — precisa empurrar uma onda gigante de ar a cada batida do bumbo.
+- **Os amplificadores:** Um amplificador de 50 Watts faz um tweeter gritar. Para um subwoofer de graves tocar com corpo, são necessários 500 a 2.000 Watts.
+- **Na mesa:** O contrabaixo e o bumbo fazem o LED pular rápido até o 0 dB porque o sinal elétrico que eles geram é eletricamente "gordo". A gaita e o violino mal movem o LED, mas soam altos — pois toda a energia deles está nos agudos que cortam o ar com facilidade (conforme explicado na próxima seção).
 
 #### Por que a gaita parece mais alta que a voz mesmo com o LED mais baixo?
 
