@@ -4,7 +4,11 @@
 
 <a href="mesa-som-visao-geral.jpg"><img src="mesa-som-visao-geral.jpg" alt="mesa-som-visao-geral"></a>
 
-Manual oficial do mesa: <https://usa.yamaha.com/files/download/other_assets/9/333859/mg32_14fx_pt.pdf>
+Manual oficial do mesa:
+
+1. <https://usa.yamaha.com/files/download/other_assets/9/333859/mg32_14fx_pt.pdf>
+2. <https://usa.yamaha.com/files/download/other_assets/8/323938/mg32_14fx_en_om_e0.pdf>
+3. <https://usa.yamaha.com/files/download/other_assets/2/322292/MG32-14FX_24-14FX_datasheet.pdf>
 
 ## Índice
 
@@ -54,6 +58,8 @@ Manual oficial do mesa: <https://usa.yamaha.com/files/download/other_assets/9/33
     - [Entendendo as luzes (o semáforo do som)](#entendendo-as-luzes-o-semáforo-do-som)
   - [3. Controles adicionais do canal](#3-controles-adicionais-do-canal)
     - [Equalização básica (EQ) - deixando o som claro](#equalização-básica-eq---deixando-o-som-claro)
+      - [O botão LOW mexe em uma faixa inteira, não em um ponto só](#o-botão-low-mexe-em-uma-faixa-inteira-não-em-um-ponto-só)
+        - [A solução: use o HPF antes de mexer no LOW](#a-solução-use-o-hpf-antes-de-mexer-no-low)
       - [O que significam os números do equalizador (Hz)?](#o-que-significam-os-números-do-equalizador-hz)
       - [Por que a gaita parece mais alta que a voz mesmo com o LED mais baixo?](#por-que-a-gaita-parece-mais-alta-que-a-voz-mesmo-com-o-led-mais-baixo)
         - [1. O ouvido humano não é "plano"](#1-o-ouvido-humano-não-é-plano)
@@ -574,6 +580,21 @@ Os botões giratórios coloridos no meio do canal são o **equalizador (EQ)**. E
 - **Violão muito "pesado"?** Abaixe o LOW.
 
 ⚠ **Importante:** Comece sempre com todos os botões de EQ na posição central (marcação do meio). Só ajuste se necessário!
+
+#### O botão LOW mexe em uma faixa inteira, não em um ponto só
+
+O botão LOW da Yamaha MG32/14FX opera no modo **shelving** ("prateleira"): ele está fixado em 100 Hz, mas não afeta apenas essa frequência. Ele age como uma prateleira inclinada: ao girar para a direita, você aumenta os 100 Hz **e também puxa para cima tudo abaixo dele** (80 Hz, 60 Hz, 40 Hz, 20 Hz...). Ao girar para a esquerda, você abaixa essa faixa inteira.
+
+Isso cria um problema prático: nessas frequências muito baixas (abaixo de 80 Hz), a voz humana, o violão e a maioria dos instrumentos não produzem quase nada de música útil. O que mora ali é **lixo sonoro** — barulho do vento no microfone, passos no palco, o "puff" da respiração e zumbido de energia elétrica. Se você aumentar o LOW sem ter cortado esses graves antes, você encorpa o 100 Hz do canal mas, sem querer, também amplifica todo esse lixo. O resultado é o som ficando "embolado", as paredes tremendo e o amplificador gastando energia à toa.
+
+##### A solução: use o HPF antes de mexer no LOW
+
+O botão **HPF (o botão com o símbolo de filtro e "/80Hz", no topo do canal)** funciona como uma tesoura que corta e descarta tudo abaixo de 80 Hz. Com ele apertado, aquele lixo sonoro desaparece. A partir daí, se você girar o LOW um pouquinho para a direita para encorpar a voz, você estará aumentando apenas a parte útil do grave (a região dos 100 Hz), sem amplificar o lixo que já foi descartado.
+
+| Instrumento / fonte | Botão HPF | Botão LOW |
+| --- | --- | --- |
+| Voz, violão, gaita, teclado | **Apertado** (cortar lixo sonoro) | Use com parcimônia se precisar de corpo |
+| Bumbo, contrabaixo | **Solto** (eles precisam do grave completo) | Ajuste conforme o som |
 
 #### O que significam os números do equalizador (Hz)?
 
