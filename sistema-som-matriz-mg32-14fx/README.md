@@ -54,6 +54,10 @@ Manual oficial do mesa: <https://usa.yamaha.com/files/download/other_assets/9/33
     - [Entendendo as luzes (o semáforo do som)](#entendendo-as-luzes-o-semáforo-do-som)
   - [3. Controles adicionais do canal](#3-controles-adicionais-do-canal)
     - [Equalização básica (EQ) - deixando o som claro](#equalização-básica-eq---deixando-o-som-claro)
+      - [Por que a gaita parece mais alta que a voz mesmo com o LED mais baixo?](#por-que-a-gaita-parece-mais-alta-que-a-voz-mesmo-com-o-led-mais-baixo)
+        - [1. O ouvido humano não é "plano"](#1-o-ouvido-humano-não-é-plano)
+        - [2. Graves gastam muita energia elétrica, agudos quase nada](#2-graves-gastam-muita-energia-elétrica-agudos-quase-nada)
+        - [3. Som contínuo vs. som percussivo](#3-som-contínuo-vs-som-percussivo)
     - [O botão PAN (balanço) - não mexa sem necessidade](#o-botão-pan-balanço---não-mexa-sem-necessidade)
     - [Phantom Power (+48V) - para microfones especiais](#phantom-power-48v---para-microfones-especiais)
     - [Os botões giratórios AUX (visão geral)](#os-botões-giratórios-aux-visão-geral)
@@ -569,6 +573,26 @@ Os botões giratórios coloridos no meio do canal são o **equalizador (EQ)**. E
 - **Violão muito "pesado"?** Abaixe o LOW.
 
 ⚠ **Importante:** Comece sempre com todos os botões de EQ na posição central (marcação do meio). Só ajuste se necessário!
+
+#### Por que a gaita parece mais alta que a voz mesmo com o LED mais baixo?
+
+Essa é uma das observações mais comuns de quem começa a operar uma mesa: o LED do canal da voz bate no 0 dB, mas a gaita parece ensurdecer a igreja com o LED marcando bem menos. O motivo é que **a mesa mede energia elétrica, e o ouvido humano mede percepção**. São coisas diferentes.
+
+Há três razões para esse fenômeno:
+
+##### 1. O ouvido humano não é "plano"
+
+O ouvido humano não escuta todas as frequências com a mesma intensidade. Por evolução, somos extremamente sensíveis à faixa de **2.000 a 5.000 Hz** — a mesma faixa do choro de um bebê e de um alarme de incêndio. A gaita é um instrumento que vive exatamente nessa faixa. A voz e o violão têm som mais grave e "aveludado". Portanto, mesmo que os três mandem a mesma energia para a mesa, o cérebro vai achar a gaita muito mais alta.
+
+##### 2. Graves gastam muita energia elétrica, agudos quase nada
+
+Sons graves (o corpo do violão, o peito da voz) são eletricamente "pesados": geram muita energia elétrica e fazem o LED subir rápido até o 0 dB, mesmo que o volume acústico não pareça tão alto. A gaita quase não tem graves: o sinal elétrico que ela manda para a mesa é leve e o LED mal sobe. Porém, toda a energia dela está nos agudos que cortam o ar com facilidade.
+
+##### 3. Som contínuo vs. som percussivo
+
+O violão é percussivo: você dedilha a corda, há um pico de som e ele some rapidamente. O LED pisca no 0 dB e desce. A gaita é tocada com sopro contínuo: o sinal forte não para. O cérebro humano percebe sons contínuos como sendo muito mais altos do que picos que batem e somem.
+
+> 💡 **Como resolver na mesa:** A regra de "bater no 0 dB" funciona bem para 90% dos instrumentos (voz, bateria, baixo, violão, teclado). Para instrumentos estridentes (gaita, violino, flauta), **acredite no seu ouvido, não no LED**: se a gaita estiver machucando o ouvido da assembleia, abaixe o fader mesmo que o LED esteja marcando baixinho. Além disso, use o botão **MID** do equalizador: vire-o levemente para a esquerda para tirar a "faca" dos médio-agudos da gaita, deixando o som mais macio sem perder a presença na música.
 
 ---
 
