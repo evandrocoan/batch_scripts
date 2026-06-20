@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Remove crunchyroll simulcastcalendar dub videos
 // @namespace    *
-// @version      0.3
+// @version      0.4
 // @description  https://webapps.stackexchange.com/questions/145612/how-to-stop-the
 // @author       You
 //
@@ -52,6 +52,46 @@
                 }
             }
         });
+        // Deduplicate episodes that share the same group+episode but differ only by URL language code.
+        // When multiple versions exist, prefer JAJP or no-suffix over other language codes.
+        // If only one version exists (any code), always keep it.
+        const groups = {};
+        $('article.js-release').each(function() {
+            const groupId = $(this).data('group-id');
+            const episodeNum = $(this).data('episode-num');
+            if (groupId === undefined || episodeNum === undefined) return;
+            const key = `${groupId}_${episodeNum}`;
+            if (!groups[key]) groups[key] = [];
+            groups[key].push(this);
+        });
+
+        Object.values(groups).forEach(articles => {
+            if (articles.length <= 1) return;
+
+            const tagged = articles.map(article => {
+                const link = $(article).find('a.available-episode-link').first();
+                const href = link.attr('href') || '';
+                const match = href.match(/\/watch\/([^/]+)\//);
+                const code = match ? match[1] : null;
+                const suffixMatch = code && code.match(/([A-Z]{4})$/);
+                const suffix = suffixMatch ? suffixMatch[1] : null;
+                return { article, code, suffix };
+            });
+
+            // Priority: JAJP or no suffix (bare ID) > any other language code
+            let preferred = tagged.find(a => a.suffix === 'JAJP');
+            if (!preferred) preferred = tagged.find(a => !a.suffix);
+            if (!preferred) preferred = tagged[0];
+
+            tagged.forEach(({ article }) => {
+                if (article !== preferred.article) {
+                    const li = $(article).closest('li');
+                    if (li.length) li.hide();
+                    else $(article).hide();
+                }
+            });
+        });
+
         // console.log("running");
         // setTimeout(keepclosing, 500);
     }
