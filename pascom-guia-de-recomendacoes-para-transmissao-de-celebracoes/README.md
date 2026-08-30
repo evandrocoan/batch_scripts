@@ -2,22 +2,26 @@
 
 # PASCOM - Guia de Boas Práticas para Transmissão de Celebrações Litúrgicas
 
-- [Pré-Celebração / Preparação](#pré-celebração--preparação)
-- [I. Princípios Fundamentais (A Base de Tudo)](#i-princípios-fundamentais-a-base-de-tudo)
-- [II. Recomendações por Momento Litúrgico (O "Como Fazer")](#ii-recomendações-por-momento-litúrgico-o-como-fazer)
-- [III. Recomendações Técnicas e de Equipe](#iii-recomendações-técnicas-e-de-equipe)
-- [IV. Recomendações Legais e de Direitos Autorais](#iv-recomendações-legais-e-de-direitos-autorais)
-- [Nossos equipamentos](#nossos-equipamentos)
+- [PASCOM - Guia de Boas Práticas para Transmissão de Celebrações Litúrgicas](#pascom---guia-de-boas-práticas-para-transmissão-de-celebrações-litúrgicas)
+  - [Pré-Celebração / Preparação](#pré-celebração--preparação)
+  - [I. Princípios Fundamentais (A Base de Tudo)](#i-princípios-fundamentais-a-base-de-tudo)
+  - [II. Recomendações por Momento Litúrgico (O "Como Fazer")](#ii-recomendações-por-momento-litúrgico-o-como-fazer)
+  - [III. Recomendações Técnicas e de Equipe](#iii-recomendações-técnicas-e-de-equipe)
+  - [IV. Recomendações Legais e de Direitos Autorais](#iv-recomendações-legais-e-de-direitos-autorais)
+  - [Nossos equipamentos](#nossos-equipamentos)
   - [Softwares utilizados no computador](#softwares-utilizados-no-computador)
   - [Softwares utilizados no seu celular](#softwares-utilizados-no-seu-celular)
+  - [Controle do computador pelo tablet (RustDesk)](#controle-do-computador-pelo-tablet-rustdesk)
+    - [Configuração](#configuração)
+    - [Se não conectar](#se-não-conectar)
   - [Ter ip do DroidCam/Celular fixo](#ter-ip-do-droidcamcelular-fixo)
-- [Resolução de problemas](#resolução-de-problemas)
+  - [Resolução de problemas](#resolução-de-problemas)
   - [Sem áudio na interface de som principal da igreja](#sem-áudio-na-interface-de-som-principal-da-igreja)
   - [Verificar se dispositivos de som estão conectados corretamente](#verificar-se-dispositivos-de-som-estão-conectados-corretamente)
   - [Ruídos nas transmissão](#ruídos-nas-transmissão)
   - [Utilizar supressor de ruído](#utilizar-supressor-de-ruído)
   - [Como ajustar volume da transmissão na mesa de som](#como-ajustar-volume-da-transmissão-na-mesa-de-som)
-- [Como fazer](#como-fazer)
+  - [Como fazer](#como-fazer)
   - [Selecionar cenário correto (Tripé 2 metros ou Tripé 4 metros)](#selecionar-cenário-correto-tripé-2-metros-ou-tripé-4-metros)
   - [Como usar extensões USB](#como-usar-extensões-usb)
   - [Como fazer flip da câmera (auto-foco, etc)](#como-fazer-flip-da-câmera-auto-foco-etc)
@@ -30,16 +34,16 @@
   - [Adicionando áudio por uma das Webcams](#adicionando-áudio-por-uma-das-webcams)
   - [Como configurar uma webcam no OBS](#como-configurar-uma-webcam-no-obs)
   - [Como configurar uma câmera DroidCam diretamente no OBS](#como-configurar-uma-câmera-droidcam-diretamente-no-obs)
-- [Ajustes](#ajustes)
-  - [Distribuição das câmeras com tripé 4 metros](#distribuição-das-câmeras-com-tripé-4-metros)
-  - [Distribuição das câmeras com tripé 2 metros](#distribuição-das-câmeras-com-tripé-2-metros)
+  - [Ajustes](#ajustes)
+    - [Distribuição das câmeras com tripé 4 metros](#distribuição-das-câmeras-com-tripé-4-metros)
+    - [Distribuição das câmeras com tripé 2 metros](#distribuição-das-câmeras-com-tripé-2-metros)
   - [Como corrigir brilho da webcam](#como-corrigir-brilho-da-webcam)
   - [Como corrigir brilho do celular](#como-corrigir-brilho-do-celular)
   - [Transmissão em 4K](#transmissão-em-4k)
     - [Ativar alta qualidade DroidCam no Android](#ativar-alta-qualidade-droidcam-no-android)
     - [Congelamentos com DroidCam em 4K ou 720p](#congelamentos-com-droidcam-em-4k-ou-720p)
   - [Usar resoluções ocultas (intermediárias entre 1080p e 4K)](#usar-resoluções-ocultas-intermediárias-entre-1080p-e-4k)
-  - [Como ativar 4K no DroidCam OBS Studio](#como-ativar-4k-no-droidcam-obs-studio)
+    - [Como ativar 4K no DroidCam OBS Studio](#como-ativar-4k-no-droidcam-obs-studio)
 
 O objetivo da transmissão de uma celebração é ser uma ponte para os fiéis que não podem estar presentes fisicamente, permitindo que eles se unam em oração com a comunidade. A transmissão é um serviço, não um espetáculo.
 
@@ -139,6 +143,50 @@ Temos 5 tripés. 3 de 2 metros, 1 de 2 e 1 de 4 metros. Com exceção do de 2 me
    2. Não usado muito, pois demanda muito CPU do computar, por criar uma webcam virtual
 3. `Camera2 API Probe` para mostrar resoluções ocultas da sua câmera frontal/traseira
    1. [https://play.google.com/store/apps/details?id=com.airbeat.device.inspector\&hl=en](https://play.google.com/store/apps/details?id=com.airbeat.device.inspector&hl=en)
+
+## Controle do computador pelo tablet (RustDesk)
+
+Para controlar o computador da transmissão pelo tablet na mesma rede Wi-Fi, o melhor para este caso é o **RustDesk**. Ele é gratuito, de código aberto e funciona por IP local, mesmo sem internet.
+
+### Configuração
+
+1. Instale o RustDesk no laptop e no tablet:
+
+   - [RustDesk para Windows/Linux](https://rustdesk.com/)
+   - No Android, procure **RustDesk Remote Desktop** na Play Store.
+
+2. No laptop, abra **Configurações -> Segurança -> Enable direct IP access**.
+
+   - Ative o acesso direto por IP.
+   - A porta padrão é `21118`.
+   - Esta função é oficialmente suportada para redes locais sem internet: [documentação oficial](https://rustdesk.com/docs/en/self-host/client-configuration/advanced-settings/).
+
+3. Defina uma senha permanente no RustDesk do laptop em **Configurações -> Segurança -> Senha**.
+
+4. Descubra o IP local do laptop:
+
+   - Windows: execute `ipconfig` e procure **Endereço IPv4**.
+   - Linux: execute `ip addr` e procure algo como `192.168.1.20`.
+
+5. No RustDesk do tablet, digite diretamente esse IP, por exemplo:
+
+   `192.168.1.20`
+
+6. Toque em **Conectar** e informe a senha.
+
+### Se não conectar
+
+- Ambos os dispositivos precisam estar na mesma rede Wi-Fi.
+- Desative no roteador a opção **AP isolation**, **Client isolation** ou **Isolamento de clientes**.
+- Autorize o RustDesk no firewall do Windows/Linux, especialmente a porta TCP `21118`.
+- Como a rede está sem internet, o Android pode avisar "sem acesso à internet". Escolha **permanecer conectado** e, se necessário, desligue temporariamente os dados móveis.
+- No Linux com Wayland pode haver limitações de controle ou captura de tela; uma sessão X11 costuma funcionar melhor.
+
+Mesmo que o RustDesk mostre mensagens como "não conectado" ou "verifique sua internet", a conexão por IP local pode continuar funcionando.
+
+Use esse modo somente em uma rede Wi-Fi confiável.
+
+Como segunda opção, para imagem mais fluida e menor latência, existe **Sunshine no laptop + Moonlight no Android**, porém a configuração é um pouco mais trabalhosa.
 
 ## Ter ip do DroidCam/Celular fixo
 
