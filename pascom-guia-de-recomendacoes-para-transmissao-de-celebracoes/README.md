@@ -130,7 +130,8 @@ Temos 5 tripés. 3 de 2 metros, 1 de 2 e 1 de 4 metros. Com exceção do de 2 me
 2. [https://github.com/dev47apps/droidcam-obs-plugin](https://github.com/dev47apps/droidcam-obs-plugin) (conecta droidcam diretamenteno OBS, somente pelo IP)
 3. [https://github.com/sorayuki/obs-multi-rtmp](https://github.com/sorayuki/obs-multi-rtmp) para transmistir simultaneamente no youtube e facebook
 4. [https://github.com/cg2121/obs-advanced-timer/tree/6.0.0](https://github.com/cg2121/obs-advanced-timer/tree/6.0.0) para mostrar countdown para inicio da missa
-5. [https://www.virtualhere.com/windows\_server\_software](https://www.virtualhere.com/windows_server_software) Usado para transmitir uma webcam conectada no computador da mesa de som.
+5. [script-inicio-missa-contagem.lua](script-inicio-missa-contagem.lua) script auxiliar para iniciar a contagem regressiva da missa
+6. [https://www.virtualhere.com/windows\_server\_software](https://www.virtualhere.com/windows_server_software) Usado para transmitir uma webcam conectada no computador da mesa de som.
 
 ## Softwares utilizados no seu celular
 
