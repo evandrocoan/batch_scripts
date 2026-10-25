@@ -238,11 +238,61 @@ Essa é uma feature de segurança, para dificultar em redes públicas, alguém i
 2. A transmissão ficou com chiado hoje vindo da mesa de som. Verifiquei com Irene durante a missa e estavam ok os microfones. No final da missa verifiquei os cabos e resolvi ao recolocar esse cabo.
 
    <a href="images/cabo-mesa-som-resolver-chiado.png"><img src="images/cabo-mesa-som-resolver-chiado.png" alt="cabo-mesa-som-resolver-chiado"></a>
-3. ?
+3. **Investigar a origem antes de aplicar filtros:** Chiado, zumbido, mau contato e distorção podem ter
+   causas diferentes. Compare trechos equivalentes da fala, do canto e dos instrumentos em uma gravação
+   local sem filtros, com o supressor ligado e na reprodução do YouTube. Mantenha os níveis e a ligação
+   iguais ao comparar o filtro ligado e desligado. Se o defeito já aparece na captura sem filtros,
+   investigue primeiro cabos, conectores, configuração das entradas e ganho. Se aparece ao ligar o
+   filtro, reveja o processamento. Uma melhora ao reconectar um cabo é uma pista sobre a conexão, mas
+   não identifica sozinha a causa nem comprova um problema de aterramento.
+4. **Compatibilizar saída, entrada e cabos:** Prefira uma saída de nível de linha da mesa ligada a uma
+   entrada de linha da interface, com o ganho ajustado sem saturação. Uma saída de fones não provoca
+   necessariamente ruído, mas seu nível precisa ser compatível com a entrada; a posição do volume e
+   o tipo de entrada importam. O formato do conector sozinho não define o nível nem o balanceamento:
+   P10 TRS pode transportar um canal balanceado ou dois canais estéreo não balanceados. Não conecte
+   uma saída estéreo diretamente a uma única entrada mono balanceada como se fossem equivalentes.
+   Dois cabos separados para L e R não são, por definição, piores que um único cabo estéreo.
+   Consulte os manuais para a ligação correta. Veja as explicações da Yamaha sobre
+   [níveis de sinal](https://hub.yamaha.com/proaudio/livesound/interconnections-101/) e
+   [cabos e conexões balanceadas](https://usa.yamaha.com/products/contents/proaudio/musicianspa/equipments/cable.html).
+5. **Considerar ground loop como hipótese:** Um laço de aterramento pode introduzir zumbido, mas não
+   deve ser presumido como causa de qualquer chiado. Em uma ligação balanceada, a entrada responde à
+   diferença entre os dois condutores de sinal, rejeitando interferência comum a ambos; o cabo não
+   inverte o sinal por conta própria nem usa o terra como segundo sinal. Um isolador de linha ou
+   direct box apropriado pode ajudar quando o problema é um laço de aterramento. Verifique o nível
+   de entrada e saída e se o modelo oferece isolamento por transformador: nem todo direct box oferece
+   esse isolamento. O transformador utiliza enrolamentos primário e secundário para transferir o
+   sinal sem uma ligação elétrica direta entre eles. O botão `ground lift` atua na ligação de terra
+   do áudio; não remova o aterramento de proteção da alimentação elétrica. Veja as referências da
+   [Rane sobre interconexão](https://www.ranecommercial.com/legacy/note110.html) e da
+   [Radial sobre direct boxes e isolamento](https://www.radialeng.com/what-di-faq).
 
 ## Utilizar supressor de ruído
 
-Quando fizemos os testes vimos que tinha um ruído saído da mesa de som. Daí adicionamos um supressor de ruído no OBS. Parecia bom, só que durante a missa terminou suprimindo os instrumentos e parte do canto da música. Mas os microfones do frei, preces e ambão ficaram ok. No final da missa removi o filtro de ruído, daí teve um chiado, mas a parte da música ficou normal. Quando testamos duas saídas da mesa de som, no dia do teste, a saída de gravação e a saída de fones de ouvido, ambas apresentavam chiado. Também tentamos interceptar a saída master para caixas de som, e não teve chiado, só que essa abordagem é meio invasiva, então como supressor de ruído parecia estar ok no dia, preferimos usar ele.
+Quando fizemos os testes, havia ruído na captura do som da mesa. Adicionamos um supressor de ruído no
+OBS e ele pareceu funcionar bem inicialmente, mas durante a missa suprimiu instrumentos e parte do
+canto. Na escuta inicial, os microfones do frei, das preces e do ambão pareceram aceitáveis; isso não
+comprova a ausência de artefatos nas falas. Ao remover o filtro no final da missa, o chiado permaneceu,
+mas a música voltou ao normal. No teste anterior, as saídas de gravação e de fones apresentavam chiado,
+enquanto a ligação pela saída master não apresentou o mesmo problema. Como essa ligação exigia alterar
+a instalação existente, na ocasião preferimos o filtro, que parecia funcionar durante o teste inicial.
+Esses resultados justificam investigar as ligações e o processamento, mas não comprovam a causa do
+ruído nem permitem atribuir todos os artefatos da gravação ao mesmo fator.
+
+**Filtro e codec são configurações diferentes:** `Speex` e `RNNoise`, no filtro `Noise Suppression` do
+OBS, são métodos de supressão aplicados ao áudio capturado. Usar o método Speex nesse filtro não
+significa transmitir com o codec Speex nem com sua taxa de bits. A codificação do áudio da transmissão
+é configurada separadamente. A documentação do OBS alerta que uma supressão Speex mais forte pode
+distorcer outros sons, inclusive a voz. Teste o resultado com fala, canto e instrumentos antes de
+utilizar o filtro em uma celebração. Veja a
+[documentação do filtro no OBS](https://obsproject.com/kb/noise-suppression-filter) e a distinção entre
+[codificação e pré-processamento no Speex](https://www.speex.org/docs/manual/speex-manual/node7.html).
+
+**Áudio no YouTube:** A taxa de bits do áudio reproduzido não depende da resolução de vídeo escolhida
+no player, conforme a [documentação do YouTube](https://support.google.com/youtube/answer/1722171?hl=en).
+Isso não garante qualidade máxima nem recupera áudio já distorcido na captura ou no processamento.
+Compare a gravação local e o áudio publicado para verificar em qual etapa o defeito aparece, sem
+presumir que mudar a resolução de vídeo resolverá o problema.
 
 **Importante:** Sempre que fizer uma transmissão, escute o áudio pois mesmo tudo aparecendo certo no OBS, sem perda de frames, e qualidade Excelente no Youtube, não impede algum chiado estar aparecendo ou som saindo distorcido.
 
@@ -255,18 +305,29 @@ Quando fizemos os testes vimos que tinha um ruído saído da mesa de som. Daí a
 3. Selecione `Noise Suppression`
 
    <a href="images/obs-selecionar-noise-suppression.png"><img src="images/obs-selecionar-noise-suppression.png" alt="obs-selecionar-noise-suppression"></a>
-4. Selecione o método de supressão:
+4. Selecione o método de supressão e teste uma gravação com fala, canto e instrumentos. Se o filtro
+   prejudicar o conteúdo, reduza a supressão quando essa opção estiver disponível ou desative o filtro
+   nessa fonte. A imagem abaixo mostra `RNNoise` selecionado e as opções disponíveis; ela não registra
+   necessariamente o método usado na missa relatada:
 
    <a href="images/obs-metodo-supressao-ruido.png"><img src="images/obs-metodo-supressao-ruido.png" alt="obs-metodo-supressao-ruido"></a>
-5. Esses métodos de supressão são dinâmicos, ou seja, durante a transmissão ao vivo, ele podem ser adicionados, removidos ou configurados. Por isso, é importante sempre estar escutando áudio da missa para observar que efeitos eles estão tendo.
-   1. Por exemplo, se o chiado está forte, o filtro de ruído pode ser adicionado em uma saída de áudio para ser usada durante as falas, mas removido em outra saída durante a música.
-   2. Para isso, vá em Configurações de áudio, e configure duas saídas utilizando o mesmo dispositivo de áudio com o som da missa:
+5. O filtro pode ser ativado, desativado ou ajustado durante a transmissão. Prepare e teste essas
+   configurações antes da celebração e continue ouvindo o resultado durante seu uso. Não suponha que
+   um filtro que preserva a fala também preservará o canto e os instrumentos.
+   1. Se a comparação confirmar que o filtro ajuda nas falas, uma opção é alternar entre uma fonte
+      filtrada para as falas e uma fonte sem filtro para a música.
+   2. Para isso, configure duas fontes de captura usando o mesmo dispositivo com o som da missa:
 
       <a href="images/obs-configurar-duas-saidas-audio.png"><img src="images/obs-configurar-duas-saidas-audio.png" alt="obs-configurar-duas-saidas-audio"></a>
-   3. Depois, adicione o filtro em um dispositivo e remova do outro, assim, para alternar entre um e outro, mute um e desmute o outro, e vice-versa para destrocar, e alternar entre a saída com filtro e a sem.
+   3. Aplique o filtro somente a uma das fontes. Para alternar, silencie a fonte ativa antes de
+      desmutar a outra. Nunca deixe as duas fontes desmutadas ao mesmo tempo, pois a captura duplicada
+      pode alterar o volume ou causar efeitos de fase. Teste a alternância e confirme qual fonte está
+      sendo enviada à transmissão.
 
       <a href="images/obs-alternar-audio-com-sem-filtro.png"><img src="images/obs-alternar-audio-com-sem-filtro.png" alt="obs-alternar-audio-com-sem-filtro"></a>
-6. ?
+6. Escute o áudio transmitido, incluindo as falas e a música, além de conferir os medidores do OBS.
+   Verifique se a monitoração usada permite ouvir o processamento aplicado; ouvir somente a saída da
+   mesa não verifica o efeito do filtro nem a reprodução na plataforma.
 
 ## Como ajustar volume da transmissão na mesa de som
 
